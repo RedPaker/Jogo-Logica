@@ -19,7 +19,7 @@
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"87a968c1-6c5e-4555-9480-dba97ecaf206","blendMode":1,"displayName":"Layer 1","isLocked":false,"name":"87a968c1-6c5e-4555-9480-dba97ecaf206","opacity":54.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"87a968c1-6c5e-4555-9480-dba97ecaf206","blendMode":1,"displayName":"Layer 1","isLocked":false,"name":"87a968c1-6c5e-4555-9480-dba97ecaf206","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"1c738437-954c-4c96-829a-3d48d9861eee","blendMode":0,"displayName":"default","isLocked":false,"name":"1c738437-954c-4c96-829a-3d48d9861eee","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_plr_placeholder",

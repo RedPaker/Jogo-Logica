@@ -8,7 +8,7 @@ var _temp_y = 0;*/
 
 
 if (keyboard_check(vk_shift)) {
-	move_spd = 4;
+	move_spd = 3;
 }else {
     move_spd = 2;
 }
