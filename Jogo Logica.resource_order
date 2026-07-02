@@ -6,9 +6,10 @@
     {"name":"Inimigos","order":2,"path":"folders/ObjectS/Inimigos.yy",},
     {"name":"Main_Char","order":1,"path":"folders/ObjectS/Main_Char.yy",},
     {"name":"Sprite","order":3,"path":"folders/Sprite.yy",},
-    {"name":"Main_Char","order":2,"path":"folders/Sprite/Main_Char.yy",},
     {"name":"Inimigos","order":1,"path":"folders/Sprite/Inimigos.yy",},
-    {"name":"Tiles","order":4,"path":"folders/Tiles.yy",},
+    {"name":"Main_Char","order":2,"path":"folders/Sprite/Main_Char.yy",},
+    {"name":"Tiles","order":3,"path":"folders/Sprite/Tiles.yy",},
+    {"name":"Tileseh","order":4,"path":"folders/Tileseh.yy",},
   ],
   "ResourceOrderSettings":[],
 }
