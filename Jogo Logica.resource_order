@@ -11,5 +11,11 @@
     {"name":"Tiles","order":3,"path":"folders/Sprite/Tiles.yy",},
     {"name":"Tileseh","order":4,"path":"folders/Tileseh.yy",},
   ],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_char","order":3,"path":"objects/obj_char/obj_char.yy",},
+    {"name":"spr_plr_td_down","order":1,"path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},
+    {"name":"spr_plr_td_left","order":2,"path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},
+    {"name":"spr_plr_td_right","order":4,"path":"sprites/spr_plr_td_right/spr_plr_td_right.yy",},
+    {"name":"spr_plr_td_up","order":3,"path":"sprites/spr_plr_td_up/spr_plr_td_up.yy",},
+  ],
 }
