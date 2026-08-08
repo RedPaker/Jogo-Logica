@@ -15,6 +15,14 @@ if (keyboard_check(vk_shift)){
     move_spdx = 1;*/
 }
 
+if(keyboard_check_pressed(ord("N"))){
+    if (noclip == 1) {
+    	noclip = 0;
+    }else {
+    	noclip = 1;
+    show_debug_message(noclip);
+    }
+}
 
 
 //Isso são velocidades alvo pro lerp. Quando vc anda, o target vira 2, e o lerp aumenta a velocidade 5% a cada frame, até chegar no 2. Elas começam em zero, ou seja, qdo vc soltar a tecla o target vira 0, e como o lerp busca chegar no target ele vai desacelerar 5% por frame.
@@ -33,8 +41,12 @@ if (_input_x != 0 || _input_y != 0) {
 hspd = lerp(hspd, _target_x, 0);
 vspd = lerp(vspd, _target_y, 0);*/
 
-move_and_collide(_target_x * move_spd, _target_y * move_spd, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
-
+if(noclip==0){  
+    move_and_collide(_target_x*move_spd, _target_y*move_spd, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
+}else{
+    x += clamp(_input_x, -move_spd, move_spd);
+    y += clamp(_input_y, -move_spd, move_spd);
+}
 
 
 
