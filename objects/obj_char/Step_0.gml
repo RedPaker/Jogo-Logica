@@ -33,18 +33,9 @@ if (_input_x != 0 || _input_y != 0) {
 hspd = lerp(hspd, _target_x, 0);
 vspd = lerp(vspd, _target_y, 0);*/
 
-if(noclip==0){
-    move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
-}else{
-    move_and_collide(_target_x, _target_y, undefined, undefined, undefined, undefined, move_spd, move_spd);
-}
+move_and_collide(_target_x * move_spd, _target_y * move_spd, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
 
 
-if(keyboard_check(ord("n")) and noclip == 0){
-    noclip = 1
-}else{
-    noclip = 0
-}
 
 
 
