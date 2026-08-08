@@ -12,7 +12,6 @@
     {"name":"Tileseh","order":4,"path":"folders/Tileseh.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"obj_char","order":3,"path":"objects/obj_char/obj_char.yy",},
     {"name":"teste_de_mapa","order":1,"path":"rooms/teste_de_mapa/teste_de_mapa.yy",},
     {"name":"spr_plr_td_down","order":1,"path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},
     {"name":"spr_plr_td_left","order":2,"path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},
