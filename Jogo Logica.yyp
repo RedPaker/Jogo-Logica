@@ -22,7 +22,9 @@
     {"$GMFolder":"","%Name":"Tileseh","folderPath":"folders/Tileseh.yy","name":"Tileseh","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Gravação de tela de 2026-08-07 08-39-43.mp4","CopyToMask":-1,"filePath":"datafiles","name":"Gravação de tela de 2026-08-07 08-39-43.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -30,6 +32,8 @@
   },
   "name":"Jogo Logica",
   "resources":[
+    {"id":{"name":"obj_enemy_parenty","path":"objects/obj_enemy_parenty/obj_enemy_parenty.yy",},},
+    {"id":{"name":"obj_enimy_rpg","path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},},
     {"id":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},},
@@ -40,6 +44,7 @@
     {"id":{"name":"spr_plr_td_up","path":"sprites/spr_plr_td_up/spr_plr_td_up.yy",},},
     {"id":{"name":"spr_tileset_placeholder","path":"sprites/spr_tileset_placeholder/spr_tileset_placeholder.yy",},},
     {"id":{"name":"spr_tileset_placeholder2","path":"sprites/spr_tileset_placeholder2/spr_tileset_placeholder2.yy",},},
+    {"id":{"name":"virus","path":"sprites/virus/virus.yy",},},
     {"id":{"name":"tls_Placeholder","path":"tilesets/tls_Placeholder/tls_Placeholder.yy",},},
     {"id":{"name":"tls_placeholder2","path":"tilesets/tls_placeholder2/tls_placeholder2.yy",},},
   ],

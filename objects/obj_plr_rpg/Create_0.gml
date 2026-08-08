@@ -6,6 +6,7 @@ tilemap_background = layer_tilemap_get_id("tlm_bg");
 hspd = 0;
 vspd = 0;
 
+
 height = 2;
 
 facing = 0;
