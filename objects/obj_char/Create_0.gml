@@ -9,3 +9,5 @@ vspd = 0;
 height = 2;
 
 facing = 0;
+
+noclip = 0;
