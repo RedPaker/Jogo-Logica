@@ -1,7 +1,7 @@
 alvo_x = x;
 alvo_y = y;
 
-move_spd = 2;
+move_spd = 0.7;
 alarm[0] = 60;
 
 distance_to_player = 100;
