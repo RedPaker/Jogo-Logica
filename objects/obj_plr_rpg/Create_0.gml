@@ -12,3 +12,8 @@ height = 2;
 facing = 0;
 
 noclip = 0;
+
+cam_x = 0;
+
+cam_y = 0;
+
