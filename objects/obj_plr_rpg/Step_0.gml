@@ -35,8 +35,8 @@ if (_input_x != 0 || _input_y != 0) {
     _target_y = lengthdir_y(move_spd, _dir);
 }
 
-
-
+cam_x = _target_x
+cam_y = _target_y
 /*larp larp larp sahur (linear interpoland)
 hspd = lerp(hspd, _target_x, 0);
 vspd = lerp(vspd, _target_y, 0);*/
@@ -44,8 +44,8 @@ vspd = lerp(vspd, _target_y, 0);*/
 if(noclip==0){  
     move_and_collide(_target_x*move_spd, _target_y*move_spd, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
 }else{
-    x += clamp(_input_x, -move_spd, move_spd);
-    y += clamp(_input_y, -move_spd, move_spd);
+    x += clamp(_target_x*10, -move_spd, move_spd);
+    y += clamp(_target_y*10, -move_spd, move_spd);
 }
 
 

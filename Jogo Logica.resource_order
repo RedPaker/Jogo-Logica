@@ -3,6 +3,7 @@
     {"name":"[Angry_bird_listening_img]","order":6,"path":"folders/[Angry_bird_listening_img].yy",},
     {"name":"All_these__rooms","order":1,"path":"folders/All_these__rooms.yy",},
     {"name":"ObjectS","order":2,"path":"folders/ObjectS.yy",},
+    {"name":"Camera","order":3,"path":"folders/ObjectS/Camera.yy",},
     {"name":"Inimigos","order":2,"path":"folders/ObjectS/Inimigos.yy",},
     {"name":"Main_Char","order":1,"path":"folders/ObjectS/Main_Char.yy",},
     {"name":"Sprite","order":3,"path":"folders/Sprite.yy",},
@@ -13,6 +14,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"teste_de_mapa","order":1,"path":"rooms/teste_de_mapa/teste_de_mapa.yy",},
+    {"name":"spr_cam","order":5,"path":"sprites/spr_cam/spr_cam.yy",},
     {"name":"spr_plr_td_down","order":1,"path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},
     {"name":"spr_plr_td_left","order":2,"path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},
     {"name":"spr_plr_td_right","order":4,"path":"sprites/spr_plr_td_right/spr_plr_td_right.yy",},
