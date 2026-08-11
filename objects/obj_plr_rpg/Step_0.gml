@@ -44,8 +44,8 @@ vspd = lerp(vspd, _target_y, 0);*/
 if(noclip==0){  
     move_and_collide(_target_x*move_spd, _target_y*move_spd, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
 }else{
-    x += clamp(_target_x*10, -move_spd, move_spd);
-    y += clamp(_target_y*10, -move_spd, move_spd);
+    x += clamp(_target_x*5, -5, 5);
+    y += clamp(_target_y*5, -5, 5);
 }
 
 

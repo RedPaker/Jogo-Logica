@@ -1,5 +1,5 @@
-var _camx = floor(obj_plr_rpg.cam_x);
-var _camy = floor(obj_plr_rpg.cam_y);
+var _camx = obj_plr_rpg.cam_x;
+var _camy = obj_plr_rpg.cam_y;
 
 var _plrx = obj_plr_rpg.x;
 var _plry = obj_plr_rpg.y;

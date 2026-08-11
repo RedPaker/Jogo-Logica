@@ -8,8 +8,8 @@
   "name":"obj_cam",
   "overriddenProperties":[],
   "parent":{
-    "name":"Camera",
-    "path":"folders/ObjectS/Camera.yy",
+    "name":"ObjectS",
+    "path":"folders/ObjectS.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,6 +33,9 @@
     "name":"spr_cam",
     "path":"sprites/spr_cam/spr_cam.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_cam",
+    "path":"sprites/spr_cam/spr_cam.yy",
+  },
   "visible":true,
 }

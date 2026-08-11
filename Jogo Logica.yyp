@@ -12,10 +12,10 @@
   "Folders":[
     {"$GMFolder":"","%Name":"[Angry_bird_listening_img]","folderPath":"folders/[Angry_bird_listening_img].yy","name":"[Angry_bird_listening_img]","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"All_these__rooms","folderPath":"folders/All_these__rooms.yy","name":"All_these__rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"obj_itens","folderPath":"folders/ObjectS/obj_itens.yy","name":"obj_itens","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ObjectS","folderPath":"folders/ObjectS.yy","name":"ObjectS","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Inimigos","folderPath":"folders/ObjectS/Inimigos.yy","name":"Inimigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Main_Char","folderPath":"folders/ObjectS/Main_Char.yy","name":"Main_Char","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"obj_itens","folderPath":"folders/ObjectS/obj_itens.yy","name":"obj_itens","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprite","folderPath":"folders/Sprite.yy","name":"Sprite","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Inimigos","folderPath":"folders/Sprite/Inimigos.yy","name":"Inimigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Main_Char","folderPath":"folders/Sprite/Main_Char.yy","name":"Main_Char","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -29,10 +29,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Jogo Logica",
   "resources":[
+    {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enimy_rpg","path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},},
     {"id":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},},
@@ -40,6 +41,7 @@
     {"id":{"name":"obj_teste","path":"objects/obj_teste/obj_teste.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},},
+    {"id":{"name":"spr_cam","path":"sprites/spr_cam/spr_cam.yy",},},
     {"id":{"name":"spr_plr_placeholder","path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",},},
     {"id":{"name":"spr_plr_td_down","path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},},
     {"id":{"name":"spr_plr_td_left","path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},},
