@@ -1,1 +1,2 @@
-coletado = false
+coletado = false;
+global.inv=[];

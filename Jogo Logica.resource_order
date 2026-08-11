@@ -1,9 +1,9 @@
 {
   "FolderOrderSettings":[
     {"name":"[Angry_bird_listening_img]","order":3,"path":"folders/[Angry_bird_listening_img].yy",},
-    {"name":"obj_itens","order":2,"path":"folders/ObjectS/obj_itens.yy",},
     {"name":"ObjectS","order":1,"path":"folders/ObjectS.yy",},
     {"name":"Main_Char","order":1,"path":"folders/ObjectS/Main_Char.yy",},
+    {"name":"obj_itens","order":2,"path":"folders/ObjectS/obj_itens.yy",},
     {"name":"Sprite","order":2,"path":"folders/Sprite.yy",},
     {"name":"Inimigos","order":1,"path":"folders/Sprite/Inimigos.yy",},
     {"name":"Main_Char","order":2,"path":"folders/Sprite/Main_Char.yy",},
@@ -12,7 +12,8 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_enemy_parent","order":1,"path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},
-    {"name":"obj_teste","order":2,"path":"objects/obj_teste/obj_teste.yy",},
+    {"name":"obj_inventory","order":2,"path":"objects/obj_inventory/obj_inventory.yy",},
+    {"name":"obj_teste","order":1,"path":"objects/obj_teste/obj_teste.yy",},
     {"name":"teste_de_mapa","order":1,"path":"rooms/teste_de_mapa/teste_de_mapa.yy",},
     {"name":"spr_plr_td_down","order":1,"path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},
     {"name":"spr_plr_td_left","order":2,"path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},
