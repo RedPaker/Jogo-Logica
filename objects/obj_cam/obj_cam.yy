@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cam",
-    "path":"sprites/spr_cam/spr_cam.yy",
+    "name":"spr_plr_placeholder",
+    "path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",
   },
   "spriteMaskId":{
     "name":"spr_cam",
