@@ -12,7 +12,8 @@
   "ResourceOrderSettings":[
     {"name":"obj_cam","order":3,"path":"objects/obj_cam/obj_cam.yy",},
     {"name":"obj_enemy_parent","order":1,"path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},
-    {"name":"obj_teste","order":2,"path":"objects/obj_teste/obj_teste.yy",},
+    {"name":"obj_inventory","order":2,"path":"objects/obj_inventory/obj_inventory.yy",},
+    {"name":"obj_teste","order":1,"path":"objects/obj_teste/obj_teste.yy",},
     {"name":"teste_de_mapa","order":1,"path":"rooms/teste_de_mapa/teste_de_mapa.yy",},
     {"name":"spr_cam","order":3,"path":"sprites/spr_cam/spr_cam.yy",},
     {"name":"spr_plr_td_down","order":1,"path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},
