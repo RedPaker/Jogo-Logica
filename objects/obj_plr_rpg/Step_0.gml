@@ -1,11 +1,11 @@
 
 //uhh ignore o messi code plzz
-var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); 
+var _input_x = keyboard_check(vk_right) - keyboard_check(vk_left);
+var _input_y = keyboard_check(vk_down) - keyboard_check(vk_up); 
 
 
 //sprint
-if (keyboard_check(vk_shift)){ 
+if (keyboard_check(ord("X"))){ 
     move_spd = 1.5
     /*move_spdy = 1.5;
     move_spdx = 1.5;*/

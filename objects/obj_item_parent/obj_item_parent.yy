@@ -10,8 +10,8 @@
   "name":"obj_item_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_itens",
-    "path":"folders/ObjectS/obj_itens.yy",
+    "name":"Itens",
+    "path":"folders/ObjectS/Itens.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"item_name","filters":[],"listItems":[],"multiselect":false,"name":"item_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Default","varFriendlyName":"Name","varType":2,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

@@ -1,4 +1,4 @@
-if (keyboard_check(ord("F"))){
+if (keyboard_check_pressed(ord("C"))){
     abrir = !abrir;
     
 }

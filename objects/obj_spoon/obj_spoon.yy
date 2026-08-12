@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_teste",
+  "%Name":"obj_spoon",
   "eventList":[],
   "managed":true,
-  "name":"obj_teste",
+  "name":"obj_spoon",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_parent/obj_item_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Yellow",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_parent/obj_item_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spoon",},
   ],
   "parent":{
     "name":"Itens",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_yellow",
-    "path":"sprites/spr_yellow/spr_yellow.yy",
+    "name":"spr_spoon",
+    "path":"sprites/spr_spoon/spr_spoon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

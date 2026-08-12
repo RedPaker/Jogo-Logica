@@ -11,8 +11,8 @@
   "name":"obj_inventory",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_itens",
-    "path":"folders/ObjectS/obj_itens.yy",
+    "name":"Itens",
+    "path":"folders/ObjectS/Itens.yy",
   },
   "parentObjectId":null,
   "persistent":true,

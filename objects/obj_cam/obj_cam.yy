@@ -8,8 +8,8 @@
   "name":"obj_cam",
   "overriddenProperties":[],
   "parent":{
-    "name":"ObjectS",
-    "path":"folders/ObjectS.yy",
+    "name":"Misc",
+    "path":"folders/ObjectS/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_plr_placeholder",
-    "path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",
+    "name":"spr_cam",
+    "path":"sprites/spr_cam/spr_cam.yy",
   },
   "spriteMaskId":{
     "name":"spr_cam",
