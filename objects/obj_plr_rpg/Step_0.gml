@@ -18,9 +18,10 @@ if (keyboard_check(vk_shift)){
 if(keyboard_check_pressed(ord("N"))){
     if (noclip == 1) {
     	noclip = 0;
+        show_debug_message("Noclip OFF!");
     }else {
     	noclip = 1;
-    show_debug_message(noclip);
+    show_debug_message("Noclip ON");
     }
 }
 
@@ -35,21 +36,23 @@ if (_input_x != 0 || _input_y != 0) {
     _target_y = lengthdir_y(move_spd, _dir);
 }
 
-cam_x = _target_x
-cam_y = _target_y
+
 /*larp larp larp sahur (linear interpoland)
 hspd = lerp(hspd, _target_x, 0);
 vspd = lerp(vspd, _target_y, 0);*/
+var _old_x = x;
+var _old_y = y;
 
 if(noclip==0){  
-    move_and_collide(_target_x*move_spd, _target_y*move_spd, tilemap_foreground, undefined, undefined, undefined, move_spd, move_spd);
+    move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined);
 }else{
-    x += clamp(_target_x*10, -move_spd, move_spd);
-    y += clamp(_target_y*10, -move_spd, move_spd);
+    x += clamp(_target_x*5, -5, 5);
+    y += clamp(_target_y*5, -5, 5);
 }
 
 
-
+cam_x = x-_old_x; 
+cam_y = y-_old_y;
 
 
 if(_input_x != 0 or _input_y != 0){

@@ -37,5 +37,9 @@
     "name":"spr_cam",
     "path":"sprites/spr_cam/spr_cam.yy",
   },
+  "spriteMaskId":{
+    "name":"spr_cam",
+    "path":"sprites/spr_cam/spr_cam.yy",
+  },
   "visible":true,
 }
