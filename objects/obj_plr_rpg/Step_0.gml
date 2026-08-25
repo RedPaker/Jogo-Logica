@@ -1,11 +1,11 @@
 
 //uhh ignore o messi code plzz
-var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); 
+var _input_x = keyboard_check(vk_right) - keyboard_check(vk_left);
+var _input_y = keyboard_check(vk_down) - keyboard_check(vk_up); 
 
 
 //sprint
-if (keyboard_check(vk_shift)){ 
+if (keyboard_check(ord("X"))){ 
     move_spd = 1.5
     /*move_spdy = 1.5;
     move_spdx = 1.5;*/
@@ -68,5 +68,17 @@ else{
     else if(sprite_index == spr_plr_td_left) sprite_index = spr_plr_td_left;
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
+}
+
+if(keyboard_check_pressed(vk_space)){
+    
+    var _dist = 15;
+
+    var xx = x + lengthdir_x(_dist, facing);
+    var yy = y + lengthdir_y(_dist, facing);
+
+    var _inst = instance_create_depth(xx, yy, depth, obj_ataque);
+    _inst.image_angle = facing;
+    _inst.damage = damage;
 }
 //67

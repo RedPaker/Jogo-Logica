@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_teste",
+  "%Name":"obj_mangos",
   "eventList":[],
   "managed":true,
-  "name":"obj_teste",
+  "name":"obj_mangos",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_parent/obj_item_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Yellow",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_parent/obj_item_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Mangos",},
   ],
   "parent":{
     "name":"Itens",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_yellow",
-    "path":"sprites/spr_yellow/spr_yellow.yy",
+    "name":"spr_mangos",
+    "path":"sprites/spr_mangos/spr_mangos.yy",
   },
   "spriteMaskId":null,
   "visible":true,
