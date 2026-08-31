@@ -6,7 +6,7 @@ tilemap_background = layer_tilemap_get_id("tlm_bg");
 hspd = 0;
 vspd = 0;
 
-hp = 10
+hp = 1000
 hp_total = hp;
 
 damage = 1;
@@ -21,3 +21,5 @@ cam_x = 0;
 
 cam_y = 0;
 
+dir_x = 1
+dir_y = 0

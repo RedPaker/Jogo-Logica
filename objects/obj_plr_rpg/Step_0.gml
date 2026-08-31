@@ -70,15 +70,26 @@ else{
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
 
+<<<<<<< Updated upstream
 if(keyboard_check_pressed(vk_space)){
     
     var _dist = 15;
+=======
+if (keyboard_check_pressed(vk_space))
+{
+    var _dist = 8;
+>>>>>>> Stashed changes
 
     var xx = x + lengthdir_x(_dist, facing);
     var yy = y + lengthdir_y(_dist, facing);
 
     var _inst = instance_create_depth(xx, yy, depth, obj_ataque);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     _inst.image_angle = facing;
     _inst.damage = damage;
 }
 //67
+
