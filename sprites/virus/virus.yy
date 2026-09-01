@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Inimigos",
-    "path":"folders/Sprite/Itens/Inimigos.yy",
+    "path":"folders/Sprite/Inimigos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

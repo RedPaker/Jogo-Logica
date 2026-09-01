@@ -19,7 +19,7 @@
     {"$GMFolder":"","%Name":"Misc","folderPath":"folders/ObjectS/Misc.yy","name":"Misc","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprite","folderPath":"folders/Sprite.yy","name":"Sprite","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GUI","folderPath":"folders/Sprite/GUI.yy","name":"GUI","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Inimigos","folderPath":"folders/Sprite/Itens/Inimigos.yy","name":"Inimigos","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Inimigos","folderPath":"folders/Sprite/Inimigos.yy","name":"Inimigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Itens","folderPath":"folders/Sprite/Itens.yy","name":"Itens","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Main_Char","folderPath":"folders/Sprite/Main_Char.yy","name":"Main_Char","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Misc","folderPath":"folders/Sprite/Misc.yy","name":"Misc","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -33,7 +33,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Jogo Logica",
   "resources":[
@@ -46,7 +46,6 @@
     {"id":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},},
     {"id":{"name":"obj_spoon","path":"objects/obj_spoon/obj_spoon.yy",},},
     {"id":{"name":"obj_teste","path":"objects/obj_teste/obj_teste.yy",},},
-    {"id":{"name":"object_ataque","path":"objects/object_ataque/object_ataque.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},},
     {"id":{"name":"spr_cam","path":"sprites/spr_cam/spr_cam.yy",},},

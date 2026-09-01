@@ -69,16 +69,4 @@ else{
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
-
-if(keyboard_check_pressed(vk_space)){
-    
-    var _dist = 16;
-
-    var xx = x + lengthdir_x(_dist, facing);
-    var yy = y + lengthdir_y(_dist, facing);
-
-    var _inst = instance_create_depth(xx, yy, depth, object_ataque);
-    _inst.image_angle = facing;
-    _inst.damage = damage;
-}
 //67
