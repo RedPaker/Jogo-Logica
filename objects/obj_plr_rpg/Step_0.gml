@@ -69,4 +69,6 @@ else{
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
+
+
 //67
