@@ -14,6 +14,7 @@
     {"name":"Tileseh","order":4,"path":"folders/Tileseh.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_atack","order":5,"path":"objects/obj_atack/obj_atack.yy",},
     {"name":"obj_enemy_parent","order":1,"path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},
     {"name":"obj_inventory","order":1,"path":"objects/obj_inventory/obj_inventory.yy",},
     {"name":"obj_mangos","order":4,"path":"objects/obj_mangos/obj_mangos.yy",},

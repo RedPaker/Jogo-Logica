@@ -1,7 +1,7 @@
 
 //uhh ignore o messi code plzz
-var _input_x = keyboard_check(vk_right) - keyboard_check(vk_left);
-var _input_y = keyboard_check(vk_down) - keyboard_check(vk_up); 
+var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); 
 
 
 //sprint
@@ -68,5 +68,15 @@ else{
     else if(sprite_index == spr_plr_td_left) sprite_index = spr_plr_td_left;
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
+}
+if(keyboard_check_pressed(vk_space)){
+	var distancia = 20;
+var ax = x + lengthdir_x(distancia, facing);
+var ay = y + lengthdir_y(distancia, facing);
+
+var ataque = instance_create_layer(ax, ay, "instances", obj_atack);
+
+ataque.direcao = facing;
+ataque.dano = id
 }
 //67

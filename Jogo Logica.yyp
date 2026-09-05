@@ -37,6 +37,7 @@
   },
   "name":"Jogo Logica",
   "resources":[
+    {"id":{"name":"obj_atack","path":"objects/obj_atack/obj_atack.yy",},},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enimy_rpg","path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},},
