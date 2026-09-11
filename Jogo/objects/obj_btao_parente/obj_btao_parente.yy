@@ -42,7 +42,7 @@
     {"$GMObjectProperty":"v2","%Name":"font_color","filters":[],"listItems":[],"multiselect":false,"name":"font_color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFFFFFFF","varFriendlyName":"Cor","varType":7,},
     {"$GMObjectProperty":"v2","%Name":"font_typeface","filters":[
         "GMFont",
-      ],"listItems":[],"multiselect":false,"name":"font_typeface","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"fnt_comicsansms","path":"fonts/fnt_comicsansms/fnt_comicsansms.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fnt_comicsansms","varFriendlyName":"Fonte","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"font_typeface","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"fnt_comicsansms_8","path":"fonts/fnt_comicsansms_8/fnt_comicsansms_8.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fnt_comicsansms_8","varFriendlyName":"Fonte","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
