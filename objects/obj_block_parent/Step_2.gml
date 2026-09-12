@@ -32,18 +32,25 @@ if (arrastando) {
         
        
         x = _gui_limitada_x+ _cam_x;
-        y = (_gui_limitada_y + _cam_y);
-  
-        
-    } else {
-        // Arraste normal pelo mundo
-        x = mouse_x + offset_x;
-        y = mouse_y + offset_y;
-        
-    }
+        y = _gui_limitada_y + _cam_y;
+    } 
     
     // Soltar o mouse
     if (mouse_check_button_released(mb_left)) {
         arrastando = false;
+    }
+}
+
+if (mouse_check_button_released(mb_left)) {
+    arrastando = false;
+    
+    // Procura por um slot de colisão embaixo da posição atual do bloco
+    var _slot = instance_place(x, y, obj_colission_bl);
+    
+    if (_slot != noone) {
+        // Encaixa o bloco exatamente na posição do slot
+        x = _slot.x;
+        y = _slot.y;
+        show_debug_message("Bloco Encaixado!");
     }
 }

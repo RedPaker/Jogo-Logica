@@ -17,6 +17,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_block_parent","order":6,"path":"objects/obj_block_parent/obj_block_parent.yy",},
+    {"name":"obj_colission_bl","order":7,"path":"objects/obj_colission_bl/obj_colission_bl.yy",},
     {"name":"obj_enemy_parent","order":1,"path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},
     {"name":"obj_inventory","order":1,"path":"objects/obj_inventory/obj_inventory.yy",},
     {"name":"obj_mangos","order":4,"path":"objects/obj_mangos/obj_mangos.yy",},
@@ -24,6 +25,7 @@
     {"name":"obj_spoon","order":3,"path":"objects/obj_spoon/obj_spoon.yy",},
     {"name":"obj_teste","order":2,"path":"objects/obj_teste/obj_teste.yy",},
     {"name":"teste_de_mapa","order":1,"path":"rooms/teste_de_mapa/teste_de_mapa.yy",},
+    {"name":"spr_collision_bl","order":1,"path":"sprites/spr_collision_bl/spr_collision_bl.yy",},
     {"name":"spr_livro_feiticos_principal","order":1,"path":"sprites/spr_livro_feiticos_principal/spr_livro_feiticos_principal.yy",},
     {"name":"spr_magenta","order":2,"path":"sprites/spr_magenta/spr_magenta.yy",},
     {"name":"spr_plr_td_down","order":1,"path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},
