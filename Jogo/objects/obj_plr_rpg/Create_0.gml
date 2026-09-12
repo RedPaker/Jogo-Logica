@@ -17,3 +17,5 @@ cam_x = 0;
 
 cam_y = 0;
 
+no_move_when_open = false;
+
