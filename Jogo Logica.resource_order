@@ -17,7 +17,10 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_block_parent","order":6,"path":"objects/obj_block_parent/obj_block_parent.yy",},
-    {"name":"obj_colission_bl","order":7,"path":"objects/obj_colission_bl/obj_colission_bl.yy",},
+    {"name":"obj_col_1","order":2,"path":"objects/obj_col_1/obj_col_1.yy",},
+    {"name":"obj_col_2","order":3,"path":"objects/obj_col_2/obj_col_2.yy",},
+    {"name":"obj_col_3","order":4,"path":"objects/obj_col_3/obj_col_3.yy",},
+    {"name":"obj_colission_bl_parent","order":1,"path":"objects/obj_colission_bl_parent/obj_colission_bl_parent.yy",},
     {"name":"obj_enemy_parent","order":1,"path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},
     {"name":"obj_inventory","order":1,"path":"objects/obj_inventory/obj_inventory.yy",},
     {"name":"obj_mangos","order":4,"path":"objects/obj_mangos/obj_mangos.yy",},
