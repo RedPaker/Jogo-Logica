@@ -1,6 +1,4 @@
 
-
-
 //uhh ignore o messi code plzz
 var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); 
@@ -38,15 +36,6 @@ if (_input_x != 0 || _input_y != 0) {
     _target_y = lengthdir_y(move_spd, _dir);
 }
 
-//Para o player qdo livro aberto
-if (keyboard_check_pressed(ord("B"))) {
-	no_move_when_open = !no_move_when_open
-}
-    
-    if (no_move_when_open == true){
-        _target_x = 0;
-        _target_y = 0;
-    }
 
 /*larp larp larp sahur (linear interpoland)
 hspd = lerp(hspd, _target_x, 0);
@@ -91,4 +80,3 @@ ataque.direcao = facing;
 ataque.dano = id
 }
 //67
-
