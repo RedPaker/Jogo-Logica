@@ -43,8 +43,6 @@
   },
   "name":"Jogo Logica",
   "resources":[
-    {"id":{"name":"obj_block_parent","path":"objects/obj_block_parent/obj_block_parent.yy",},},
-    {"id":{"name":"obj_bloco_printf","path":"objects/obj_bloco_printf/obj_bloco_printf.yy",},},
     {"id":{"name":"fnt_comicsansms_10","path":"fonts/fnt_comicsansms_10/fnt_comicsansms_10.yy",},},
     {"id":{"name":"fnt_comicsansms_12","path":"fonts/fnt_comicsansms_12/fnt_comicsansms_12.yy",},},
     {"id":{"name":"fnt_comicsansms_14","path":"fonts/fnt_comicsansms_14/fnt_comicsansms_14.yy",},},
@@ -52,6 +50,8 @@
     {"id":{"name":"fnt_comicsansms_6","path":"fonts/fnt_comicsansms_6/fnt_comicsansms_6.yy",},},
     {"id":{"name":"fnt_comicsansms_8","path":"fonts/fnt_comicsansms_8/fnt_comicsansms_8.yy",},},
     {"id":{"name":"obj_atack","path":"objects/obj_atack/obj_atack.yy",},},
+    {"id":{"name":"obj_block_parent","path":"objects/obj_block_parent/obj_block_parent.yy",},},
+    {"id":{"name":"obj_bloco_printf","path":"objects/obj_bloco_printf/obj_bloco_printf.yy",},},
     {"id":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
     {"id":{"name":"obj_col_1","path":"objects/obj_col_1/obj_col_1.yy",},},
