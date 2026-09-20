@@ -1,6 +1,6 @@
 dano = 10;
 
-tempo_vida = 12;
+tempo_vida = 24;
 
 atingiu = false;
 
