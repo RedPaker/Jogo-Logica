@@ -14,8 +14,15 @@ facing = 0;
 noclip = 0;
 
 cam_x = 0;
-
 cam_y = 0;
 
-no_move_when_open = false;
+hp = 100;
 
+dano_time = 0;
+
+game_over = false;
+
+empurra = 0;
+empurra_dir = 0;
+
+ataque_time = 0;

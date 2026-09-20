@@ -1,7 +1,8 @@
 dano = 10;
 
-direcao = 0;
+tempo_vida = 24;
 
-dano = noone;
+atingiu = false;
 
-tempo_vida = 12;
+velocidade = 1
+

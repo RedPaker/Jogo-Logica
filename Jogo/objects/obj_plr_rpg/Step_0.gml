@@ -1,4 +1,10 @@
+if (game_over) {
+    if (keyboard_check_pressed(ord("R"))) {
+        game_restart();
+    }
 
+    exit;
+}
 
 
 //uhh ignore o messi code plzz
@@ -20,10 +26,8 @@ if (keyboard_check(ord("X"))){
 if(keyboard_check_pressed(ord("N"))){
     if (noclip == 1) {
     	noclip = 0;
-        show_debug_message("Noclip OFF!");
     }else {
     	noclip = 1;
-    show_debug_message("Noclip ON");
     }
 }
 
@@ -38,15 +42,6 @@ if (_input_x != 0 || _input_y != 0) {
     _target_y = lengthdir_y(move_spd, _dir);
 }
 
-//Para o player qdo livro aberto
-if (keyboard_check_pressed(ord("B"))) {
-	no_move_when_open = !no_move_when_open
-}
-    
-    if (no_move_when_open == true){
-        _target_x = 0;
-        _target_y = 0;
-    }
 
 /*larp larp larp sahur (linear interpoland)
 hspd = lerp(hspd, _target_x, 0);
@@ -80,15 +75,57 @@ else{
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
-if(keyboard_check_pressed(vk_space)){
-	var distancia = 20;
-var ax = x + lengthdir_x(distancia, facing);
-var ay = y + lengthdir_y(distancia, facing);
-
-var ataque = instance_create_layer(ax, ay, "instances", obj_atack);
-
-ataque.direcao = facing;
-ataque.dano = id
+if (keyboard_check_pressed(vk_space) && ataque_time <= 0) {
+    
+    var _distancia = 14;
+    
+    var _ax = x + lengthdir_x(_distancia, facing);
+    var _ay = y + lengthdir_y(_distancia, facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_atack, {atk_dist:_distancia});
+    /*var _atk_dist = 10;
+    facing = point_direction(x,y,mouse_x,mouse_y);
+    var _atk_x = x + lengthdir_x(_atk_dist, facing);
+    var _atk_y = y + lengthdir_y(_atk_dist, facing);
+    
+    instance_create_layer(_atk_x, _atk_y, "instances", obj_atack,{
+        atk_x : _atk_x,
+        atk_y : _atk_y,
+        atk_dist : _atk_dist,
+        atk_face : facing
+    });*/
+    
+    ataque_time = 60;
 }
-//67
 
+if (ataque_time > 0) {
+    ataque_time--;
+}
+
+if (hp <= 0) {
+    hp = 0;
+    game_over = true;
+}
+
+if (empurra > 0 && noclip==0) {
+    var _empurra_x = lengthdir_x(empurra, empurra_dir);
+    var _empurra_y = lengthdir_y(empurra, empurra_dir);
+
+    move_and_collide(_empurra_x, _empurra_y, tilemap_foreground);
+
+    empurra *= 0.8;
+
+    if (empurra < 0.2) {
+        empurra = 0;
+    }
+}
+
+if (dano_time > 0) {
+    dano_time--;
+    image_blend = c_red;
+}
+else {
+    image_blend = c_white;
+}
+// TESTE GIT
+//67
