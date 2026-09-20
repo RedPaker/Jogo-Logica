@@ -29,7 +29,6 @@
     {"name":"obj_teste","order":2,"path":"objects/obj_teste/obj_teste.yy",},
     {"name":"obj_warp_parent","order":1,"path":"objects/obj_warp_parent/obj_warp_parent.yy",},
     {"name":"Menu","order":2,"path":"rooms/Menu/Menu.yy",},
-    {"name":"Room1_1","order":6,"path":"rooms/Room1_1/Room1_1.yy",},
     {"name":"teste_de_mapa","order":1,"path":"rooms/teste_de_mapa/teste_de_mapa.yy",},
     {"name":"spr_btao","order":1,"path":"sprites/spr_btao/spr_btao.yy",},
     {"name":"spr_magenta","order":1,"path":"sprites/spr_magenta/spr_magenta.yy",},

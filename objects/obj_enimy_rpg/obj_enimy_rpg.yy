@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_enimy_rpg",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_enimy_rpg",
   "overriddenProperties":[],

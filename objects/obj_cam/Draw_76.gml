@@ -9,8 +9,13 @@ if (obj_plr_rpg.noclip == 1) {
 	x = lerp(x, _plrx, .9);
     y = lerp(y, _plry, .9);
 }else{
-    x = lerp(x, _plrx+(_camx*50), .025); //para mostrar um pouco mais a frente do jogador
-    y = lerp(y, _plry+(_camy*50), .025);
+    if(obj_plr_rpg.empurra>0){
+        x = lerp(x, _plrx, .4); //para mostrar um pouco mais a frente do jogador
+        y = lerp(y, _plry, .4);
+    }else {
+        x = lerp(x, _plrx+(_camx*50), .025); //para mostrar um pouco mais a frente do jogador
+        y = lerp(y, _plry+(_camy*50), .025);
+    }
 }
 
 camera_x = camera_get_view_width(view_camera[0]);

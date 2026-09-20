@@ -96,13 +96,13 @@ if (hp <= 0) {
     game_over = true;
 }
 
-if (empurra > 0) {
+if (empurra > 0 && noclip==0) {
     var _empurra_x = lengthdir_x(empurra, empurra_dir);
     var _empurra_y = lengthdir_y(empurra, empurra_dir);
 
     move_and_collide(_empurra_x, _empurra_y, tilemap_foreground);
 
-    empurra *= 0.7;
+    empurra *= 0.8;
 
     if (empurra < 0.2) {
         empurra = 0;

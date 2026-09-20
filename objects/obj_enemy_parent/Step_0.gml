@@ -9,7 +9,7 @@ if (empurra > 0) {
 
     move_and_collide(_empurra_x,_empurra_y,[tilemap_foreground, obj_enemy_parent, obj_plr_rpg]);
 
-    empurra *= 0.7;
+    empurra *= 0.8;
 
     if (empurra < 0.2) {
         empurra = 0;
