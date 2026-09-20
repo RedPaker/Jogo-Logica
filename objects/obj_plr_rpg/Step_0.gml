@@ -82,7 +82,7 @@ if (keyboard_check_pressed(vk_space) && ataque_time <= 0) {
     var _ax = x + lengthdir_x(_distancia, facing);
     var _ay = y + lengthdir_y(_distancia, facing);
     
-    instance_create_layer(_ax, _ay, "instances", obj_atack, {atk_dist:_distancia,atk_face:facing});
+    instance_create_layer(_ax, _ay, "instances", obj_atack, {atk_dist:_distancia});
     /*var _atk_dist = 10;
     facing = point_direction(x,y,mouse_x,mouse_y);
     var _atk_x = x + lengthdir_x(_atk_dist, facing);
