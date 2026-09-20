@@ -1,6 +1,6 @@
 
 
-//image_angle =  obj_plr_rpg.facing;
+image_angle =  obj_plr_rpg.facing;
 
 
 x = obj_plr_rpg.x + lengthdir_x(atk_dist, atk_face);
