@@ -67,7 +67,7 @@ if(_input_x != 0 or _input_y != 0){
     else if (_input_y > 0) sprite_index = spr_plr_td_down;
     else if (_input_y < 0) sprite_index = spr_plr_td_up;
         
-    /*facing = point_direction(0, 0, _input_x, _input_y);*/
+    facing = point_direction(0, 0, _input_x, _input_y);
 }
 else{
     if(sprite_index == spr_plr_td_right) sprite_index = spr_plr_td_right;
@@ -75,15 +75,15 @@ else{
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_space) && ataque_time <= 0) {
     
-    /*var distancia = 14;
+    var distancia = 1;
     
     var ax = x + lengthdir_x(distancia, facing);
     var ay = y + lengthdir_y(distancia, facing);
     
-    instance_create_layer(ax, ay, "instances", obj_atack);*/
-    var _atk_dist = 14;
+    instance_create_layer(ax, ay, "instances", obj_atack);
+    /*var _atk_dist = 10;
     facing = point_direction(x,y,mouse_x,mouse_y);
     var _atk_x = x + lengthdir_x(_atk_dist, facing);
     var _atk_y = y + lengthdir_y(_atk_dist, facing);
@@ -93,11 +93,13 @@ if (keyboard_check_pressed(vk_space)) {
         atk_y : _atk_y,
         atk_dist : _atk_dist,
         atk_face : facing
-    });
+    });*/
+    
+    ataque_time = 40;
 }
 
-if (dano_time > 0) {
-    dano_time--;
+if (ataque_time > 0) {
+    ataque_time--;
 }
 
 if (hp <= 0) {
