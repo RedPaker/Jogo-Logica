@@ -1,4 +1,9 @@
 {
   "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_block_gerador_parent","order":5,"path":"objects/obj_block_gerador_parent/obj_block_gerador_parent.yy",},
+    {"name":"obj_block_imitador_parent","order":7,"path":"objects/obj_block_imitador_parent/obj_block_imitador_parent.yy",},
+    {"name":"obj_bloco_print_gerador","order":1,"path":"objects/obj_bloco_print_gerador/obj_bloco_print_gerador.yy",},
+    {"name":"obj_bloco_print_imitador","order":6,"path":"objects/obj_bloco_print_imitador/obj_bloco_print_imitador.yy",},
+  ],
 }

@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_col_2",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_bloco_print_imitador",
+  "eventList":[],
   "managed":true,
-  "name":"obj_col_2",
+  "name":"obj_bloco_print_imitador",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocos_livro",
     "path":"folders/ObjectS/Blocos_livro.yy",
   },
   "parentObjectId":{
-    "name":"obj_colission_bl_parent",
-    "path":"objects/obj_colission_bl_parent/obj_colission_bl_parent.yy",
+    "name":"obj_block_imitador_parent",
+    "path":"objects/obj_block_imitador_parent/obj_block_imitador_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collision_bl",
-    "path":"sprites/spr_collision_bl/spr_collision_bl.yy",
+    "name":"spr_bloco_printf",
+    "path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",
   },
   "spriteMaskId":null,
   "visible":true,

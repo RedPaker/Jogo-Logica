@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_parent",
+  "%Name":"obj_block_imitador_parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -9,11 +9,11 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_block_parent",
+  "name":"obj_block_imitador_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Itens",
-    "path":"folders/ObjectS/Itens.yy",
+    "name":"Blocos_livro",
+    "path":"folders/ObjectS/Blocos_livro.yy",
   },
   "parentObjectId":null,
   "persistent":false,

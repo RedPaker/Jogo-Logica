@@ -5,5 +5,5 @@ offset_livro_x = -180;
 offset_livro_y = -180;
 image_xscale = 2.8;
 image_yscale = 2.8;
-global.blocks_col = []
-blocks_col = []
+ocupado = false;
+bloco_encaixado = noone; // Guarda a ID do bloco preso nele
