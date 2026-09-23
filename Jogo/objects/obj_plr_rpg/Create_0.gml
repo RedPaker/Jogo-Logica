@@ -26,3 +26,5 @@ empurra = 0;
 empurra_dir = 0;
 
 ataque_time = 0;
+
+impacto = 0

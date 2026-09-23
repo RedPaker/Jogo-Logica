@@ -16,9 +16,15 @@ if (empurra > 0) {
     }
 }
 
+
 if (dano_time > 0) {
     dano_time--;
-    image_blend = c_red;
+
+    if ((dano_time div 4) % 2 == 0) {
+        image_blend = c_red;
+    } else {
+        image_blend = c_white;
+    }
 }
 else {
     image_blend = c_white;

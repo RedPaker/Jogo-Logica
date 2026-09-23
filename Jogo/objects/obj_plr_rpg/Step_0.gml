@@ -6,6 +6,11 @@ if (game_over) {
     exit;
 }
 
+if(impacto > 0){
+    impacto--;
+    exit;
+}
+
 
 //uhh ignore o messi code plzz
 var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -122,7 +127,12 @@ if (empurra > 0 && noclip==0) {
 
 if (dano_time > 0) {
     dano_time--;
-    image_blend = c_red;
+
+    if ((dano_time div 4) % 2 == 0) {
+        image_blend = c_red;
+    } else {
+        image_blend = c_white;
+    }
 }
 else {
     image_blend = c_white;
