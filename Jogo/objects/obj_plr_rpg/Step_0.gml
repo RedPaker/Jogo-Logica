@@ -11,6 +11,11 @@ if(impacto > 0){
     exit;
 }
 
+if (instance_exists(obj_spellbook) && obj_spellbook.abrir) {
+    image_index = 0;
+    exit; 
+}
+
 
 //uhh ignore o messi code plzz
 var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -115,7 +120,7 @@ if (hp <= 0) {
 if (empurra > 0 && noclip==0) {
     var _empurra_x = lengthdir_x(empurra, empurra_dir);
     var _empurra_y = lengthdir_y(empurra, empurra_dir);
-
+    
     move_and_collide(_empurra_x, _empurra_y, tilemap_foreground);
 
     empurra *= 0.8;
@@ -137,5 +142,7 @@ if (dano_time > 0) {
 else {
     image_blend = c_white;
 }
+
+
 // TESTE GIT
 //67

@@ -20,5 +20,3 @@ if (abrir) {
 
     draw_rectangle_color(_x1, _y1, _x2, _y2, _cor_laranja, _cor_laranja, _cor_laranja, _cor_laranja, false);
 }
-    
-    
