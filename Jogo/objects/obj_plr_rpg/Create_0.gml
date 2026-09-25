@@ -6,8 +6,7 @@ tilemap_background = layer_tilemap_get_id("tlm_bg");
 hspd = 0;
 vspd = 0;
 
-
-height = 2;
+state = 0 //0-Jogando 1-Freezed 2-Noclip 3-Knockback 4-Warping
 
 facing = 0;
 
