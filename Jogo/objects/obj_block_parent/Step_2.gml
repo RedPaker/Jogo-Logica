@@ -16,6 +16,12 @@ if (_livro_aberto) {
 
     var _cam_x = camera_get_view_x(view_camera[0]);
     var _cam_y = camera_get_view_y(view_camera[0]);
+    
+    if (!primeira) {
+        x = (_centro_x + 180) + _cam_x;
+        y = _centro_y + _cam_y;
+        primeira = true;
+    }
 
     // --- LÓGICA DE ARRASTE ---
     if (arrastando) {
@@ -31,31 +37,25 @@ if (_livro_aberto) {
         y = _gui_limitada_y + _cam_y;
 
         // --- MOUSE SOLTO: CHECA COLISÃO E ENCAIXE ---
-        if (mouse_check_button_released(mb_left)) {
-            arrastando = false;
+        // --- MOUSE SOLTO: CHECA ENCAIXE DIRETO NO SLOT BASE ---
+if (mouse_check_button_released(mb_left)) {
+    arrastando = false;
 
-            var _slot_encontrado = noone;
+    // Detecta se soltou em cima de QUALQUER instância do obj_colission_bl
+    var _slot_encontrado = instance_place(x, y, obj_colission_bl);
 
-            // Percorre o seu array global de colisão
-            for (var i = 0; i < array_length(global.blocks_col); i++) {
-                var _slot_teste = instance_place(x, y, global.blocks_col[i].name);
-                if (_slot_teste != noone) {
-                    _slot_encontrado = _slot_teste;
-                    break;
-                }
-            }
-
-            if (_slot_encontrado != noone) {
-                // ENCAIXOU: Alinha perfeitamente com o slot
-                x = _slot_encontrado.x;
-                y = _slot_encontrado.y;
-                show_debug_message("Bloco Encaixado!");
-            } else {
-                // NÃO ENCAIXOU: Reseta para a posição inicial no livro
-                x = (_centro_x + 180) + _cam_x;
-                y = _centro_y + _cam_y;
-                show_debug_message("Não encaixou, voltou ao início!");
-            }
-        }
+    if (_slot_encontrado != noone) {
+        // ENCAIXOU: Alinha perfeitamente com a posição do slot
+        x = _slot_encontrado.x;
+        y = _slot_encontrado.y;
+        show_debug_message("Bloco Encaixado na linha: " + string(_slot_encontrado.linha));
+    } else {
+        x = (display_get_gui_width() / 2 + 180) + _cam_x;
+        y = (display_get_gui_height() / 2) + _cam_y;
+        show_debug_message("Não encaixou, voltou ao início!");
     }
+}
+}
+} else {
+    primeira = false
 }

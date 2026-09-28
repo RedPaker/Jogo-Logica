@@ -15,4 +15,7 @@ if (instance_exists(obj_spellbook) && obj_spellbook.abrir) {
  var _gui_x = x - camera_get_view_x(view_camera[0]);
 var _gui_y = y - camera_get_view_y(view_camera[0]);
 
-
+if (!instance_exists(obj_spellbook) || !obj_spellbook.abrir) {
+    instance_destroy();
+    exit;
+}

@@ -1,9 +1,23 @@
-depth = -90; // Um pouco atrás do bloco para o bloco ficar por cima dele
 
-// Deslocamento desejado no livro (por exemplo: 180 pixels à direita do centro)
-offset_livro_x = -180;
-offset_livro_y = -180;
+event_inherited();
+
+depth = -90; 
 image_xscale = 2.8;
 image_yscale = 2.8;
-ocupado = false;
-bloco_encaixado = noone; // Guarda a ID do bloco preso nele
+offset_livro_x = -180;
+offset_livro_y = -180; 
+linha = 0;
+bloco_encaixado = noone;
+
+if (!variable_global_exists("blocks_col")) {
+    global.blocks_col = [];
+}
+
+
+var _item_col_data = {
+    id_instancia: id,
+    sprite: object_get_sprite(object_index),
+    linha: linha
+};
+
+array_push(global.blocks_col, _item_col_data);
