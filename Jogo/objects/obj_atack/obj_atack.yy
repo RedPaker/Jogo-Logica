@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_yellow",
-    "path":"sprites/spr_yellow/spr_yellow.yy",
+    "name":"spr_plr_atk",
+    "path":"sprites/spr_plr_atk/spr_plr_atk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

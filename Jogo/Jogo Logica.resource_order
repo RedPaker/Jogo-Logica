@@ -5,5 +5,6 @@
     {"name":"obj_block_imitador_parent","order":7,"path":"objects/obj_block_imitador_parent/obj_block_imitador_parent.yy",},
     {"name":"obj_bloco_print_gerador","order":1,"path":"objects/obj_bloco_print_gerador/obj_bloco_print_gerador.yy",},
     {"name":"obj_bloco_print_imitador","order":6,"path":"objects/obj_bloco_print_imitador/obj_bloco_print_imitador.yy",},
+    {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
   ],
 }

@@ -78,6 +78,7 @@
     {"id":{"name":"spr_livro_feiticos_principal","path":"sprites/spr_livro_feiticos_principal/spr_livro_feiticos_principal.yy",},},
     {"id":{"name":"spr_magenta","path":"sprites/spr_magenta/spr_magenta.yy",},},
     {"id":{"name":"spr_mangos","path":"sprites/spr_mangos/spr_mangos.yy",},},
+    {"id":{"name":"spr_plr_atk","path":"sprites/spr_plr_atk/spr_plr_atk.yy",},},
     {"id":{"name":"spr_plr_placeholder","path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",},},
     {"id":{"name":"spr_plr_td_down","path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},},
     {"id":{"name":"spr_plr_td_left","path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},},
