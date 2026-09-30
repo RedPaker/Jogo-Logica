@@ -2,32 +2,33 @@
 <html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Syne+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Syne+Mono&display=swap"
+    rel="stylesheet">
+
 <head>
     <title>Site do jogo</title>
 
     <style>
-        
         .syne-mono-regular {
-  font-family: "Syne Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
+            font-family: "Syne Mono", monospace;
+            font-weight: 200;
+            font-style: normal;
+        }
 
         body {
             background-color: #fbfefb;
             color: #050316;
             font-family: "Noto Sans";
-
+            margin: 0;
         }
 
         header {
             background-color: #fbfefb;
-            padding: 20px;
             text-align: center;
+            gap:20
         }
 
-        header h1{
+        header h1 {
             font-size: 80px;
         }
 
@@ -48,7 +49,8 @@
             display: flex;
             gap: 20px;
             margin-top: 20px;
-            padding: 150px;
+            padding-left: 15%;
+            padding-right: 15%;
         }
 
         article {
@@ -59,9 +61,10 @@
             grid-template-columns: 1fr 1fr 1fr;
             box-sizing: border-box;
             gap: 20px;
+            flex: 3;
         }
 
-        
+
 
         section {
             background-color: #fbfefb;
@@ -69,14 +72,15 @@
             padding: 15px;
             height: 100%;
             box-sizing: border-box;
+            border-radius: 20px;
         }
 
         section img {
             width: 100%;
             height: auto;
-            float: left;
             margin-right: 15px;
             object-fit: cover;
+            border-radius: 10px;
         }
 
         section h2 {
@@ -90,15 +94,17 @@
         .link-caixa {
             color: inherit;
             text-decoration: none;
-            display: block; 
-            height: 100%;
+            display: block;
+            width: 100%;
+            display: flex;
         }
 
         aside {
             background-color: #27ce75;
-            border: 2px solid #050316;
             padding: 20px;
             width: 30%;
+            border-radius: 40px;
+            flex: 1;
         }
 
         aside h2 {
@@ -106,13 +112,12 @@
         }
 
         footer {
-            background-color: #dbfffa;
+            background-color: #00241f;
             padding: 20px;
             margin-top: 20px;
             text-align: center;
+            color: #eae9fc;
         }
-
-
     </style>
 </head>
 
@@ -122,15 +127,13 @@
         <p>Bem-vindo ao site de apresentação do nosso jogo de lógica.</p>
 
         <nav>
-            <a href="site-jogo.html">Site Alternativo</a>
             <a href="historia.html">História</a>
             <a href="personagens.html">Personagens</a>
             <a href="criadores.html">Criadores</a>
             <a href="storyboards.html">Storyboards</a>
         </nav>
     </header>
-    <hr>
-    </hr>
+
 
     <main class="principal">
 
@@ -143,7 +146,6 @@
                     <h2>História</h2>
                     <p>
                         História e acontecimentos do jogo.
-                        Espere que o jogo correr naturalmente.
                     </p>
                 </section>
             </a>
