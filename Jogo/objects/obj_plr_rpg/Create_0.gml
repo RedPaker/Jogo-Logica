@@ -1,3 +1,17 @@
+global.roomxy =  [
+    { 
+    roomname : room,
+    roomx : x,
+    roomy : y,
+    },
+    { 
+    roomname : room,
+    roomx : x,
+    roomy : y,
+    }
+]
+
+
 /*move_spdy = 2; //velocidade y
 move_spdx = 2;velocidade x*/
 move_spd = 2;
@@ -16,14 +30,11 @@ cam_x = 0;
 cam_y = 0;
 
 hp = 100;
-
 dano_time = 0;
-
 game_over = false;
 
 empurra = 0;
 empurra_dir = 0;
 
 ataque_time = 0;
-
 impacto = 0
