@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+.bodyfix{
+    margin-top: 60px;
+}
+
 header {
     background-color: #fbfefb;
     text-align: center;

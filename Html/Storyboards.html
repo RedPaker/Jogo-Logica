@@ -1,62 +1,22 @@
 <html>
 <head>
     <title>Storyboards</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 30px;
-            font-family: Arial, sans-serif;
-            background: #071522;
-            color: white;
-        }
-
-        .caixa {
-            max-width: 1000px;
-            margin: auto;
-            background: rgba(35, 85, 110, 0.45);
-            border: 1px solid rgba(180, 220, 230, 0.5);
-            padding: 25px;
-        }
-
-        .caixa img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 25px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #7fffd4;
-            margin: 10px 0;
-        }
-
-        h2 {
-            text-align: center;
-            color: #7cff70;
-            margin-bottom: 30px;
-        }
-
-        .voltar {
-            display: block;
-            width: fit-content;
-            margin: 25px auto;
-            padding: 10px 20px;
-            border: 1px solid #7fffd4;
-            color: white;
-            text-decoration: none;
-        }
-
-        .voltar:hover {
-            background: #16384c;
-        }
-    </style>
+    <link rel="stylesheet" href="Stylesheet.css">
 </head>
 
-<body>
+<body class="bodyfix">
+    <header>
+        <h1 class="syne-mono-regular">Spells 'n Glitches</h1>
+        <p>Bem-vindo ao site de apresentação do nosso jogo de lógica.</p>
 
-    <div class="caixa">
+        <nav>
+            <a href="historia.html">História</a>
+            <a href="personagens.html">Personagens</a>
+            <a href="criadores.html">Criadores</a>
+            <a href="storyboards.html">Storyboards</a>
+        </nav>
+    </header>
+    <div class="primarybox">
 
         <img src="Son.png">
 
@@ -71,6 +31,21 @@
         <a href="site-jogo.html" class="voltar">Voltar</a>
 
     </div>
-
+    <footer>
+        <table>
+            <tr>
+                <th>Arthur Andrade</th>
+                <th>|</th>
+                <th>Leonardo Brandão</th>
+                <th>|</th>
+                <th>Mateus Diógenes</th>
+                <th>|</th>
+                <th>Matheus Junqueira</th>
+                <th>|</th>
+                <th>Nicolas Salatini</th>
+            </tr>
+        </table>
+        <p>DS 131 - IFSP SPO - 2026</p>
+    </footer>
 </body>
 </html>
