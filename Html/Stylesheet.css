@@ -131,6 +131,7 @@ footer p {
     height: 300px;
     object-fit: cover;
     display: block;
+    border-radius: 25px;
 }
 
 .primarybox h1 {
