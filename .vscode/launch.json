@@ -10,6 +10,13 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir Html no Chrome",
+            "url": "${file}",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
