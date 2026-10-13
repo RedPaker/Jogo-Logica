@@ -1,10 +1,17 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"obj_atack","order":2,"path":"objects/obj_atack/obj_atack.yy",},
     {"name":"obj_block_gerador_parent","order":5,"path":"objects/obj_block_gerador_parent/obj_block_gerador_parent.yy",},
     {"name":"obj_block_imitador_parent","order":7,"path":"objects/obj_block_imitador_parent/obj_block_imitador_parent.yy",},
     {"name":"obj_bloco_print_gerador","order":1,"path":"objects/obj_bloco_print_gerador/obj_bloco_print_gerador.yy",},
     {"name":"obj_bloco_print_imitador","order":6,"path":"objects/obj_bloco_print_imitador/obj_bloco_print_imitador.yy",},
+    {"name":"obj_inventory","order":1,"path":"objects/obj_inventory/obj_inventory.yy",},
+    {"name":"obj_item_parent","order":6,"path":"objects/obj_item_parent/obj_item_parent.yy",},
+    {"name":"obj_save","order":7,"path":"objects/obj_save/obj_save.yy",},
+    {"name":"obj_spellbook","order":4,"path":"objects/obj_spellbook/obj_spellbook.yy",},
+    {"name":"obj_spoon","order":5,"path":"objects/obj_spoon/obj_spoon.yy",},
+    {"name":"obj_teste","order":3,"path":"objects/obj_teste/obj_teste.yy",},
     {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
   ],
 }
