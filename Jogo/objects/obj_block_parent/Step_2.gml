@@ -25,6 +25,9 @@ if (_livro_aberto) {
 
     // --- LÓGICA DE ARRASTE ---
     if (arrastando) {
+        
+        aumenta = true
+        
         var _mouse_gui_x = device_mouse_x_to_gui(0);
         var _mouse_gui_y = device_mouse_y_to_gui(0);
 
@@ -55,7 +58,10 @@ if (mouse_check_button_released(mb_left)) {
         show_debug_message("Não encaixou, voltou ao início!");
     }
 }
+} else {
+        aumenta = false
 }
 } else {
     primeira = false
 }
+

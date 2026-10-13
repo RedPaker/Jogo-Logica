@@ -12,8 +12,8 @@
   "name":"obj_block_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Itens",
-    "path":"folders/ObjectS/Itens.yy",
+    "name":"Blocos_livro",
+    "path":"folders/ObjectS/Blocos_livro.yy",
   },
   "parentObjectId":null,
   "persistent":false,

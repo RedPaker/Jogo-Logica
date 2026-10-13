@@ -5,7 +5,7 @@ var _plrx = obj_plr_rpg.x;
 var _plry = obj_plr_rpg.y;
 
 
-if (obj_plr_rpg.noclip == 1) {
+if (obj_plr_rpg.noclip == 1 or obj_spellbook.abrir == true) {
 	x = lerp(x, _plrx, .9);
     y = lerp(y, _plry, .9);
 }else{
@@ -22,3 +22,4 @@ camera_x = camera_get_view_width(view_camera[0]);
 camera_y = camera_get_view_height(view_camera[0]);
 
 camera_set_view_pos(view_camera[0], (x-(camera_x/2)), (y-(camera_y/2)));
+

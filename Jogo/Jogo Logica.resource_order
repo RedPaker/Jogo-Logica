@@ -1,4 +1,21 @@
 {
-  "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"GUI","order":1,"path":"folders/Sprite/GUI.yy",},
+    {"name":"Inimigos","order":2,"path":"folders/Sprite/Inimigos.yy",},
+    {"name":"Itens","order":3,"path":"folders/Sprite/Itens.yy",},
+    {"name":"Main_Char","order":4,"path":"folders/Sprite/Main_Char.yy",},
+    {"name":"Misc","order":5,"path":"folders/Sprite/Misc.yy",},
+    {"name":"Tiles","order":6,"path":"folders/Sprite/Tiles.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_block_parent","order":3,"path":"objects/obj_block_parent/obj_block_parent.yy",},
+    {"name":"obj_colission_bl","order":1,"path":"objects/obj_colission_bl/obj_colission_bl.yy",},
+    {"name":"obj_collision_mini","order":2,"path":"objects/obj_collision_mini/obj_collision_mini.yy",},
+    {"name":"obj_enimy_rpg","order":1,"path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},
+    {"name":"obj_mini_disco","order":5,"path":"objects/obj_mini_disco/obj_mini_disco.yy",},
+    {"name":"obj_mini_parent","order":4,"path":"objects/obj_mini_parent/obj_mini_parent.yy",},
+    {"name":"spr_colission_mini","order":2,"path":"sprites/spr_colission_mini/spr_colission_mini.yy",},
+    {"name":"spr_collision_bl","order":1,"path":"sprites/spr_collision_bl/spr_collision_bl.yy",},
+    {"name":"spr_mini_disco","order":3,"path":"sprites/spr_mini_disco/spr_mini_disco.yy",},
+  ],
 }
