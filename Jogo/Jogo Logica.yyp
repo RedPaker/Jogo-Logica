@@ -71,6 +71,7 @@
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},},
+    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
     {"id":{"name":"spr_bloco_printf","path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",},},
     {"id":{"name":"spr_btao","path":"sprites/spr_btao/spr_btao.yy",},},
     {"id":{"name":"spr_cam","path":"sprites/spr_cam/spr_cam.yy",},},
