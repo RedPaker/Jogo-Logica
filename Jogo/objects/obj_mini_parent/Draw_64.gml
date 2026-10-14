@@ -1,11 +1,13 @@
 
-if (aumenta) { 
-    scale_x = 3.2;
-    scale_y = 3.2;
+if (aumenta){ 
+    scale_x = 3.2
+    scale_y = 3.2
 } else {
-    scale_x = 2.8;
-    scale_y = 2.8;
+    scale_x = 2.8
+    scale_y = 2.8
+
 }
+
 
 if (instance_exists(obj_spellbook) && obj_spellbook.abrir) {
     var _gui_x = x - camera_get_view_x(view_camera[0]);

@@ -1,3 +1,4 @@
+// Verifica se o livro de feitiços está aberto
 var _livro_aberto = instance_exists(obj_spellbook) && obj_spellbook.abrir;
 
 if (_livro_aberto) {
@@ -18,13 +19,14 @@ if (_livro_aberto) {
     
     if (!primeira) {
         x = (_centro_x + 180) + _cam_x;
-        y = _centro_y + _cam_y;
+        y = (_centro_y + 100) + _cam_y;
         primeira = true;
     }
 
     // --- LÓGICA DE ARRASTE ---
     if (arrastando) {
-        aumenta = true;
+        
+        aumenta = true
         
         var _mouse_gui_x = device_mouse_x_to_gui(0);
         var _mouse_gui_y = device_mouse_y_to_gui(0);
@@ -37,34 +39,29 @@ if (_livro_aberto) {
         x = _gui_limitada_x + _cam_x;
         y = _gui_limitada_y + _cam_y;
 
-        // --- MOUSE SOLTO: CHECA ENCAIXE ---
-        if (mouse_check_button_released(mb_left)) {
-            arrastando = false;
+        // --- MOUSE SOLTO: CHECA COLISÃO E ENCAIXE ---
+        // --- MOUSE SOLTO: CHECA ENCAIXE DIRETO NO SLOT BASE ---
+if (mouse_check_button_released(mb_left)) {
+    arrastando = false;
 
-            // Busca colisão prioritariamente com sub-slot pequeno, depois slot base
-            var _slot_pequeno = instance_place(x, y, obj_colission_bl_pequeno);
-            var _slot_base = instance_place(x, y, obj_colission_bl);
+    // Detecta se soltou em cima de QUALQUER instância do obj_colission_bl
+    var _slot_encontrado = instance_place(x, y, obj_colission_mini);
 
-            if (_slot_pequeno != noone) {
-                // Encaixa no slot do bloco maior
-                x = _slot_pequeno.x;
-                y = _slot_pequeno.y;
-                show_debug_message("Bloquinho menor encaixado no sub-slot!");
-            } else if (_slot_base != noone) {
-                // Alternativa: Encaixa no slot normal
-                x = _slot_base.x;
-                y = _slot_base.y;
-                show_debug_message("Bloquinho menor encaixado na linha: " + string(_slot_base.linha));
-            } else {
-                // Volta ao início
-                x = (_centro_x + 180) + _cam_x;
-                y = _centro_y + _cam_y;
-                show_debug_message("Não encaixou, voltou ao início!");
-            }
-        }
+    if (_slot_encontrado != noone) {
+        // ENCAIXOU: Alinha perfeitamente com a posição do slot
+        x = _slot_encontrado.x;
+        y = _slot_encontrado.y;
+        show_debug_message("Bloco Encaixado na linha: " + string(_slot_encontrado.linha));
     } else {
-        aumenta = false;
+        x = (display_get_gui_width() / 2 + 180) + _cam_x;
+        y = (display_get_gui_height() / 2 + 100) + _cam_y;
+        show_debug_message("Não encaixou, voltou ao início!");
     }
-} else {
-    primeira = false;
 }
+} else {
+        aumenta = false
+}
+} else {
+    primeira = false
+}
+

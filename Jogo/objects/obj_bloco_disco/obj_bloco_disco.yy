@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_collision_mini",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_bloco_disco",
+  "eventList":[],
   "managed":true,
-  "name":"obj_collision_mini",
+  "name":"obj_bloco_disco",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocos_livro",
     "path":"folders/ObjectS/Blocos_livro.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_mini_parent",
+    "path":"objects/obj_mini_parent/obj_mini_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_colission_mini",
-    "path":"sprites/spr_colission_mini/spr_colission_mini.yy",
+    "name":"spr_mini_disco",
+    "path":"sprites/spr_mini_disco/spr_mini_disco.yy",
   },
   "spriteMaskId":null,
   "visible":true,

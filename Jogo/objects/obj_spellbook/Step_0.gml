@@ -6,8 +6,10 @@ if (keyboard_check_pressed(ord("B"))){
 var _centro_x = display_get_gui_width() / 2;
 var _centro_y = display_get_gui_height() / 2;
 
-var _slots_total = 9;
-var _espacamento_y = 50;
+if (abrir && !slots_criados){
+    var _slots_total = 9;
+    var _espacamento_y = 50;
+    var _espacamento_x = 45;
 
 for (var i = 0; i < _slots_total; i++) {
     var _slot = instance_create_layer(_centro_x - 180, _centro_y - 120 + (i * _espacamento_y), "Instances", obj_colission_bl);
@@ -17,24 +19,23 @@ for (var i = 0; i < _slots_total; i++) {
     _slot.offset_livro_y = - 200 + (i * _espacamento_y);
 }
 
+var _linhas_totais = 9
+var _slots_mini = 5
 
-//TESTES
-// Supondo que a origem da sprite do bloco maior seja no Canto Superior Esquerdo (0,0):
-meus_sub_slots = [];
-
-var _total_sub_slots = 5;
-var _largura_sub_slot = 16;
-
-for (var i = 0; i < _total_sub_slots; i++) {
-    var _slot_pequeno = instance_create_layer(x, y, "Instances", obj_collision_mini);
+for (var i = 0; i < _linhas_totais; i++) {
+    for (var j = 0; j < _slots_mini; j++){
+        var _slot = instance_create_layer(_centro_x - 180 + (j* _espacamento_x), _centro_y - 120 + (i * _espacamento_y), "Instances", obj_colission_mini);
     
-    _slot_pequeno.bloco_mae = id;
-    _slot_pequeno.sub_linha = i;
+        _slot.linha = i;
+        _slot.offset_livro_x = -270 + (j* _espacamento_x) ;
+        _slot.offset_livro_y = - 200 + (i * _espacamento_y);
+    }
     
-    // Alinha horizontalmente: slot 0 em X=0, slot 1 em X=16, slot 2 em X=32, etc.
-    _slot_pequeno.offset_pai_x = i * _largura_sub_slot; 
-    _slot_pequeno.offset_pai_y = 0;
-    
-
-    array_push(meus_sub_slots, _slot_pequeno);
+    slots_criados = true
 }
+
+}
+
+
+
+
