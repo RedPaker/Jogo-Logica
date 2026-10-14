@@ -5,7 +5,7 @@ if(place_meeting(x, y, obj_plr_rpg)){
             sprite:object_get_sprite(object_index),
         };
         array_push(global.inv, _item_data);
-        instance_destroy();
+        instance_deactivate_object(id)
     }
     
 }

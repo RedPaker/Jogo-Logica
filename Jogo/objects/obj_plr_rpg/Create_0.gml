@@ -1,15 +1,4 @@
-global.roomxy =  [
-    { 
-    roomname : room,
-    roomx : x,
-    roomy : y,
-    },
-    { 
-    roomname : room,
-    roomx : x,
-    roomy : y,
-    }
-]
+
 
 
 /*move_spdy = 2; //velocidade y
