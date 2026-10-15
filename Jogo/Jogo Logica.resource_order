@@ -15,5 +15,6 @@
     {"name":"obj_warp_parent","order":1,"path":"objects/obj_warp_parent/obj_warp_parent.yy",},
     {"name":"Configs","order":1,"path":"rooms/Configs/Configs.yy",},
     {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
+    {"name":"Sprite21","order":1,"path":"sprites/Sprite21/Sprite21.yy",},
   ],
 }
