@@ -1,26 +1,11 @@
 
-if (file_exists("save.ini")) {
-    ini_open("save.ini");
-
-    obj_plr_rpg.x = ini_read_real("player", "x", 0);
-    obj_plr_rpg.y = ini_read_real("player", "y", 0);
-    obj_plr_rpg.hp = ini_read_real("player", "hp", 100);
-
-    global.inv = [];
-
-    var _inv = ini_read_real("inventario", "quantidade", 0);
-
-    for (var i = 0; i < _inv; i++) {
-        var _sprite = ini_read_real("inventario", "sprite_" + string(i), -1);
-        var _nome = ini_read_string("inventario", "nome_" + string(i), "");
-
-        array_push(global.inv, {
-            name: _nome,
-            sprite: _sprite
-        });
-    }
-
-    ini_close();
-
-
+if (file_exists("save.json")) {
+    var _arquivo = file_text_open_read("save.json");
+    var _texto = file_text_read_string(_arquivo);
+    file_text_close(_arquivo);
+var _dados = json_parse(_texto);
+    obj_plr_rpg.x = _dados.x;
+    obj_plr_rpg.y = _dados.y;
+    obj_plr_rpg.hp = _dados.hp;
 }
+

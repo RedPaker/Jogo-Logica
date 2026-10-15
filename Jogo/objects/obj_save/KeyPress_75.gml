@@ -1,10 +1,12 @@
 
-if(file_exists("save.ini"))file_delete("save.ini"); 
-    ini_open("save.ini");
+var _dados = {
+    x: obj_plr_rpg.x,
+    y: obj_plr_rpg.y,
+    hp: obj_plr_rpg.hp
+};
 
-ini_write_real("player", "x", obj_plr_rpg.x);
-ini_write_real("player", "y", obj_plr_rpg.y);
-ini_write_real("player", "hp", obj_plr_rpg.hp);
+var _json = json_stringify(_dados)
 
-
-ini_close();
+var _arquivo = file_text_open_write("save.json")
+file_text_write_string(_arquivo, _json)
+file_text_close(_arquivo)
