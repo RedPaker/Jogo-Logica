@@ -7,3 +7,4 @@ image_xscale = 2.8;
 image_yscale = 2.8;
 primeira = false;
 aumenta = false;
+a_frente = false

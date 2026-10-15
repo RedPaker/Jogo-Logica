@@ -35,6 +35,7 @@ if (mouse_check_button_pressed(mb_left)) {
     
     if (_clicou) {
         arrastando = true;
+        a_frente = true
     }
 }
 

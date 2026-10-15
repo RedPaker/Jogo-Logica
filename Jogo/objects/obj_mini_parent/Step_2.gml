@@ -43,7 +43,7 @@ if (_livro_aberto) {
         // --- MOUSE SOLTO: CHECA ENCAIXE DIRETO NO SLOT BASE ---
 if (mouse_check_button_released(mb_left)) {
     arrastando = false;
-
+    a_frente = false
     // Detecta se soltou em cima de QUALQUER instância do obj_colission_bl
     var _slot_encontrado = instance_place(x, y, obj_colission_mini);
 

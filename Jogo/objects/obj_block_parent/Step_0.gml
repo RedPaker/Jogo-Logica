@@ -33,9 +33,15 @@ if (mouse_check_button_pressed(mb_left)) {
         }
     }
     
-    if (_clicou) {
+    
+    if (obj_mini_parent.a_frente == false){
+        if (_clicou) {
         arrastando = true;
     }
+    } else {
+    	arrastando = false
+    }
+    
 }
 
 

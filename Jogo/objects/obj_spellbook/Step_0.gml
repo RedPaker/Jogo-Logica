@@ -31,11 +31,14 @@ for (var i = 0; i < _linhas_totais; i++) {
         _slot.offset_livro_y = - 200 + (i * _espacamento_y);
     }
     
+    
+}
     slots_criados = true
 }
 
+
+if (slots_criados == true && keyboard_check_pressed(ord("B"))){
+    slots_criados = false
 }
-
-
 
 
