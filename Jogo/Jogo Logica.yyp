@@ -54,6 +54,7 @@
     {"id":{"name":"obj_block_imitador_parent","path":"objects/obj_block_imitador_parent/obj_block_imitador_parent.yy",},},
     {"id":{"name":"obj_bloco_print_gerador","path":"objects/obj_bloco_print_gerador/obj_bloco_print_gerador.yy",},},
     {"id":{"name":"obj_bloco_print_imitador","path":"objects/obj_bloco_print_imitador/obj_bloco_print_imitador.yy",},},
+    {"id":{"name":"obj_botao_play","path":"objects/obj_botao_play/obj_botao_play.yy",},},
     {"id":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
     {"id":{"name":"obj_colission_bl","path":"objects/obj_colission_bl/obj_colission_bl.yy",},},
@@ -70,6 +71,7 @@
     {"id":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},},
     {"id":{"name":"Configs","path":"rooms/Configs/Configs.yy",},},
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
+    {"id":{"name":"room_save","path":"rooms/room_save/room_save.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},},
     {"id":{"name":"spr_bloco_printf","path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",},},
@@ -100,6 +102,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
+    {"roomId":{"name":"room_save","path":"rooms/room_save/room_save.yy",},},
     {"roomId":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Configs","path":"rooms/Configs/Configs.yy",},},
