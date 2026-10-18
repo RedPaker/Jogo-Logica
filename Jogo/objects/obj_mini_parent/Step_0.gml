@@ -15,8 +15,7 @@ var _half_h = sprite_height / 2;
 var _livro_aberto = instance_exists(obj_spellbook) && obj_spellbook.abrir;
 
 if (mouse_check_button_pressed(mb_left)) {
-    var _clicou = false;
-    
+    var _clicou = false
     if (_livro_aberto) {
         // Verifica colisão na tela GUI
         if (point_in_rectangle(_mouse_gui_x, _mouse_gui_y, _bloco_gui_x - _half_w, _bloco_gui_y - _half_h, _bloco_gui_x + _half_w, _bloco_gui_y + _half_h)) {
