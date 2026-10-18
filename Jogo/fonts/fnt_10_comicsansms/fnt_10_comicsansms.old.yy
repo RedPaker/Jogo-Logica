@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_comicsansms_10",
+  "%Name":"fnt_10_comicsansms",
   "AntiAlias":0,
   "applyKerning":0,
   "ascender":15,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":19,
   "maintainGms1Font":false,
-  "name":"fnt_comicsansms_10",
+  "name":"fnt_10_comicsansms",
   "parent":{
     "name":"Typefaces",
     "path":"folders/Typefaces.yy",

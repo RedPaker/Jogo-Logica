@@ -1,15 +1,15 @@
 {
   "$GMRoom":"v1",
-  "%Name":"Menu",
+  "%Name":"rm_menu",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_15212BB4","path":"rooms/Menu/Menu.yy",},
-    {"name":"inst_2A3E5C9","path":"rooms/Menu/Menu.yy",},
-    {"name":"inst_79C3169A","path":"rooms/Menu/Menu.yy",},
-    {"name":"inst_495F5363","path":"rooms/Menu/Menu.yy",},
+    {"name":"inst_15212BB4","path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"inst_2A3E5C9","path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"inst_79C3169A","path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"inst_779F3D6C","path":"rooms/rm_menu/rm_menu.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -19,15 +19,20 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":16.0,"y":16.0,},
         {"$GMRInstance":"v4","%Name":"inst_79C3169A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_79C3169A","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"propertyId":{"name":"txt","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Settings",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"propertyId":{"name":"font_color","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFFFFFFF",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"propertyId":{"name":"room2send","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"resource":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_configs",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":1.5,"x":232.0,"y":156.0,},
         {"$GMRInstance":"v4","%Name":"inst_2A3E5C9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2A3E5C9","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"propertyId":{"name":"txt","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Creditos",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":1.5,"x":288.0,"y":156.0,},
-        {"$GMRInstance":"v4","%Name":"inst_495F5363","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_495F5363","objectId":{"name":"obj_botao_play","path":"objects/obj_botao_play/obj_botao_play.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":1.5,"x":176.0,"y":156.0,},
+        {"$GMRInstance":"v4","%Name":"inst_779F3D6C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_779F3D6C","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"propertyId":{"name":"room2send","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"resource":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_save",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"propertyId":{"name":"txt","path":"objects/obj_btao_parente/obj_btao_parente.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Play",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":1.5,"x":176.0,"y":156.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"Sprite21","path":"sprites/Sprite21/Sprite21.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"Menu",
+  "name":"rm_menu",
   "parent":{
     "name":"All_these__rooms",
     "path":"folders/All_these__rooms.yy",
@@ -62,7 +67,7 @@
   "viewSettings":{
     "clearDisplayBuffer":true,
     "clearViewBackground":false,
-    "enableViews":false,
+    "enableViews":true,
     "inheritViewSettings":false,
   },
   "volume":1.0,

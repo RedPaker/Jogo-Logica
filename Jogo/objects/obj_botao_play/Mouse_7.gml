@@ -1,1 +1,1 @@
-room_goto(room_save)
+room_goto(rm_save)

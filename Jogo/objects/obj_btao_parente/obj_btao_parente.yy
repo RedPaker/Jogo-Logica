@@ -37,13 +37,13 @@
     {"$GMObjectProperty":"v2","%Name":"widthofthetext","filters":[],"listItems":[],"multiselect":false,"name":"widthofthetext","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1.0","varFriendlyName":"Largura Maxima","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"room2send","filters":[
         "GMRoom",
-      ],"listItems":[],"multiselect":false,"name":"room2send","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"teste_de_mapa","path":"rooms/teste_de_mapa/teste_de_mapa.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"teste_de_mapa","varFriendlyName":"Sala a Enviar","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"room2send","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_menu","varFriendlyName":"Sala a Enviar","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"h_align","filters":[],"listItems":[],"multiselect":false,"name":"h_align","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fa_center","varFriendlyName":"Alinhação Horizontal","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"v_align","filters":[],"listItems":[],"multiselect":false,"name":"v_align","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fa_center","varFriendlyName":"Alinhamento Vertical","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"font_color","filters":[],"listItems":[],"multiselect":false,"name":"font_color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFFFFFFF","varFriendlyName":"Cor","varType":7,},
     {"$GMObjectProperty":"v2","%Name":"font_typeface","filters":[
         "GMFont",
-      ],"listItems":[],"multiselect":false,"name":"font_typeface","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"fnt_comicsansms_8","path":"fonts/fnt_comicsansms_8/fnt_comicsansms_8.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fnt_comicsansms_8","varFriendlyName":"Fonte","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"font_typeface","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"fnt_8_comicsansms","path":"fonts/fnt_8_comicsansms/fnt_8_comicsansms.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fnt_8_comicsansms","varFriendlyName":"Fonte","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
