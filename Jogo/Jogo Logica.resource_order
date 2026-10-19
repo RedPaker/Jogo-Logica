@@ -30,6 +30,7 @@
     {"name":"rm_mappingtest","order":2,"path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"rm_save","order":4,"path":"rooms/rm_save/rm_save.yy",},
     {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
+    {"name":"spr_cyan","order":1,"path":"sprites/spr_cyan/spr_cyan.yy",},
     {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
     {"name":"spr_ui_frame","order":2,"path":"sprites/spr_ui_frame/spr_ui_frame.yy",},
     {"name":"Sprite21","order":1,"path":"sprites/Sprite21/Sprite21.yy",},

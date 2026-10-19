@@ -78,6 +78,7 @@
     {"id":{"name":"spr_bloco_printf","path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",},},
     {"id":{"name":"spr_cam","path":"sprites/spr_cam/spr_cam.yy",},},
     {"id":{"name":"spr_collision_bl","path":"sprites/spr_collision_bl/spr_collision_bl.yy",},},
+    {"id":{"name":"spr_cyan","path":"sprites/spr_cyan/spr_cyan.yy",},},
     {"id":{"name":"spr_invtr_placeholder","path":"sprites/spr_invtr_placeholder/spr_invtr_placeholder.yy",},},
     {"id":{"name":"spr_livro_feiticos_principal","path":"sprites/spr_livro_feiticos_principal/spr_livro_feiticos_principal.yy",},},
     {"id":{"name":"spr_magenta","path":"sprites/spr_magenta/spr_magenta.yy",},},
