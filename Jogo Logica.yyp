@@ -50,6 +50,11 @@
     {"id":{"name":"obj_atack","path":"objects/obj_atack/obj_atack.yy",},},
     {"id":{"name":"obj_btao_parente","path":"objects/obj_btao_parente/obj_btao_parente.yy",},},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
+<<<<<<< Updated upstream:Jogo Logica.yyp
+=======
+    {"id":{"name":"obj_colission_bl","path":"objects/obj_colission_bl/obj_colission_bl.yy",},},
+    {"id":{"name":"obj_damage_counter","path":"objects/obj_damage_counter/obj_damage_counter.yy",},},
+>>>>>>> Stashed changes:Jogo/Jogo Logica.yyp
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enimy_rpg","path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},},
