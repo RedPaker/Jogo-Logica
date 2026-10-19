@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Blocos_livro",
-    "path":"folders/Sprite/Blocos_livro.yy",
+    "name":"Misc",
+    "path":"folders/Sprite/Misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
