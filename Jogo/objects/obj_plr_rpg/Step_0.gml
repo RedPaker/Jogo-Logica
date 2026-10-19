@@ -29,10 +29,10 @@ if (keyboard_check(ord("X"))){
 }
 
 if(keyboard_check_pressed(ord("N"))){
-    if (noclip == 1) {
-    	noclip = 0;
+    if (state == 2) {
+    	state = 0;
     }else {
-    	noclip = 1;
+    	state = 2;
     }
 }
 
@@ -54,9 +54,9 @@ vspd = lerp(vspd, _target_y, 0);*/
 var _old_x = x;
 var _old_y = y;
 
-if(noclip==0){  
+if(state==0){  
     move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined);
-}else{
+}else if(state == 2){
     x += clamp(_target_x*5, -5, 5);
     y += clamp(_target_y*5, -5, 5);
 }
@@ -112,7 +112,7 @@ if (hp <= 0) {
     game_over = true;
 }
 
-if (empurra > 0 && noclip==0) {
+if (empurra > 0 && state==0) {
     var _empurra_x = lengthdir_x(empurra, empurra_dir);
     var _empurra_y = lengthdir_y(empurra, empurra_dir);
 

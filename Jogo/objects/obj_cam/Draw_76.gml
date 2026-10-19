@@ -5,7 +5,7 @@ var _plrx = obj_plr_rpg.x;
 var _plry = obj_plr_rpg.y;
 
 
-if (obj_plr_rpg.noclip == 1) {
+if (obj_plr_rpg.state == 2) {
 	x = lerp(x, _plrx, .9);
     y = lerp(y, _plry, .9);
 }else{
