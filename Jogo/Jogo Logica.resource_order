@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings":[
     {"name":"All_these__rooms","order":1,"path":"folders/All_these__rooms.yy",},
-    {"name":"Shadurhs","order":6,"path":"folders/Shadurhs.yy",},
     {"name":"ObjectS","order":2,"path":"folders/ObjectS.yy",},
+    {"name":"Shadurhs","order":6,"path":"folders/Shadurhs.yy",},
     {"name":"Sprite","order":3,"path":"folders/Sprite.yy",},
     {"name":"Tileseh","order":4,"path":"folders/Tileseh.yy",},
     {"name":"Typefaces","order":5,"path":"folders/Typefaces.yy",},
