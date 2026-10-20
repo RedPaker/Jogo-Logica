@@ -19,6 +19,33 @@ if (abrir) {
     var _y2 = _centro_y + 235;
 
     draw_rectangle_color(_x1, _y1, _x2, _y2, _cor_laranja, _cor_laranja, _cor_laranja, _cor_laranja, false);
+    
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_set_color(c_black);
+    
+    draw_text_transformed(_centro_x + 330, _centro_y + 250, string(pagina_atual + 1), 4, 4, 0);
+
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    
+    //Texto
+    
+    if (pagina_atual >= 0 && pagina_atual < array_length(global.paginas_spawn_data)) {
+        var _lista_pagina = global.paginas_spawn_data[pagina_atual];
+        
+        // Pega o primeiro item (onde fica a frase)
+        if (array_length(_lista_pagina) > 0) {
+            var _primeiro_item = _lista_pagina[0];
+            
+            if (variable_struct_exists(_primeiro_item, "frase")) {
+                draw_set_halign(fa_center);
+                draw_set_valign(fa_middle);
+                draw_set_color(c_black);
+                
+                // Desenha o título no topo da página esquerda (ajuste os offsets X e Y se precisar)
+                draw_text_transformed(_centro_x - 180, _centro_y - 260, _primeiro_item.frase,1.7,1.7,0);
+            } 
+        }
+    }
 }
-    
-    

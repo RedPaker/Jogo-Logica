@@ -14,20 +14,29 @@ if (!variable_global_exists("paginas_spawn_data")) {
 
 global.paginas_spawn_data[0] = [
     {
+        frase: "Arremesso de disco"
+    },
+    
+    {
         objeto: obj_bloco_print,
         offset_x: 180,
         offset_y: -100,
-        linha_inicial: noone // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
     },
     {
         objeto: obj_bloco_disco,
-        offset_x: 220,
-        offset_y: -100,
+        offset_x: 100,
+        offset_y: 1, 
         linha_inicial: noone
     }
     ];
 
 global.paginas_spawn_data[1] = [
+     {
+        frase: "CHOQUE"
+    },
+    
+    
     {
         objeto: obj_bloco_disco,
         offset_x: 180,
@@ -53,6 +62,11 @@ spawn_blocos_pagina = function(pagina_atual) {
     for (var i = 0; i < array_length(_lista_blocos); i++){
         
         var _dados = _lista_blocos[i];
+        
+        if (!variable_struct_exists(_dados, "objeto")) {
+            continue;
+        }
+        
         var _spawn_x = (_centro_x + _dados.offset_x) + _cam_x;
         var _spawn_y = (_centro_y + _dados.offset_y) + _cam_y;
         var _novo_bloco = instance_create_layer(_spawn_x, _spawn_y, "Instances", _dados.objeto);
