@@ -9,7 +9,7 @@ if(!atingiu){
     
 	other.dano_time = 15;
 	
-	other.empurra = 4;
+	other.empurra = 3;
 	other.empurra_dir =point_direction(obj_plr_rpg.x, obj_plr_rpg.y, other.x, other.y);
 	
 	atingiu = true;

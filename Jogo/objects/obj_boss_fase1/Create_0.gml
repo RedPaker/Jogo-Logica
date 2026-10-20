@@ -1,22 +1,22 @@
-
 alvo_x = x;
 alvo_y = y;
 
 hp = 50;
+move_spd = 0.4;
 
-move_spd = 0.7;
 alarm[0] = 60;
 
 distance_to_player = 100;
 
-tilemap_foreground = layer_tilemap_get_id("tlm_fg");//fala onde colidir
+tilemap_foreground = layer_tilemap_get_id("tlm_fg");
 tilemap_background = layer_tilemap_get_id("tlm_bg");
 
 empurra = 0;
-
 empurra_dir = 0;
 
 dano_time = 0;
+tempo_piscada = 6;
 
-
-tempo_piscada = 6
+estado = "perseguir";
+tempo_estado = 0;
+tempo_tiro = 0;
