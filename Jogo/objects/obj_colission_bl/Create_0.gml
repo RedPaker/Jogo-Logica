@@ -21,3 +21,4 @@ var _item_col_data = {
 };
 
 array_push(global.blocks_col, _item_col_data);
+        

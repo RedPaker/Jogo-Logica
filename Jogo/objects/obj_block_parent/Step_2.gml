@@ -1,6 +1,16 @@
 // Verifica se o livro de feitiços está aberto
 var _livro_aberto = instance_exists(obj_spellbook) && obj_spellbook.abrir;
 
+posicao_livro = function() {
+    var _centro_x = display_get_gui_width() / 2;
+    var _centro_y = display_get_gui_height() / 2;
+    var _cam_x = camera_get_view_x(view_camera[0]);
+    var _cam_y = camera_get_view_y(view_camera[0]);
+
+    x = (_centro_x + offset_inventario_x) + _cam_x;
+    y = (_centro_y + offset_inventario_y) + _cam_y;
+};
+
 if (_livro_aberto) {
     // --- DEFINIÇÕES DE PÁGINA E LIMITES DA GUI ---
     var _centro_x = display_get_gui_width() / 2;
@@ -18,8 +28,7 @@ if (_livro_aberto) {
     var _cam_y = camera_get_view_y(view_camera[0]);
     
     if (!primeira) {
-        x = (_centro_x + 180) + _cam_x;
-        y = _centro_y + _cam_y;
+        posicao_livro()
         primeira = true;
     }
 
@@ -53,8 +62,7 @@ if (mouse_check_button_released(mb_left)) {
         y = _slot_encontrado.y;
         show_debug_message("Bloco Encaixado na linha: " + string(_slot_encontrado.linha));
     } else {
-        x = (display_get_gui_width() / 2 + 180) + _cam_x;
-        y = (display_get_gui_height() / 2) + _cam_y;
+        posicao_livro()
         show_debug_message("Não encaixou, voltou ao início!");
     }
 }
