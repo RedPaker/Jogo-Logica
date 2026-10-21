@@ -137,6 +137,24 @@ if (dano_time > 0) {
 else {
     image_blend = c_white;
 }
+
+if (tiro_time > 0) {
+    tiro_time--;
+}
+
+if (keyboard_check(ord("R")) && tiro_time <= 0) {
+    var _tiro = instance_create_layer(
+        x + lengthdir_x(14, facing),
+        y + lengthdir_y(14, facing),
+        "instances",
+        obj_cd
+    );
+
+    _tiro.direcao = facing;
+    _tiro.image_angle = facing;
+
+    tiro_time = tiro_cadencia;
+}
 // TESTE GIT
 //67
 //depth = -y

@@ -26,3 +26,6 @@ empurra_dir = 0;
 
 ataque_time = 0;
 impacto = 0
+
+tiro_time = 0
+tiro_cadencia = 30
