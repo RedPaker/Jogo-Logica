@@ -9,3 +9,5 @@ primeira = false;
 aumenta = false;
 offset_inventario_x = 180;
 offset_inventario_y = 0;
+valor_conferencia = 0
+send = false

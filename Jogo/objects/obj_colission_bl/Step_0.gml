@@ -18,3 +18,4 @@ if (!instance_exists(obj_spellbook) || !obj_spellbook.abrir) {
     instance_destroy();
     exit;
 }
+

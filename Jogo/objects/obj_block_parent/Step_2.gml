@@ -56,6 +56,7 @@ if (mouse_check_button_released(mb_left)) {
         x = _slot_encontrado.x;
         y = _slot_encontrado.y;
         show_debug_message("Bloco Encaixado na linha: " + string(_slot_encontrado.linha));
+       send = true;
     } else {
         posicao_livro()
         show_debug_message("Não encaixou, voltou ao início!");

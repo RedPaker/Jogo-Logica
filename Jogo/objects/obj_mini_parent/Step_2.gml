@@ -36,35 +36,7 @@ if (_livro_aberto) {
         if (mouse_check_button_released(mb_left)) {
             arrastando = false;
             a_frente = false;
-
-            var _slot_mini = instance_place(x, y, obj_colission_mini);
-
-            if (_slot_mini != noone) {
-                var _linha_alvo = _slot_mini.linha;
-                var _tem_bloco = false;
-
-                with (obj_block_parent) {
-                    var _slot_pai = instance_place(x, y, obj_colission_bl);
-                    
-                    if (_slot_pai != noone && _slot_pai.linha == _linha_alvo) {
-                        _tem_bloco_ = true;
-                    }
-                }
-
-                var _posicao_valida = (hitbox_valido == -1 || _slot_mini.posicao == hitbox_valido);
-
-                if (_tem_bloco && _posicao_valida) {
-                    x = _slot_mini.x;
-                    y = _slot_mini.y;
-                } else {
-                    x = (_centro_x + 180) + _cam_x;
-                    y = (_centro_y + 100) + _cam_y;
-                }
-                
-            } else {
-                x = (_centro_x + 180) + _cam_x;
-                y = (_centro_y + 100) + _cam_y;
-            }
+            encaixe();
         }
     } else {
         aumenta = false;

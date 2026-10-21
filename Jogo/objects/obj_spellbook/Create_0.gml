@@ -14,6 +14,10 @@ if (!variable_global_exists("paginas_spawn_data")) {
 
 global.paginas_spawn_data[0] = [
     {
+        seq_certa: [1],
+        seq_certa_mini:  [2]
+    },
+    {
         frase: "Arremesso de disco"
     },
     
@@ -31,7 +35,12 @@ global.paginas_spawn_data[0] = [
     }
     ];
 
+
 global.paginas_spawn_data[1] = [
+        {
+        seq_certa: [1],
+        seq_certa_mini:  [2]
+    },
      {
         frase: "CHOQUE"
     },
@@ -119,4 +128,83 @@ for (var i = 0; i < _linhas_totais; i++) {
     
 }
     slots_criados = true
+}
+
+
+verificacao = function(pagina_atual){
+    
+    if (pagina_atual >= array_length(global.paginas_spawn_data)) return;
+        
+    var _lista_blocos = global.paginas_spawn_data[pagina_atual];
+    
+     for (var n = 0; n < array_length(_lista_blocos); n++){
+        
+        var _dados = _lista_blocos[n];
+        
+        if (!variable_struct_exists(_dados, "seq_certa")) {
+            continue;
+        }
+        
+        
+    var _grande = false
+    var _mini = false
+    
+    
+    var _sequencia_jogador = [];
+
+    for (var i = 0; i < 9; i++) {
+        var _valor_da_linha = -1;
+        
+        with (obj_block_parent) {
+            var _slot_pai = instance_place(x, y, obj_colission_bl);
+            
+            if (_slot_pai != noone && _slot_pai.linha == i) {
+                _valor_da_linha = valor_conferencia;
+                show_debug_message(_valor_da_linha);
+            }
+        }
+        
+        if (_valor_da_linha != -1) {
+            array_push(_sequencia_jogador, _valor_da_linha);
+        }
+    }
+        
+    var _receita_correta = _dados.seq_certa;
+
+    if (array_equals(_sequencia_jogador, _receita_correta)) {
+        show_debug_message("Feitiço correto!");
+     _grande = true
+    }
+        
+    var _sequencia_mini_jogador = [];
+
+    for (var ix = 0; ix < 9; ix++) {
+        for (var jx = 0; jx < 5; jx++) {
+            var _valor_encontrado = -1;
+            
+            with (obj_mini_parent) {
+                var _slot_mini = instance_place(x, y, obj_colission_mini);
+                
+                if (_slot_mini != noone && _slot_mini.linha == ix && _slot_mini.posicao == jx) {
+                    _valor_encontrado = valor_conferencia; 
+                    show_debug_message(_valor_encontrado);
+                }
+            }
+            
+            if (_valor_encontrado != -1) {
+                array_push(_sequencia_mini_jogador, _valor_encontrado);
+            }
+        }
+    }
+    var _receita_mini_correta = _dados.seq_certa_mini;
+
+    if (array_equals(_sequencia_mini_jogador, _receita_mini_correta)) {
+        show_debug_message("Sequência dos mini blocos correta!");
+        _mini = true
+    }
+    
+    if (_mini = true && _grande == true){
+        show_debug_message("Parabéns!")
+    }
+}
 }

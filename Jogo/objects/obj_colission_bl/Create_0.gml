@@ -9,8 +9,8 @@ offset_livro_y = -180;
 linha = 0;
 bloco_encaixado = noone;
 
-if (!variable_global_exists("blocks_col")) {
-    global.blocks_col = [];
+if (!variable_global_exists("blocks")) {
+    global.blocks = [];
 }
 
 
@@ -20,5 +20,4 @@ var _item_col_data = {
     linha: linha
 };
 
-array_push(global.blocks_col, _item_col_data);
-        
+//array_push(global.blocks, _item_col_data);

@@ -25,3 +25,8 @@ if (keyboard_check_pressed(vk_left)){
         spawn_blocos_pagina(pagina_atual);
     }
 }
+
+
+if (keyboard_check_pressed(vk_enter)){
+    verificacao(pagina_atual)
+}
