@@ -48,6 +48,7 @@
     {"name":"rm_save","order":4,"path":"rooms/rm_save/rm_save.yy",},
     {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"room_boss_fase1","order":5,"path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
+    {"name":"room_boss_web","order":6,"path":"rooms/room_boss_web/room_boss_web.yy",},
     {"name":"spr_collision_bl","order":5,"path":"sprites/spr_collision_bl/spr_collision_bl.yy",},
     {"name":"spr_cyan","order":4,"path":"sprites/spr_cyan/spr_cyan.yy",},
     {"name":"spr_magenta","order":3,"path":"sprites/spr_magenta/spr_magenta.yy",},
