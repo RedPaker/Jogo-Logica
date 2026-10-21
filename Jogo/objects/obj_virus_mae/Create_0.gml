@@ -19,6 +19,15 @@ tempo_piscada = 6;
 
 estado = "perseguir";
 tempo_estado = 0;
+dash_vel = 8
+dash_dir = 0
+
+dash_tempo = 0;
+dash_carga = 45;
+dash_dura = 12
+dash_recarga = 60
+
+
 tempo_parir = 60;
 filhos = 2
 filhos_max = 6;

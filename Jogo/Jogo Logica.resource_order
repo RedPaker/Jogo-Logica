@@ -55,7 +55,5 @@
     {"name":"spr_warp_parent","order":1,"path":"sprites/spr_warp_parent/spr_warp_parent.yy",},
     {"name":"spr_yellow","order":2,"path":"sprites/spr_yellow/spr_yellow.yy",},
     {"name":"Sprite21","order":1,"path":"sprites/Sprite21/Sprite21.yy",},
-    {"name":"Sprite24","order":4,"path":"sprites/Sprite24/Sprite24.yy",},
-    {"name":"Sprite25","order":5,"path":"sprites/Sprite25/Sprite25.yy",},
   ],
 }

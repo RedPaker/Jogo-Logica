@@ -102,8 +102,6 @@
     {"id":{"name":"spr_warp_parent","path":"sprites/spr_warp_parent/spr_warp_parent.yy",},},
     {"id":{"name":"spr_yellow","path":"sprites/spr_yellow/spr_yellow.yy",},},
     {"id":{"name":"Sprite21","path":"sprites/Sprite21/Sprite21.yy",},},
-    {"id":{"name":"Sprite24","path":"sprites/Sprite24/Sprite24.yy",},},
-    {"id":{"name":"Sprite25","path":"sprites/Sprite25/Sprite25.yy",},},
     {"id":{"name":"virus","path":"sprites/virus/virus.yy",},},
     {"id":{"name":"tls_Placeholder","path":"tilesets/tls_Placeholder/tls_Placeholder.yy",},},
     {"id":{"name":"tls_placeholder2","path":"tilesets/tls_placeholder2/tls_placeholder2.yy",},},
