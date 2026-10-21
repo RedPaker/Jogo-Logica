@@ -89,17 +89,28 @@ switch (estado) {
             var _quantidade = instance_number(obj_enimy_rpg);
             for (var i = 0; i < filhos; i++) {
                 if (_quantidade < filhos_max) {
-                    var _ang = irandom(359);
-                    var _dist = irandom_range(24, 40);
-                    var _ex = x + lengthdir_x(_dist, _ang);
-                    var _ey = y + lengthdir_y(_dist, _ang);
+                    var _criou = false;
+                    var _tentativas = 0;
+                    
+                    while (!_criou && _tentativas < 30) {
+                    	var _ang = irandom(359);
+                        var _dist = irandom_range(24, 40);
+                        var _ex = x + lengthdir_x(_dist, _ang);
+                        var _ey = y + lengthdir_y(_dist, _ang);
+                    
+                    if(!place_meeting(_ex, _ey, tilemap_foreground)){
                     instance_create_layer(
                         _ex,
                         _ey,
                         "instances",
                         obj_enimy_rpg
-                    );
+                    ); 
+                
                     _quantidade++;
+                    _criou = true;    
+                        }
+                        _tentativas++; 
+                    }     
                 }
             }
             estado = "perseguir";
