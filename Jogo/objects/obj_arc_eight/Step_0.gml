@@ -27,7 +27,7 @@ switch (estado) {
     case "atirar":
         tempo_tiro--;
     if (tempo_tiro <= 0) {
-        instance_create_layer(x, y, "instances", obj_tiro_boss );
+        instance_create_layer(x, y, "instances", obj_tiro_boss);
         tempo_tiro = 20; 
     }
     tempo_estado--;

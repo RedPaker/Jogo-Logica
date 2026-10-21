@@ -26,6 +26,8 @@
     {"name":"inst_712485EC","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_40D29FED","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_4D95802","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
+    {"name":"inst_371354D2","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
+    {"name":"inst_63BAC772","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -61,6 +63,10 @@
         {"$GMRInstance":"v4","%Name":"inst_24DE1EE9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24DE1EE9","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"propertyId":{"name":"warpto_room","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"resource":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_test",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":984.0,"y":992.0,},
+        {"$GMRInstance":"v4","%Name":"inst_371354D2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_371354D2","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"propertyId":{"name":"warpto_room","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"resource":{"name":"room_boss_fase1","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"room_boss_fase1",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2616.0,"y":256.0,},
+        {"$GMRInstance":"v4","%Name":"inst_63BAC772","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63BAC772","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2616.0,"y":224.0,},
       ],"layers":[],"name":"Entities","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"tlm_ent","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tlm_ent","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":141,"SerialiseWidth":250,"TileCompressedData":[
           -2407,-2147483648,1,8,-145,-2147483648,-8,18,-91,-2147483648,1,8,-8,-2147483648,1,8,-141,-2147483648,
