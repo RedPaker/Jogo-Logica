@@ -1,4 +1,3 @@
-
 var _livro_aberto = instance_exists(obj_spellbook) && obj_spellbook.abrir;
 
 if (_livro_aberto) {
@@ -23,8 +22,7 @@ if (_livro_aberto) {
     }
 
     if (arrastando) {
-        
-        aumenta = true
+        aumenta = true;
         
         var _mouse_gui_x = device_mouse_x_to_gui(0);
         var _mouse_gui_y = device_mouse_y_to_gui(0);
@@ -35,25 +33,42 @@ if (_livro_aberto) {
         x = _gui_limitada_x + _cam_x;
         y = _gui_limitada_y + _cam_y;
 
-if (mouse_check_button_released(mb_left)) {
-    arrastando = false;
-    a_frente = false
-    var _slot_encontrado = instance_place(x, y, obj_colission_mini);
+        if (mouse_check_button_released(mb_left)) {
+            arrastando = false;
+            a_frente = false;
 
-    if (_slot_encontrado != noone) {
-        x = _slot_encontrado.x;
-        y = _slot_encontrado.y;
-        show_debug_message("Bloco Encaixado na linha: " + string(_slot_encontrado.linha));
+            var _slot_mini = instance_place(x, y, obj_colission_mini);
+
+            if (_slot_mini != noone) {
+                var _linha_alvo = _slot_mini.linha;
+                var _tem_bloco = false;
+
+                with (obj_block_parent) {
+                    var _slot_pai = instance_place(x, y, obj_colission_bl);
+                    
+                    if (_slot_pai != noone && _slot_pai.linha == _linha_alvo) {
+                        _tem_bloco_ = true;
+                    }
+                }
+
+                var _posicao_valida = (hitbox_valido == -1 || _slot_mini.posicao == hitbox_valido);
+
+                if (_tem_bloco && _posicao_valida) {
+                    x = _slot_mini.x;
+                    y = _slot_mini.y;
+                } else {
+                    x = (_centro_x + 180) + _cam_x;
+                    y = (_centro_y + 100) + _cam_y;
+                }
+                
+            } else {
+                x = (_centro_x + 180) + _cam_x;
+                y = (_centro_y + 100) + _cam_y;
+            }
+        }
     } else {
-        x = (display_get_gui_width() / 2 + 180) + _cam_x;
-        y = (display_get_gui_height() / 2 + 100) + _cam_y;
-        show_debug_message("Não encaixou, voltou ao início!");
+        aumenta = false;
     }
-}
 } else {
-        aumenta = false
+    primeira = false;
 }
-} else {
-    primeira = false
-}
-

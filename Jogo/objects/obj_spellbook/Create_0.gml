@@ -110,8 +110,10 @@ for (var i = 0; i < _linhas_totais; i++) {
         var _slot = instance_create_layer(_centro_x - 180 + (j* _espacamento_x), _centro_y - 120 + (i * _espacamento_y), "Instances", obj_colission_mini);
     
         _slot.linha = i;
+        _slot.posicao = j;
         _slot.offset_livro_x = -270 + (j* _espacamento_x) ;
         _slot.offset_livro_y = - 200 + (i * _espacamento_y);
+        show_debug_message("Criado Slot Mini -> Linha: " + string(i) + " | Posicao (j): " + string(j));
     }
     
     

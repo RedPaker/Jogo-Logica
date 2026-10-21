@@ -1,5 +1,4 @@
 
-event_inherited();
 
 depth = -85; 
 image_xscale = 2.8;
@@ -8,6 +7,7 @@ offset_livro_x = -180;
 offset_livro_y = -180; 
 linha = 0;
 bloco_encaixado = noone;
+posicao = 0;
 
 if (!variable_global_exists("blocks_col")) {
     global.blocks_col = [];
