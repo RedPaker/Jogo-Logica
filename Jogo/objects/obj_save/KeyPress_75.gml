@@ -1,8 +1,13 @@
 var _dados = {
+    plr :{
+        
+    },
+    char : {
         x: obj_plr_rpg.x,
         y: obj_plr_rpg.y,
         hp: obj_plr_rpg.hp
-    };
+    }
+};
 
     var _json = json_stringify(_dados);
 

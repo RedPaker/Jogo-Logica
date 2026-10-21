@@ -8,3 +8,5 @@ if (tilemap_get_at_pixel( tilemap_foreground, x + _h, y + _v ) != 0) {
     x += _h;
     y += _v;
 }
+
+depth = -y

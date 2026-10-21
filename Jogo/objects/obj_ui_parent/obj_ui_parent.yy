@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
   "%Name":"obj_ui_parent",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_ui_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"GUI",
-    "path":"folders/ObjectS/GUI.yy",
+    "name":"UI",
+    "path":"folders/ObjectS/UI.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -23,7 +26,12 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_ui_frame","path":"sprites/spr_ui_frame/spr_ui_frame.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_ui_frame","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"uiactive","filters":[],"listItems":[],"multiselect":false,"name":"uiactive","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
