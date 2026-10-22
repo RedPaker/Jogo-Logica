@@ -1,4 +1,6 @@
 show_debug_message("TOuched")
+
+
 if (warpto_room == noone) {
     if(warpto_x != -1){
         player.x=warpto_x

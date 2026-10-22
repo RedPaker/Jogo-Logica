@@ -16,3 +16,6 @@ empurra = 0;
 empurra_dir = 0;
 
 dano_time = 0;
+
+
+tempo_piscada = 6
