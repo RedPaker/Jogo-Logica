@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Tileseh",
-    "path":"folders/Sprite/Tileseh.yy",
+    "path":"folders/Tileseh.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

@@ -1,24 +1,20 @@
 {
   "$GMObject":"",
-<<<<<<<< HEAD:Jogo/objects/obj_bloco_print/obj_bloco_print.yy
   "%Name":"obj_bloco_print",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_bloco_print",
-========
-  "%Name":"obj_ui_parent",
-  "eventList":[],
-  "managed":true,
-  "name":"obj_ui_parent",
->>>>>>>> main:Jogo/objects/obj_ui_parent/obj_ui_parent.yy
   "overriddenProperties":[],
   "parent":{
-    "name":"GUI",
-    "path":"folders/ObjectS/GUI.yy",
+    "name":"Blocos_livro",
+    "path":"folders/ObjectS/Blocos_livro.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_block_parent",
+    "path":"objects/obj_block_parent/obj_block_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -37,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ui_frame",
-    "path":"sprites/spr_ui_frame/spr_ui_frame.yy",
+    "name":"spr_bloco_printf",
+    "path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",
   },
   "spriteMaskId":null,
   "visible":true,

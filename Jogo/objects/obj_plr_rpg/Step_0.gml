@@ -6,9 +6,9 @@ if (game_over) {
     exit;
 }
 
-if(impacto > 0){
-    impacto--;
-    exit;
+if (obj_spellbook.abrir == true){
+    move_spd = 0
+    exit
 }
 
 
@@ -29,10 +29,10 @@ if (keyboard_check(ord("X"))){
 }
 
 if(keyboard_check_pressed(ord("N"))){
-    if (state == 2) {
-    	state = 0;
+    if (noclip == 1) {
+    	noclip = 0;
     }else {
-    	state = 2;
+    	noclip = 1;
     }
 }
 
@@ -54,9 +54,9 @@ vspd = lerp(vspd, _target_y, 0);*/
 var _old_x = x;
 var _old_y = y;
 
-if(state==0){  
+if(noclip==0){  
     move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined);
-}else if(state == 2){
+}else{
     x += clamp(_target_x*5, -5, 5);
     y += clamp(_target_y*5, -5, 5);
 }
@@ -112,7 +112,7 @@ if (hp <= 0) {
     game_over = true;
 }
 
-if (empurra > 0 && state==0) {
+if (empurra > 0 && noclip==0) {
     var _empurra_x = lengthdir_x(empurra, empurra_dir);
     var _empurra_y = lengthdir_y(empurra, empurra_dir);
 
@@ -127,34 +127,10 @@ if (empurra > 0 && state==0) {
 
 if (dano_time > 0) {
     dano_time--;
-
-    if ((dano_time div 4) % 2 == 0) {
-        image_blend = c_red;
-    } else {
-        image_blend = c_white;
-    }
+    image_blend = c_red;
 }
 else {
     image_blend = c_white;
 }
-
-if (tiro_time > 0) {
-    tiro_time--;
-}
-
-if (keyboard_check(ord("R")) && tiro_time <= 0) {
-    var _tiro = instance_create_layer(
-        x + lengthdir_x(14, facing),
-        y + lengthdir_y(14, facing),
-        "instances",
-        obj_cd
-    );
-
-    _tiro.direcao = facing;
-    _tiro.image_angle = facing;
-
-    tiro_time = tiro_cadencia;
-}
 // TESTE GIT
 //67
-//depth = -y

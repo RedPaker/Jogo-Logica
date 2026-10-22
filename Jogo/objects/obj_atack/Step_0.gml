@@ -1,6 +1,6 @@
-//depth = -y
 
-image_angle =  obj_plr_rpg.facing+90;
+
+image_angle =  obj_plr_rpg.facing;
 
 
 x = obj_plr_rpg.x + lengthdir_x(atk_dist, obj_plr_rpg.facing);
