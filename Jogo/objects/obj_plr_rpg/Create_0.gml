@@ -1,3 +1,6 @@
+
+
+
 /*move_spdy = 2; //velocidade y
 move_spdx = 2;velocidade x*/
 move_spd = 2;
@@ -6,24 +9,23 @@ tilemap_background = layer_tilemap_get_id("tlm_bg");
 hspd = 0;
 vspd = 0;
 
-
-height = 2;
+state = 0 //0-Jogando 1-Freezed 2-Noclip 3-Knockback 4-Warping
 
 facing = 0;
 
-noclip = 0;
 
 cam_x = 0;
 cam_y = 0;
 
 hp = 100;
-
 dano_time = 0;
-
 game_over = false;
 
 empurra = 0;
 empurra_dir = 0;
 
 ataque_time = 0;
+impacto = 0
 
+tiro_time = 0
+tiro_cadencia = 30
