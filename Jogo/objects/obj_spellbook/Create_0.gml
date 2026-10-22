@@ -4,6 +4,7 @@ bloco_ja_criado = false;
 depth = 100;
 slots_criados = false
 pagina_atual = 0
+desenhar = false;
 
 
 //Aqui vai ser o spawn dos blocos  nas páginas (eu acho)
@@ -204,7 +205,8 @@ verificacao = function(pagina_atual){
     }
     
     if (_mini = true && _grande == true){
-        show_debug_message("Parabéns!")
+        show_debug_message("Parabéns!");
+        desenhar = true
     }
 }
 }

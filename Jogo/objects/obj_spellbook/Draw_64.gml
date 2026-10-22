@@ -35,8 +35,7 @@ if (abrir) {
         var _lista_pagina = global.paginas_spawn_data[pagina_atual];
 
         if (array_length(_lista_pagina) > 0) {
-            var _primeiro_item = _lista_pagina[0];
-            
+            var _primeiro_item = _lista_pagina[1];
             if (variable_struct_exists(_primeiro_item, "frase")) {
                 draw_set_halign(fa_center);
                 draw_set_valign(fa_middle);
@@ -47,3 +46,20 @@ if (abrir) {
         }
     }
 }
+
+
+if (desenhar == true){
+     var _centro_x = display_get_gui_width() / 2;
+    var _centro_y = display_get_gui_height() / 2;
+
+ draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_set_color(c_green);
+    
+    draw_text_transformed(_centro_x + 220, _centro_y + 250, "Resenha", 4, 4, 0);
+
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+
+}
+
