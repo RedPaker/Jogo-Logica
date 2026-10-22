@@ -1,21 +1,13 @@
 {
   "$GMObject":"",
-<<<<<<<< HEAD:Jogo/objects/obj_colission_mini/obj_colission_mini.yy
-  "%Name":"obj_colission_mini",
-========
   "%Name":"obj_damage_count",
->>>>>>>> main:Jogo/objects/obj_damage_count/obj_damage_count.yy
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-<<<<<<<< HEAD:Jogo/objects/obj_colission_mini/obj_colission_mini.yy
-  "name":"obj_colission_mini",
-========
   "name":"obj_damage_count",
->>>>>>>> main:Jogo/objects/obj_damage_count/obj_damage_count.yy
   "overriddenProperties":[],
   "parent":{
     "name":"Misc",
@@ -39,14 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-<<<<<<<< HEAD:Jogo/objects/obj_colission_mini/obj_colission_mini.yy
-  "spriteId":{
-    "name":"spr_colission_mini",
-    "path":"sprites/spr_colission_mini/spr_colission_mini.yy",
-  },
-========
   "spriteId":null,
->>>>>>>> main:Jogo/objects/obj_damage_count/obj_damage_count.yy
   "spriteMaskId":null,
   "visible":true,
 }

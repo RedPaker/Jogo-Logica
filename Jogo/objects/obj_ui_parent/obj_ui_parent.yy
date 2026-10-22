@@ -1,18 +1,9 @@
 {
   "$GMObject":"",
-<<<<<<<< HEAD:Jogo/objects/obj_bloco_print/obj_bloco_print.yy
-  "%Name":"obj_bloco_print",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
-  "managed":true,
-  "name":"obj_bloco_print",
-========
   "%Name":"obj_ui_parent",
   "eventList":[],
   "managed":true,
   "name":"obj_ui_parent",
->>>>>>>> main:Jogo/objects/obj_ui_parent/obj_ui_parent.yy
   "overriddenProperties":[],
   "parent":{
     "name":"GUI",
