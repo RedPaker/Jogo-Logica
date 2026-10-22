@@ -1,5 +1,6 @@
-if(!variable_global_exists("firsttimeplaying")){
+if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;
+    show_debug_message("Reset");
     
     global.st_up = vk_up;
     global.st_left = vk_left;
@@ -18,6 +19,6 @@ if(!variable_global_exists("firsttimeplaying")){
     
     global.st_cutsn = true;
     
-    global.st_music = 50/100;
-    global.st_master = 100/100;
+    global.st_music = 25/100;
+    global.st_master = 50/100;
 } 

@@ -61,7 +61,6 @@ if(state==0){
     y += clamp(_target_y*5, -5, 5);
 }
 
-depth = -y
 
 cam_x = x-_old_x; 
 cam_y = y-_old_y;
@@ -82,7 +81,7 @@ else{
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
 if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
-    
+    show_debug_message(global.st_use);
     var _distancia = 14;
     
     var _ax = x + lengthdir_x(_distancia, facing);

@@ -10,7 +10,10 @@
     {"name":"inst_2A3E5C9","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_79C3169A","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_779F3D6C","path":"rooms/rm_menu/rm_menu.yy",},
-    {"name":"inst_52702E69","path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"inst_2313504F","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_7316CCBA","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_CD0FA5","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_22F0EA52","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -30,10 +33,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_button_rmsnd","path":"objects/obj_ui_button_rmsnd/obj_ui_button_rmsnd.yy",},"propertyId":{"name":"room2send","path":"objects/obj_ui_button_rmsnd/obj_ui_button_rmsnd.yy",},"resource":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_save",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_button_text","path":"objects/obj_ui_button_text/obj_ui_button_text.yy",},"propertyId":{"name":"txt","path":"objects/obj_ui_button_text/obj_ui_button_text.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Play",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":1.5,"x":176.0,"y":156.0,},
-        {"$GMRInstance":"v4","%Name":"inst_52702E69","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_52702E69","objectId":{"name":"obj_ui_button_01","path":"objects/obj_ui_button_01/obj_ui_button_01.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"sprite","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resource":{"name":"spr_invtr_placeholder","path":"sprites/spr_invtr_placeholder/spr_invtr_placeholder.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_invtr_placeholder",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":112.0,},
-      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"Sprite21","path":"sprites/Sprite21/Sprite21.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_menu",
