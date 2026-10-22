@@ -28,11 +28,6 @@
     {"name":"inst_4D95802","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_371354D2","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_63BAC772","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_74891105","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_2F7C0D0D","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_14B09BC0","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_21BE4DF","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_133A8E78","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
   ],
   "isDnd":false,
   "layers":[
