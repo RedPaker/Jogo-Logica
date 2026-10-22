@@ -1,4 +1,5 @@
 switch (estado) {
+    
 
     case "perseguir":
 
@@ -78,7 +79,7 @@ switch (estado) {
         tempo_estado++;
             if (tempo_estado >= dash_dura) {
                 estado = "filhos";
-                tempo_parir = 60
+                tempo_parir = 150
                 tempo_estado = 0;
         }
     break;
