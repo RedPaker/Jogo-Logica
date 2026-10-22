@@ -11,6 +11,10 @@ if(impacto > 0){
     exit;
 }
 
+if (obj_spellbook.abrir){
+    move_spd = 0
+    exit
+}
 
 //uhh ignore o messi code plzz
 var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));

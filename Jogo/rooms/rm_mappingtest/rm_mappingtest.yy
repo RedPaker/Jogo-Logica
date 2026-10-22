@@ -7,10 +7,8 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_5C3C47FF","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_F4999C0","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_5EC0B8C6","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_6CA3C41","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_63B870A4","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_12D6B015_1","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_79A82E24","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_51EF70B3","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
@@ -28,6 +26,8 @@
     {"name":"inst_4D95802","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_371354D2","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_63BAC772","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
+    {"name":"inst_53AEECBB","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
+    {"name":"inst_79892148","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -38,12 +38,12 @@
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_5C3C47FF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C3C47FF","objectId":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":912.0,"y":912.0,},
-        {"$GMRInstance":"v4","%Name":"inst_F4999C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_F4999C0","objectId":{"name":"obj_bloco_print_gerador","path":"objects/obj_bloco_print_gerador/obj_bloco_print_gerador.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":856.0,},
         {"$GMRInstance":"v4","%Name":"inst_5EC0B8C6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5EC0B8C6","objectId":{"name":"obj_colission_bl","path":"objects/obj_colission_bl/obj_colission_bl.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1176.0,"y":856.0,},
-        {"$GMRInstance":"v4","%Name":"inst_63B870A4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63B870A4","objectId":{"name":"obj_bloco_print_imitador","path":"objects/obj_bloco_print_imitador/obj_bloco_print_imitador.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":880.0,},
         {"$GMRInstance":"v4","%Name":"inst_6C2A2D3D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6C2A2D3D","objectId":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1168.0,"y":832.0,},
         {"$GMRInstance":"v4","%Name":"inst_748D14BB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_748D14BB","objectId":{"name":"obj_spellbook","path":"objects/obj_spellbook/obj_spellbook.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1112.0,"y":968.0,},
         {"$GMRInstance":"v4","%Name":"inst_9604D73","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9604D73","objectId":{"name":"obj_save","path":"objects/obj_save/obj_save.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1112.0,"y":888.0,},
+        {"$GMRInstance":"v4","%Name":"inst_53AEECBB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53AEECBB","objectId":{"name":"obj_bloco_print","path":"objects/obj_bloco_print/obj_bloco_print.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1176.0,"y":880.0,},
+        {"$GMRInstance":"v4","%Name":"inst_79892148","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_79892148","objectId":{"name":"obj_colission_mini","path":"objects/obj_colission_mini/obj_colission_mini.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1232.0,"y":856.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Itens","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_7CF530EC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CF530EC","objectId":{"name":"obj_mangos","path":"objects/obj_mangos/obj_mangos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":864.0,},

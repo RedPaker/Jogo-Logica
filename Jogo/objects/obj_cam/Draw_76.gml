@@ -18,6 +18,11 @@ if (obj_plr_rpg.state == 2) {
     }
 }
 
+if (obj_spellbook.abrir){
+    x = obj_plr_rpg.x
+    y = obj_plr_rpg.y
+}
+
 camera_x = camera_get_view_width(view_camera[0]);
 camera_y = camera_get_view_height(view_camera[0]);
 

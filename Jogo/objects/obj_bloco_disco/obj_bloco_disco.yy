@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bloco_print_gerador",
-  "eventList":[],
+  "%Name":"obj_bloco_disco",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_bloco_print_gerador",
+  "name":"obj_bloco_disco",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocos_livro",
     "path":"folders/ObjectS/Blocos_livro.yy",
   },
   "parentObjectId":{
-    "name":"obj_block_gerador_parent",
-    "path":"objects/obj_block_gerador_parent/obj_block_gerador_parent.yy",
+    "name":"obj_mini_parent",
+    "path":"objects/obj_mini_parent/obj_mini_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bloco_printf",
-    "path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",
+    "name":"spr_bloco_disco",
+    "path":"sprites/spr_bloco_disco/spr_bloco_disco.yy",
   },
   "spriteMaskId":null,
   "visible":true,

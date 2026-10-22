@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bloco_print_imitador",
-  "eventList":[],
+  "%Name":"obj_bloco_print",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_bloco_print_imitador",
+  "name":"obj_bloco_print",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocos_livro",
     "path":"folders/ObjectS/Blocos_livro.yy",
   },
   "parentObjectId":{
-    "name":"obj_block_imitador_parent",
-    "path":"objects/obj_block_imitador_parent/obj_block_imitador_parent.yy",
+    "name":"obj_block_parent",
+    "path":"objects/obj_block_parent/obj_block_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
