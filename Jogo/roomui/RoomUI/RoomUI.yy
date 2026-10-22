@@ -1,9 +1,28 @@
 {
   "$GMRoomUI":"",
   "%Name":"RoomUI",
-  "children":[
+  "children":[],
+  "locked":false,
+  "name":"RoomUI",
+  "parent":{
+    "name":"Jogo Logica",
+    "path":"Jogo Logica.yyp",
+  },
+  "resourceType":"GMRoomUI",
+  "resourceVersion":"2.0",
+  "viewspaceChildren":[
     {"$GMRUILayer":"v1","%Name":"UILayer_1","alignItems":3,"children":[
-        {"$GMRFlexPanel":"","%Name":"FlexPanel_1","alignItems":2,"alignSelf":3,"children":[],"flexDirection":0,"height":{"unit":2,"value":50.0,},"justifyContent":1,"name":"FlexPanel_1","nodeColour":4294068448,"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":50.0,},},
+        {"$GMRFlexPanel":"","%Name":"FlexPanel_2","alignItems":2,"children":[
+            {"$GMRFlexPanel":"","%Name":"FlexPanel_1","alignItems":2,"alignSelf":4,"children":[
+                {"$GMRSpriteGraphic":"v1","%Name":"graphic_2C02929B","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"keepAspect":true,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2C02929B","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_plr_placeholder","path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",},"x":0.0,"y":0.0,},
+              ],"flexDirection":0,"flexGrow":1.0,"height":{"unit":3,"value":60.98,},"justifyContent":1,"name":"FlexPanel_1","nodeColour":4294105672,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":32.89,},},
+            {"$GMRFlexPanel":"","%Name":"TitlePanel","alignItems":2,"alignSelf":4,"children":[
+                {"$GMRFlexPanel":"","%Name":"FlexPanel","alignItems":2,"children":[
+                    {"$GMRTextItem":"v3","%Name":"text_2F7B0A74","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"fnt_16_comicsansms","path":"fonts/fnt_16_comicsansms/fnt_16_comicsansms.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_2F7B0A74","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Game Name","wrap":false,"x":0.0,"y":0.0,},
+                  ],"flexDirection":0,"height":{"unit":3,"value":30.0,},"justifyContent":1,"name":"FlexPanel","nodeColour":4289284338,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":126.0,},},
+                {"$GMRSpriteGraphic":"v1","%Name":"graphic_3A8ABA95","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"keepAspect":true,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_3A8ABA95","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_livro_feiticos_principal","path":"sprites/spr_livro_feiticos_principal/spr_livro_feiticos_principal.yy",},"x":0.0,"y":0.0,},
+              ],"flexDirection":0,"flexGrow":1.0,"height":{"unit":3,"value":50.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":16.0,},"marginRight":{"unit":1,"value":16.0,},"marginTop":{"unit":1,"value":16.0,},"name":"TitlePanel","nodeColour":4294068448,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":51.64,},},
+          ],"flexDirection":2,"flexGrow":3.0,"gapColumn":16.0,"height":{"unit":3,"value":100.0,},"justifyContent":1,"name":"FlexPanel_2","nodeColour":4294068390,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":100.0,},},
         {"$GMRFlexPanel":"","%Name":"FramePanel","alignItems":4,"children":[
             {"$GMRFlexPanel":"","%Name":"PlayButton","alignItems":2,"children":[
                 {"$GMRFlexPanel":"","%Name":"TextPanel","alignItems":2,"children":[
@@ -30,17 +49,8 @@
                 {"$GMRInstance":"v4","%Name":"inst_22F0EA52","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_22F0EA52","objectId":{"name":"obj_button_main","path":"objects/obj_button_main/obj_button_main.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
               ],"flexDirection":0,"flexGrow":1.0,"flexShrink":1.0,"height":{"unit":3,"value":16.0,},"justifyContent":1,"name":"PlayButton","nodeColour":4294068357,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":16.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_5C5F1702","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_5C5F1702","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ui_frame","path":"sprites/spr_ui_frame/spr_ui_frame.yy",},"x":0.0,"y":0.0,},
-          ],"flexDirection":2,"gapColumn":4.0,"height":{"unit":2,"value":25.0,},"justifyContent":3,"name":"FramePanel","nodeColour":4291447026,"paddingBottom":{"unit":1,"value":4.0,},"paddingLeft":{"unit":1,"value":4.0,},"paddingRight":{"unit":1,"value":4.0,},"paddingTop":{"unit":1,"value":4.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":75.0,},},
-      ],"flexDirection":0,"gridX":8,"gridY":8,"justifyContent":2,"name":"UILayer_1","nodeColour":4294076232,"paddingBottom":{"unit":1,"value":8.0,},"paddingLeft":{"unit":1,"value":8.0,},"paddingRight":{"unit":1,"value":8.0,},"paddingTop":{"unit":1,"value":8.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+          ],"flexDirection":2,"flexGrow":1.0,"gapColumn":4.0,"height":{"unit":3,"value":25.0,},"justifyContent":3,"name":"FramePanel","nodeColour":4291447026,"paddingBottom":{"unit":1,"value":4.0,},"paddingLeft":{"unit":1,"value":4.0,},"paddingRight":{"unit":1,"value":4.0,},"paddingTop":{"unit":1,"value":4.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":75.0,},},
+      ],"flexDirection":0,"gridX":8,"gridY":8,"justifyContent":3,"name":"UILayer_1","nodeColour":4294076232,"paddingBottom":{"unit":1,"value":8.0,},"paddingLeft":{"unit":1,"value":8.0,},"paddingRight":{"unit":1,"value":8.0,},"paddingTop":{"unit":1,"value":8.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
-  "locked":false,
-  "name":"RoomUI",
-  "parent":{
-    "name":"Jogo Logica",
-    "path":"Jogo Logica.yyp",
-  },
-  "resourceType":"GMRoomUI",
-  "resourceVersion":"2.0",
-  "viewspaceChildren":[],
   "visible":true,
 }
