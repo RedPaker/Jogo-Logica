@@ -1,4 +1,4 @@
-if(!variable_global_exists("st_firsttimeplaying")){
+    if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;
     show_debug_message("Reset");
     
@@ -7,7 +7,7 @@ if(!variable_global_exists("st_firsttimeplaying")){
     global.st_down = vk_down;
     global.st_right = vk_right;
     
-    global.st_use = ord("Z");
+    global.st_use = vk_space;
     global.st_run = ord("X");
     global.st_inv = ord("C");
     

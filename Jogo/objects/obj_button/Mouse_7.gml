@@ -1,3 +1,4 @@
+image_index = 1
 switch (button_id) {
 	case 1://play
         layer_set_visible(layer_get_id("SavesLayer"), true);
@@ -19,10 +20,27 @@ switch (button_id) {
         game_end()
     break;
     case 5:
-        if (fileexists == 1){
+        if (fileexistsload == true){
             
         }else {
-        	
+        	sv_newgame();
         }
-    break
+    break;
+    case 6:
+        if (fileexistsdel == true){
+            if (state == 0){
+                state = 1;
+                image_index = 3;
+            }else if (state == 1) {
+            	state = 0;
+                sv_delete(button_sub_id)
+                image_index = 1
+            }
+        }else{
+        	state = 2;
+            image_index = 4
+        }
+        
+        
+    break;
 }
