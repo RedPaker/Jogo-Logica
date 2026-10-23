@@ -57,6 +57,7 @@
     {"name":"obj_ui_manager","order":5,"path":"objects/obj_ui_manager/obj_ui_manager.yy",},
     {"name":"obj_ui_parent","order":6,"path":"objects/obj_ui_parent/obj_ui_parent.yy",},
     {"name":"obj_vento","order":3,"path":"objects/obj_vento/obj_vento.yy",},
+    {"name":"obj_virus_com_computaodr","order":6,"path":"objects/obj_virus_com_computaodr/obj_virus_com_computaodr.yy",},
     {"name":"obj_virus_mae","order":3,"path":"objects/obj_virus_mae/obj_virus_mae.yy",},
     {"name":"obj_warp_parent","order":1,"path":"objects/obj_warp_parent/obj_warp_parent.yy",},
     {"name":"rm_configs","order":3,"path":"rooms/rm_configs/rm_configs.yy",},

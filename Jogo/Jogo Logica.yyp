@@ -91,6 +91,7 @@
     {"id":{"name":"obj_ui_manager","path":"objects/obj_ui_manager/obj_ui_manager.yy",},},
     {"id":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},},
     {"id":{"name":"obj_vento","path":"objects/obj_vento/obj_vento.yy",},},
+    {"id":{"name":"obj_virus_com_computaodr","path":"objects/obj_virus_com_computaodr/obj_virus_com_computaodr.yy",},},
     {"id":{"name":"obj_virus_mae","path":"objects/obj_virus_mae/obj_virus_mae.yy",},},
     {"id":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},},
     {"id":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
