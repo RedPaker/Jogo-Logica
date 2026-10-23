@@ -9,7 +9,7 @@
   ],
   "parent":{
     "name":"Itens",
-    "path":"folders/ObjectS/Itens.yy",
+    "path":"folders/ObjectS/Inimigos/Itens.yy",
   },
   "parentObjectId":{
     "name":"obj_item_parent",
