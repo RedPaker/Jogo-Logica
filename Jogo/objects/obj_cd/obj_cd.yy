@@ -11,8 +11,8 @@
   "name":"obj_cd",
   "overriddenProperties":[],
   "parent":{
-    "name":"Itens",
-    "path":"folders/ObjectS/Itens.yy",
+    "name":"Feitiços",
+    "path":"folders/ObjectS/Feitiços.yy",
   },
   "parentObjectId":null,
   "persistent":false,
