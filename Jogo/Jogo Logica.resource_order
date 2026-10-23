@@ -2,6 +2,7 @@
   "FolderOrderSettings":[
     {"name":"All_these__rooms","order":1,"path":"folders/All_these__rooms.yy",},
     {"name":"ObjectS","order":2,"path":"folders/ObjectS.yy",},
+    {"name":"GUI","order":6,"path":"folders/ObjectS/GUI.yy",},
     {"name":"Inimigos","order":2,"path":"folders/ObjectS/Inimigos.yy",},
     {"name":"Itens","order":3,"path":"folders/ObjectS/Itens.yy",},
     {"name":"Main_Char","order":4,"path":"folders/ObjectS/Main_Char.yy",},
