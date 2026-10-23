@@ -12,6 +12,7 @@ vspd = 0;
 state = 0 //0-Jogando 1-Freezed 2-Noclip 3-Knockback 4-Warping
 
 facing = 0;
+facing_vento = 0;
 
 
 cam_x = 0;
@@ -26,3 +27,6 @@ empurra_dir = 0;
 
 ataque_time = 0;
 impacto = 0
+
+tiro_time = 0
+tiro_cadencia = 30

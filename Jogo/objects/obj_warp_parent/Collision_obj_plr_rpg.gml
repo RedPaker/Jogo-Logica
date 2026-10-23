@@ -1,4 +1,6 @@
 show_debug_message("TOuched")
+
+
 if (warpto_room == noone) {
     player.state = 4
     if(warpto_x != -1){

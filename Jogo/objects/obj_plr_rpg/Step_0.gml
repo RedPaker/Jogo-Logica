@@ -11,10 +11,17 @@ if(impacto > 0){
     exit;
 }
 
+if (obj_spellbook.abrir){
+    move_spd = 0
+    exit
+}
 
 //uhh ignore o messi code plzz
 var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); 
+var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+
+var _input_x_vento =  keyboard_check(ord("A")) - keyboard_check(ord("D"));
+var _input_y_vento = keyboard_check(ord("W")) - keyboard_check(ord("S"))
 
 
 //sprint
@@ -34,6 +41,10 @@ if(keyboard_check_pressed(ord("N"))){
     }else {
     	state = 2;
     }
+}
+
+if (keyboard_check_pressed(ord("J"))){
+    instance_create_layer(x,y,"Instances",obj_jukebox);
 }
 
 
@@ -73,6 +84,7 @@ if(_input_x != 0 or _input_y != 0){
     else if (_input_y < 0) sprite_index = spr_plr_td_up;
         
     facing = point_direction(0, 0, _input_x, _input_y);
+    facing_vento = point_direction(0,0,_input_x_vento,_input_y_vento);
 }
 else{
     if(sprite_index == spr_plr_td_right) sprite_index = spr_plr_td_right;
@@ -102,6 +114,16 @@ if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
     
     ataque_time = 60;
 }
+
+if (keyboard_check_pressed(ord("V"))){
+    var _distancia = 16;
+    
+    var _ax = x + lengthdir_x(_distancia, facing);
+    var _ay = y + lengthdir_y(_distancia, facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
+}
+
 
 if (ataque_time > 0) {
     ataque_time--;
@@ -136,6 +158,24 @@ if (dano_time > 0) {
 }
 else {
     image_blend = c_white;
+}
+
+if (tiro_time > 0) {
+    tiro_time--;
+}
+
+if (keyboard_check(ord("R")) && tiro_time <= 0) {
+    var _tiro = instance_create_layer(
+        x + lengthdir_x(14, facing),
+        y + lengthdir_y(14, facing),
+        "instances",
+        obj_cd
+    );
+
+    _tiro.direcao = facing;
+    _tiro.image_angle = facing;
+
+    tiro_time = tiro_cadencia;
 }
 // TESTE GIT
 //67

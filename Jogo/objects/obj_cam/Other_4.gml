@@ -6,4 +6,3 @@ if (instance_exists((obj_plr_rpg))){
     camera_y = camera_get_view_height(view_camera[0]);
     camera_set_view_pos(view_camera[0], (x-(camera_x/2)), (y-(camera_y/2)));
 }
-

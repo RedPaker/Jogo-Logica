@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"virus",
-    "path":"sprites/virus/virus.yy",
+    "name":"spr_cyan",
+    "path":"sprites/spr_cyan/spr_cyan.yy",
   },
   "spriteMaskId":null,
   "visible":true,
