@@ -19,3 +19,6 @@ tempo_piscada = 6
 
 tiro_time = 0
 tiro_cadencia = 70
+
+distance_to_jukebox = 200
+apaixonado = false

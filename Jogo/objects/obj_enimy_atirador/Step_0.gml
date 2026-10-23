@@ -20,7 +20,8 @@ if (empurra > 0) {
 }
 
     tiro_time --;
-    if(tiro_time <= 0){
+if (!apaixonado){
+     if(tiro_time <= 0){
         var _tiro = instance_create_layer(
             x,
             y,
@@ -29,6 +30,8 @@ if (empurra > 0) {
         );
         tiro_time = tiro_cadencia;
     }
+}
+   
 
 
 
