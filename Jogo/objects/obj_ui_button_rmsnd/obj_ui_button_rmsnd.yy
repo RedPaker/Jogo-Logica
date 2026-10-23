@@ -1,0 +1,47 @@
+{
+  "$GMObject":"",
+  "%Name":"obj_ui_button_rmsnd",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
+  "managed":true,
+  "name":"obj_ui_button_rmsnd",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"sprite","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resource":{"name":"spr_ui_btao","path":"sprites/spr_ui_btao/spr_ui_btao.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_ui_btao",},
+  ],
+  "parent":{
+    "name":"UI",
+    "path":"folders/ObjectS/UI.yy",
+  },
+  "parentObjectId":{
+    "name":"obj_ui_button_text",
+    "path":"objects/obj_ui_button_text/obj_ui_button_text.yy",
+  },
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"room2send","filters":[
+        "GMRoom",
+      ],"listItems":[],"multiselect":false,"name":"room2send","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_menu","varFriendlyName":"Sala a Enviar","varType":5,},
+  ],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":{
+    "name":"spr_ui_btao",
+    "path":"sprites/spr_ui_btao/spr_ui_btao.yy",
+  },
+  "spriteMaskId":null,
+  "visible":true,
+}

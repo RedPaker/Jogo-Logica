@@ -1,2 +1,10 @@
-window_set_cursor(cr_arrow);
-room = room2send;
+// Inherit the parent event
+event_inherited();
+
+if global.firsttimeplaying == 0{
+    global.firsttimeplaying = 1;
+}else {
+	global.firsttimeplaying = 0
+}
+
+

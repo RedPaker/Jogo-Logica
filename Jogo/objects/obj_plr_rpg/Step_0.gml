@@ -92,8 +92,8 @@ else{
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
-if (keyboard_check_pressed(vk_space) && ataque_time <= 0) {
-    
+if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
+    show_debug_message(global.st_use);
     var _distancia = 14;
     
     var _ax = x + lengthdir_x(_distancia, facing);

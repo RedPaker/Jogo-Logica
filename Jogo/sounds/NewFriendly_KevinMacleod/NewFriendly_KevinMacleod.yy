@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"NewFriendly_KevinMacleod",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":169.10402,
+  "exportDir":"",
+  "name":"NewFriendly_KevinMacleod",
+  "parent":{
+    "name":"[Angry_bird_listening_img]",
+    "path":"folders/[Angry_bird_listening_img].yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"NewFriendly_KevinMacleod.mp3",
+  "volume":1.0,
+}
