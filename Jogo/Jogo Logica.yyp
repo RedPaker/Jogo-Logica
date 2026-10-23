@@ -86,6 +86,7 @@
     {"id":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
+    {"id":{"name":"node_search","path":"scripts/node_search/node_search.yy",},},
     {"id":{"name":"scr_saving","path":"scripts/scr_saving/scr_saving.yy",},},
     {"id":{"name":"NewFriendly_KevinMacleod","path":"sounds/NewFriendly_KevinMacleod/NewFriendly_KevinMacleod.yy",},},
     {"id":{"name":"spr_bloco_printf","path":"sprites/spr_bloco_printf/spr_bloco_printf.yy",},},

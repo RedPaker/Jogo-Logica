@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"node_search",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"node_search",
+  "parent":{
+    "name":"Scripty",
+    "path":"folders/Scripty.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

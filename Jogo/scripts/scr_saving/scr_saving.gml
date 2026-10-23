@@ -1,4 +1,4 @@
-function save(save_id){
+function sv_save(save_id){
     var _dados = {
         plr :{
             
@@ -18,7 +18,7 @@ function save(save_id){
     
 }
 
-function check(save_id){
+function sv_check(save_id){
     if(file_exists(string_concat("save", save_id, ".json"))){
         var _arquivo = file_text_open_read(string_concat("save", save_id, ".json"));
         var _texto = file_text_read_string(_arquivo);
@@ -30,7 +30,7 @@ function check(save_id){
     }
 }
 
-function load(save_id){
+function sv_load(save_id){
     if (file_exists(string_concat("save", save_id, ".json"))) {
         var _arquivo = file_text_open_read(string_concat("save", save_id, ".json"));
         var _texto = file_text_read_string(_arquivo);

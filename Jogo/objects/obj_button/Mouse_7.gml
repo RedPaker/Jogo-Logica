@@ -18,4 +18,11 @@ switch (button_id) {
     case 4://exit
         game_end()
     break;
+    case 5:
+        if (fileexists == 1){
+            
+        }else {
+        	
+        }
+    break
 }
