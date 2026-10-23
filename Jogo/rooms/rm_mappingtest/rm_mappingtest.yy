@@ -21,7 +21,6 @@
     {"name":"inst_755443B9","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_6C0C0164","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_24DE1EE9","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
-    {"name":"inst_3F16171A","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_6D60A37","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_712485EC","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"inst_40D29FED","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
