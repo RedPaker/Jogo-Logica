@@ -51,6 +51,7 @@
     {"name":"rm_save","order":4,"path":"rooms/rm_save/rm_save.yy",},
     {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"room_boss_fase1","order":5,"path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
+    {"name":"room_boss_final","order":7,"path":"rooms/room_boss_final/room_boss_final.yy",},
     {"name":"room_boss_web","order":6,"path":"rooms/room_boss_web/room_boss_web.yy",},
     {"name":"spr_black","order":7,"path":"sprites/spr_black/spr_black.yy",},
     {"name":"spr_bloco_disco","order":2,"path":"sprites/spr_bloco_disco/spr_bloco_disco.yy",},

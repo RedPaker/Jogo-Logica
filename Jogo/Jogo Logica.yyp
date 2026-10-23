@@ -84,6 +84,7 @@
     {"id":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"room_boss_fase1","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},},
+    {"id":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
     {"id":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
     {"id":{"name":"spr_black","path":"sprites/spr_black/spr_black.yy",},},
     {"id":{"name":"spr_bloco_disco","path":"sprites/spr_bloco_disco/spr_bloco_disco.yy",},},
@@ -128,6 +129,7 @@
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"roomId":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
+    {"roomId":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
