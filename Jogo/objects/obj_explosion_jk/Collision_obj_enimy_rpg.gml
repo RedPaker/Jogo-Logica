@@ -1,3 +1,3 @@
 
-    other.hp -= 100
+    other.hp -= 2
     other.empurra = 20 
