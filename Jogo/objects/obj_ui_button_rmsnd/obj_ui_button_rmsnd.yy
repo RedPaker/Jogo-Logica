@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"sprite","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resource":{"name":"spr_ui_btao","path":"sprites/spr_ui_btao/spr_ui_btao.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_ui_btao",},
   ],
   "parent":{
-    "name":"UI",
-    "path":"folders/ObjectS/UI.yy",
+    "name":"z_Deprecated",
+    "path":"folders/ObjectS/z_Deprecated.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_button_text",

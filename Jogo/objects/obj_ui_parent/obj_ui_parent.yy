@@ -9,8 +9,8 @@
   "name":"obj_ui_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/ObjectS/UI.yy",
+    "name":"z_Deprecated",
+    "path":"folders/ObjectS/z_Deprecated.yy",
   },
   "parentObjectId":null,
   "persistent":false,
