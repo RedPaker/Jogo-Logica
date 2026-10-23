@@ -18,7 +18,10 @@ if (obj_spellbook.abrir){
 
 //uhh ignore o messi code plzz
 var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); 
+var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+
+var _input_x_vento =  keyboard_check(ord("A")) - keyboard_check(ord("D"));
+var _input_y_vento = keyboard_check(ord("W")) - keyboard_check(ord("S"))
 
 
 //sprint
@@ -81,6 +84,7 @@ if(_input_x != 0 or _input_y != 0){
     else if (_input_y < 0) sprite_index = spr_plr_td_up;
         
     facing = point_direction(0, 0, _input_x, _input_y);
+    facing_vento = point_direction(0,0,_input_x_vento,_input_y_vento);
 }
 else{
     if(sprite_index == spr_plr_td_right) sprite_index = spr_plr_td_right;
@@ -110,6 +114,16 @@ if (keyboard_check_pressed(vk_space) && ataque_time <= 0) {
     
     ataque_time = 60;
 }
+
+if (keyboard_check_pressed(ord("V"))){
+    var _distancia = 16;
+    
+    var _ax = x + lengthdir_x(_distancia, facing);
+    var _ay = y + lengthdir_y(_distancia, facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
+}
+
 
 if (ataque_time > 0) {
     ataque_time--;
