@@ -20,5 +20,5 @@
     global.st_cutsn = true;
     
     global.st_music = 25/100;
-    global.st_master = 50/100;
+    global.st_master = 25/100;
 } 
