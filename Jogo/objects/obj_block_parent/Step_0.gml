@@ -34,7 +34,7 @@ if (mouse_check_button_pressed(mb_left)) {
     if (instance_exists(obj_mini_parent) &&  obj_mini_parent.a_frente == false){
         if (_clicou) {
         arrastando = true;
-    }
+        }
     } else {
     	arrastando = false
     }

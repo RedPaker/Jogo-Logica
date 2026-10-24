@@ -13,7 +13,7 @@
     {"name":"Shadurhs","order":6,"path":"folders/Shadurhs.yy",},
     {"name":"Sprite","order":3,"path":"folders/Sprite.yy",},
     {"name":"Feitiços","order":8,"path":"folders/Sprite/Feitiços.yy",},
-    {"name":"GUI","order":1,"path":"folders/Sprite/GUI.yy",},
+    {"name":"UI","order":1,"path":"folders/Sprite/UI.yy",},
     {"name":"Inimigos","order":2,"path":"folders/Sprite/Inimigos.yy",},
     {"name":"Itens","order":3,"path":"folders/Sprite/Itens.yy",},
     {"name":"Main_Char","order":4,"path":"folders/Sprite/Main_Char.yy",},
