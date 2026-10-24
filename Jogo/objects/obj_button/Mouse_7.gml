@@ -11,7 +11,14 @@ switch (button_id) {
         }
     break;
     case 2://config
-        
+        layer_set_visible(layer_get_id("SettingsLayer"), true);
+        layer_set_visible(layer_get_id("MainLayer"), false);
+        switch (button_sub_id) {
+        	case 1:
+                layer_set_visible(layer, false);
+                layer_set_visible(layer_get_id("MainLayer"), true);
+            break;
+        }
     break;
     case 3://creditos
         
@@ -19,14 +26,14 @@ switch (button_id) {
     case 4://exit
         game_end()
     break;
-    case 5:
+    case 5://Load/Newgame
         if (fileexistsload == true){
             
         }else {
         	sv_newgame();
         }
     break;
-    case 6:
+    case 6://Delete
         if (fileexistsdel == true){
             if (state == 0){
                 state = 1;
@@ -40,7 +47,5 @@ switch (button_id) {
         	state = 2;
             image_index = 4
         }
-        
-        
     break;
 }
