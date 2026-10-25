@@ -4,7 +4,7 @@ current_char = 0;
 draw_message = "";
 
 char_speed = 0.5;
-input_key = global.st_use;
+input_key = global.st_use ;
 
 /* Obtém a largura e altura da câmara do Viewport 0 
 var _view_width = camera_get_view_width(view_camera[0]); 
