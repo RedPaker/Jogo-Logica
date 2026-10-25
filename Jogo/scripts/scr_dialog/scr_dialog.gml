@@ -37,5 +37,9 @@ global.welcome_dialog = [
     {
         name: "Lil 67",
         msg: "Ta chapando loco"
-    } 
+    },
+    {
+        name: "Astolfo",
+        msg: "aaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAb"
+    }
 ]
