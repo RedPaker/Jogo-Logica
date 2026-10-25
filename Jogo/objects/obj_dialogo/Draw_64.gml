@@ -16,4 +16,5 @@ draw_text(_dx,_dy,_name)
 draw_set_colour(c_white);
 
 _dy += 40;
-draw_text_ext(_dx,_dy,draw_message, -1, _boxw - _dx * 2)
+draw_text_ext(_dx,_dy,draw_message, -1, _boxw - (_dx * 2))
+draw_sprite_ext(global.sprites[$ _name],0,_boxw-80,_boxh+250,8,8,0,c_white,1)

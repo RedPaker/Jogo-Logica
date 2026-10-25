@@ -2,20 +2,10 @@ if (instance_exists(obj_dialogo)){
     exit
 }
 
-if (keyboard_check_pressed(vk_enter)){
-    create_dialog([
-        {
-            name: "Resina",
-            msg: "Ola, sou legal"
-        }
-    ])
-}
-
 if (game_over) {
     if (keyboard_check_pressed(ord("R"))) {
         game_restart();
     }
-
     exit;
 }
 

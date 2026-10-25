@@ -11,6 +11,11 @@ global.char_colors = {
     "Lil 67": c_blue
 }
 
+global.sprites = {
+    "Astolfo": spr_plr_placeholder,
+    "Lil 67": spr_plr_td_down
+}
+
 
 global.welcome_dialog = [
     {

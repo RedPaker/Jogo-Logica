@@ -42,6 +42,9 @@ if (abrir) {
                 draw_set_color(c_black);
                 
                 draw_text_transformed(_centro_x - 180, _centro_y - 260, _primeiro_item.frase,1.7,1.7,0);
+                
+                draw_set_halign(fa_left);
+                draw_set_valign(fa_top);
             } 
         }
     }

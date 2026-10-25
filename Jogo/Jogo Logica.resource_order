@@ -2,8 +2,8 @@
   "FolderOrderSettings":[
     {"name":"All_these__rooms","order":1,"path":"folders/All_these__rooms.yy",},
     {"name":"ObjectS","order":2,"path":"folders/ObjectS.yy",},
-    {"name":"Feitiços","order":6,"path":"folders/ObjectS/Feitiços.yy",},
     {"name":"Amigos kkkk (NPCs)","order":7,"path":"folders/ObjectS/Amigos kkkk (NPCs).yy",},
+    {"name":"Feitiços","order":6,"path":"folders/ObjectS/Feitiços.yy",},
     {"name":"Inimigos","order":2,"path":"folders/ObjectS/Inimigos.yy",},
     {"name":"Itens","order":7,"path":"folders/ObjectS/Inimigos/Itens.yy",},
     {"name":"Main_Char","order":4,"path":"folders/ObjectS/Main_Char.yy",},
