@@ -18,7 +18,7 @@ if (obj_plr_rpg.state == 2 or obj_plr_rpg.state == 4) {
     }
 }
 
-if (obj_spellbook.abrir){
+if (obj_spellbook.abrir || instance_exists(obj_choque)){
     x = obj_plr_rpg.x
     y = obj_plr_rpg.y
 }

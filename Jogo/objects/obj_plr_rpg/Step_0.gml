@@ -54,6 +54,16 @@ if (keyboard_check_pressed(ord("O"))){
     instance_create_layer(x,y,"Instances",obj_choque)
 }
 
+if (instance_exists(obj_choque) && obj_choque.lifetime > 0){
+   exit;
+}
+
+if (!instance_exists(obj_dialogo)){
+    instance_activate_layer("Entidades");
+    instance_activate_layer("Itens");
+    instance_activate_layer("Misc");
+}   
+
 //Isso são velocidades alvo pro lerp. Quando vc anda, o target vira 2, e o lerp aumenta a velocidade 5% a cada frame, até chegar no 2. Elas começam em zero, ou seja, qdo vc soltar a tecla o target vira 0, e como o lerp busca chegar no target ele vai desacelerar 5% por frame.
 var _target_x = 0; 
 var _target_y = 0;
