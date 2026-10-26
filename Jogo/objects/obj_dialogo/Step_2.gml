@@ -3,7 +3,7 @@ if (current_message < 0){
     instance_activate_layer("Itens");
     instance_activate_layer("Misc");
     exit;
-}
+}   
     
 
 
