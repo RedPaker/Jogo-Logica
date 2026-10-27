@@ -1,2 +1,2 @@
-time_vento = 700
+time_vento = 70
 atingiu = false

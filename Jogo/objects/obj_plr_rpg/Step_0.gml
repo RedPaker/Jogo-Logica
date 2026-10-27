@@ -46,16 +46,42 @@ if(keyboard_check_pressed(ord("N"))){
     }
 }
 
-if (keyboard_check_pressed(ord("J"))){
-    instance_create_layer(x,y,"Instances",obj_jukebox);
+if(jukebox_time > 0){
+    jukebox_time --;
 }
 
-if (keyboard_check_pressed(ord("O"))){
+if (keyboard_check_pressed(ord("J")) && jukebox_time <= 0){
+    instance_create_layer(x,y,"Instances",obj_jukebox);
+    
+    jukebox_time = jukebox_cadencia;
+}
+
+if(choque_time > 0){
+    choque_time --;
+}
+if (keyboard_check_pressed(ord("O")) && choque_time <= 0){
     instance_create_layer(x,y,"Instances",obj_choque)
+    
+    choque_time = choque_cadencia;
 }
 
 if (instance_exists(obj_choque) && obj_choque.lifetime > 0){
    exit;
+}
+
+if(vento_time > 0){
+    vento_time--;
+}
+
+if (keyboard_check_pressed(ord("V")) && vento_time <= 0){
+    var _distancia = 16;
+    
+    var _ax = x + lengthdir_x(_distancia, facing);
+    var _ay = y + lengthdir_y(_distancia, facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
+    
+    vento_time = vento_cadencia;
 }
 
 if (!instance_exists(obj_dialogo)){
@@ -129,15 +155,6 @@ if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
     });*/
     
     ataque_time = 60;
-}
-
-if (keyboard_check_pressed(ord("V"))){
-    var _distancia = 16;
-    
-    var _ax = x + lengthdir_x(_distancia, facing);
-    var _ay = y + lengthdir_y(_distancia, facing);
-    
-    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
 }
 
 

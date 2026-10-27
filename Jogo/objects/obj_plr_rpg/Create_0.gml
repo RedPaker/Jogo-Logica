@@ -26,7 +26,16 @@ empurra = 0;
 empurra_dir = 0;
 
 ataque_time = 0;
-impacto = 0
+impacto = 0;
 
-tiro_time = 0
-tiro_cadencia = 30
+tiro_time = 0;
+tiro_cadencia = 30;
+
+choque_time = 0;
+choque_cadencia = 400;
+
+jukebox_time = 0;
+jukebox_cadencia = 500;
+
+vento_time = 0;
+vento_cadencia = 150;
