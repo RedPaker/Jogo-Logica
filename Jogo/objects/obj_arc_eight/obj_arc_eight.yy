@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cyan",
-    "path":"sprites/spr_cyan/spr_cyan.yy",
+    "name":"Arc_8BodyIdle",
+    "path":"sprites/Arc_8BodyIdle/Arc_8BodyIdle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

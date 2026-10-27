@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_white",
-    "path":"sprites/spr_white/spr_white.yy",
+    "name":"CD",
+    "path":"sprites/CD/CD.yy",
   },
   "spriteMaskId":null,
   "visible":true,
