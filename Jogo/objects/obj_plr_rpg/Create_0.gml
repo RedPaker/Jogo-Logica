@@ -27,10 +27,3 @@ empurra_dir = 0;
 
 ataque_time = 0;
 impacto = 0;
-
-
-jukebox_time = 0;
-jukebox_cadencia = 500;
-
-vento_time = 0;
-vento_cadencia = 150;

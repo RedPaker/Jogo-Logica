@@ -5,7 +5,15 @@ if (keyboard_check(global.st_umg)){
         break;
     
         case 2:
-            choque()
+            choque();
+        break;
+    
+        case 3:
+            explosao();
+        break;
+        
+        case 4:
+            vento();
         break; 
     }
 }

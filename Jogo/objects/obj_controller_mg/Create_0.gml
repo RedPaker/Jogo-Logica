@@ -1,10 +1,16 @@
-id_magia = 2;
+id_magia = 4;
 
 tiro_time = 0;
 tiro_cadencia = 30;
 
 choque_time = 0;
 choque_cadencia = 400;
+
+jukebox_time = 0;
+jukebox_cadencia = 500;
+
+vento_time = 0;
+vento_cadencia = 150;
 
 
 
@@ -35,4 +41,33 @@ function choque(){
     instance_create_layer(obj_plr_rpg.x,obj_plr_rpg.y,"Instances",obj_choque)
     choque_time = choque_cadencia;
     }
+}
+
+function explosao(){
+    if(jukebox_time > 0){
+    jukebox_time --;
+}
+
+if (keyboard_check_pressed(global.st_umg) && jukebox_time <= 0){
+    instance_create_layer(obj_plr_rpg.x, obj_plr_rpg.y,"Instances",obj_jukebox);
+    
+    jukebox_time = jukebox_cadencia;
+    }
+}
+
+function vento(){
+    if(vento_time > 0){
+    vento_time--;
+}
+
+if (keyboard_check_pressed(global.st_umg) && vento_time <= 0){
+    var _distancia = 16;
+    
+    var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
+    var _ay = y + lengthdir_y(_distancia, obj_plr_rpg.facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
+    
+    vento_time = vento_cadencia;
+}
 }

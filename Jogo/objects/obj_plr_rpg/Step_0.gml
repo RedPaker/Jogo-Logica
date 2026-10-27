@@ -47,32 +47,6 @@ if(keyboard_check_pressed(ord("N"))){
     }
 }
 
-if(jukebox_time > 0){
-    jukebox_time --;
-}
-
-if (keyboard_check_pressed(ord("J")) && jukebox_time <= 0){
-    instance_create_layer(x,y,"Instances",obj_jukebox);
-    
-    jukebox_time = jukebox_cadencia;
-}
-
-
-if(vento_time > 0){
-    vento_time--;
-}
-
-if (keyboard_check_pressed(ord("V")) && vento_time <= 0){
-    var _distancia = 16;
-    
-    var _ax = x + lengthdir_x(_distancia, facing);
-    var _ay = y + lengthdir_y(_distancia, facing);
-    
-    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
-    
-    vento_time = vento_cadencia;
-}
-
 if (!instance_exists(obj_dialogo)){
     instance_activate_layer("Entidades");
     instance_activate_layer("Itens");
