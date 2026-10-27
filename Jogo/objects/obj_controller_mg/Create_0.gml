@@ -1,7 +1,7 @@
 id_magia = 1;
 
 tiro_time = 0;
-tiro_cadencia = 15d;
+tiro_cadencia = 15;
 
 choque_time = 0;
 choque_cadencia = 400;
