@@ -1,3 +1,3 @@
 // Inherit the parent event
 event_inherited();
-dialog = global.welcome_dialog
+dialog = d_select_dialog("welcome_dialog");
