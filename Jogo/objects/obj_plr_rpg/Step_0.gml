@@ -1,12 +1,13 @@
 if (instance_exists(obj_dialogo)){
     exit
 }
+if (keyboard_check_pressed(ord("P"))) {
+       game_restart();
+        exit;
+}
 
-if (game_over) {
-    if (keyboard_check_pressed(ord("R"))) {
-        game_restart();
-    }
-    exit;
+if (instance_exists(obj_choque) && obj_choque.lifetime > 0){
+    exit
 }
 
 if(impacto > 0){
@@ -56,18 +57,6 @@ if (keyboard_check_pressed(ord("J")) && jukebox_time <= 0){
     jukebox_time = jukebox_cadencia;
 }
 
-if(choque_time > 0){
-    choque_time --;
-}
-if (keyboard_check_pressed(ord("O")) && choque_time <= 0){
-    instance_create_layer(x,y,"Instances",obj_choque)
-    
-    choque_time = choque_cadencia;
-}
-
-if (instance_exists(obj_choque) && obj_choque.lifetime > 0){
-   exit;
-}
 
 if(vento_time > 0){
     vento_time--;
@@ -193,23 +182,7 @@ else {
     image_blend = c_white;
 }
 
-if (tiro_time > 0) {
-    tiro_time--;
-}
 
-if (keyboard_check(ord("R")) && tiro_time <= 0) {
-    var _tiro = instance_create_layer(
-        x + lengthdir_x(14, facing),
-        y + lengthdir_y(14, facing),
-        "instances",
-        obj_cd
-    );
-
-    _tiro.direcao = facing;
-    _tiro.image_angle = facing;
-
-    tiro_time = tiro_cadencia;
-}
 // TESTE GIT
 //67
 //depth = -y

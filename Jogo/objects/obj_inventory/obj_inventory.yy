@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Itens",
-    "path":"folders/ObjectS/Inimigos/Itens.yy",
+    "path":"folders/ObjectS/Itens.yy",
   },
   "parentObjectId":null,
   "persistent":true,

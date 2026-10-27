@@ -11,9 +11,8 @@ if(!variable_global_exists("st_firsttimeplaying")){
     global.st_run = ord("X");
     global.st_inv = ord("C");
     
-    global.st_mg1 = ord("A");
-    global.st_mg2 = ord("S");
-    global.st_mg3 = ord("D");
+    global.st_umg = ord("E");
+    global.st_smg = ord("S");
     
     global.st_sprinthold = true;
     
