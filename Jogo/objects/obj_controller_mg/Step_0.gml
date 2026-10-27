@@ -15,5 +15,9 @@ if (keyboard_check(global.st_umg)){
         case 4:
             vento();
         break; 
+    
+        case 5:
+            cura();
+        break;    
     }
 }

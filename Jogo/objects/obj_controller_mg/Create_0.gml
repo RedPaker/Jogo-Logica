@@ -1,4 +1,4 @@
-id_magia = 1;
+id_magia = 5;
 
 tiro_time = 0;
 tiro_cadencia = 15;
@@ -12,6 +12,8 @@ jukebox_cadencia = 500;
 vento_time = 0;
 vento_cadencia = 150;
 
+cura_time = 0;
+cura_cadencia = 400;
 
 
 function lancar_cd(){
@@ -70,4 +72,15 @@ if (keyboard_check_pressed(global.st_umg) && vento_time <= 0){
     
     vento_time = vento_cadencia;
 }
+}
+
+function cura(){
+    if(cura_time > 0){
+        cura_time --;
+    }
+    if(keyboard_check_pressed(global.st_umg) && cura_time <= 0){
+        obj_plr_rpg.hp = min(obj_plr_rpg.hp + 30, 100);
+        cura_time = cura_cadencia;
+        show_debug_message("curado");
+    }
 }
