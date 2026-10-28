@@ -29,7 +29,7 @@ if (game_over) {
     draw_text_transformed(
         display_get_gui_width() / 2,
         display_get_gui_height() / 2 + 40,
-        "Pressione R para reiniciar",
+        "Pressione P para reiniciar",
         1.5,
         1.5,
         0

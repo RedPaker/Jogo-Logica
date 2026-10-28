@@ -10,10 +10,18 @@ switch (estado) {
             alvo_y = obj_plr_rpg.y; 
         }
         var _dir = point_direction(0, 0, alvo_x-x, alvo_y-y);
-        var _hor = lengthdir_x(1, _dir);
-        var _ver = lengthdir_y(1, _dir);
+        //var _hor = lengthdir_x(1, _dir);
+        //var _ver = lengthdir_y(1, _dir);
+        var _hor = clamp(alvo_x - x, -1, 1);
+        var _ver = clamp(alvo_y - y, -1, 1);
         
-        move_and_collide(_hor * move_spd, _ver * move_spd, [tilemap_foreground, obj_enemy_parent] ); 
+        
+        if (abs(_ver)<.2) {
+            move_and_collide(_hor * move_spd,0, [tilemap_foreground, obj_enemy_parent] ); 
+        }else {
+        	move_and_collide(0, _ver * move_spd*1.25, [tilemap_foreground, obj_enemy_parent] ); 
+        }
+        
         
     if (empurra > 0) {
             var _empurra_x = lengthdir_x(empurra, empurra_dir);

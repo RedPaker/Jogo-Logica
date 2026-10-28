@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-move_spd = 0.4;
+move_spd = 0.5;
 estado = "perseguir";
 tempo_estado = 0;
 tempo_tiro = 0;
@@ -18,3 +18,5 @@ function sprite_walkh(_h,_v,_si1,_si2,_si3){
     else if (_h < 0) sprite_index = _si3;
     else if (_v != 0) sprite_index = _si1;
 }
+
+instance_create_layer(x,y,"Entidades",obj_arceight_head,)
