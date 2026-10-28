@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"NewFriendly_KevinMacleod",
+  "%Name":"snd_hitretro",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":169.10402,
+  "duration":3.4249432,
   "exportDir":"",
-  "name":"NewFriendly_KevinMacleod",
+  "name":"snd_hitretro",
   "parent":{
-    "name":"[Angry_bird_listening_img]",
-    "path":"folders/[Angry_bird_listening_img].yy",
+    "name":"SoundEffecs",
+    "path":"folders/[Angry_bird_listening_img]/SoundEffecs.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"NewFriendly_KevinMacleod.mp3",
+  "soundFile":"snd_hitretro.wav",
   "volume":1.0,
 }

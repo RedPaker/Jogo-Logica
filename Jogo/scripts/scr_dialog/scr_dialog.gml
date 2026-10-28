@@ -28,7 +28,7 @@ function d_select_dialog(_is){
                     msg: "A vaca bota ovo, e o ovo tira leite da galinha kkkkkkk"
                 },
                 {
-                    name: "Lil 67",
+                    name: "0x43",
                     msg: "Ta chapando loco"
                 },
                 {
@@ -43,10 +43,10 @@ function d_select_dialog(_is){
 
 global.char_colors = {
     "Astolfo": c_red,
-    "Lil 67": c_blue
+    "0x43": c_blue
 }
 
 global.sprites = {
     "Astolfo": spr_plr_placeholder,
-    "Lil 67": spr_plr_td_down
+    "0x43": spr_plr_speak
 }

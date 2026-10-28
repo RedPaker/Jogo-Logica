@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_death_arc8",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.4249432,
+  "exportDir":"",
+  "name":"snd_death_arc8",
+  "parent":{
+    "name":"SoundEffecs",
+    "path":"folders/[Angry_bird_listening_img]/SoundEffecs.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_death_arc8.wav",
+  "volume":1.0,
+}

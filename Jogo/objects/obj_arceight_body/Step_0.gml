@@ -1,4 +1,4 @@
-
+oldhp = hp
 
 
 
@@ -86,5 +86,6 @@ if (dano_time > 0) {
     image_blend = c_white;
 }
 if (hp <= 0) {
+    audio_play_sound_at(snd_death_arc8,x,y,0,64,128,1,false,1);
     instance_destroy();
 }

@@ -1,5 +1,7 @@
 {
   "FolderOrderSettings":[
+    {"name":"SoundEffecs","order":4,"path":"folders/[Angry_bird_listening_img]/SoundEffecs.yy",},
+    {"name":"SONgs","order":3,"path":"folders/[Angry_bird_listening_img]/SONgs.yy",},
     {"name":"All_these__rooms","order":1,"path":"folders/All_these__rooms.yy",},
     {"name":"ObjectS","order":2,"path":"folders/ObjectS.yy",},
     {"name":"Amigos kkkk (NPCs)","order":7,"path":"folders/ObjectS/Amigos kkkk (NPCs).yy",},
@@ -77,6 +79,7 @@
     {"name":"room_boss_web","order":6,"path":"rooms/room_boss_web/room_boss_web.yy",},
     {"name":"RoomUI","order":8,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"scr_dialog","order":1,"path":"scripts/scr_dialog/scr_dialog.yy",},
+    {"name":"snd_hitretro","order":1,"path":"sounds/snd_hitretro/snd_hitretro.yy",},
     {"name":"CD","order":4,"path":"sprites/CD/CD.yy",},
     {"name":"spr_Arc_8BodyIdle","order":1,"path":"sprites/spr_Arc_8BodyIdle/spr_Arc_8BodyIdle.yy",},
     {"name":"spr_Arc_8BodyLeft","order":2,"path":"sprites/spr_Arc_8BodyLeft/spr_Arc_8BodyLeft.yy",},
@@ -103,6 +106,7 @@
     {"name":"spr_green","order":9,"path":"sprites/spr_green/spr_green.yy",},
     {"name":"spr_magenta","order":3,"path":"sprites/spr_magenta/spr_magenta.yy",},
     {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
+    {"name":"spr_plr_speak","order":2,"path":"sprites/spr_plr_speak/spr_plr_speak.yy",},
     {"name":"spr_red","order":10,"path":"sprites/spr_red/spr_red.yy",},
     {"name":"spr_redactedretactedmateus","order":1,"path":"sprites/spr_redactedretactedmateus/spr_redactedretactedmateus.yy",},
     {"name":"spr_tileset_boss1","order":1,"path":"sprites/spr_tileset_boss1/spr_tileset_boss1.yy",},

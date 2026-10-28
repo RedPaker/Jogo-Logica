@@ -6,6 +6,9 @@ estado = "perseguir";
 tempo_estado = 0;
 tempo_tiro = 0;
 
+framecall = 0;
+crnt_frame = 0;
+hit = 0;
 
 function sprite_walkv(_h,_v,_si1,_si2,_si3){
     if(_v != 0) sprite_index = _si1;
