@@ -11,8 +11,8 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"[Angry_bird_listening_img]","folderPath":"folders/[Angry_bird_listening_img].yy","name":"[Angry_bird_listening_img]","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"SoundEffecs","folderPath":"folders/[Angry_bird_listening_img]/SoundEffecs.yy","name":"SoundEffecs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"SONgs","folderPath":"folders/[Angry_bird_listening_img]/SONgs.yy","name":"SONgs","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"SoundEffecs","folderPath":"folders/[Angry_bird_listening_img]/SoundEffecs.yy","name":"SoundEffecs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"All_these__rooms","folderPath":"folders/All_these__rooms.yy","name":"All_these__rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ObjectS","folderPath":"folders/ObjectS.yy","name":"ObjectS","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Amigos kkkk (NPCs)","folderPath":"folders/ObjectS/Amigos kkkk (NPCs).yy","name":"Amigos kkkk (NPCs)","resourceType":"GMFolder","resourceVersion":"2.0",},
