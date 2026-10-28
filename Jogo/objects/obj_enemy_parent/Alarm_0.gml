@@ -8,6 +8,8 @@ if (!apaixonado){
 }
 }
 
+stunned = false
+
 alarm[0] = 60;
 
 
@@ -24,3 +26,5 @@ if (apaixonado){
 } else {
     move_spd = 0.5
 }
+
+ 

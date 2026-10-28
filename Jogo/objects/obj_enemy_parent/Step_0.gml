@@ -2,6 +2,11 @@ if (instance_exists(obj_dialogo)){
     exit
 }
 
+if (stunned){
+    exit
+}
+
+
 var _hor = clamp(alvo_x - x, -1, 1);
 var _ver = clamp(alvo_y - y, -1, 1);
 

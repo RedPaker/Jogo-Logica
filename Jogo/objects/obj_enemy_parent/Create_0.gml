@@ -22,3 +22,5 @@ tempo_piscada = 6
 
 distance_to_jukebox = 200
 apaixonado = false
+stunned = false
+count = 0

@@ -120,6 +120,14 @@ if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
     ataque_time = 60;
 }
 
+if (keyboard_check_pressed(ord("O"))){
+    var _distancia = 6;
+    
+    var _ax = x + lengthdir_x(_distancia, facing);
+    var _ay = y + lengthdir_y(_distancia, facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_flash, {atk_dist:_distancia});
+}
 
 if (ataque_time > 0) {
     ataque_time--;
