@@ -15,6 +15,9 @@ vento_cadencia = 150;
 cura_time = 0;
 cura_cadencia = 400;
 
+flash_time = 0;
+flash_cadencia = 20
+
 
 function lancar_cd(){
     if (tiro_time > 0) {
@@ -83,4 +86,21 @@ function cura(){
         cura_time = cura_cadencia;
         show_debug_message("curado");
     }
+}
+
+function flash(){
+    if(flash_time > 0){
+        flash_time --;
+    }
+    
+    if (keyboard_check_pressed(ord(global.st_umg)&& flash_time <= 0)){
+    var _distancia = 6;
+    
+    var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
+    var _ay = y + lengthdir_y(_distancia, obj_plr_rpg.facing);
+    
+    instance_create_layer(_ax, _ay, "instances", obj_flash, {atk_dist:_distancia});
+    
+    flash_time = flash_cadencia        
+}
 }
