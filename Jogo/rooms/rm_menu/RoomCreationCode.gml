@@ -2,17 +2,17 @@ if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;
     show_debug_message("Reset");
     //Gameplay
-    global.st_up = vk_up;
-    global.st_left = vk_left;
-    global.st_down = vk_down;
-    global.st_right = vk_right;
+    global.st_up = ord("W");
+    global.st_left = ord("A");
+    global.st_down = ord("S");
+    global.st_right = ord("D");
     
     global.st_use = vk_space;
     global.st_run = ord("X");
     global.st_inv = ord("C");
     
     global.st_umg = ord("E");
-    global.st_smg = ord("S");
+    global.st_smg = ord("Q");
     
     global.st_sprinthold = true;
     
