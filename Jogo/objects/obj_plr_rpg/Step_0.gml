@@ -21,19 +21,32 @@ if (obj_spellbook.abrir){
 }
 
 //uhh ignore o messi code plzz
-var _input_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _input_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-
-var _input_x_vento =  keyboard_check(ord("A")) - keyboard_check(ord("D"));
-var _input_y_vento = keyboard_check(ord("W")) - keyboard_check(ord("S"))
+var _input_x = keyboard_check(global.st_right) - keyboard_check(global.st_left);
+var _input_y = keyboard_check(global.st_down) - keyboard_check(global.st_up);
 
 
 //sprint
-if (keyboard_check(ord("X"))){ 
-    move_spd = 1.5
-    /*move_spdy = 1.5;
-    move_spdx = 1.5;*/
+if (keyboard_check(global.st_run)){ 
+    if (state == 5){
+        move_spd = 0.75
+        /*move_spdy = 1.5;
+        move_spdx = 1.5;*/
+    }else {
+        move_spd = 1.5
+        /*move_spdy = 1.5;
+        move_spdx = 1.5;*/
+    }
+    
 } else {
+    if (state == 5){
+        move_spd = .5
+        /*move_spdy = 1;
+        move_spdx = 1;*/
+    }else {
+        move_spd = 1
+        /*move_spdy = 1;
+        move_spdx = 1;*/
+    }
     move_spd = 1
     /*move_spdy = 1;
     move_spdx = 1;*/
@@ -70,7 +83,7 @@ vspd = lerp(vspd, _target_y, 0);*/
 var _old_x = x;
 var _old_y = y;
 
-if(state==0){  
+if(state==0 or state == 5){  
     move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined);
 }else if(state == 2){
     x += clamp(_target_x*5, -5, 5);
@@ -83,13 +96,21 @@ cam_y = y-_old_y;
 
 
 if(_input_x != 0 or _input_y != 0){
-    if(_input_x > 0) sprite_index = spr_plr_td_right;
-    else if(_input_x < 0) sprite_index = spr_plr_td_left;
-    else if (_input_y > 0) sprite_index = spr_plr_td_down;
-    else if (_input_y < 0) sprite_index = spr_plr_td_up;
+    if (state == 5) {
+    	if(_input_x < 0) sprite_index = spr_plr_td_right;
+        else if(_input_x > 0) sprite_index = spr_plr_td_left;
+        else if (_input_y < 0) sprite_index = spr_plr_td_down;
+        else if (_input_y > 0) sprite_index = spr_plr_td_up;
+    }else {
+    	if(_input_x > 0) sprite_index = spr_plr_td_right;
+        else if(_input_x < 0) sprite_index = spr_plr_td_left;
+        else if (_input_y > 0) sprite_index = spr_plr_td_down;
+        else if (_input_y < 0) sprite_index = spr_plr_td_up;
+    }
+    
+    
         
     facing = point_direction(0, 0, _input_x, _input_y);
-    facing_vento = point_direction(0,0,_input_x_vento,_input_y_vento);
 }
 else{
     if(sprite_index == spr_plr_td_right) sprite_index = spr_plr_td_right;
@@ -98,11 +119,18 @@ else{
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
 if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
-    show_debug_message(global.st_use);
     var _distancia = 14;
+
+    var _dx = lengthdir_x(_distancia, facing);
+    var _dy = lengthdir_y(_distancia, facing);
     
-    var _ax = x + lengthdir_x(_distancia, facing);
-    var _ay = y + lengthdir_y(_distancia, facing);
+    if (abs(_dx)<abs(_dy)){
+        _ax = 0;
+        _ay = x + _dy;
+    }else {
+    	_ax = y + _dx;
+        _ay = 0;
+    }
     
     instance_create_layer(_ax, _ay, "instances", obj_atack, {atk_dist:_distancia});
     /*var _atk_dist = 10;
