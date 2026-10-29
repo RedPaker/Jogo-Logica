@@ -27,3 +27,7 @@ empurra_dir = 0;
 
 ataque_time = 0;
 impacto = 0;
+
+curando = false
+terminou_de_curar = false
+tempo_cura = 0

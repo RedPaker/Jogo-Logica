@@ -108,6 +108,7 @@
     {"name":"spr_green","order":9,"path":"sprites/spr_green/spr_green.yy",},
     {"name":"spr_magenta","order":3,"path":"sprites/spr_magenta/spr_magenta.yy",},
     {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
+    {"name":"spr_plr_curando","order":6,"path":"sprites/spr_plr_curando/spr_plr_curando.yy",},
     {"name":"spr_plr_speak","order":2,"path":"sprites/spr_plr_speak/spr_plr_speak.yy",},
     {"name":"spr_red","order":10,"path":"sprites/spr_red/spr_red.yy",},
     {"name":"spr_redactedretactedmateus","order":1,"path":"sprites/spr_redactedretactedmateus/spr_redactedretactedmateus.yy",},

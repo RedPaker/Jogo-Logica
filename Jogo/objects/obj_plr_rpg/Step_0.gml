@@ -82,11 +82,12 @@ cam_x = x-_old_x;
 cam_y = y-_old_y;
 
 
-if(_input_x != 0 or _input_y != 0){
-    if(_input_x > 0) sprite_index = spr_plr_td_right;
-    else if(_input_x < 0) sprite_index = spr_plr_td_left;
-    else if (_input_y > 0) sprite_index = spr_plr_td_down;
-    else if (_input_y < 0) sprite_index = spr_plr_td_up;
+    if(_input_x != 0 or _input_y != 0){
+        if(_input_x > 0) sprite_index = spr_plr_td_right;
+        else if(_input_x < 0) sprite_index = spr_plr_td_left;
+        else if (_input_y > 0) sprite_index = spr_plr_td_down;
+        else if (_input_y < 0) sprite_index = spr_plr_td_up;
+    
         
     facing = point_direction(0, 0, _input_x, _input_y);
     facing_vento = point_direction(0,0,_input_x_vento,_input_y_vento);
@@ -97,6 +98,9 @@ else{
     else if(sprite_index == spr_plr_td_up) sprite_index = spr_plr_td_up;
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
+
+
+
 if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
     show_debug_message(global.st_use);
     var _distancia = 14;
@@ -129,6 +133,27 @@ if (ataque_time > 0) {
 if (hp <= 0) {
     hp = 0;
     game_over = true;
+}
+
+if(curando){
+    sprite_index = spr_plr_curando
+}
+
+if (tempo_cura > 0){
+    curando = true
+    tempo_cura--
+    
+} else {
+    curando = false
+}
+
+  if (sprite_index == spr_plr_curando && floor(image_index) >= image_number - 1) {
+        sprite_index = spr_plr_td_down;
+        image_index = 0; 
+}
+
+if (tempo_cura == 1){
+show_debug_message("fvhivn")
 }
 
 if (empurra > 0 && state==0) {

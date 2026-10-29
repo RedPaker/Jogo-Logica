@@ -14,6 +14,7 @@ vento_cadencia = 150;
 
 cura_time = 0;
 cura_cadencia = 400;
+tempo = 0
 
 flash_time = 0;
 flash_cadencia = 20
@@ -81,9 +82,12 @@ function cura(){
     if(cura_time > 0){
         cura_time --;
     }
+    
+    
     if(keyboard_check_pressed(global.st_umg) && cura_time <= 0){
         obj_plr_rpg.hp = min(obj_plr_rpg.hp + 30, 100);
         cura_time = cura_cadencia;
+        obj_plr_rpg.tempo_cura = 200
         show_debug_message("curado");
     }
 }

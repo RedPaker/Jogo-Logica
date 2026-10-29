@@ -154,6 +154,7 @@
     {"id":{"name":"spr_magenta","path":"sprites/spr_magenta/spr_magenta.yy",},},
     {"id":{"name":"spr_mangos","path":"sprites/spr_mangos/spr_mangos.yy",},},
     {"id":{"name":"spr_plr_atk","path":"sprites/spr_plr_atk/spr_plr_atk.yy",},},
+    {"id":{"name":"spr_plr_curando","path":"sprites/spr_plr_curando/spr_plr_curando.yy",},},
     {"id":{"name":"spr_plr_placeholder","path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",},},
     {"id":{"name":"spr_plr_speak","path":"sprites/spr_plr_speak/spr_plr_speak.yy",},},
     {"id":{"name":"spr_plr_td_down","path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},},
