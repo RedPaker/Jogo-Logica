@@ -21,9 +21,10 @@ if (obj_spellbook.abrir){
 }
 
 //uhh ignore o messi code plzz
-var _input_x = keyboard_check(global.st_right) - keyboard_check(global.st_left);
-var _input_y = keyboard_check(global.st_down) - keyboard_check(global.st_up);
-
+if (!curando) {
+    _input_x = keyboard_check(global.st_right) - keyboard_check(global.st_left);
+    _input_y = keyboard_check(global.st_down) - keyboard_check(global.st_up);
+}
 
 //sprint
 if (keyboard_check(global.st_run)){ 
