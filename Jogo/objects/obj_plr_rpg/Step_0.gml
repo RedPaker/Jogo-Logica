@@ -39,8 +39,8 @@ if (keyboard_check(global.st_run)){
     }
     
 } else {
-    if (state == 5){
-        move_spd = .5
+    if (state == 6){
+        move_spd = 1.5
         /*move_spdy = 1;
         move_spdx = 1;*/
     }else {
@@ -48,9 +48,6 @@ if (keyboard_check(global.st_run)){
         /*move_spdy = 1;
         move_spdx = 1;*/
     }
-    move_spd = 1
-    /*move_spdy = 1;
-    move_spdx = 1;*/
 }
 
 if(keyboard_check_pressed(ord("N"))){
@@ -84,7 +81,7 @@ vspd = lerp(vspd, _target_y, 0);*/
 var _old_x = x;
 var _old_y = y;
 
-if(state==0 or state == 5){  
+if(state==0 or state == 5 or state == 6){  
     move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined);
 }else if(state == 2){
     x += clamp(_target_x*5, -5, 5);

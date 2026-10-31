@@ -20,7 +20,7 @@ flash_time = 0;
 flash_cadencia = 20
 
 overheat_time = 0;
-overheat_cadencia = 400;
+overheat_cadencia = 30;
 
 
 

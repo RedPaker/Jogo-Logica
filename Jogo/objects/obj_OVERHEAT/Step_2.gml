@@ -1,1 +1,1 @@
-depth = -16000;
+depth = obj_plr_rpg.depth - 5;
