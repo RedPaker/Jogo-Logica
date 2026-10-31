@@ -19,5 +19,5 @@ if(hit>0){
     hit--;
 }
 
-depth = -bbox_bottom + 16000;
+depth = -bbox_bottom;
 obj_arceight_head.depth = depth
