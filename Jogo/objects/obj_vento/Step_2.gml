@@ -1,1 +1,1 @@
-depth = -bbox_bottom +16000;
+depth = -bbox_bottom;
