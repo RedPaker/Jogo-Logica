@@ -47,6 +47,6 @@ global.char_colors = {
 }
 
 global.sprites = {
-    "Astolfo": spr_plr_placeholder,
-    "0x43": spr_plr_speak
+    "Astolfo": spr_speak_asterisco,
+    "0x43": spr_speak_C
 }
