@@ -65,24 +65,39 @@ if (keyboard_check_pressed(global.st_umg) && vento_time <= 0){
 }
 }
 
-function cura(){
-    if(keyboard_check_pressed(global.st_umg) && cura_time <= 0){
-        obj_plr_rpg.hp = min(obj_plr_rpg.hp + 30, 100);
-        cura_time = cura_cadencia;
-        obj_plr_rpg.tempo_cura = 200
-        show_debug_message("curado");
+function cura() {
+
+    if (keyboard_check_pressed(global.st_umg) && !obj_plr_rpg.curando && cura_time <= 0) {
+
+        obj_plr_rpg.curando = true;
+        obj_plr_rpg.tempo_cura = obj_plr_rpg.duracao_cura;
+    }
+
+    if (obj_plr_rpg.curando) {
+
+        obj_plr_rpg.tempo_cura--;
+
+        if (obj_plr_rpg.tempo_cura <= 0) {
+            obj_plr_rpg.hp = min(obj_plr_rpg.hp + 30, 100);
+
+            obj_plr_rpg.curando = false;
+            cura_time = cura_cadencia;
+        }
+    }
+
+    if (cura_time > 0) {
+        cura_time--;
     }
 }
-
 function flash(){
     if (keyboard_check_pressed(ord(global.st_umg)&& flash_time <= 0)){
-    var _distancia = 6;
+        var _distancia = 6;
     
-    var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
-    var _ay = y + lengthdir_y(_distancia, obj_plr_rpg.facing);
+        var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
+        var _ay = y + lengthdir_y(_distancia, obj_plr_rpg.facing);
     
-    instance_create_layer(_ax, _ay, "instances", obj_flash, {atk_dist:_distancia});
+        instance_create_layer(_ax, _ay, "instances", obj_flash, {atk_dist:_distancia});
     
-    flash_time = flash_cadencia        
-}
+        flash_time = flash_cadencia        
+    }
 }
