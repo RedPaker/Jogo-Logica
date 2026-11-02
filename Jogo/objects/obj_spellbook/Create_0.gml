@@ -29,7 +29,7 @@ global.paginas_spawn_data[0] = [
         linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
     },
     {
-        objeto: obj_bloco_disco,
+        objeto: obj_bloco_fita,
         offset_x: 100,
         offset_y: 1, 
         linha_inicial: noone
@@ -45,15 +45,83 @@ global.paginas_spawn_data[1] = [
      {
         frase: "CHOQUE"
     },
-    
-    
+  
     {
-        objeto: obj_bloco_disco,
+        objeto: obj_bloco_print,
         offset_x: 180,
-        offset_y: -50,
+        offset_y: -100,
+        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+    },
+    {
+        objeto: obj_bloco_choque,
+        offset_x: 100,
+        offset_y: 1, 
         linha_inicial: noone
     }
 ];
+
+global.paginas_spawn_data[2] = [
+    {
+        seq_certa: [3, 4, 5, 6, 1],
+        seq_certa_mini:  [7, 8,9]
+    },
+    {
+        frase: "Musicas Melosas"
+    },
+    
+    {
+        objeto: obj_bloco_import_time,
+        offset_x: 180,
+        offset_y: -220,
+        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+    },
+    {
+        objeto: obj_bloco_import_ply_snd,
+        offset_x: 180,
+        offset_y: -140, 
+        linha_inicial: noone
+    },
+    
+       {
+        objeto: obj_bloco_ply_snd,
+        offset_x: 180,
+        offset_y: -60, 
+        linha_inicial: noone
+    },
+    
+        {
+        objeto: obj_bloco_timesleep,
+        offset_x: 180,
+        offset_y: 20, 
+        linha_inicial: noone
+    },
+    
+    {
+        objeto: obj_bloco_print,
+        offset_x: 180,
+        offset_y: 100, 
+        linha_inicial: noone
+    },
+    
+    {
+        objeto: obj_bloco_fita,
+        offset_x: 180,
+        offset_y: 180, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_5,
+        offset_x: 100,
+        offset_y: 180, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_boom,
+        offset_x: 260,
+        offset_y: 180, 
+        linha_inicial: noone
+    }
+    ];
 
 //BLOCOS:
 
@@ -158,7 +226,6 @@ verificacao = function(pagina_atual){
         
         with (obj_block_parent) {
             var _slot_pai = instance_place(x, y, obj_colission_bl);
-            
             if (_slot_pai != noone && _slot_pai.linha == i) {
                 _valor_da_linha = valor_conferencia;
                 show_debug_message(_valor_da_linha);
@@ -210,3 +277,5 @@ verificacao = function(pagina_atual){
     }
 }
 }
+
+

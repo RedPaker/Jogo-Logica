@@ -10,6 +10,19 @@ aumenta = false;
 a_frente = false;
 hitbox_valido = -1
 valor_conferencia = 0
+offset_inventario_x = 180;
+offset_inventario_y = 0;
+
+posicao_livro = function() {
+    var _centro_x = display_get_gui_width() / 2;
+    var _centro_y = display_get_gui_height() / 2;
+    var _cam_x = camera_get_view_x(view_camera[0]);
+    var _cam_y = camera_get_view_y(view_camera[0]);
+
+    x = (_centro_x + offset_inventario_x) + _cam_x;
+    y = (_centro_y + offset_inventario_y) + _cam_y;
+};
+
 
 encaixe = function(){
     
@@ -27,32 +40,25 @@ encaixe = function(){
     var _cam_x = camera_get_view_x(view_camera[0]);
     var _cam_y = camera_get_view_y(view_camera[0]);
     
-      var _slot_mini = instance_place(x, y, obj_colission_mini);
-
+    var _slot_grande = instance_place(x,y,obj_block_parent)
+    var _slot_mini = instance_place(x, y, obj_colission_mini);
             if (_slot_mini != noone) {
-                var _linha_alvo = _slot_mini.linha;
                 var _tem_bloco = false;
 
-                with (obj_block_parent) {
-                    var _slot_pai = instance_place(x, y, obj_colission_bl);
-                    
-                    if (_slot_pai != noone && _slot_pai.linha == _linha_alvo) {
-                        _tem_bloco= true;
-                    }
+                if (_slot_grande.encaixado == true){
+                    _tem_bloco = true
                 }
-                var _posicao_valida = (hitbox_valido == -1 || _slot_mini.posicao == hitbox_valido);
-
+                var _posicao_valida = (hitbox_valido == -1 || _slot_mini.posicao == hitbox_valido) &&  !_slot_grande.no_block_valid;
+                
                 if (_tem_bloco && _posicao_valida) {
                     x = _slot_mini.x;
                     y = _slot_mini.y;
                     array_push(global.blocks, valor_conferencia)
                 } else {
-                    x = (_centro_x + 180) + _cam_x;
-                    y = (_centro_y + 100) + _cam_y;
+                    posicao_livro()
                 }
                 
             } else {
-                x = (_centro_x + 180) + _cam_x;
-                y = (_centro_y + 100) + _cam_y;
+                posicao_livro()
             }
 }

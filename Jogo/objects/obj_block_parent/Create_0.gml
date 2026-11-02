@@ -11,3 +11,5 @@ offset_inventario_x = 180;
 offset_inventario_y = 0;
 valor_conferencia = 0
 send = false
+no_block_valid = false
+encaixado = false
