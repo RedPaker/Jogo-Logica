@@ -48,7 +48,7 @@ encaixe = function(){
                 if (_slot_grande.encaixado == true){
                     _tem_bloco = true
                 }
-                var _posicao_valida = (hitbox_valido == -1 || _slot_mini.posicao == hitbox_valido) &&  !_slot_grande.no_block_valid;
+                var _posicao_valida = (hitbox_valido == -1 || _slot_grande.accept_all  || _slot_mini.posicao == hitbox_valido) &&  !_slot_grande.no_block_valid;
                 
                 if (_tem_bloco && _posicao_valida) {
                     x = _slot_mini.x;

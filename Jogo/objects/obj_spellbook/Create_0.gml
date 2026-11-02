@@ -123,6 +123,68 @@ global.paginas_spawn_data[2] = [
     }
     ];
 
+    global.paginas_spawn_data[3] = [
+    {
+        seq_certa: [10,1],
+        seq_certa_mini:  [11, 12, 13, 14, 8, 11]
+    },
+    {
+        frase: "Super Ventoinha!"
+    },
+    
+    {
+        objeto: obj_bloco_operacoes,
+        offset_x: 180,
+        offset_y: -220,
+        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+    },
+    {
+        objeto: obj_bloco_print,
+        offset_x: 180,
+        offset_y: -140, 
+        linha_inicial: noone
+    },
+    
+ 
+    {
+        objeto: obj_bloco_vent,
+        offset_x: 180,
+        offset_y: -60, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 100,
+        offset_y: -60, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_spr_vent,
+        offset_x: 260,
+        offset_y: -60, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_mult,
+        offset_x: 180,
+        offset_y: 20, 
+        linha_inicial: noone
+    },
+       {
+        objeto: obj_bloco_num_5,
+        offset_x: 100,
+        offset_y: 20, 
+        linha_inicial: noone
+    },
+    {
+    objeto: obj_bloco_spr_vent,
+        offset_x: 260,
+        offset_y: 20, 
+        linha_inicial: noone
+    },
+    
+];
+
 //BLOCOS:
 
 spawn_blocos_pagina = function(pagina_atual) {

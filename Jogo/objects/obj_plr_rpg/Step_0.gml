@@ -156,17 +156,29 @@ if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
     ataque_time = 60;
 }
 
-
-
-if (ataque_time > 0) {
-    ataque_time--;
+if (keyboard_check_pressed(ord("X"))){
+    dash_dir = facing
+        var _dash_x = lengthdir_x(dash_vel, dash_dir)
+        var _dash_y = lengthdir_y(dash_vel, dash_dir)
+        
+        var _passos = ceil(dash_vel);
+        
+        for(var i = 0; i < _passos; i++){
+            
+            var _dx = _dash_x / _passos;
+            var _dy = _dash_y / _passos;
+            
+            if(place_meeting(x + _dx, y + _dy, tilemap_foreground)){
+                break;
+            }
+            
+            x += _dx;
+            y += _dy;
+        }
 }
 
-if (hp <= 0) {
-    hp = 0;
-    game_over = true;
-}
 
+            
 if(curando){
     sprite_index = spr_plr_curando
 }
