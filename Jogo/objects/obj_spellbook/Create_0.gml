@@ -181,7 +181,7 @@ global.paginas_spawn_data[2] = [
         offset_x: 260,
         offset_y: 20, 
         linha_inicial: noone
-    },
+    },  
     
 ];
 
