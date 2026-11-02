@@ -208,8 +208,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
-    {"roomId":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"roomId":{"name":"room_boss_fase1","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},},
+    {"roomId":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"roomId":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},},
     {"roomId":{"name":"rm_mappingtest","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},},
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},

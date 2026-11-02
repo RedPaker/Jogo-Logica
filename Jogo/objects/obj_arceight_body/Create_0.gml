@@ -1,10 +1,28 @@
 // Inherit the parent event
 event_inherited();
 
-move_spd = 0.5;
+hp = 500
+
+move_spd = 0.7;
 estado = "perseguir";
 tempo_estado = 0;
 tempo_tiro = 0;
+
+grid_tamanho = 32;
+
+var _colunas = ceil(room_width / grid_tamanho);
+var _linhas = ceil(room_height / grid_tamanho);
+
+grid_ia = mp_grid_create(
+    0, 0,
+    _colunas,
+    _linhas,
+    grid_tamanho,
+    grid_tamanho
+);
+
+caminho = path_add();
+tempo_recalcular = 0;
 
 framecall = 0;
 crnt_frame = 0;
