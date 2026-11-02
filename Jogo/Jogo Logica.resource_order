@@ -68,6 +68,7 @@
     {"name":"obj_mini_parent","order":4,"path":"objects/obj_mini_parent/obj_mini_parent.yy",},
     {"name":"obj_npc_test","order":1,"path":"objects/obj_npc_test/obj_npc_test.yy",},
     {"name":"obj_OVERHEAT","order":7,"path":"objects/obj_OVERHEAT/obj_OVERHEAT.yy",},
+    {"name":"obj_puzzle_ram","order":5,"path":"objects/obj_puzzle_ram/obj_puzzle_ram.yy",},
     {"name":"obj_save","order":2,"path":"objects/obj_save/obj_save.yy",},
     {"name":"obj_spellbook","order":4,"path":"objects/obj_spellbook/obj_spellbook.yy",},
     {"name":"obj_spoon","order":5,"path":"objects/obj_spoon/obj_spoon.yy",},

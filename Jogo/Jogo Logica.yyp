@@ -102,6 +102,7 @@
     {"id":{"name":"obj_npc_test","path":"objects/obj_npc_test/obj_npc_test.yy",},},
     {"id":{"name":"obj_OVERHEAT","path":"objects/obj_OVERHEAT/obj_OVERHEAT.yy",},},
     {"id":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},},
+    {"id":{"name":"obj_puzzle_ram","path":"objects/obj_puzzle_ram/obj_puzzle_ram.yy",},},
     {"id":{"name":"obj_save","path":"objects/obj_save/obj_save.yy",},},
     {"id":{"name":"obj_spellbook","path":"objects/obj_spellbook/obj_spellbook.yy",},},
     {"id":{"name":"obj_spoon","path":"objects/obj_spoon/obj_spoon.yy",},},

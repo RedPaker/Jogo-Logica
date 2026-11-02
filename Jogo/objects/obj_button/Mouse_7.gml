@@ -73,4 +73,58 @@ switch (button_id) {
             }
         }
     break;
+    case 9:
+case 10:
+case 11:
+case 12:
+
+    var _botao = button_id - 8;
+    var _layer = layer_get_id("UILayer_2");
+
+    if (_layer != -1 && layer_get_visible(_layer)) {
+
+        if (_botao == global.numero_puzzle) {
+
+            global.puzzle_acertos++;
+
+            if (global.puzzle_acertos >= 10) {
+                layer_set_visible(_layer, false);
+
+                var _puzzle = instance_find(obj_puzzle_ram, 0);
+
+                if (_puzzle != noone) {
+                    _puzzle.interagindo = false;
+                }
+
+                global.puzzle_ram_concluido = true;
+                break;
+            }
+
+            var _anterior = global.numero_puzzle;
+            var _novo = irandom_range(1, 3);
+
+            if (_novo >= _anterior) {
+                _novo++;
+            }
+
+            global.numero_puzzle = _novo;
+
+            var _texto = layer_text_get_id(_layer, "text_4B58F36B");
+
+            if (_texto != -1) {
+                layer_text_text(_texto, string(global.numero_puzzle));
+            }
+
+            var _puzzle = instance_find(obj_puzzle_ram, 0);
+
+            if (_puzzle != noone) {
+                _puzzle.tempo_puzzle = room_speed * 2;
+            }
+
+        } else {
+            global.puzzle_acertos = 0;
+        }
+    }
+
+break;
 }

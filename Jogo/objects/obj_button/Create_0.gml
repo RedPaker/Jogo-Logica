@@ -41,3 +41,22 @@ break;
 }
 
 global.codigo_binario = "";
+
+interagindo = false;
+distancia_interacao = 32;
+tempo_puzzle = 0;
+
+if (!variable_global_exists("puzzle_ram_concluido")) {
+    global.puzzle_ram_concluido = false;
+}
+
+global.puzzle_acertos = 0;
+
+function atualizar_visor() {
+    var _ui_layer = layer_get_id("UILayer_1");
+    var _text_element = layer_text_get_id(_ui_layer, "text_4B58F36B");
+
+    if (_text_element != -1) {
+        layer_text_text(_text_element, string(global.numero_puzzle));
+    }
+}

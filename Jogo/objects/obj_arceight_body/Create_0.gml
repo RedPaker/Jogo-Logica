@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 500
+hp = 250
 
 move_spd = 0.7;
 estado = "perseguir";
