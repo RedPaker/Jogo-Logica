@@ -4,7 +4,7 @@ if (!instance_exists(obj_plr_rpg)) exit;
 
 var _dist = point_distance(x, y, obj_plr_rpg.x, obj_plr_rpg.y);
 
-if (_dist <= distancia_interacao && keyboard_check_pressed(ord("Z"))) {
+if (_dist <= distancia_interacao && keyboard_check_pressed(global.st_use)) {
 
     interagindo = !interagindo;
 
