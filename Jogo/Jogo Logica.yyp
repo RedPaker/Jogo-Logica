@@ -56,6 +56,7 @@
   "resources":[
     {"id":{"name":"fnt_10_comicsansms","path":"fonts/fnt_10_comicsansms/fnt_10_comicsansms.yy",},},
     {"id":{"name":"fnt_12_comicsansms","path":"fonts/fnt_12_comicsansms/fnt_12_comicsansms.yy",},},
+    {"id":{"name":"fnt_12_consolas","path":"fonts/fnt_12_consolas/fnt_12_consolas.yy",},},
     {"id":{"name":"fnt_14_comicsansms","path":"fonts/fnt_14_comicsansms/fnt_14_comicsansms.yy",},},
     {"id":{"name":"fnt_16_comicsansms","path":"fonts/fnt_16_comicsansms/fnt_16_comicsansms.yy",},},
     {"id":{"name":"fnt_6_comicsansms","path":"fonts/fnt_6_comicsansms/fnt_6_comicsansms.yy",},},
@@ -64,6 +65,7 @@
     {"id":{"name":"obj_arceight_body","path":"objects/obj_arceight_body/obj_arceight_body.yy",},},
     {"id":{"name":"obj_arceight_head","path":"objects/obj_arceight_head/obj_arceight_head.yy",},},
     {"id":{"name":"obj_atack","path":"objects/obj_atack/obj_atack.yy",},},
+    {"id":{"name":"obj_binario_puzzle","path":"objects/obj_binario_puzzle/obj_binario_puzzle.yy",},},
     {"id":{"name":"obj_block_parent","path":"objects/obj_block_parent/obj_block_parent.yy",},},
     {"id":{"name":"obj_bloco_boom","path":"objects/obj_bloco_boom/obj_bloco_boom.yy",},},
     {"id":{"name":"obj_bloco_choque","path":"objects/obj_bloco_choque/obj_bloco_choque.yy",},},
@@ -205,11 +207,11 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"roomId":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"roomId":{"name":"room_boss_fase1","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},},
     {"roomId":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},},
     {"roomId":{"name":"rm_mappingtest","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},},
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
-    {"roomId":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"roomId":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
     {"roomId":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
   ],

@@ -1,3 +1,10 @@
+if (instance_number(obj_binario_puzzle) > 0) {
+    var _puzzle = instance_find(obj_binario_puzzle, 0);
+
+    if (_puzzle.interagindo) {
+        exit;
+    }
+}
 if (instance_exists(obj_dialogo)){
     exit
 }
