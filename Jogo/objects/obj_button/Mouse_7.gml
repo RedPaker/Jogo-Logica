@@ -1,8 +1,7 @@
-
 image_index = 1;
 
 switch (button_id) {
-    
+
     case 1: // Play
         layer_set_visible(layer_get_id("SavesLayer"), true);
         layer_set_visible(layer_get_id("MainLayer"), false);
@@ -28,7 +27,7 @@ switch (button_id) {
     break;
 
     case 3: // Créditos
-        
+
     break;
 
     case 4: // Exit
@@ -37,7 +36,7 @@ switch (button_id) {
 
     case 5: // Load/New Game
         if (fileexistsload == true) {
-            
+
         } else {
             sv_newgame();
         }
@@ -60,17 +59,18 @@ switch (button_id) {
             image_index = 4;
         }
     break;
+
     case 7: // Botão 1
     case 8: // Botão 0
+        if (string_length(global.codigo_binario) < 8) {
+            global.codigo_binario += string(8 - button_id);
 
-        global.codigo_binario += string(8 - button_id);
-
-        var _ui_layer = layer_get_id("UILayer_1");
-        var _text_element = layer_text_get_id(_ui_layer, "text_5B88EC1D");
+            var _ui_layer = layer_get_id("UILayer_1");
+            var _text_element = layer_text_get_id(_ui_layer, "text_5B88EC1D");
 
             if (_text_element != -1) {
                 layer_text_text(_text_element, global.codigo_binario);
             }
-
+        }
     break;
 }
