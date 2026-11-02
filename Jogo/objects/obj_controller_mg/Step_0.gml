@@ -1,6 +1,6 @@
 if (keyboard_check_pressed(global.st_smg)) {
     id_magia ++;
-    if(id_magia > 6){
+    if(id_magia > 7){
         id_magia = 1;
     }
 }
@@ -23,6 +23,10 @@ if(cura_time > 0){
 if(flash_time > 0){
         flash_time --;
     }
+
+if (overheat_time > 0){
+    overheat_time --;
+}
 
 if (keyboard_check(global.st_umg)){
     switch (id_magia) {
@@ -47,6 +51,10 @@ if (keyboard_check(global.st_umg)){
         
         case 6:
             flash();
+        break;    
+    
+        case 7:
+            overheat();
         break;    
     }
 }

@@ -18,3 +18,6 @@ if (oldhp>hp){
 if(hit>0){
     hit--;
 }
+
+depth = -bbox_bottom;
+obj_arceight_head.depth = depth

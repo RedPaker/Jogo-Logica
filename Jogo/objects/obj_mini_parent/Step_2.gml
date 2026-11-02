@@ -1,5 +1,6 @@
 var _livro_aberto = instance_exists(obj_spellbook) && obj_spellbook.abrir;
 
+
 if (_livro_aberto) {
     var _centro_x = display_get_gui_width() / 2;
     var _centro_y = display_get_gui_height() / 2;
@@ -16,8 +17,7 @@ if (_livro_aberto) {
     var _cam_y = camera_get_view_y(view_camera[0]);
     
     if (!primeira) {
-        x = (_centro_x + 180) + _cam_x;
-        y = (_centro_y + 100) + _cam_y;
+        posicao_livro()
         primeira = true;
     }
 

@@ -19,6 +19,11 @@ tempo = 0
 flash_time = 0;
 flash_cadencia = 20
 
+overheat_time = 0;
+overheat_cadencia = 30;
+
+
+
 
 function lancar_cd(){
     if (keyboard_check(global.st_umg) && tiro_time <= 0) {
@@ -99,5 +104,13 @@ function flash(){
         instance_create_layer(_ax, _ay, "instances", obj_flash, {atk_dist:_distancia});
     
         flash_time = flash_cadencia        
+    }
+}
+
+function overheat(){
+    
+    if (keyboard_check_pressed(global.st_umg) && overheat_time<= 0){
+    instance_create_layer(obj_plr_rpg.x,obj_plr_rpg.y,"Instances",obj_OVERHEAT)
+    overheat_time = overheat_cadencia;
     }
 }

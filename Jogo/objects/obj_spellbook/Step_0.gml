@@ -11,6 +11,8 @@ if (abrir && !slots_criados){
 }
 
 
+
+
 if (slots_criados == true && keyboard_check_pressed(ord("B"))){
     slots_criados = false
 }

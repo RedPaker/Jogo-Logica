@@ -31,3 +31,4 @@ impacto = 0;
 curando = false;
 tempo_cura = 0;
 duracao_cura = 245; // 1 segundo (60 FPS)
+imortal = false

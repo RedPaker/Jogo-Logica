@@ -1,4 +1,6 @@
 if (abrir) {
+    
+    draw_set_font(fnt_10_comicsansms)
 
     // 1. Fundo escuro
     draw_set_alpha(0.8);
