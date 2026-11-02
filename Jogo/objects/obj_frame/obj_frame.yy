@@ -23,11 +23,17 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"frame_id","filters":[],"listItems":[],"multiselect":false,"name":"frame_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"frame_sub_id","filters":[],"listItems":[],"multiselect":false,"name":"frame_sub_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ui_frame",
+    "path":"sprites/spr_ui_frame/spr_ui_frame.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
