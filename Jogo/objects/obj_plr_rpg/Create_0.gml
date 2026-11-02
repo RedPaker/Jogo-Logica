@@ -32,3 +32,10 @@ curando = false;
 tempo_cura = 0;
 duracao_cura = 245; // 1 segundo (60 FPS)
 imortal = false
+
+dash_vel = 12
+dash_dir = 0
+
+dash_carga = 45;
+dash_dura = 100
+dash_recarga = 60

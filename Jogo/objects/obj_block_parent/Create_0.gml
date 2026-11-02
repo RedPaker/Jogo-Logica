@@ -13,3 +13,4 @@ valor_conferencia = 0
 send = false
 no_block_valid = false
 encaixado = false
+accept_all = false
