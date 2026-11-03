@@ -7,7 +7,7 @@ switch (button_id) {
             case 1:
                 layer_set_visible(layer_get_id("SavesLayer"), true);
                 layer_set_visible(layer_get_id("MainLayer"), false);
-                break;
+            break;
             case 2:
                 layer_set_visible(layer_get_id("SettingsLayer"), true);
                 layer_set_visible(layer_get_id("MainLayer"), false);
@@ -15,6 +15,7 @@ switch (button_id) {
             case 3:
                 layer_set_visible(layer_get_id("SavesLayer"), true);
                 layer_set_visible(layer_get_id("MainLayer"), false);
+            break;
             default:
                 layer_set_visible(layer, false);
                 layer_set_visible(layer_get_id("MainLayer"), true);
@@ -27,7 +28,7 @@ switch (button_id) {
             case 1:
                 layer_set_visible(layer_get_id("GameplayLayer"), true);
                 layer_set_visible(layer_get_id("SettingsLayer"), false);
-                break; 
+            break; 
             case 2:
                 layer_set_visible(layer_get_id("VisualLayer"), true);
                 layer_set_visible(layer_get_id("SettingsLayer"), false);
@@ -35,6 +36,11 @@ switch (button_id) {
             case 3:
                 layer_set_visible(layer_get_id("AudioLayer"), true);
                 layer_set_visible(layer_get_id("SettingsLayer"), false);
+            break;
+            case 4:
+                layer_set_visible(layer_get_id("ResinaLayer"), true);
+                layer_set_visible(layer_get_id("SettingsLayer"), false);
+            break;
             default:
                 layer_set_visible(layer, false);
                 layer_set_visible(layer_get_id("SettingsLayer"), true);
