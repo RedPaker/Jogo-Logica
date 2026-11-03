@@ -23,7 +23,7 @@ global.paginas_spawn_data[0] = [
     },
     
     {
-        objeto: obj_bloco_print,
+        objeto: obj_bloco_while,
         offset_x: 180,
         offset_y: -100,
         linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
@@ -32,6 +32,12 @@ global.paginas_spawn_data[0] = [
         objeto: obj_bloco_fita,
         offset_x: 100,
         offset_y: 1, 
+        linha_inicial: noone
+    }, 
+     {
+        objeto: obj_bloco_print,
+        offset_x: 180,
+        offset_y: -140, 
         linha_inicial: noone
     }
     ];
@@ -339,5 +345,4 @@ verificacao = function(pagina_atual){
     }
 }
 }
-
 

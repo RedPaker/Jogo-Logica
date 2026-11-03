@@ -70,3 +70,7 @@ if (mouse_check_button_released(mb_left)) {
     primeira = false
 }
 
+if (encaixado){
+    verificar_bloco_while()
+}
+
