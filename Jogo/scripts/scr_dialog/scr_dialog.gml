@@ -12,29 +12,29 @@ function d_select_dialog(_is){
     	case "welcome_dialog":
             return_value = [
                 {
-                    name: "Astolfo",
-                    msg: "Subi no pe de pera pra pega uma pera"
+                    name: "U+003A",
+                    msg: "Oi?... Alo?..."
                 },
                 {
-                    name: "Astolfo",
-                    msg: "A pera tava podi eu desci cum a goiaba"   
+                    name: "U+003A",
+                    msg: "O senhor esta bem?"   
                 }, 
                 {
-                    name: "Astolfo",
-                    msg: "O trem anda no ar, aviao anda na linha"
+                    name: "U+003A",
+                    msg: "Eu te vi desmaiado la fora e descidi ajudar"
                 },
                  {
-                    name: "Astolfo",
-                    msg: "A vaca bota ovo, e o ovo tira leite da galinha kkkkkkk"
+                    name: "U+003A",
+                    msg: "Parece que algo esta infectando os moradores,\n mas você pode me ajudar? "
                 },
                 {
                     name: "0x43",
-                    msg: "Ta chapando loco"
+                    msg: "Talvez... Acho que nao tenho muita escolha ne?"
                 },
                 {
-                    name: "Astolfo",
-                    msg: "aaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAb"
-                }
+                    name: "U+003A",
+                    msg: "a situacao esta melhor vamos tentar encontrar\n outros que nao foram infectados"
+                },
             ]
         break;
     }
@@ -42,11 +42,11 @@ function d_select_dialog(_is){
 }
 
 global.char_colors = {
-    "Astolfo": c_red,
+    "U+003A": c_red,
     "0x43": c_blue
 }
 
 global.sprites = {
-    "Astolfo": spr_speak_asterisco,
+    "U+003A": spr_speak_asterisco,
     "0x43": spr_speak_C
 }
