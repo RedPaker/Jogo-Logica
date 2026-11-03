@@ -330,6 +330,7 @@
               ],"flexDirection":0,"height":{"unit":1,"value":150.0,},"justifyContent":1,"name":"FlexPanel_3","nodeColour":4282937074,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":120.0,},},
           ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"UILayer_2","nodeColour":4288672328,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
       ],"locked":false,"name":"UIRam","nodeColour":4286400754,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":false,},
+    {"$GMRUIFolder":"","%Name":"UIInventario","children":[],"locked":false,"name":"UIInventario","nodeColour":4287842546,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":true,},
   ],
   "visible":true,
 }

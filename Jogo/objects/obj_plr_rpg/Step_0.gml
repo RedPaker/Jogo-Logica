@@ -124,6 +124,10 @@ else{
     else if(sprite_index ==  spr_plr_td_down) sprite_index =  spr_plr_td_down;
 }
 
+if (ataque_time > 0) {
+    ataque_time--;
+}
+
 
 
 if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
@@ -153,7 +157,7 @@ if (keyboard_check_pressed(global.st_use) && ataque_time <= 0) {
         atk_face : facing
     });*/
     
-    ataque_time = 60;
+    ataque_time = 40;
 }
 
 if (keyboard_check_pressed(ord("X"))){
