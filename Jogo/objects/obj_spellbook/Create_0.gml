@@ -23,13 +23,7 @@ global.paginas_spawn_data[0] = [
     },
     
     {
-        objeto: obj_bloco_while,
-        offset_x: 180,
-        offset_y: -100,
-        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
-    },
-    {
-        objeto: obj_bloco_fita,
+        objeto: obj_bloco_disco,
         offset_x: 100,
         offset_y: 1, 
         linha_inicial: noone
@@ -40,6 +34,7 @@ global.paginas_spawn_data[0] = [
         offset_y: -140, 
         linha_inicial: noone
     }
+
     ];
 
 
@@ -190,6 +185,43 @@ global.paginas_spawn_data[2] = [
     },  
     
 ];
+
+global.paginas_spawn_data[4] = [
+    {
+        seq_certa: [1],
+        seq_certa_mini:  [2]
+    },
+    {
+        frase: "Reiniciando..."
+    },
+    
+    {
+        objeto: obj_bloco_while,
+        offset_x: 180,
+        offset_y: -100,
+        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+    },
+    {
+        objeto: obj_bloco_fita,
+        offset_x: 100,
+        offset_y: 1, 
+        linha_inicial: noone
+    }, 
+     {
+        objeto: obj_bloco_print,
+        offset_x: 180,
+        offset_y: -180, 
+        linha_inicial: noone
+    },
+    
+     {
+        objeto: obj_bloco_print,
+        offset_x: 180,
+        offset_y: 200, 
+        linha_inicial: noone
+    },
+    ];
+
 
 //BLOCOS:
 

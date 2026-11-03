@@ -18,11 +18,14 @@ criou_rabinho = false;
 rabinho_instancia = noone;
 encontrou = false
 qt = 1
+blk = noone
+saiu = false
+e_while = false
+amarz = 0
 
 verificar_bloco_while = function() {
     var _linha_while = -1;
 
-    // Descobre a linha do bloco while
     with (obj_colission_bl) {
         var _bloco = instance_place(x, y, obj_bloco_while);
 
@@ -30,12 +33,12 @@ verificar_bloco_while = function() {
             _linha_while = linha;
         }
     }
+    amarz = _linha_while
 
     if (_linha_while != -1) {
 
         if (!criou_rabinho) {
 
-            // Guarda a linha seguinte em uma variável local
             var _linha_rabo = _linha_while + qt;
 
             with (obj_colission_bl) {
@@ -55,8 +58,11 @@ verificar_bloco_while = function() {
             
             var _bloco = instance_place(x, y, obj_bloco_while);
             var _ta_no_while = instance_place(x,y,_bloco)
+            if (_bloco != noone){
+                blk = _bloco
+            }
             
-            if (_ta_no_while){
+                if (_ta_no_while){
                 with (obj_bloco_while_rabo) {
                 instance_destroy();
             }
@@ -65,7 +71,9 @@ verificar_bloco_while = function() {
                 show_debug_message("Oi")
                 y += 50
             }
+            
         }
+        
 
     } else {
 
@@ -75,5 +83,37 @@ verificar_bloco_while = function() {
             }
             criou_rabinho = false;
         }
+        
+        
     }
 }
+
+saiu_do_while = function(){
+            show_debug_message("Oie")
+        with (obj_bloco_while_rabo){
+            instance_destroy()
+        }
+        if (criou_rabinho) {
+            qt -= 1
+            var _linha_rabo = amarz + 1;
+
+            with (obj_colission_bl) {
+                if (linha == _linha_rabo) {
+
+                    var _algo = instance_create_layer(
+                        x - 68,
+                        y,
+                        "Instances",
+                        obj_bloco_while_rabo
+                    );
+                    _algo.slot_pai = id;
+                }
+            }
+
+            criou_rabinho = false;
+    } 
+        amarz = 0
+        blk = noone
+}
+
+

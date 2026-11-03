@@ -72,5 +72,12 @@ if (mouse_check_button_released(mb_left)) {
 
 if (encaixado){
     verificar_bloco_while()
+} else {
+    if (blk != noone){
+    saiu_do_while()
+    }
 }
+
+
+
 
