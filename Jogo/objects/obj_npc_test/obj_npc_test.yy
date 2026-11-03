@@ -3,6 +3,7 @@
   "%Name":"obj_npc_test",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_npc_test",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_plr_placeholder",
-    "path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",
+    "name":"spr_white",
+    "path":"sprites/spr_white/spr_white.yy",
   },
   "spriteMaskId":null,
   "visible":true,
