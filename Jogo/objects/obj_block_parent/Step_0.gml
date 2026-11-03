@@ -30,13 +30,17 @@ if (mouse_check_button_pressed(mb_left)) {
         }
     }
     
-    if (instance_exists(obj_mini_parent) &&  obj_mini_parent.a_frente == false){
-        if (_clicou) {
-        arrastando = true;
-        }
+   if (_clicou) {
+    var _mini = instance_place(x, y, obj_mini_parent);
+    
+    // Se tem mini-bloco, ele só arrasta se o mini não estiver "a frente". 
+    // Se NÃO tem mini-bloco, pode arrastar livremente!
+    if (_mini != noone && _mini.a_frente == true) {
+        arrastando = false;
     } else {
-    	arrastando = false
+        arrastando = true
     }
+}
     
 }
 
