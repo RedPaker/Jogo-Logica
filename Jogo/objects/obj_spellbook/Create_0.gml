@@ -188,39 +188,177 @@ global.paginas_spawn_data[2] = [
 
 global.paginas_spawn_data[4] = [
     {
-        seq_certa: [1],
-        seq_certa_mini:  [2]
+        seq_certa: [3, 10, 15, 10, 6, 25, 16, 10, 26],
+        seq_certa_mini: [17, 12, 24, 17, 19, 22, 17, 21, 12, 23, 23, 17, 12, 12, 22, 18, 20, 12, 23]
     },
     {
         frase: "Reiniciando..."
     },
     
+    // --- ESTRUTURAS DE CONTROLE (While e If) ---
     {
         objeto: obj_bloco_while,
-        offset_x: 180,
-        offset_y: -100,
-        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+        offset_x: 125,
+        offset_y: -240, 
+        linha_inicial: noone
     },
     {
-        objeto: obj_bloco_fita,
+        objeto: obj_bloco_if,
+        offset_x: 245,
+        offset_y: -240, 
+        linha_inicial: noone
+    },
+
+    // --- VARIÁVEIS / TEMPO / GERAIS ---
+    {
+        objeto: obj_bloco_import_time,
+        offset_x: 125,
+        offset_y: -170,
+        linha_inicial: noone, 
+    },
+    {
+        objeto: obj_bloco_timesleep,
+        offset_x: 245,
+        offset_y: -170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 75,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 125,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 175,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 225,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_coracao,
+        offset_x: 275,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+
+    // --- OPERADORES MATEMÁTICOS E LÓGICOS ---
+    {
+        objeto: obj_bloco_operacoes,
         offset_x: 100,
-        offset_y: 1, 
-        linha_inicial: noone
-    }, 
-     {
-        objeto: obj_bloco_print,
-        offset_x: 180,
-        offset_y: -180, 
+        offset_y: -30, 
         linha_inicial: noone
     },
-    
-     {
-        objeto: obj_bloco_print,
-        offset_x: 180,
-        offset_y: 200, 
+    {
+        objeto: obj_bloco_operacoes,
+        offset_x: 150, // <- Adicionado aqui (mais um de operação)
+        offset_y: -30, 
         linha_inicial: noone
     },
-    ];
+    {
+        objeto: obj_bloco_operacoes,
+        offset_x: 235,
+        offset_y: -30, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_maior,
+        offset_x: 75,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 125,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 175,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 225,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 275,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual, // <- Adicionado aqui (mais um igual)
+        offset_x: 150,
+        offset_y: 110, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_mais,
+        offset_x: 95,
+        offset_y: 110, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_menos,
+        offset_x: 235,
+        offset_y: 110, 
+        linha_inicial: noone
+    },
+
+    // --- NÚMEROS ---
+    {
+        objeto: obj_bloco_num_0,
+        offset_x: 85,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_0,
+        offset_x: 135,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_1,
+        offset_x: 185,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_1,
+        offset_x: 235,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_1,
+        offset_x: 285,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_3,
+        offset_x: 185,
+        offset_y: 230, 
+        linha_inicial: noone
+    }
+];
 
 
 //BLOCOS:
@@ -270,7 +408,7 @@ spawn_blocos_colisao = function() {
     
     var _slots_total = 9;
     var _espacamento_y = 50;
-    var _espacamento_x = 45;
+    var _espacamento_x = 47;
 
 for (var i = 0; i < _slots_total; i++) {
     var _slot = instance_create_layer(_centro_x - 180, _centro_y - 120 + (i * _espacamento_y), "Instances", obj_colission_bl);
@@ -336,6 +474,11 @@ verificacao = function(pagina_atual){
             array_push(_sequencia_jogador, _valor_da_linha);
         }
     }
+
+        
+            show_debug_message(_sequencia_jogador)
+        
+        
         
     var _receita_correta = _dados.seq_certa;
 
