@@ -408,7 +408,7 @@ spawn_blocos_colisao = function() {
     
     var _slots_total = 9;
     var _espacamento_y = 50;
-    var _espacamento_x = 47;
+    var _espacamento_x = 46;
 
 for (var i = 0; i < _slots_total; i++) {
     var _slot = instance_create_layer(_centro_x - 180, _centro_y - 120 + (i * _espacamento_y), "Instances", obj_colission_bl);
