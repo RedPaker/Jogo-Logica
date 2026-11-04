@@ -87,7 +87,7 @@ switch (estado) {
     case "filhos":
         tempo_parir--;
         if (tempo_parir <= 0) {
-            var _quantidade = instance_number(obj_enimy_rpg);
+            var _quantidade = instance_number(obj_aranha);
             for (var i = 0; i < filhos; i++) {
                 if (_quantidade < filhos_max) {
                     var _criou = false;
@@ -104,7 +104,7 @@ switch (estado) {
                         _ex,
                         _ey,
                         "instances",
-                        obj_enimy_rpg
+                        obj_aranha
                     ); 
                 
                     _quantidade++;
