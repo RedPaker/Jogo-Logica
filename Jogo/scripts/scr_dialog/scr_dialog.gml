@@ -69,7 +69,7 @@ function d_select_dialog(_is){
             return_value = [
                 {
                     name: "Porteiro",
-                    msg: "Voce é muito corajoso sabia?"
+                    msg: "Voce e muito corajoso sabia?"
                 },
                 {
                     name: "Porteiro",
@@ -243,5 +243,7 @@ global.char_colors = {
 
 global.sprites = {
     "U+003A": spr_speak_asterisco,
-    "0x43": spr_speak_C
+    "0x43": spr_speak_C,
+    "Porteiro":spr_green,
+    "Morador": spr_magenta,
 }
