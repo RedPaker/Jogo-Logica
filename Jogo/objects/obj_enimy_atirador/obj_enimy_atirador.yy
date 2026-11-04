@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_magenta",
-    "path":"sprites/spr_magenta/spr_magenta.yy",
+    "name":"spr_mouth_right",
+    "path":"sprites/spr_mouth_right/spr_mouth_right.yy",
   },
   "spriteMaskId":null,
   "visible":true,
