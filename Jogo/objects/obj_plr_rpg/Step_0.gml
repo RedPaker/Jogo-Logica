@@ -1,3 +1,16 @@
+if(hp <= 0){
+    game_over = true
+    
+    if (keyboard_check_pressed(ord("P"))) {
+       game_restart();
+        exit;
+}
+}
+
+else {
+	
+
+
 if (instance_number(obj_binario_puzzle) > 0) {
     var _puzzle = instance_find(obj_binario_puzzle, 0);
 
@@ -7,10 +20,6 @@ if (instance_number(obj_binario_puzzle) > 0) {
 }
 if (instance_exists(obj_dialogo)){
     exit
-}
-if (keyboard_check_pressed(ord("P"))) {
-       game_restart();
-        exit;
 }
 
 if (instance_exists(obj_choque) && obj_choque.lifetime > 0){
@@ -228,6 +237,7 @@ if (dano_time > 0) {
 }
 else {
     image_blend = c_white;
+}
 }
 
 
