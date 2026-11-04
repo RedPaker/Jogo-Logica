@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cyan",
-    "path":"sprites/spr_cyan/spr_cyan.yy",
+    "name":"spr_eyes_wr",
+    "path":"sprites/spr_eyes_wr/spr_eyes_wr.yy",
   },
   "spriteMaskId":null,
   "visible":true,
