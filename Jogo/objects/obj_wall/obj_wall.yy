@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enimy_rpg",
-  "eventList":[],
+  "%Name":"obj_wall",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_enimy_rpg",
+  "name":"obj_wall",
   "overriddenProperties":[],
   "parent":{
-    "name":"Inimigos",
-    "path":"folders/ObjectS/Inimigos.yy",
+    "name":"Misc",
+    "path":"folders/ObjectS/Misc.yy",
   },
-  "parentObjectId":{
-    "name":"obj_enemy_parent",
-    "path":"objects/obj_enemy_parent/obj_enemy_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,9 +30,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_eyes_wr",
-    "path":"sprites/spr_eyes_wr/spr_eyes_wr.yy",
+    "name":"spr_barreira",
+    "path":"sprites/spr_barreira/spr_barreira.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_barreira",
+    "path":"sprites/spr_barreira/spr_barreira.yy",
+  },
   "visible":true,
 }
