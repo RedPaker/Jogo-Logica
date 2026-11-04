@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enimy_rpg",
+  "%Name":"obj_enemy_eyes",
   "eventList":[],
   "managed":true,
-  "name":"obj_enimy_rpg",
+  "name":"obj_enemy_eyes",
   "overriddenProperties":[],
   "parent":{
     "name":"Inimigos",

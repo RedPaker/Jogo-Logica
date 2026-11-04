@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enimy_atirador",
+  "%Name":"obj_enemy_atirador",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_enimy_atirador",
+  "name":"obj_enemy_atirador",
   "overriddenProperties":[],
   "parent":{
     "name":"Inimigos",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mouth_right",
-    "path":"sprites/spr_mouth_right/spr_mouth_right.yy",
+    "name":"spr_magenta",
+    "path":"sprites/spr_magenta/spr_magenta.yy",
   },
   "spriteMaskId":null,
   "visible":true,
