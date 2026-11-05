@@ -270,6 +270,18 @@ footer p {
     background: black;
 }
 
+.codigo-carousel {
+    position: relative;
+    width: 85%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.codigo-carousel .carousel-indicators {
+    position: static !important; 
+    margin-top: 15px !important; 
+}
+
 
 .codigo-carousel {
     position: relative;
