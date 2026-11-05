@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Til e set",
-    "path":"folders/Til e set.yy",
+    "name":"Tileseh",
+    "path":"folders/Sprite/Tileseh.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

@@ -120,12 +120,20 @@ footer p {
 
 .primarybox {
     max-width: 900px;
-    margin: auto;
+    margin: 50px;
     background: #27ce75;
     border-radius: 50px;
     padding: 25px;
-    margin: 50px;
     flex: 1;
+    box-sizing: border-box;
+}
+
+.primarybox > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 25px;
 }
 
 .primarybox img {
@@ -216,7 +224,6 @@ footer p {
     display: block;
 }
 
-/* Setas */
 
 .storyboard-arrow {
     position: absolute;
@@ -242,7 +249,7 @@ footer p {
     right: 10px;
 }
 
-/* Indicadores */
+
 
 .storyboard-indicators {
     display: flex;
@@ -263,3 +270,37 @@ footer p {
     background: black;
 }
 
+
+.codigo-carousel {
+    position: relative;
+    width: 85%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.codigo-carousel .carousel-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    display: block;
+}
+
+.codigo-carousel .carousel-indicators {
+    position: static;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.codigo-carousel .carousel-indicators li {
+    background-color: #00241f;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 600px) {
+    .codigo-carousel .carousel-item img {
+        height: 260px;
+    }
+}
