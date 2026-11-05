@@ -42,7 +42,6 @@ y_bloco_if = 50;
 qt_if = 1;
 
 
-
 verificar_bloco_while = function() {
     var _linha_while = -1;
 

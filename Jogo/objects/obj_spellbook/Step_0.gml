@@ -15,11 +15,13 @@ if (abrir && !slots_criados){
 
 if (slots_criados == true && keyboard_check_pressed(ord("B"))){
     slots_criados = false
+    desenhar = false
 }
 
 if (keyboard_check_pressed(vk_right)){
     pagina_atual++
     spawn_blocos_pagina(pagina_atual)
+    desenhar = false
 }
 
 if (keyboard_check_pressed(vk_left)){
@@ -27,6 +29,7 @@ if (keyboard_check_pressed(vk_left)){
         pagina_atual--;
         spawn_blocos_pagina(pagina_atual);
     }
+    desenhar = false
 }
 
 
