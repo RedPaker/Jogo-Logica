@@ -84,8 +84,6 @@
     {"name":"obj_enemy_atirador","order":4,"path":"objects/obj_enemy_atirador/obj_enemy_atirador.yy",},
     {"name":"obj_enemy_eyes","order":1,"path":"objects/obj_enemy_eyes/obj_enemy_eyes.yy",},
     {"name":"obj_enemy_mouth","order":8,"path":"objects/obj_enemy_mouth/obj_enemy_mouth.yy",},
-    {"name":"obj_enimy_atirador","order":4,"path":"objects/obj_enimy_atirador/obj_enimy_atirador.yy",},
-    {"name":"obj_enimy_rpg","order":1,"path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},
     {"name":"obj_explosion_jk","order":1,"path":"objects/obj_explosion_jk/obj_explosion_jk.yy",},
     {"name":"obj_flash","order":6,"path":"objects/obj_flash/obj_flash.yy",},
     {"name":"obj_frame","order":5,"path":"objects/obj_frame/obj_frame.yy",},

@@ -115,8 +115,6 @@
     {"id":{"name":"obj_enemy_eyes","path":"objects/obj_enemy_eyes/obj_enemy_eyes.yy",},},
     {"id":{"name":"obj_enemy_mouth","path":"objects/obj_enemy_mouth/obj_enemy_mouth.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
-    {"id":{"name":"obj_enimy_atirador","path":"objects/obj_enimy_atirador/obj_enimy_atirador.yy",},},
-    {"id":{"name":"obj_enimy_rpg","path":"objects/obj_enimy_rpg/obj_enimy_rpg.yy",},},
     {"id":{"name":"obj_explosion_jk","path":"objects/obj_explosion_jk/obj_explosion_jk.yy",},},
     {"id":{"name":"obj_flash","path":"objects/obj_flash/obj_flash.yy",},},
     {"id":{"name":"obj_frame","path":"objects/obj_frame/obj_frame.yy",},},
