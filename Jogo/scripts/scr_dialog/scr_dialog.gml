@@ -69,7 +69,7 @@ function d_select_dialog(_is){
             return_value = [
                 {
                     name: "Porteiro",
-                    msg: "Voce é muito corajoso sabia?"
+                    msg: "Voce e muito corajoso sabia?"
                 },
                 {
                     name: "Porteiro",
@@ -102,7 +102,7 @@ function d_select_dialog(_is){
             ]
         break;
     
-        case "tutorial_binario":
+        case "tutorial_binario_dialog":
             return_value = [
                 {
                     name: "0x43",
@@ -114,15 +114,15 @@ function d_select_dialog(_is){
                 },
                 {
                     name: "U+003A",
-                    msg: "ESCUTE COM BASTANTE ATENCAO."
+                    msg: "ESCUTE COM BASTANTE ATENCAO!!!!!"
                 },
                 {
                     name: "U+003A",
-                    msg: "Um numero em binario é um numero na base 2\n ou seja 0 e 1."
+                    msg: "Um numero em binario e um numero na base 2\n ou seja 0 e 1."
                 },
                 {
                     name: "U+003A",
-                    msg: "um numero na base 10 é o numero no qual estamos acostumados."
+                    msg: "um numero na base 10 e o numero no qual estamos acostumados."
                 },
                 {
                     name: "U+003A",
@@ -130,11 +130,11 @@ function d_select_dialog(_is){
                 },
                 {
                     name: "U+003A",
-                    msg: "Para transformar em binario precisamos fazer a divisao de 44 por 2."
+                    msg: "Para transformar em binario\n precisamos fazer a divisao de 44 por 2."
                 },
                 {
                     name: "U+003A",
-                    msg: "O resultado é 22 e o resto é 0\n LEMBRE DO RESTO!!!!!!"
+                    msg: "O resultado e 22 e o resto e 0\n LEMBRE DO RESTO!!!!!!"
                 },
                 {
                     name: "U+003A",
@@ -154,11 +154,11 @@ function d_select_dialog(_is){
                 },
                 {
                     name: "0x43",
-                    msg: "A juntando os restos 44 em binario e 101100."
+                    msg: "juntando os restos 44 em binario e 101100."
                 },
                 {
-                    name: "0x43",
-                    msg: "Faça isso com 183.\n divida por dois, anote os restos,\n e monte o numero comecando pelo ultimo resto. "
+                    name: "U+003A",
+                    msg: "Faca isso com 183. Divida por dois, anote os restos,\n e monte o numero comecando pelo ultimo resto."
                 },
                 
             ]
@@ -243,5 +243,7 @@ global.char_colors = {
 
 global.sprites = {
     "U+003A": spr_speak_asterisco,
-    "0x43": spr_speak_C
+    "0x43": spr_speak_C,
+    "Porteiro":spr_green,
+    "Morador": spr_magenta,
 }

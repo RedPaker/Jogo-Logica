@@ -188,39 +188,177 @@ global.paginas_spawn_data[2] = [
 
 global.paginas_spawn_data[4] = [
     {
-        seq_certa: [1],
-        seq_certa_mini:  [2]
+        seq_certa: [3, 10, 15, 10, 6, 25, 16, 10, 26],
+        seq_certa_mini: [17, 12, 24, 17, 19, 22, 17, 21, 12, 23, 23, 17, 12, 12, 22, 18, 20, 12, 23]
     },
     {
         frase: "Reiniciando..."
     },
     
+    // --- ESTRUTURAS DE CONTROLE (While e If) ---
     {
         objeto: obj_bloco_while,
-        offset_x: 180,
-        offset_y: -100,
-        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+        offset_x: 125,
+        offset_y: -240, 
+        linha_inicial: noone
     },
     {
-        objeto: obj_bloco_fita,
+        objeto: obj_bloco_if,
+        offset_x: 245,
+        offset_y: -240, 
+        linha_inicial: noone
+    },
+
+    // --- VARIÁVEIS / TEMPO / GERAIS ---
+    {
+        objeto: obj_bloco_import_time,
+        offset_x: 125,
+        offset_y: -170,
+        linha_inicial: noone, 
+    },
+    {
+        objeto: obj_bloco_timesleep,
+        offset_x: 245,
+        offset_y: -170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 75,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 125,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 175,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_relogio,
+        offset_x: 225,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_coracao,
+        offset_x: 275,
+        offset_y: -100, 
+        linha_inicial: noone
+    },
+
+    // --- OPERADORES MATEMÁTICOS E LÓGICOS ---
+    {
+        objeto: obj_bloco_operacoes,
         offset_x: 100,
-        offset_y: 1, 
-        linha_inicial: noone
-    }, 
-     {
-        objeto: obj_bloco_print,
-        offset_x: 180,
-        offset_y: -180, 
+        offset_y: -30, 
         linha_inicial: noone
     },
-    
-     {
-        objeto: obj_bloco_print,
-        offset_x: 180,
-        offset_y: 200, 
+    {
+        objeto: obj_bloco_operacoes,
+        offset_x: 150, // <- Adicionado aqui (mais um de operação)
+        offset_y: -30, 
         linha_inicial: noone
     },
-    ];
+    {
+        objeto: obj_bloco_operacoes,
+        offset_x: 235,
+        offset_y: -30, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_maior,
+        offset_x: 75,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 125,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 175,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 225,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual,
+        offset_x: 275,
+        offset_y: 40, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_igual, // <- Adicionado aqui (mais um igual)
+        offset_x: 150,
+        offset_y: 110, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_mais,
+        offset_x: 95,
+        offset_y: 110, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_menos,
+        offset_x: 235,
+        offset_y: 110, 
+        linha_inicial: noone
+    },
+
+    // --- NÚMEROS ---
+    {
+        objeto: obj_bloco_num_0,
+        offset_x: 85,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_0,
+        offset_x: 135,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_1,
+        offset_x: 185,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_1,
+        offset_x: 235,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_1,
+        offset_x: 285,
+        offset_y: 170, 
+        linha_inicial: noone
+    },
+    {
+        objeto: obj_bloco_num_3,
+        offset_x: 185,
+        offset_y: 230, 
+        linha_inicial: noone
+    }
+];
 
 
 //BLOCOS:
@@ -270,7 +408,7 @@ spawn_blocos_colisao = function() {
     
     var _slots_total = 9;
     var _espacamento_y = 50;
-    var _espacamento_x = 45;
+    var _espacamento_x = 46;
 
 for (var i = 0; i < _slots_total; i++) {
     var _slot = instance_create_layer(_centro_x - 180, _centro_y - 120 + (i * _espacamento_y), "Instances", obj_colission_bl);
@@ -300,81 +438,106 @@ for (var i = 0; i < _linhas_totais; i++) {
 }
 
 
-verificacao = function(pagina_atual){
-    
-    if (pagina_atual >= array_length(global.paginas_spawn_data)) return;
-        
-    var _lista_blocos = global.paginas_spawn_data[pagina_atual];
-    
-     for (var n = 0; n < array_length(_lista_blocos); n++){
-        
-        var _dados = _lista_blocos[n];
-        
-        if (!variable_struct_exists(_dados, "seq_certa")) {
-            continue;
-        }
-        
-        
-    var _grande = false
-    var _mini = false
-    
-    
-    var _sequencia_jogador = [];
+
+aba_atual = 0;        // 0 = Código, 1 = Log
+codigo_linhas = array_create(9, "");
+log_linhas = [];      // cada item: { linha, msg, ok }
+
+// Lê o que o jogador montou, guardando a linha de cada bloco
+coletar_programa = function() {
+    var _res = {
+        grande: [], grande_linha: [], grande_texto: [],
+        mini: [],   mini_linha: [],   mini_texto: []
+    };
 
     for (var i = 0; i < 9; i++) {
-        var _valor_da_linha = -1;
-        
         with (obj_block_parent) {
-            var _slot_pai = instance_place(x, y, obj_colission_bl);
-            if (_slot_pai != noone && _slot_pai.linha == i) {
-                _valor_da_linha = valor_conferencia;
-                show_debug_message(_valor_da_linha);
+            var _slot = instance_place(x, y, obj_colission_bl);
+            if (_slot != noone && _slot.linha == i) {
+                array_push(_res.grande, valor_conferencia);
+                array_push(_res.grande_linha, i);
+                array_push(_res.grande_texto, variable_instance_exists(id, "texto_codigo") ? texto_codigo : string(valor_conferencia));
             }
         }
-        
-        if (_valor_da_linha != -1) {
-            array_push(_sequencia_jogador, _valor_da_linha);
-        }
-    }
-        
-    var _receita_correta = _dados.seq_certa;
-
-    if (array_equals(_sequencia_jogador, _receita_correta)) {
-        show_debug_message("Feitiço correto!");
-     _grande = true
-    }
-        
-    var _sequencia_mini_jogador = [];
-
-    for (var ix = 0; ix < 9; ix++) {
-        for (var jx = 0; jx < 5; jx++) {
-            var _valor_encontrado = -1;
-            
+        for (var j = 0; j < 5; j++) {
             with (obj_mini_parent) {
-                var _slot_mini = instance_place(x, y, obj_colission_mini);
-                
-                if (_slot_mini != noone && _slot_mini.linha == ix && _slot_mini.posicao == jx) {
-                    _valor_encontrado = valor_conferencia; 
-                    show_debug_message(_valor_encontrado);
+                var _slot_m = instance_place(x, y, obj_colission_mini);
+                if (_slot_m != noone && _slot_m.linha == i && _slot_m.posicao == j) {
+                    array_push(_res.mini, valor_conferencia);
+                    array_push(_res.mini_linha, i);
+                    array_push(_res.mini_texto, variable_instance_exists(id, "texto_codigo") ? texto_codigo : string(valor_conferencia));
                 }
             }
-            
-            if (_valor_encontrado != -1) {
-                array_push(_sequencia_mini_jogador, _valor_encontrado);
-            }
         }
     }
-    var _receita_mini_correta = _dados.seq_certa_mini;
+    return _res;
+}
 
-    if (array_equals(_sequencia_mini_jogador, _receita_mini_correta)) {
-        show_debug_message("Sequência dos mini blocos correta!");
-        _mini = true
+// Monta o texto de cada linha para a aba Código
+atualizar_codigo = function() {
+    var _p = coletar_programa();
+    for (var i = 0; i < 9; i++) codigo_linhas[i] = "";
+
+    for (var k = 0; k < array_length(_p.grande); k++) {
+        codigo_linhas[_p.grande_linha[k]] = _p.grande_texto[k];
     }
-    
-    if (_mini = true && _grande == true){
-        show_debug_message("Parabéns!");
-        desenhar = true
+    for (var k = 0; k < array_length(_p.mini); k++) {
+        var _l = _p.mini_linha[k];
+        codigo_linhas[_l] += (codigo_linhas[_l] == "" ? "" : " ") + _p.mini_texto[k];
     }
 }
+
+// Compara uma sequência e devolve o primeiro erro (com a linha)
+comparar_sequencia = function(_jogador, _linhas, _correta, _nome) {
+    var _erros = [];
+    var _n = min(array_length(_jogador), array_length(_correta));
+
+    for (var k = 0; k < _n; k++) {
+        if (_jogador[k] != _correta[k]) {
+            array_push(_erros, { linha: _linhas[k], ok: false, msg: _nome + " errado ou fora de ordem." });
+            return _erros;
+        }
+    }
+    if (array_length(_jogador) > array_length(_correta)) {
+        array_push(_erros, { linha: _linhas[_n], ok: false, msg: _nome + " sobrando." });
+    } else if (array_length(_jogador) < array_length(_correta)) {
+        var _ult = (_n > 0) ? _linhas[_n - 1] : -1;
+        array_push(_erros, { linha: _ult + 1, ok: false, msg: "Faltam " + _nome + " a partir daqui." });
+    }
+    return _erros;
 }
+
+verificacao = function(pagina_atual) {
+    log_linhas = [];
+    if (pagina_atual >= array_length(global.paginas_spawn_data)) return;
+
+    var _lista = global.paginas_spawn_data[pagina_atual];
+    var _certa = [], _certa_mini = [];
+    for (var n = 0; n < array_length(_lista); n++) {
+        if (variable_struct_exists(_lista[n], "seq_certa")) {
+            _certa = _lista[n].seq_certa;
+            _certa_mini = _lista[n].seq_certa_mini;
+        }
+    }
+
+    var _p = coletar_programa();
+
+    if (array_length(_p.grande) == 0 && array_length(_p.mini) == 0) {
+        array_push(log_linhas, { linha: -1, ok: false, msg: "Nenhum bloco encaixado." });
+        aba_atual = 1;
+        return;
+    }
+
+    var _e1 = comparar_sequencia(_p.grande, _p.grande_linha, _certa, "Bloco");
+    var _e2 = comparar_sequencia(_p.mini, _p.mini_linha, _certa_mini, "Mini bloco");
+    for (var i = 0; i < array_length(_e1); i++) array_push(log_linhas, _e1[i]);
+    for (var i = 0; i < array_length(_e2); i++) array_push(log_linhas, _e2[i]);
+
+    if (array_length(log_linhas) == 0) {
+        array_push(log_linhas, { linha: -1, ok: true, msg: "Nenhum erro. Programa correto!" });
+        desenhar = true;
+    }
+    //aba_atual = 1
+}
+
 

@@ -1,3 +1,16 @@
+if(hp <= 0){
+    game_over = true
+    
+    if (keyboard_check_pressed(ord("P"))) {
+       game_restart();
+        exit;
+}
+}
+
+else {
+	
+
+
 if (instance_number(obj_binario_puzzle) > 0) {
     var _puzzle = instance_find(obj_binario_puzzle, 0);
 
@@ -7,10 +20,6 @@ if (instance_number(obj_binario_puzzle) > 0) {
 }
 if (instance_exists(obj_dialogo)){
     exit
-}
-if (keyboard_check_pressed(ord("P"))) {
-       game_restart();
-        exit;
 }
 
 if (instance_exists(obj_choque) && obj_choque.lifetime > 0){
@@ -89,7 +98,7 @@ var _old_x = x;
 var _old_y = y;
 
 if(state==0 or state == 5 or state == 6){  
-    move_and_collide(_target_x, _target_y, tilemap_foreground, undefined, undefined, undefined);
+    move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls], undefined, undefined, undefined);
 }else if(state == 2){
     x += clamp(_target_x*5, -5, 5);
     y += clamp(_target_y*5, -5, 5);
@@ -172,7 +181,7 @@ if (keyboard_check_pressed(ord("X"))){
             var _dx = _dash_x / _passos;
             var _dy = _dash_y / _passos;
             
-            if(place_meeting(x + _dx, y + _dy, tilemap_foreground)){
+            if(place_meeting(x + _dx, y + _dy, [tilemap_foreground,inviswalls])){
                 break;
             }
             
@@ -208,7 +217,7 @@ if (empurra > 0 && state==0) {
     var _empurra_x = lengthdir_x(empurra, empurra_dir);
     var _empurra_y = lengthdir_y(empurra, empurra_dir);
 
-    move_and_collide(_empurra_x, _empurra_y, tilemap_foreground);
+    move_and_collide(_empurra_x, _empurra_y, [tilemap_foreground, inviswalls]);
 
     empurra *= 0.8;
 
@@ -228,6 +237,7 @@ if (dano_time > 0) {
 }
 else {
     image_blend = c_white;
+}
 }
 
 
