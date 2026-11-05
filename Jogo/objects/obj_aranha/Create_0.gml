@@ -21,6 +21,7 @@ distance_to_jukebox = 200;
 apaixonado = false;
 
 stunned = false;
+seguindo_jukebox = false;
 
 distancia_separacao = 32;
 forca_separacao = 2;
