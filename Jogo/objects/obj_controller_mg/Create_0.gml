@@ -17,7 +17,7 @@ cura_cadencia = 400;
 tempo = 0
 
 flash_time = 0;
-flash_cadencia = 20
+flash_cadencia = 200
 
 overheat_time = 0;
 overheat_cadencia = 30;
@@ -71,30 +71,31 @@ if (keyboard_check_pressed(global.st_umg) && vento_time <= 0){
 }
 
 function cura() {
+    var _plr = instance_find(obj_plr_rpg, 0);
+    if (_plr == noone) return;
 
-    if (keyboard_check_pressed(global.st_umg) && !obj_plr_rpg.curando && cura_time <= 0) {
+    if (keyboard_check_pressed(global.st_umg) && !_plr.curando && cura_time <= 0 && _plr.hp < _plr.hp_max) {
 
-        obj_plr_rpg.curando = true;
-        obj_plr_rpg.tempo_cura = obj_plr_rpg.duracao_cura;
+        _plr.curando = true;
+        _plr.tempo_cura = sprite_get_number(spr_plr_curando);
+        _plr.sprite_index = spr_plr_curando;
+        _plr.image_index = 0;
+        _plr.image_speed = 1;
+
+        cura_time = cura_cadencia;
     }
-
-    if (obj_plr_rpg.curando) {
-        obj_plr_rpg.tempo_cura--;
-
-        if (obj_plr_rpg.tempo_cura <= 0) {
-            obj_plr_rpg.hp = min(obj_plr_rpg.hp + 30, 100);
-
-            obj_plr_rpg.curando = false;
-            cura_time = cura_cadencia;
+    if (_plr.curando) {
+        if (_plr.image_index >= sprite_get_number(spr_plr_curando) - 1) {
+            _plr.hp = min(_plr.hp + 30, _plr.hp_max);
+            _plr.curando = false;
+            _plr.tempo_cura = 0;
+            _plr.image_speed = 1;
         }
     }
-
-    if (cura_time > 0) {
-        cura_time--;
-    }
 }
+
 function flash(){
-    if (keyboard_check_pressed(ord(global.st_umg)&& flash_time <= 0)){
+    if (keyboard_check(ord(global.st_umg)&& flash_time <= 0)){
         var _distancia = 6;
     
         var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
