@@ -120,6 +120,7 @@
     {"name":"room_boss_fase1","order":5,"path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
     {"name":"room_boss_final","order":7,"path":"rooms/room_boss_final/room_boss_final.yy",},
     {"name":"room_boss_web","order":6,"path":"rooms/room_boss_web/room_boss_web.yy",},
+    {"name":"room_salas","order":2,"path":"rooms/room_salas/room_salas.yy",},
     {"name":"RoomUI","order":8,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"scr_dialog","order":1,"path":"scripts/scr_dialog/scr_dialog.yy",},
     {"name":"snd_hitretro","order":1,"path":"sounds/snd_hitretro/snd_hitretro.yy",},

@@ -1,3 +1,4 @@
+
 if (instance_exists(obj_dialogo)) exit;
 
 if (hp <= 0) {
@@ -5,6 +6,7 @@ if (hp <= 0) {
     exit;
 }
 
+// Efeito visual de dano
 if (dano_time > 0) {
     dano_time--;
 
@@ -14,8 +16,10 @@ if (dano_time > 0) {
     image_blend = c_white;
 }
 
+// Se estiver parado perto da Jukebox
 if (stunned) exit;
 
+// Empurrão
 if (empurra > 0) {
     var _ex = lengthdir_x(empurra, empurra_dir);
     var _ey = lengthdir_y(empurra, empurra_dir);
@@ -30,15 +34,27 @@ if (empurra > 0) {
     exit;
 }
 
-if (!instance_exists(obj_plr_rpg)) exit;
+// Define o alvo
+if (apaixonado && instance_exists(obj_jukebox)) {
+    var _jukebox = instance_find(obj_jukebox, 0);
 
-alvo_x = obj_plr_rpg.x;
-alvo_y = obj_plr_rpg.y;
+    alvo_x = _jukebox.x;
+    alvo_y = _jukebox.y;
+}
+else {
+    apaixonado = false;
 
+    if (!instance_exists(obj_plr_rpg)) exit;
+
+    alvo_x = obj_plr_rpg.x;
+    alvo_y = obj_plr_rpg.y;
+}
+
+// Separação entre inimigos
 var _separa_x = 0;
 var _separa_y = 0;
 
-var _objetos = [obj_enemy_parent];
+var _objetos = [obj_enemy_parent, obj_virus_mae];
 
 for (var i = 0; i < array_length(_objetos); i++) {
     var _quantidade = instance_number(_objetos[i]);
@@ -61,6 +77,7 @@ for (var i = 0; i < array_length(_objetos); i++) {
     }
 }
 
+// Direção até o alvo
 var _dx = alvo_x - x;
 var _dy = alvo_y - y;
 var _dist = point_distance(x, y, alvo_x, alvo_y);
@@ -73,6 +90,7 @@ if (_dist > 1) {
     _dy = 0;
 }
 
+// Movimento e separação
 var _mov_x = _dx + _separa_x * 0.8;
 var _mov_y = _dy + _separa_y * 0.8;
 
