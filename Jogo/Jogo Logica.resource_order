@@ -89,7 +89,6 @@
     {"name":"obj_frame","order":5,"path":"objects/obj_frame/obj_frame.yy",},
     {"name":"obj_inventory","order":1,"path":"objects/obj_inventory/obj_inventory.yy",},
     {"name":"obj_item_parent","order":6,"path":"objects/obj_item_parent/obj_item_parent.yy",},
-    {"name":"obj_menu_controller","order":3,"path":"objects/obj_menu_controller/obj_menu_controller.yy",},
     {"name":"obj_mini_parent","order":4,"path":"objects/obj_mini_parent/obj_mini_parent.yy",},
     {"name":"obj_npc_morador","order":2,"path":"objects/obj_npc_morador/obj_npc_morador.yy",},
     {"name":"obj_npc_porteiro","order":1,"path":"objects/obj_npc_porteiro/obj_npc_porteiro.yy",},
