@@ -112,6 +112,7 @@
     {"name":"obj_virus_mae","order":3,"path":"objects/obj_virus_mae/obj_virus_mae.yy",},
     {"name":"obj_wall","order":6,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_warp_parent","order":1,"path":"objects/obj_warp_parent/obj_warp_parent.yy",},
+    {"name":"rm_casa","order":8,"path":"rooms/rm_casa/rm_casa.yy",},
     {"name":"rm_configs","order":3,"path":"rooms/rm_configs/rm_configs.yy",},
     {"name":"rm_mappingtest","order":2,"path":"rooms/rm_mappingtest/rm_mappingtest.yy",},
     {"name":"rm_save","order":4,"path":"rooms/rm_save/rm_save.yy",},
