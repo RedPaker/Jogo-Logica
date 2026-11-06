@@ -148,6 +148,7 @@
     {"id":{"name":"obj_virus_mae","path":"objects/obj_virus_mae/obj_virus_mae.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},},
+    {"id":{"name":"rm_casa","path":"rooms/rm_casa/rm_casa.yy",},},
     {"id":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"id":{"name":"rm_mappingtest","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
@@ -282,6 +283,7 @@
     {"roomId":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
     {"roomId":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
     {"roomId":{"name":"room_salas","path":"rooms/room_salas/room_salas.yy",},},
+    {"roomId":{"name":"rm_casa","path":"rooms/rm_casa/rm_casa.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
