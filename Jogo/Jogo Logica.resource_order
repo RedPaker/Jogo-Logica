@@ -197,6 +197,7 @@
     {"name":"spr_speak_asterisco","order":1,"path":"sprites/spr_speak_asterisco/spr_speak_asterisco.yy",},
     {"name":"spr_tileset_boss1","order":1,"path":"sprites/spr_tileset_boss1/spr_tileset_boss1.yy",},
     {"name":"spr_tileset","order":3,"path":"sprites/spr_tileset/spr_tileset.yy",},
+    {"name":"spr_title","order":6,"path":"sprites/spr_title/spr_title.yy",},
     {"name":"spr_ui_btao_trash","order":4,"path":"sprites/spr_ui_btao_trash/spr_ui_btao_trash.yy",},
     {"name":"spr_ui_frame_dialogo","order":5,"path":"sprites/spr_ui_frame_dialogo/spr_ui_frame_dialogo.yy",},
     {"name":"spr_ui_frame","order":2,"path":"sprites/spr_ui_frame/spr_ui_frame.yy",},
