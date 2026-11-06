@@ -65,7 +65,7 @@ switch (button_id) {
         if (string_length(global.codigo_binario) < 8) {
             global.codigo_binario += string(8 - button_id);
 
-            var _ui_layer = layer_get_id("UILayer_1");
+            var _ui_layer = layer_get_id("BinarioLayer");
             var _text_element = layer_text_get_id(_ui_layer, "text_5B88EC1D");
 
             if (_text_element != -1) {
@@ -79,7 +79,7 @@ case 11:
 case 12:
 
     var _botao = button_id - 8;
-    var _layer = layer_get_id("UILayer_2");
+    var _layer = layer_get_id("RamLayer");
 
     if (_layer != -1 && layer_get_visible(_layer)) {
 
@@ -118,7 +118,7 @@ case 12:
             var _puzzle = instance_find(obj_puzzle_ram, 0);
 
             if (_puzzle != noone) {
-                _puzzle.tempo_puzzle = room_speed * 2;
+                _puzzle.tempo_puzzle = game_get_speed(gamespeed_fps) * 2;
             }
 
         } else {

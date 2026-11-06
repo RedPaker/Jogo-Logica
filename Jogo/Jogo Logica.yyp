@@ -122,7 +122,6 @@
     {"id":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},},
     {"id":{"name":"obj_jukebox","path":"objects/obj_jukebox/obj_jukebox.yy",},},
     {"id":{"name":"obj_mangos","path":"objects/obj_mangos/obj_mangos.yy",},},
-    {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_mini_parent","path":"objects/obj_mini_parent/obj_mini_parent.yy",},},
     {"id":{"name":"obj_npc_morador","path":"objects/obj_npc_morador/obj_npc_morador.yy",},},
     {"id":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},},
