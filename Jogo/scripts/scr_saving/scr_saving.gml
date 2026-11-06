@@ -53,9 +53,18 @@ function sv_delete(save_id){
 }
 
 function sv_newgame(){
-    room = rm_mappingtest
-    var _mainmenu = ["MainLayer", "SavesLayer", "SettingsLayer"];
-    for(var i =0;i<array_length(_mainmenu);i++){
-        layer_set_visible(layer_get_id(_mainmenu[i]), false);
+    var _mainmenu = ["MainLayer", "SavesLayer", "SettingsLayer"]; 
+    for(var i = 0; i < array_length(_mainmenu); i++){ 
+        var _layer_id = layer_get_id(_mainmenu[i]);
+        if (_layer_id != -1) {
+            layer_set_visible(_layer_id, false); 
+        }
     }
+    if (instance_exists(obj_plr_rpg))  instance_destroy(obj_plr_rpg);
+    if (instance_exists(obj_cam))      instance_destroy(obj_cam);
+    if (instance_exists(obj_spellbook)) instance_destroy(obj_spellbook);
+    if (instance_exists(obj_save))      instance_destroy(obj_save);
+    if (instance_exists(obj_inventory)) instance_destroy(obj_inventory);
+    room_goto(rm_ilha)
+    
 }
