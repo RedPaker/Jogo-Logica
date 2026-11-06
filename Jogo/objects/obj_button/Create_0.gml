@@ -53,7 +53,7 @@ if (!variable_global_exists("puzzle_ram_concluido")) {
 global.puzzle_acertos = 0;
 
 function atualizar_visor() {
-    var _ui_layer = layer_get_id("UILayer_1");
+    var _ui_layer = layer_get_id("BinarioPuzzle");
     var _text_element = layer_text_get_id(_ui_layer, "text_4B58F36B");
 
     if (_text_element != -1) {

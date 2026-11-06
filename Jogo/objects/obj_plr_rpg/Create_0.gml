@@ -38,5 +38,5 @@ dash_vel = 12
 dash_dir = 0
 
 dash_carga = 45;
-dash_dura = 100
-dash_recarga = 60
+dash_dura = 100;
+dash_recarga = 60;

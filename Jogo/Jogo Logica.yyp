@@ -122,7 +122,6 @@
     {"id":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},},
     {"id":{"name":"obj_jukebox","path":"objects/obj_jukebox/obj_jukebox.yy",},},
     {"id":{"name":"obj_mangos","path":"objects/obj_mangos/obj_mangos.yy",},},
-    {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_mini_parent","path":"objects/obj_mini_parent/obj_mini_parent.yy",},},
     {"id":{"name":"obj_npc_morador","path":"objects/obj_npc_morador/obj_npc_morador.yy",},},
     {"id":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},},
@@ -157,6 +156,7 @@
     {"id":{"name":"room_boss_fase1","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},},
     {"id":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
     {"id":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
+    {"id":{"name":"room_salas","path":"rooms/room_salas/room_salas.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"scr_dialog","path":"scripts/scr_dialog/scr_dialog.yy",},},
     {"id":{"name":"scr_saving","path":"scripts/scr_saving/scr_saving.yy",},},
@@ -281,6 +281,7 @@
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
     {"roomId":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
+    {"roomId":{"name":"room_salas","path":"rooms/room_salas/room_salas.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

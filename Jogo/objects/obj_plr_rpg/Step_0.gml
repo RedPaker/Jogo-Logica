@@ -98,7 +98,7 @@ var _old_x = x;
 var _old_y = y;
 
 if(state==0 or state == 5 or state == 6){  
-    move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls], undefined, undefined, undefined);
+    move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls]);
 }else if(state == 2){
     x += clamp(_target_x*5, -5, 5);
     y += clamp(_target_y*5, -5, 5);
