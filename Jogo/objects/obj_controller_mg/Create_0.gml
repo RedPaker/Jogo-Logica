@@ -79,7 +79,6 @@ function cura() {
     }
 
     if (obj_plr_rpg.curando) {
-
         obj_plr_rpg.tempo_cura--;
 
         if (obj_plr_rpg.tempo_cura <= 0) {

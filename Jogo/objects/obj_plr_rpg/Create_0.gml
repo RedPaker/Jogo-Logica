@@ -40,3 +40,9 @@ dash_dir = 0
 dash_carga = 45;
 dash_dura = 100;
 dash_recarga = 60;
+
+hp_max = 100;
+hp_anterior = hp;    // para detectar quando perde vida
+hp_fantasma = hp;    // vida "antiga", usada para piscar os segmentos perdidos
+bat_pisca = 0;       // timer da animação de dano
+bat_segs = 10;       // quantidade de segmentos

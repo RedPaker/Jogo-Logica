@@ -1,3 +1,16 @@
+if (hp < hp_anterior) {
+    if (bat_pisca <= 0) hp_fantasma = hp_anterior;
+    bat_pisca = 60;                  // dura 1 segundo
+}
+if (hp > hp_anterior) hp_fantasma = hp;   // curou: cancela o fantasma
+
+if (bat_pisca > 0) {
+    bat_pisca--;
+    if (bat_pisca <= 0) hp_fantasma = hp;
+}
+
+hp_anterior = hp;
+
 if(hp <= 0){
     game_over = true
     
