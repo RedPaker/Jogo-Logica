@@ -1,4 +1,3 @@
-
 if (hp < hp_anterior) {
     if (bat_pisca <= 0) hp_fantasma = hp_anterior;
     bat_pisca = 60;
@@ -17,15 +16,13 @@ if (bat_pisca > 0) {
 hp_anterior = hp;
 
 if(hp <= 0){
-    game_over = true;
-
-    
+    game_over = true;    
 } else {
 
     if (keyboard_check_pressed(ord("P"))) {
         game_restart();
         exit;
-    }   
+    }    
     
     if (instance_number(obj_binario_puzzle) > 0) {
         var _puzzle = instance_find(obj_binario_puzzle, 0);
@@ -52,9 +49,23 @@ if(hp <= 0){
         move_spd = 0;
         exit;
     }
+
+    // ==========================================
+    // 1. TRATAMENTO DA CURA (PRIMEIRO DE TUDO)
+    // ==========================================
     if (curando) {
         _input_x = 0;
         _input_y = 0;
+        
+        // Inicia a animação de cura se ainda não foi iniciada
+        if (!animacao_cura_iniciada) {
+            sprite_index = spr_plr_curando;
+            image_index = 0;
+            image_speed = 1;
+            animacao_cura_iniciada = true;
+        }
+        
+        // Verifica se a animação chegou no último frame
         if (image_index >= sprite_get_number(spr_plr_curando) - 1) {
             image_index = sprite_get_number(spr_plr_curando) - 1;
             image_speed = 0;
@@ -63,7 +74,10 @@ if(hp <= 0){
             tempo_cura = 0;
             animacao_cura_iniciada = false;
         }
-    } else {
+    } 
+    else {
+        // Se NÃO estiver curando, pega os inputs normais
+        animacao_cura_iniciada = false;
         _input_x = keyboard_check(global.st_right) - keyboard_check(global.st_left);
         _input_y = keyboard_check(global.st_down) - keyboard_check(global.st_up);
     }
@@ -96,9 +110,8 @@ if(hp <= 0){
         instance_activate_layer("Entidades");
         instance_activate_layer("Itens");
         instance_activate_layer("Misc");
-    }   
+    }    
 
-    //Isso são velocidades alvo pro lerp. Quando vc anda, o target vira 2, e o lerp aumenta a velocidade 5% a cada frame, até chegar no 2. Elas começam em zero, ou seja, qdo vc soltar a tecla o target vira 0, e como o lerp busca chegar no target ele vai desacelerar 5% por frame.
     var _target_x = 0; 
     var _target_y = 0;
 
@@ -108,82 +121,77 @@ if(hp <= 0){
         _target_y = lengthdir_y(move_spd, _dir);
     }
 
-    /*larp larp larp sahur (linear interpoland)
-    hspd = lerp(hspd, _target_x, 0);
-    vspd = lerp(vspd, _target_y, 0);*/
-
     var _old_x = x;
     var _old_y = y;
 
-    if(state == 0 or state == 5 or state == 6){  
-        move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls]);
-    }else if(state == 2 && !curando){
-        x += clamp(_target_x*5, -5, 5);
-        y += clamp(_target_y*5, -5, 5);
+    if(!curando) {
+        if(state == 0 or state == 5 or state == 6){  
+            move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls]);
+        }else if(state == 2){
+            x += clamp(_target_x*5, -5, 5);
+            y += clamp(_target_y*5, -5, 5);
+        }
     }
 
     cam_x = x-_old_x; 
     cam_y = y-_old_y;
     
-    
-    if (!curando && (_input_x != 0 or _input_y != 0)){
-        facing = point_direction(0, 0, _input_x, _input_y);
-        var _xface = lengthdir_x(1,facing)
-        var _yface = lengthdir_y(1,facing);
+    // ==========================================
+    // 2. CONTROLE DE SPRITES (SÓ RODA SE NÃO CURANDO)
+    // ==========================================
+    if (!curando) {
+        if (_input_x != 0 or _input_y != 0){
+            facing = point_direction(0, 0, _input_x, _input_y);
+            var _xface = lengthdir_x(1, facing);
+            var _yface = lengthdir_y(1, facing);
+            
+            if (state != 5) {
+                if(_xface > 0) sprite_index = spr_plr_walk_right;
+                else if(_xface < 0) sprite_index = spr_plr_walk_left;
+                else if (_yface > 0) sprite_index = spr_plr_walk_down;
+                else if (_yface < 0) sprite_index = spr_plr_walk_up;
+            } else {
+                if(_xface < 0) sprite_index = spr_plr_walk_right;
+                else if(_xface > 0) sprite_index = spr_plr_walk_left;
+                else if (_yface < 0) sprite_index = spr_plr_walk_down;
+                else if (_yface > 0) sprite_index = spr_plr_walk_up;
+            }
+        } 
+        else {
+            switch (facing) {
+                case 0:   
+                    sprite_index = spr_plr_td_right; 
+                    break;
+                case 180: 
+                    sprite_index = spr_plr_td_left;  
+                    break;
+                case 90:  
+                    sprite_index = spr_plr_td_up;    
+                    break;
+                case 270: 
+                    sprite_index = spr_plr_td_down;  
+                    break;
+                default:
+                    sprite_index = spr_plr_td_down;
+                    break;
+            }
+        }
         
-        
-        if(_xface > 0) sprite_index = spr_plr_walk_right;
-        else if(_xface < 0) sprite_index = spr_plr_walk_left;
-        else if (_yface > 0) sprite_index = spr_plr_walk_down;
-        else if (_yface < 0) sprite_index = spr_plr_walk_up;
-    } else {
+        if (state == 5){
+            var _xface = lengthdir_x(1, facing);
+            var _yface = lengthdir_y(1, facing);
+            if(_xface < 0) sprite_index = spr_plr_walk_right;
+            else if(_xface > 0) sprite_index = spr_plr_walk_left;
+            else if (_yface < 0) sprite_index = spr_plr_walk_down;
+            else if (_yface > 0) sprite_index = spr_plr_walk_up;
+        }
 
-     switch (facing) {
-            case 0:   
-                sprite_index = spr_plr_td_right; 
-                break;
-            case 180: 
-                sprite_index = spr_plr_td_left;  
-                break;
-            case 90:  
-                sprite_index = spr_plr_td_up;    
-                break;
-            case 270: 
-                sprite_index = spr_plr_td_down;  
-                break;
-            default:
-                sprite_index = spr_plr_td_down;
-                break;
+        if (instance_exists(obj_flash)) {
+            if(sprite_index == spr_plr_td_down) sprite_index = spr_plr_td_down_light;
+        } else {
+            if(sprite_index == spr_plr_td_down_light) sprite_index = spr_plr_td_down;
         }
     }
-    
-    if (state == 5){
-        var _xface = lengthdir_x(1,facing)
-        var _yface = lengthdir_y(1,facing);
-        if(_xface < 0) sprite_index = spr_plr_td_right;
-        else if(_xface > 0) sprite_index = spr_plr_td_left;
-        else if (_yface < 0) sprite_index = spr_plr_td_down;
-        else if (_yface > 0) sprite_index = spr_plr_td_up;
-    }
-    if (instance_exists(obj_flash)) {
-    	if(sprite_index == spr_plr_td_down) sprite_index = spr_plr_td_down_light;
-    }else {
-        if(sprite_index == spr_plr_td_down_light) sprite_index = spr_plr_td_down;
-    } 
-
-    
-    if (curando) {
-        if (!animacao_cura_iniciada) {
-            sprite_index = spr_plr_curando;
-            image_index = 0;
-            image_speed = 1;
-            animacao_cura_iniciada = true;
-        }
-    } else {
-        animacao_cura_iniciada = false;
-    }
-    
-    
 
     if (ataque_time > 0) {
         ataque_time--;
@@ -195,7 +203,7 @@ if(hp <= 0){
         var _dx = lengthdir_x(_distancia, facing);
         var _dy = lengthdir_y(_distancia, facing);
 
-        if (abs(_dx)<abs(_dy)){
+        if (abs(_dx) < abs(_dy)){
             _ax = 0;
             _ay = x + _dy;
         }else {
@@ -255,7 +263,3 @@ if(hp <= 0){
         image_blend = c_white;
     }
 }
-
-// TESTE GIT
-//67
-//depth = -y
