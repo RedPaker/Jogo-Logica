@@ -24,8 +24,8 @@ if (empurra > 0) {
     var _ex = lengthdir_x(empurra, empurra_dir);
     var _ey = lengthdir_y(empurra, empurra_dir);
 
-    move_and_collide(_ex, 0, [tilemap_foreground]);
-    move_and_collide(0, _ey, [tilemap_foreground]);
+    move_and_collide(_ex, 0, [tilemap_foreground,inviswalls]);
+    move_and_collide(0, _ey, [tilemap_foreground,inviswalls]);
 
     empurra *= 0.75;
 
@@ -103,6 +103,6 @@ if (_comprimento > 0.001) {
     move_and_collide(
         _mov_x * move_spd,
         _mov_y * move_spd,
-        [tilemap_foreground]
+        [tilemap_foreground,inviswalls]
     );
 }

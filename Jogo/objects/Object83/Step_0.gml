@@ -9,8 +9,3 @@ switch (obj_id) {
         image_index = global.me2
     break;
 }
-if (room == rm_menu) {
-    layer_set_visible("GuiLayer", false);
-}else {
-    layer_set_visible("GuiLayer", true);
-}

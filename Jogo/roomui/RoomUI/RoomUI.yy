@@ -356,7 +356,7 @@
                       ],"flexDirection":0,"height":{"unit":1,"value":67.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":8.0,},"marginRight":{"unit":1,"value":8.0,},"name":"FlexPanel_11","nodeColour":4286640712,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":67.0,},},
                   ],"flexDirection":0,"flexGrow":1.0,"height":{"unit":2,"value":100.0,},"justifyContent":2,"name":"RightFlex","nodeColour":4294068401,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":0.0,},},
               ],"flexDirection":2,"flexGrow":1.0,"height":{"unit":1,"value":0.0,},"justifyContent":1,"name":"Bottom","nodeColour":4294068309,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":100.0,},},
-          ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"GuiLayer","nodeColour":4282943474,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+          ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"GuiLayer","nodeColour":4282943474,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
       ],"locked":false,"name":"gui","nodeColour":4287842546,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":true,},
   ],
   "visible":true,

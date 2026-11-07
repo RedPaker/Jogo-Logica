@@ -19,10 +19,12 @@ hp_anterior = hp;
 if(hp <= 0){
     game_over = true;
 
-    if (keyboard_check_pressed(ord("P"))) {
+    
+}
+
+if (keyboard_check_pressed(ord("P"))) {
         game_restart();
         exit;
-    }
 }
 
 else {

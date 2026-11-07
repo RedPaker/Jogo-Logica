@@ -52,7 +52,7 @@ if (!instance_exists(obj_cam)) instance_create_layer(280, 272, "Entities", obj_c
 if (!instance_exists(obj_spellbook)) instance_create_layer(0, 0, "Sistemas", obj_spellbook); 
 if (!instance_exists(obj_save))      instance_create_layer(0, 0, "Sistemas", obj_save); 
 if (!instance_exists(obj_inventory)) instance_create_layer(0, 0, "Sistemas", obj_inventory);
-
+if (!instance_exists(obj_controller_mg)) instance_create_layer(0, 0, "Sistemas", obj_controller_mg);
 
 // desenha um retângulo preenchido em "pixels lógicos" (x2 e y2 não incluídos)
 function pix_rect(_ox, _oy, _p, _x1, _y1, _x2, _y2, _cor) {
