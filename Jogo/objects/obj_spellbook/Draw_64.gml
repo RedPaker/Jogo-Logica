@@ -8,7 +8,7 @@ if (abrir) {
     draw_set_alpha(1.0);
 
     // 2. Sprite do Livro
-    draw_sprite_ext(spr_livro_feiticos_principal, 0, 640, 360, 6, 6, 0, c_white, 1);
+    draw_sprite_ext(spr_livro_feiticos_principal, 0, 640, 360, 4, 4, 0, c_white, 1);
 
     // 3. Retângulo Laranja
     var _centro_x = display_get_gui_width() / 2;

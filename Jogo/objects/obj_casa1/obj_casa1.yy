@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_casa1",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_casa1",
@@ -11,7 +11,10 @@
     "name":"Structures",
     "path":"folders/ObjectS/Structures.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_structure",
+    "path":"objects/obj_structure/obj_structure.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

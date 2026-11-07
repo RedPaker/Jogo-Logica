@@ -87,7 +87,7 @@ switch (button_id) {
         if (string_length(global.codigo_binario) < 8) {
             global.codigo_binario += string(8 - button_id);
 
-            var _ui_layer = layer_get_id("UILayer_1");
+            var _ui_layer = layer_get_id("BinarioLayer");
             var _text_element = layer_text_get_id(_ui_layer, "text_5B88EC1D");
 
             if (_text_element != -1) {
@@ -100,26 +100,22 @@ switch (button_id) {
     case 11:
     case 12:
 
-        var _botao = button_id - 8;
-        var _layer = layer_get_id("UILayer_2");
-    
-        if (_layer != -1 && layer_get_visible(_layer)) {
-    
-            if (_botao == global.numero_puzzle) {
-    
-                global.puzzle_acertos++;
-    
-                if (global.puzzle_acertos >= 10) {
-                    layer_set_visible(_layer, false);
-    
-                    var _puzzle = instance_find(obj_puzzle_ram, 0);
-    
-                    if (_puzzle != noone) {
-                        _puzzle.interagindo = false;
-                    }
-    
-                    global.puzzle_ram_concluido = true;
-                    break;
+    var _botao = button_id - 8;
+    var _layer = layer_get_id("RamLayer");
+
+    if (_layer != -1 && layer_get_visible(_layer)) {
+
+        if (_botao == global.numero_puzzle) {
+
+            global.puzzle_acertos++;
+
+            if (global.puzzle_acertos >= 10) {
+                layer_set_visible(_layer, false);
+
+                var _puzzle = instance_find(obj_puzzle_ram, 0);
+
+                if (_puzzle != noone) {
+                    _puzzle.interagindo = false;
                 }
     
                 var _anterior = global.numero_puzzle;
@@ -146,6 +142,30 @@ switch (button_id) {
             } else {
                 global.puzzle_acertos = 0;
             }
+
+            var _anterior = global.numero_puzzle;
+            var _novo = irandom_range(1, 3);
+
+            if (_novo >= _anterior) {
+                _novo++;
+            }
+
+            global.numero_puzzle = _novo;
+
+            var _texto = layer_text_get_id(_layer, "text_4B58F36B");
+
+            if (_texto != -1) {
+                layer_text_text(_texto, string(global.numero_puzzle));
+            }
+
+            var _puzzle = instance_find(obj_puzzle_ram, 0);
+
+            if (_puzzle != noone) {
+                _puzzle.tempo_puzzle = game_get_speed(gamespeed_fps) * 2;
+            }
+
+        } else {
+            global.puzzle_acertos = 0;
         }
     
     break;
