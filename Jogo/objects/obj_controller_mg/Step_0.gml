@@ -3,6 +3,17 @@ if (keyboard_check_pressed(global.st_smg)) {
     if(id_magia > 7){
         id_magia = 1;
     }
+    
+    global.meu += 1
+    global.me1 += 1
+    global.me2 += 1
+    
+    if (global.meu > 7){
+        global.meu = 0
+        global.me1 = 1
+        global.me2 = 2
+    }
+    
 }
 
 if (tiro_time > 0) {

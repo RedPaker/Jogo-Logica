@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_green",
-    "path":"sprites/spr_green/spr_green.yy",
+    "name":"spr_roda_feiticos_itens",
+    "path":"sprites/spr_roda_feiticos_itens/spr_roda_feiticos_itens.yy",
   },
   "spriteMaskId":null,
   "visible":true,

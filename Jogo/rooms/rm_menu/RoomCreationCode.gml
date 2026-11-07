@@ -1,6 +1,6 @@
 global.meu = 0
-global.me1 = 0
-global.me2 = 0
+global.me1 = 1
+global.me2 = 2
 
 if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;
