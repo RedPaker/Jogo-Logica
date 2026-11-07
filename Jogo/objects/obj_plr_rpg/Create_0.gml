@@ -47,3 +47,9 @@ hp_anterior = hp;    // para detectar quando perde vida
 hp_fantasma = hp;    // vida "antiga", usada para piscar os segmentos perdidos
 bat_pisca = 0;       // timer da animação de dano
 bat_segs = 10;       // quantidade de segmentos
+
+// desenha um retângulo preenchido em "pixels lógicos" (x2 e y2 não incluídos)
+function pix_rect(_ox, _oy, _p, _x1, _y1, _x2, _y2, _cor) {
+    draw_set_color(_cor);
+    draw_rectangle(_ox + _x1 * _p, _oy + _y1 * _p, _ox + _x2 * _p - 1, _oy + _y2 * _p - 1, false);
+}
