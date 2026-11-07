@@ -65,6 +65,6 @@ function sv_newgame(){
     if (instance_exists(obj_spellbook)) instance_destroy(obj_spellbook);
     if (instance_exists(obj_save))      instance_destroy(obj_save);
     if (instance_exists(obj_inventory)) instance_destroy(obj_inventory);
-    room_goto(rm_ilha)
+    room_goto(rm_casa);
     
 }
