@@ -1,3 +1,7 @@
+global.meu = 0
+global.me1 = 0
+global.me2 = 0
+
 if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;
     show_debug_message("Reset");

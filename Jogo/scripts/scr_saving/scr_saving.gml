@@ -60,12 +60,6 @@ function sv_newgame(){
             layer_set_visible(_layer_id, false); 
         }
     }
-    
-    global.meu = 0
-    global.me1 = 0
-    global.me2 = 0
-    
-    
     if (instance_exists(obj_plr_rpg))  instance_destroy(obj_plr_rpg);
     if (instance_exists(obj_cam))      instance_destroy(obj_cam);
     if (instance_exists(obj_spellbook)) instance_destroy(obj_spellbook);

@@ -150,6 +150,7 @@
     {"id":{"name":"obj_virus_mae","path":"objects/obj_virus_mae/obj_virus_mae.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},},
+    {"id":{"name":"Object83","path":"objects/Object83/Object83.yy",},},
     {"id":{"name":"rm_configs","path":"rooms/rm_configs/rm_configs.yy",},},
     {"id":{"name":"rm_ilha","path":"rooms/rm_ilha/rm_ilha.yy",},},
     {"id":{"name":"rm_mappingtest","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},},
