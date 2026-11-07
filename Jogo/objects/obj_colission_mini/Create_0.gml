@@ -1,4 +1,4 @@
-depth = -85; 
+depth = -110; 
 image_xscale = 2.8;
 image_yscale = 2.8;
 offset_livro_x = -180;

@@ -18,3 +18,11 @@ if (!instance_exists(obj_spellbook) || !obj_spellbook.abrir) {
     instance_destroy();
     exit;
 }
+
+var _bloco = instance_place(x,y,obj_mini_parent)
+
+if (_bloco){
+    visible = true
+} else {
+    visible = false
+}
