@@ -1,5 +1,3 @@
-id_magia = 1;
-
 tiro_time = 0;
 tiro_cadencia = 15;
 
