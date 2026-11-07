@@ -245,6 +245,7 @@
     {"id":{"name":"spr_plr_atk","path":"sprites/spr_plr_atk/spr_plr_atk.yy",},},
     {"id":{"name":"spr_plr_curando","path":"sprites/spr_plr_curando/spr_plr_curando.yy",},},
     {"id":{"name":"spr_plr_placeholder","path":"sprites/spr_plr_placeholder/spr_plr_placeholder.yy",},},
+    {"id":{"name":"spr_plr_td_down_light","path":"sprites/spr_plr_td_down_light/spr_plr_td_down_light.yy",},},
     {"id":{"name":"spr_plr_td_down","path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",},},
     {"id":{"name":"spr_plr_td_left","path":"sprites/spr_plr_td_left/spr_plr_td_left.yy",},},
     {"id":{"name":"spr_plr_td_right","path":"sprites/spr_plr_td_right/spr_plr_td_right.yy",},},

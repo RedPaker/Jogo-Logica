@@ -20,15 +20,13 @@ if(hp <= 0){
     game_over = true;
 
     
-}
+} else {
 
-if (keyboard_check_pressed(ord("P"))) {
+    if (keyboard_check_pressed(ord("P"))) {
         game_restart();
         exit;
-}
-
-else {
-
+    }   
+    
     if (instance_number(obj_binario_puzzle) > 0) {
         var _puzzle = instance_find(obj_binario_puzzle, 0);
 
@@ -126,23 +124,34 @@ else {
 
     cam_x = x-_old_x; 
     cam_y = y-_old_y;
-
+    
+    
     if (!curando && (_input_x != 0 or _input_y != 0)){
-        if (state == 5) {
-            if(_input_x < 0) sprite_index = spr_plr_td_right;
-            else if(_input_x > 0) sprite_index = spr_plr_td_left;
-            else if (_input_y < 0) sprite_index = spr_plr_td_down;
-            else if (_input_y > 0) sprite_index = spr_plr_td_up;
-        }else {
-            if(_input_x > 0) sprite_index = spr_plr_td_right;
-            else if(_input_x < 0) sprite_index = spr_plr_td_left;
-            else if (_input_y > 0) sprite_index = spr_plr_td_down;
-            else if (_input_y < 0) sprite_index = spr_plr_td_up;
-        }
-
         facing = point_direction(0, 0, _input_x, _input_y);
+        var _xface = lengthdir_x(1,facing)
+        var _yface = lengthdir_y(1,facing);
+        
+        
+        if(_xface > 0) sprite_index = spr_plr_td_right;
+        else if(_xface < 0) sprite_index = spr_plr_td_left;
+        else if (_yface > 0) sprite_index = spr_plr_td_down;
+        else if (_yface < 0) sprite_index = spr_plr_td_up;
     }
-
+    
+    if (state == 5){
+        var _xface = lengthdir_x(1,facing)
+        var _yface = lengthdir_y(1,facing);
+        if(_xface < 0) sprite_index = spr_plr_td_right;
+        else if(_xface > 0) sprite_index = spr_plr_td_left;
+        else if (_yface < 0) sprite_index = spr_plr_td_down;
+        else if (_yface > 0) sprite_index = spr_plr_td_up;
+    }
+    if (instance_exists(obj_flash)) {
+    	if(sprite_index == spr_plr_td_down) sprite_index = spr_plr_td_down_light;
+    }else {
+        if(sprite_index == spr_plr_td_down_light) sprite_index = spr_plr_td_down;
+    }
+    
     if (curando) {
         if (!animacao_cura_iniciada) {
             sprite_index = spr_plr_curando;
@@ -153,6 +162,8 @@ else {
     } else {
         animacao_cura_iniciada = false;
     }
+    
+    
 
     if (ataque_time > 0) {
         ataque_time--;

@@ -192,6 +192,7 @@
     {"name":"spr_OVERHEAT","order":7,"path":"sprites/spr_OVERHEAT/spr_OVERHEAT.yy",},
     {"name":"spr_plr_atk","order":1,"path":"sprites/spr_plr_atk/spr_plr_atk.yy",},
     {"name":"spr_plr_curando","order":6,"path":"sprites/spr_plr_curando/spr_plr_curando.yy",},
+    {"name":"spr_plr_td_down_light","order":3,"path":"sprites/spr_plr_td_down_light/spr_plr_td_down_light.yy",},
     {"name":"spr_plr_walk","order":2,"path":"sprites/spr_plr_walk/spr_plr_walk.yy",},
     {"name":"spr_ply_snd_func","order":7,"path":"sprites/spr_ply_snd_func/spr_ply_snd_func.yy",},
     {"name":"spr_red","order":10,"path":"sprites/spr_red/spr_red.yy",},
