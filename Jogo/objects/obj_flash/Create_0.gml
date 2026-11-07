@@ -1,1 +1,1 @@
-lifetime = 12
+lifetime = 24
