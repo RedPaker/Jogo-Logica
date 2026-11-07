@@ -26,8 +26,20 @@ if (obj_spellbook.abrir || instance_exists(obj_choque)){
 
 camera_x = camera_get_view_width(view_camera[0]);
 camera_y = camera_get_view_height(view_camera[0]);
-
-x = clamp(x,0+camera_get_view_width(view_camera[0])/2,room_width-camera_get_view_width(view_camera[0])/2);
-y = clamp(y,0+camera_get_view_height(view_camera[0])/2,room_height-camera_get_view_height(view_camera[0])/2);
+if (room_width>camera_get_view_width(view_camera[0])) {
+	x = clamp(x,0+camera_get_view_width(view_camera[0])/2,room_width-camera_get_view_width(view_camera[0])/2);
+}else {
+	x = room_width/2
+}
+if (room_width>camera_get_view_width(view_camera[0])) {
+	x = clamp(x,0+camera_get_view_width(view_camera[0])/2,room_width-camera_get_view_width(view_camera[0])/2);
+}else {
+	x = room_width/2
+}
+if (room_height>camera_get_view_height(view_camera[0])) {
+	y = clamp(y,0+camera_get_view_height(view_camera[0])/2,room_height-camera_get_view_height(view_camera[0])/2);
+}else {
+	x = room_height/2
+}
 
 camera_set_view_pos(view_camera[0], (x-(camera_x/2)), (y-(camera_y/2)));

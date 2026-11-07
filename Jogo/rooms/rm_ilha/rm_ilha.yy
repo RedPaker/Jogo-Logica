@@ -10,6 +10,7 @@
     {"name":"inst_5F8AD386","path":"rooms/rm_ilha/rm_ilha.yy",},
     {"name":"inst_475F5AE0","path":"rooms/rm_ilha/rm_ilha.yy",},
     {"name":"inst_1AA3C2FB","path":"rooms/rm_ilha/rm_ilha.yy",},
+    {"name":"inst_28862839","path":"rooms/rm_ilha/rm_ilha.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -23,7 +24,11 @@
         {"$GMRInstance":"v4","%Name":"inst_5F8AD386","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F8AD386","objectId":{"name":"obj_tree","path":"objects/obj_tree/obj_tree.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":352.0,"y":288.0,},
       ],"layers":[],"name":"Walls","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Itens","depth":300,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Itens","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Entities","depth":400,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Entities","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Entities","depth":400,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_28862839","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_28862839","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"propertyId":{"name":"warpto_room","path":"objects/obj_warp_parent/obj_warp_parent.yy",},"resource":{"name":"room_casa","path":"rooms/room_casa/room_casa.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"room_casa",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":224.0,},
+      ],"layers":[],"name":"Entities","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"tlm_fg","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tlm_fg","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":47,"TileCompressedData":[
           -20,0,-27,-2147483648,-20,0,-27,-2147483648,-20,0,-27,-2147483648,-20,0,-27,-2147483648,-20,0,-27,-2147483648,
           -20,0,-27,-2147483648,-20,0,-27,-2147483648,-20,0,-27,-2147483648,-20,0,-15,-2147483648,1,0,-11,-2147483648,

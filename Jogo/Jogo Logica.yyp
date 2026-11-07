@@ -159,6 +159,7 @@
     {"id":{"name":"room_boss_fase1","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},},
     {"id":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
     {"id":{"name":"room_boss_web","path":"rooms/room_boss_web/room_boss_web.yy",},},
+    {"id":{"name":"room_casa","path":"rooms/room_casa/room_casa.yy",},},
     {"id":{"name":"room_salas","path":"rooms/room_salas/room_salas.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"scr_dialog","path":"scripts/scr_dialog/scr_dialog.yy",},},
@@ -257,6 +258,7 @@
     {"id":{"name":"spr_tileset_placeholder","path":"sprites/spr_tileset_placeholder/spr_tileset_placeholder.yy",},},
     {"id":{"name":"spr_tileset_placeholder2","path":"sprites/spr_tileset_placeholder2/spr_tileset_placeholder2.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
+    {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
     {"id":{"name":"spr_ui_btao_trash","path":"sprites/spr_ui_btao_trash/spr_ui_btao_trash.yy",},},
     {"id":{"name":"spr_ui_btao","path":"sprites/spr_ui_btao/spr_ui_btao.yy",},},
     {"id":{"name":"spr_ui_frame_dialogo","path":"sprites/spr_ui_frame_dialogo/spr_ui_frame_dialogo.yy",},},
@@ -290,6 +292,7 @@
     {"roomId":{"name":"room_boss_final","path":"rooms/room_boss_final/room_boss_final.yy",},},
     {"roomId":{"name":"room_salas","path":"rooms/room_salas/room_salas.yy",},},
     {"roomId":{"name":"rm_ilha","path":"rooms/rm_ilha/rm_ilha.yy",},},
+    {"roomId":{"name":"room_casa","path":"rooms/room_casa/room_casa.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
