@@ -14,7 +14,7 @@ if (instance_exists(obj_spellbook) && obj_spellbook.abrir) {
 
 var _bloco = instance_place(x,y,obj_block_parent)
 
-if (_bloco){
+if (_bloco && _bloco.arrastando){
     visible = true
 } else {
     visible = false
