@@ -136,20 +136,6 @@ if(hp <= 0){
         else if(_xface < 0) sprite_index = spr_plr_walk_left;
         else if (_yface > 0) sprite_index = spr_plr_walk_down;
         else if (_yface < 0) sprite_index = spr_plr_walk_up;
-    }
-    
-    if (state == 5){
-        var _xface = lengthdir_x(1,facing)
-        var _yface = lengthdir_y(1,facing);
-        if(_xface < 0) sprite_index = spr_plr_td_right;
-        else if(_xface > 0) sprite_index = spr_plr_td_left;
-        else if (_yface < 0) sprite_index = spr_plr_td_down;
-        else if (_yface > 0) sprite_index = spr_plr_td_up;
-    }
-    if (instance_exists(obj_flash)) {
-    	if(sprite_index == spr_plr_td_down) sprite_index = spr_plr_td_down_light;
-    }else {
-        if(sprite_index == spr_plr_td_down_light) sprite_index = spr_plr_td_down;
     } else {
 
      switch (facing) {
@@ -170,7 +156,21 @@ if(hp <= 0){
                 break;
         }
     }
-}
+    
+    if (state == 5){
+        var _xface = lengthdir_x(1,facing)
+        var _yface = lengthdir_y(1,facing);
+        if(_xface < 0) sprite_index = spr_plr_td_right;
+        else if(_xface > 0) sprite_index = spr_plr_td_left;
+        else if (_yface < 0) sprite_index = spr_plr_td_down;
+        else if (_yface > 0) sprite_index = spr_plr_td_up;
+    }
+    if (instance_exists(obj_flash)) {
+    	if(sprite_index == spr_plr_td_down) sprite_index = spr_plr_td_down_light;
+    }else {
+        if(sprite_index == spr_plr_td_down_light) sprite_index = spr_plr_td_down;
+    } 
+
     
     if (curando) {
         if (!animacao_cura_iniciada) {
@@ -255,7 +255,6 @@ if(hp <= 0){
         image_blend = c_white;
     }
 }
-
 
 // TESTE GIT
 //67

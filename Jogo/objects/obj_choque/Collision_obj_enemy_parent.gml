@@ -1,7 +1,9 @@
-other.move_spd = 0    
+other.move_spd = 0
+
 
 if (pode_tomar){ 
         other.hp -= dano;
+        other.chocado = true    
     
         var _texto = instance_create_layer(other.x, other.y-12, "instances",obj_damage_count);
     
