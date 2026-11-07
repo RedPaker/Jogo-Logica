@@ -41,6 +41,9 @@
     "name":"spr_warp_parent",
     "path":"sprites/spr_warp_parent/spr_warp_parent.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_warp_parent",
+    "path":"sprites/spr_warp_parent/spr_warp_parent.yy",
+  },
   "visible":true,
 }
