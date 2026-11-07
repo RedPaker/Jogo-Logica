@@ -37,3 +37,8 @@ if (keyboard_check_pressed(vk_enter)){
     verificacao(pagina_atual)
 }
 
+function pix_rect(_ox, _oy, _p, _x1, _y1, _x2, _y2, _cor) {
+    draw_set_color(_cor);
+    draw_rectangle(_ox + _x1 * _p, _oy + _y1 * _p, _ox + _x2 * _p - 1, _oy + _y2 * _p - 1, false);
+}
+

@@ -11,16 +11,56 @@ if (abrir) {
     draw_sprite_ext(spr_livro_feiticos_principal, 0, 640, 360, 4, 4, 0, c_white, 1);
 
     // 3. Retângulo Laranja
-    var _centro_x = display_get_gui_width() / 2;
-    var _centro_y = display_get_gui_height() / 2;
-    var _cor_laranja = make_color_rgb(255, 160, 64); 
+    // 3. Terminal pixelado
+var _centro_x = display_get_gui_width() / 2;
+var _centro_y = display_get_gui_height() / 2;
+var _cor_laranja = make_color_rgb(255, 160, 64); // ainda usado nas abas
 
-    var _x1 = _centro_x - 320;
-    var _y1 = _centro_y - 250;
-    var _x2 = _centro_x - 40;
-    var _y2 = _centro_y + 235;
+var _P = 5;                       // tamanho de cada pixel na tela
+var _ox = _centro_x - 320;        // mesma posição do retângulo antigo
+var _oy = _centro_y - 250;
+var _W = 56;                      // 280 / 5
+var _H = 97;                      // 485 / 5
 
-    draw_rectangle_color(_x1, _y1, _x2, _y2, _cor_laranja, _cor_laranja, _cor_laranja, _cor_laranja, false);
+var _c_borda = make_color_rgb(110, 110, 125);
+var _c_barra = make_color_rgb(55, 55, 68);
+var _c_tela  = make_color_rgb(8, 16, 11);
+var _c_verde = make_color_rgb(80, 255, 120);
+
+// moldura externa com cantos cortados
+pix_rect(_ox, _oy, _P, 1, 0, _W - 1, _H, _c_borda);
+pix_rect(_ox, _oy, _P, 0, 1, _W, _H - 1, _c_borda);
+
+// tela
+pix_rect(_ox, _oy, _P, 1, 1, _W - 1, _H - 1, _c_tela);
+
+// scanlines (uma linha sim, outra não)
+draw_set_alpha(0.12);
+for (var r = 7; r < _H - 1; r += 2) {
+    pix_rect(_ox, _oy, _P, 1, r, _W - 1, r + 1, _c_verde);
+}
+draw_set_alpha(1);
+
+// barra de título + divisória
+pix_rect(_ox, _oy, _P, 1, 1, _W - 1, 6, _c_barra);
+pix_rect(_ox, _oy, _P, 1, 6, _W - 1, 7, _c_borda);
+
+// botões (vermelho, amarelo, verde)
+pix_rect(_ox, _oy, _P, 3, 2, 5, 4, make_color_rgb(255, 90, 90));
+pix_rect(_ox, _oy, _P, 6, 2, 8, 4, make_color_rgb(255, 210, 80));
+pix_rect(_ox, _oy, _P, 9, 2, 11, 4, make_color_rgb(90, 220, 110));
+
+// prompt no rodapé com cursor piscando
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_set_color(_c_verde);
+var _py = _oy + (_H - 4) * _P;
+draw_text(_ox + 3 * _P, _py, ">");
+if ((current_time div 500) mod 2 == 0) {
+    pix_rect(_ox, _oy, _P, 6, _H - 6, 8, _H - 3, _c_verde);
+}
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
     
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
