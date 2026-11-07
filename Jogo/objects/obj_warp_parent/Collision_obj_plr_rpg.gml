@@ -11,11 +11,5 @@ if (warpto_room == noone) {
     }
     player.state = 0
 }else {
-    room_goto(warpto_room)
-    if(warpto_x != -1){
-        player.x=warpto_x
-    }
-    if(warpto_y != -1){
-        player.y=warpto_y
-    }
+    scr_fade(warpto_room,warpto_x,warpto_y);
 }

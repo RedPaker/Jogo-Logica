@@ -29,7 +29,7 @@ if (music_time <= 0 && !explodiu) {
     }
 
     // Cria a explosão que causa dano
-    instance_create_layer(x, y, "Instances", obj_explosion_jk);
+    instance_create_layer(x, y, "Entities", obj_explosion_jk);
 
     instance_destroy();
 }

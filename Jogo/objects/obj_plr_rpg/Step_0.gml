@@ -211,7 +211,7 @@ if(hp <= 0){
             _ay = 0;
         }
 
-        instance_create_layer(_ax, _ay, "instances", obj_atack, {atk_dist:_distancia});
+        instance_create_layer(_ax, _ay, "Entities", obj_atack, {atk_dist:_distancia});
 
         ataque_time = 40;
     }
