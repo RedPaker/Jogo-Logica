@@ -57,7 +57,7 @@
               ],"flexDirection":0,"height":{"unit":1,"value":16.0,},"justifyContent":1,"name":"ButtonPanel","nodeColour":4282944242,"positionLeft":{"unit":1,"value":8.0,},"positionTop":{"unit":1,"value":8.0,},"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":32.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_3BEE868A","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_3BEE868A","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_redactedretactedmateus","path":"sprites/spr_redactedretactedmateus/spr_redactedretactedmateus.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ResinaLayer","nodeColour":4288410184,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
-      ],"locked":false,"name":"settings","nodeColour":4294068428,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":true,},
+      ],"locked":false,"name":"settings","nodeColour":4294068428,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":false,},
     {"$GMRUIFolder":"","%Name":"main","children":[
         {"$GMRUILayer":"v1","%Name":"SavesLayer","alignItems":4,"children":[
             {"$GMRFlexPanel":"","%Name":"TitlePanel","alignItems":2,"children":[
@@ -353,5 +353,5 @@
           ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"GuiLayer","nodeColour":4282943474,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
       ],"locked":false,"name":"gui","nodeColour":4287842546,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":true,},
   ],
-  "visible":false,
+  "visible":true,
 }
