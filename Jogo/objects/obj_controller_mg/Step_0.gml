@@ -1,8 +1,5 @@
 if (keyboard_check_pressed(global.st_smg)) {
-    id_magia ++;
-    if(id_magia > 7){
-        id_magia = 1;
-    }
+    
     
     global.meu += 1
     global.me1 += 1
@@ -10,10 +7,13 @@ if (keyboard_check_pressed(global.st_smg)) {
     
     if (global.meu > 7){
         global.meu = 0
-        global.me1 = 1
-        global.me2 = 2
     }
-    
+    if (global.me1 > 7){
+        global.me1 = 0
+    }
+    if (global.me2 > 7){
+        global.me2 = 0
+    }
 }
 
 if (tiro_time > 0) {
@@ -40,7 +40,7 @@ if (overheat_time > 0){
 }
 
 if (keyboard_check(global.st_umg)){
-    switch (id_magia) {
+    switch (global.meu) {
         case 1:
             lancar_cd()
         break;
