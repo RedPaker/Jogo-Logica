@@ -1,4 +1,4 @@
-lifetime = 10
+lifetime = 20
 atingiu = false
 dano = 20
 
