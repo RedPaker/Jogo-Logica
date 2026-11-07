@@ -28,7 +28,7 @@ function lancar_cd(){
     var _tiro = instance_create_layer(
         obj_plr_rpg.x + lengthdir_x(10, round(obj_plr_rpg.facing/90)*90),
         obj_plr_rpg.y + lengthdir_y(12, round(obj_plr_rpg.facing/90)*90),
-        "Instances",
+        "Entities",
         obj_cd
     );
 
@@ -41,14 +41,14 @@ function lancar_cd(){
 function choque(){
     
     if (keyboard_check_pressed(global.st_umg) && choque_time <= 0){
-    instance_create_layer(obj_plr_rpg.x,obj_plr_rpg.y,"Instances",obj_choque)
+    instance_create_layer(obj_plr_rpg.x,obj_plr_rpg.y,"Entities",obj_choque)
     choque_time = choque_cadencia;
     }
 }
 
 function explosao(){
     if (keyboard_check_pressed(global.st_umg) && jukebox_time <= 0){
-        instance_create_layer(obj_plr_rpg.x, obj_plr_rpg.y,"Instances",obj_jukebox);
+        instance_create_layer(obj_plr_rpg.x, obj_plr_rpg.y,"Entities",obj_jukebox);
         
         jukebox_time = jukebox_cadencia;
     }
@@ -62,7 +62,7 @@ if (keyboard_check_pressed(global.st_umg) && vento_time <= 0){
     var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
     var _ay = y + lengthdir_y(_distancia, obj_plr_rpg.facing);
     
-    instance_create_layer(_ax, _ay, "instances", obj_vento, {atk_dist:_distancia});
+    instance_create_layer(_ax, _ay, "Entities", obj_vento, {atk_dist:_distancia});
     
     vento_time = vento_cadencia;
 }
@@ -99,7 +99,7 @@ function flash(){
         var _ax = x + lengthdir_x(_distancia, obj_plr_rpg.facing);
         var _ay = y + lengthdir_y(_distancia, obj_plr_rpg.facing);
     
-        instance_create_layer(_ax, _ay, "instances", obj_flash, {atk_dist:_distancia});
+        instance_create_layer(_ax, _ay, "Entities", obj_flash, {atk_dist:_distancia});
     
         flash_time = flash_cadencia        
     }
@@ -108,7 +108,7 @@ function flash(){
 function overheat(){
     
     if (keyboard_check_pressed(global.st_umg) && overheat_time<= 0){
-    instance_create_layer(obj_plr_rpg.x,obj_plr_rpg.y,"Instances",obj_OVERHEAT)
+    instance_create_layer(obj_plr_rpg.x,obj_plr_rpg.y,"Entities",obj_OVERHEAT)
     overheat_time = overheat_cadencia;
     }
 }

@@ -1,6 +1,7 @@
 global.meu = 0
 global.me1 = 1
 global.me2 = 2
+global.jogo_pausado = false;
 
 if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;

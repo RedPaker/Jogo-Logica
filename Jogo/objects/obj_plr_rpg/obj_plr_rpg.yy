@@ -36,6 +36,9 @@
     "name":"spr_plr_td_down",
     "path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_plr_td_down",
+    "path":"sprites/spr_plr_td_down/spr_plr_td_down.yy",
+  },
   "visible":true,
 }
