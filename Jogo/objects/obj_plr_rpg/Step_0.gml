@@ -127,32 +127,42 @@ else {
     cam_x = x-_old_x; 
     cam_y = y-_old_y;
 
-    if (!curando && (_input_x != 0 or _input_y != 0)){
+if (!curando) {
+    if (_input_x != 0 or _input_y != 0) {
         if (state == 5) {
-            if(_input_x < 0) sprite_index = spr_plr_td_right;
-            else if(_input_x > 0) sprite_index = spr_plr_td_left;
-            else if (_input_y < 0) sprite_index = spr_plr_td_down;
-            else if (_input_y > 0) sprite_index = spr_plr_td_up;
-        }else {
-            if(_input_x > 0) sprite_index = spr_plr_td_right;
-            else if(_input_x < 0) sprite_index = spr_plr_td_left;
-            else if (_input_y > 0) sprite_index = spr_plr_td_down;
-            else if (_input_y < 0) sprite_index = spr_plr_td_up;
+            if (_input_x < 0) sprite_index = spr_plr_walk_right;
+            else if (_input_x > 0) sprite_index = spr_plr_walk_left;
+            else if (_input_y < 0) sprite_index = spr_plr_walk_down;
+            else if (_input_y > 0) sprite_index = spr_plr_walk_up;
+        } else {
+            if (_input_x > 0) sprite_index = spr_plr_walk_right;
+            else if (_input_x < 0) sprite_index = spr_plr_walk_left;
+            else if (_input_y > 0) sprite_index = spr_plr_walk_down;
+            else if (_input_y < 0) sprite_index = spr_plr_walk_up;
         }
 
         facing = point_direction(0, 0, _input_x, _input_y);
-    }
-
-    if (curando) {
-        if (!animacao_cura_iniciada) {
-            sprite_index = spr_plr_curando;
-            image_index = 0;
-            image_speed = 1;
-            animacao_cura_iniciada = true;
+    } 
+    else {
+        switch (facing) {
+            case 0:   
+                sprite_index = spr_plr_td_right; 
+                break;
+            case 180: 
+                sprite_index = spr_plr_td_left;  
+                break;
+            case 90:  
+                sprite_index = spr_plr_td_up;    
+                break;
+            case 270: 
+                sprite_index = spr_plr_td_down;  
+                break;
+            default:
+                sprite_index = spr_plr_td_down;
+                break;
         }
-    } else {
-        animacao_cura_iniciada = false;
     }
+}
 
     if (ataque_time > 0) {
         ataque_time--;
