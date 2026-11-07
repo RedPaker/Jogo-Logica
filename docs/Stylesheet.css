@@ -316,3 +316,8 @@ footer p {
         height: 260px;
     }
 }
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
