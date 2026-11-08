@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_inventory",
+  "%Name":"old_obj_inventory",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_inventory",
+  "name":"old_obj_inventory",
   "overriddenProperties":[],
   "parent":{
-    "name":"Itens",
-    "path":"folders/ObjectS/Itens.yy",
+    "name":"z_Deprecated",
+    "path":"folders/ObjectS/z_Deprecated.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -6,7 +6,8 @@ function sv_save(save_id){
         char : {
             x: obj_plr_rpg.x,
             y: obj_plr_rpg.y,
-            hp: obj_plr_rpg.hp
+            hp: obj_plr_rpg.hp,
+            spells: obj_controller_mg.unlocked_spells
         }
     };
     
@@ -64,7 +65,7 @@ function sv_newgame(){
     if (instance_exists(obj_cam))      instance_destroy(obj_cam);
     if (instance_exists(obj_spellbook)) instance_destroy(obj_spellbook);
     if (instance_exists(obj_save))      instance_destroy(obj_save);
-    if (instance_exists(obj_inventory)) instance_destroy(obj_inventory);
+    if (instance_exists(old_obj_inventory)) instance_destroy(old_obj_inventory);
     scr_fade(rm_casa,-1,-1);
     
 }

@@ -13,21 +13,19 @@ if (instance_exists(obj_plr_rpg)) {
         for (var i = 0; i < _tamanho; i++) {
             var nome_da_variavel = _nomes[i];
             
-            // Obter o valor real (true/false) usando o nome da variável
             var valor = variable_struct_get(_unlockedspells, nome_da_variavel);
             
-            // Se for verdadeiro, aumenta o contador
             if (valor == true) {
                 desbloqueados++;
             }
         }
         
         if (_text_id != -1) {
-        layer_text_text("HP:" + _text_id, string(_hp) + " / " + string(_hpmax) + "\n" + string(desbloqueados) + "Feitiços");
+        layer_text_text(_text_id, "HP:" + string(_hp) + " / " + string(_hpmax) + "\n" + string(desbloqueados) + " Feitiços");
     }
     }else {
     	if (_text_id != -1) {
-        layer_text_text("HP:" + _text_id, string(_hp) + " / " + string(_hpmax));
+        layer_text_text(_text_id, "HP:" + string(_hp) + " / " + string(_hpmax));
     }
     }
 }
