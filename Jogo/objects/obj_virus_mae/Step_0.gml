@@ -1,3 +1,4 @@
+if (global.jogo_pausado == true) exit;
 switch (estado) {
     
 

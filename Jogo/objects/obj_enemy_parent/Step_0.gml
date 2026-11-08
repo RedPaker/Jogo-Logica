@@ -1,5 +1,7 @@
 
-if (instance_exists(obj_dialogo)) exit;
+if (global.jogo_pausado == true) {
+    exit;
+}
 
 if (hp <= 0) {
     instance_destroy();

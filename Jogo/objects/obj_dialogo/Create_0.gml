@@ -17,6 +17,7 @@ display_set_gui_size(_view_width, _view_height);  */
 gui_w = display_get_gui_width();
 gui_h = display_get_gui_height();
 
+global.jogo_pausado = true
 instance_deactivate_layer("Entities");
 instance_deactivate_layer("Itens");
 instance_deactivate_layer("Misc");

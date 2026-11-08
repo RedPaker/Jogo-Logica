@@ -10,8 +10,8 @@
   "name":"obj_spellbook",
   "overriddenProperties":[],
   "parent":{
-    "name":"Itens",
-    "path":"folders/ObjectS/Itens.yy",
+    "name":"UI",
+    "path":"folders/ObjectS/UI.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -31,7 +31,7 @@ if(hp <= 0){
         }
     }
 
-    if (instance_exists(obj_dialogo)){
+    if (global.jogo_pausado == true){
         exit;
     }
 
@@ -41,11 +41,6 @@ if(hp <= 0){
 
     if(impacto > 0){
         impacto--;
-        exit;
-    }
-
-    if (obj_spellbook.abrir){
-        move_spd = 0;
         exit;
     }
 

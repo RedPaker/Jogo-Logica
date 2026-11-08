@@ -1,3 +1,6 @@
+if (global.jogo_pausado == true) {
+    exit;
+}
 // Inherit the parent event
 event_inherited();
     tiro_time --;

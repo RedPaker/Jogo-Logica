@@ -1,1 +1,0 @@
-global.menu_aberto = false;

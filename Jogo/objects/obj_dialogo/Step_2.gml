@@ -12,6 +12,7 @@ if (current_char < string_length(_str)){
 } else if (keyboard_check_pressed(input_key)) {
     current_message++;
     if (current_message >= array_length(messages)){
+        global.jogo_pausado = false
         instance_activate_layer("Entities");
         instance_activate_layer("Itens");
         instance_activate_layer("Misc");

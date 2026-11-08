@@ -1,3 +1,6 @@
+if (global.jogo_pausado == true) {
+    exit;
+}
 if (other.imortal = false){
     if (other.dano_time <= 0 && other.hp > 0) {
     other.hp -= 10;

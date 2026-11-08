@@ -64,7 +64,7 @@ function sv_newgame(){
     if (instance_exists(obj_plr_rpg))  instance_destroy(obj_plr_rpg);
     if (instance_exists(obj_cam))      instance_destroy(obj_cam);
     if (instance_exists(obj_spellbook)) instance_destroy(obj_spellbook);
-    if (instance_exists(obj_save))      instance_destroy(obj_save);
+    if (instance_exists(obj_menu))      instance_destroy(obj_menu);
     if (instance_exists(old_obj_inventory)) instance_destroy(old_obj_inventory);
     scr_fade(rm_casa,-1,-1);
     

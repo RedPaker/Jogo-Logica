@@ -1,3 +1,6 @@
+if (global.jogo_pausado == true){
+        exit;
+}
 var _camx = obj_plr_rpg.cam_x;
 var _camy = obj_plr_rpg.cam_y;
 
