@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_invtr_placeholder",
-    "path":"sprites/spr_invtr_placeholder/spr_invtr_placeholder.yy",
+    "name":"spr_ui_oldinvtr_placeholder",
+    "path":"sprites/spr_ui_oldinvtr_placeholder/spr_ui_oldinvtr_placeholder.yy",
   },
   "spriteMaskId":null,
   "visible":true,

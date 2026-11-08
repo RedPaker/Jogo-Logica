@@ -41,8 +41,8 @@
   ],
   "name":"room_boss_web",
   "parent":{
-    "name":"All_these__rooms",
-    "path":"folders/All_these__rooms.yy",
+    "name":"Jogo",
+    "path":"folders/All_these__rooms/Jogo.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

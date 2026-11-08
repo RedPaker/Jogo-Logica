@@ -51,8 +51,8 @@
   ],
   "name":"rm_casa",
   "parent":{
-    "name":"All_these__rooms",
-    "path":"folders/All_these__rooms.yy",
+    "name":"Interiores",
+    "path":"folders/All_these__rooms/Jogo/Interiores.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

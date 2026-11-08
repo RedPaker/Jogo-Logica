@@ -16,8 +16,8 @@
   ],
   "name":"room_boss_final",
   "parent":{
-    "name":"All_these__rooms",
-    "path":"folders/All_these__rooms.yy",
+    "name":"Jogo",
+    "path":"folders/All_these__rooms/Jogo.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
