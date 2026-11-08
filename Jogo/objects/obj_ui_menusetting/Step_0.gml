@@ -1,9 +1,9 @@
+desbloqueados = 0;
 if (instance_exists(obj_plr_rpg)) {
     var _hpmax = obj_plr_rpg.hp_max;
     var _hp = obj_plr_rpg.hp;
     var _text_id = layer_text_get_id(layer, "text_1F36EB49");
     if(object_exists(obj_controller_mg)){
-        desbloqueados = 0;
         var _unlockedspells = obj_controller_mg.unlocked_spells
         
         var _nomes = variable_struct_get_names(_unlockedspells);
