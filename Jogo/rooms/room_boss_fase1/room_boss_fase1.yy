@@ -63,8 +63,8 @@
   ],
   "name":"room_boss_fase1",
   "parent":{
-    "name":"All_these__rooms",
-    "path":"folders/All_these__rooms.yy",
+    "name":"Jogo",
+    "path":"folders/All_these__rooms/Jogo.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

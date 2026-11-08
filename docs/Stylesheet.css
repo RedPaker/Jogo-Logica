@@ -321,3 +321,12 @@ p {
     margin-bottom: 20px;
     line-height: 1.6;
 }
+
+.video-apresentacao {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 12px;
+}

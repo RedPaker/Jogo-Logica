@@ -1,3 +1,14 @@
+unlocked_spells = {
+    cd:false,
+    shock:false,
+    jukebox:false,
+    ventoinha:false,
+    restart:false,
+    brightness:false,
+    overheat:false
+}
+
+
 tiro_time = 0;
 tiro_cadencia = 15;
 

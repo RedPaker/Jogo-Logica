@@ -275,8 +275,8 @@
   ],
   "name":"rm_mappingtest",
   "parent":{
-    "name":"All_these__rooms",
-    "path":"folders/All_these__rooms.yy",
+    "name":"Testes",
+    "path":"folders/All_these__rooms/Testes.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
