@@ -10,6 +10,12 @@ posicao_livro = function() {
     y = (_centro_y + offset_inventario_y) + _cam_y;
 };
 
+// Lembra em qual linha o bloco está (não atualiza durante o arraste,
+// assim sabemos de onde ele saiu quando for solto)
+if (_livro_aberto && !arrastando) {
+    minha_linha = encaixado ? linha_do_slot() : -1;
+}
+
 if (_livro_aberto) {
     //DEFINIÇÕES DE PÁGINA E LIMITES DA GUI  (confuso demais)
     var _centro_x = display_get_gui_width() / 2;
@@ -62,6 +68,11 @@ if (mouse_check_button_released(mb_left)) {
         show_debug_message("Não encaixou, voltou ao início!");
         encaixado = false
     }
+
+    // Estava dentro de um WHILE/IF e foi colocado em outro lugar: sai da estrutura
+    var _nova_linha = encaixado ? linha_do_slot() : -1;
+    if (blk != noone && _nova_linha != minha_linha) saiu_do_while();
+    if (blk_if != noone && _nova_linha != minha_linha) saiu_do_if();
 }
 } else {
         aumenta = false
@@ -74,15 +85,7 @@ if (mouse_check_button_released(mb_left)) {
 if (encaixado && !arrastando){
     verificar_bloco_while()
     verificar_bloco_if()
-} else {
-    if (blk != noone){
-    saiu_do_while() 
-    }
-    if (blk_if != noone){
-        saiu_do_if()
-    }
+} else if (!encaixado) {
+    if (blk != noone) saiu_do_while()
+    if (blk_if != noone) saiu_do_if()
 }
-
-
-
-
