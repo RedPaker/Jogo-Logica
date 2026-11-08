@@ -1,11 +1,20 @@
-<html>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Syne+Mono&display=swap"
-    rel="stylesheet">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <title>Vídeo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Syne+Mono&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="Stylesheet.css">
 </head>
 
@@ -27,13 +36,29 @@
     <main class="main_legal">
         <div class="primarybox">
 
-            <video class="video-apresentacao" controls preload="metadata">
-                <source src="imagens/WhatsApp Video 2026-11-06 at 23.50.38.mp4" type="video/mp4">
-                Seu navegador não suporta a reprodução de vídeos.
-            </video>
+            <h2>Vídeo de apresentação</h2>
 
-            <a href="index.html" class="voltar">Voltar</a>
+           <div class="video-container">
 
+                <iframe
+                    src="https://www.youtube.com/embed?listType=playlist&amp;list=PLZwQ3OxJxsgY"
+                    title="Playlist Spells n Glitches"
+                    referrerpolicy="origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <p class="video-fallback">
+                Problemas para assistir?
+                <a href="https://www.youtube.com/playlist?list=PLZwQ3OxJxsgY"
+                target="_blank"
+                rel="noopener noreferrer">
+                    Abrir playlist diretamente no YouTube
+                </a>
+            </p>
+                <a href="index.html" class="voltar">Voltar</a>
         </div>
     </main>
 
