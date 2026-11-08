@@ -49,6 +49,7 @@
     {"name":"fnt_6_segoeui","order":8,"path":"fonts/fnt_6_segoeui/fnt_6_segoeui.yy",},
     {"name":"fnt_8_comicsansms","order":3,"path":"fonts/fnt_8_comicsansms/fnt_8_comicsansms.yy",},
     {"name":"fnt_8_segoeui","order":7,"path":"fonts/fnt_8_segoeui/fnt_8_segoeui.yy",},
+    {"name":"Font10","order":9,"path":"fonts/Font10/Font10.yy",},
     {"name":"obj_aranha","order":5,"path":"objects/obj_aranha/obj_aranha.yy",},
     {"name":"obj_arceight_body","order":2,"path":"objects/obj_arceight_body/obj_arceight_body.yy",},
     {"name":"obj_arceight_head","order":7,"path":"objects/obj_arceight_head/obj_arceight_head.yy",},

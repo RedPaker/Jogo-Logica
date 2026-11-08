@@ -31,10 +31,11 @@ var _vis = (aba_atual != 1);
 with (obj_block_parent)   visible = _vis;
 with (obj_mini_parent)    visible = _vis;
 
-// --- abas ---
+// --- abas estilo terminal ---
+draw_set_font(fonte_terminal);
 var _rx = _centro_x + 40;
 var _ry = _centro_y - 250;
-var _nomes = ["Código", "Log"];
+var _nomes = ["Codigo", "Log"];
 var _mx = device_mouse_x_to_gui(0);
 var _my = device_mouse_y_to_gui(0);
 
@@ -47,51 +48,57 @@ for (var a = 0; a < 2; a++) {
         aba_atual = a;
     }
 
-    var _cor = (aba_atual == a) ? _cor_laranja : make_color_rgb(190, 190, 190);
-    draw_rectangle_color(_ax1, _ry, _ax2, _ay2, _cor, _cor, _cor, _cor, false);
+    var _ativa = (aba_atual == a);
+    painel_pixel(_ax1, _ry, _ax2, _ay2,
+                 cor_term_verde,
+                 _ativa ? cor_term_verde : cor_term_fundo);
 
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
-    draw_set_color(c_black);
-    draw_text(_ax1 + 50, _ry + 18, _nomes[a]);
+    draw_set_color(_ativa ? cor_term_fundo : cor_term_verde);
+    draw_text(floor(_ax1 + 50), floor(_ry + 18), _nomes[a]);
 }
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-// --- conteúdo da aba Log ---
+// --- painel do Log ---
 if (aba_atual == 1) {
-    var _ty = _ry + 55;
+    var _px1 = _rx - 8;
+    var _py1 = _ry + 44;
+    var _px2 = _rx + 300;
+    var _py2 = _centro_y + 235;
+
+    painel_terminal(_px1, _py1, _px2, _py2);
+
+    // barra de título
+    painel_pixel(_px1, _py1, _px2, _py1 + 28, cor_term_verde, cor_term_verde_esc);
+    draw_set_color(cor_term_verde);
+    draw_text(floor(_px1 + 14), floor(_py1 + 5), "livro@feitico:~$ log");
+
+    var _tx = floor(_rx + 6);
+    var _ty = floor(_py1 + 44);
+
     if (array_length(log_linhas) == 0) {
-        draw_set_color(c_black);
-        draw_text_ext(_rx, _ty, "Aperte ENTER para testar o programa.", 24, 270);
+        draw_set_color(cor_term_verde);
+        draw_text_ext(_tx, _ty, "> Aperte ENTER para testar o programa.", 24, 270);
+        _ty += 56;
     } else {
         for (var i = 0; i < array_length(log_linhas); i++) {
             var _l = log_linhas[i];
-            draw_set_color(_l.ok ? c_green : c_red);
-            var _txt = (_l.linha >= 0 ? "Linha " + string(_l.linha + 1) + ": " : "") + _l.msg;
-            draw_text_ext(_rx, _ty + i * 60, _txt, 24, 270);
+            draw_set_color(_l.ok ? cor_term_verde : cor_term_erro);
+            var _txt = "> " + (_l.linha >= 0 ? "[linha " + string(_l.linha + 1) + "] " : "") + _l.msg;
+            draw_text_ext(_tx, _ty, _txt, 24, 270);
+            _ty += string_height_ext(_txt, 24, 270) + 12;
         }
+    }
+
+    // cursor piscando
+    if ((current_time div 500) mod 2 == 0) {
+        draw_set_color(cor_term_verde);
+        draw_text(_tx, _ty, "> _");
     }
     draw_set_color(c_black);
 }
-    
-    if (pagina_atual >= 0 && pagina_atual < array_length(global.paginas_spawn_data)) {
-        var _lista_pagina = global.paginas_spawn_data[pagina_atual];
-
-        if (array_length(_lista_pagina) > 0) {
-            var _primeiro_item = _lista_pagina[1];
-            if (variable_struct_exists(_primeiro_item, "frase")) {
-                draw_set_halign(fa_center);
-                draw_set_valign(fa_middle);
-                draw_set_color(c_black);
-                
-                draw_text_transformed(_centro_x - 180, _centro_y - 260, _primeiro_item.frase,1.7,1.7,0);
-                
-                draw_set_halign(fa_left);
-                draw_set_valign(fa_top);
-            } 
-        }
-    }
 }
 
 

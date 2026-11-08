@@ -81,6 +81,7 @@
     {"id":{"name":"fnt_6_segoeui","path":"fonts/fnt_6_segoeui/fnt_6_segoeui.yy",},},
     {"id":{"name":"fnt_8_comicsansms","path":"fonts/fnt_8_comicsansms/fnt_8_comicsansms.yy",},},
     {"id":{"name":"fnt_8_segoeui","path":"fonts/fnt_8_segoeui/fnt_8_segoeui.yy",},},
+    {"id":{"name":"Font10","path":"fonts/Font10/Font10.yy",},},
     {"id":{"name":"obj_aranha","path":"objects/obj_aranha/obj_aranha.yy",},},
     {"id":{"name":"obj_arceight_body","path":"objects/obj_arceight_body/obj_arceight_body.yy",},},
     {"id":{"name":"obj_arceight_head","path":"objects/obj_arceight_head/obj_arceight_head.yy",},},

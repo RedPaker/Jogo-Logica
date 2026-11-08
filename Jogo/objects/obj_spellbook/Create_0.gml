@@ -540,4 +540,37 @@ verificacao = function(pagina_atual) {
     //aba_atual = 1
 }
 
+fonte_terminal = Font10;   // troque por uma fonte pixel (veja abaixo)
+px = 4;                                // tamanho do "pixel" do painel
+
+cor_term_fundo     = make_color_rgb(8, 14, 10);
+cor_term_verde     = make_color_rgb(70, 255, 110);
+cor_term_verde_esc = make_color_rgb(20, 90, 40);
+cor_term_erro      = make_color_rgb(255, 90, 90);
+
+// retângulo com cantos cortados em degrau, alinh   ado à grade de pixels
+painel_pixel = function(_x1, _y1, _x2, _y2, _borda, _fundo) {
+    var _p = px;
+    _x1 = floor(_x1 / _p) * _p;  _y1 = floor(_y1 / _p) * _p;
+    _x2 = floor(_x2 / _p) * _p;  _y2 = floor(_y2 / _p) * _p;
+
+    draw_set_color(_borda);
+    draw_rectangle(_x1 + _p, _y1, _x2 - _p - 1, _y2 - 1, false);
+    draw_rectangle(_x1, _y1 + _p, _x2 - 1, _y2 - _p - 1, false);
+
+    draw_set_color(_fundo);
+    draw_rectangle(_x1 + _p, _y1 + _p, _x2 - _p - 1, _y2 - _p - 1, false);
+}
+
+// painel completo de terminal com scanlines
+painel_terminal = function(_x1, _y1, _x2, _y2) {
+    painel_pixel(_x1, _y1, _x2, _y2, cor_term_verde, cor_term_fundo);
+
+    draw_set_alpha(0.18);
+    draw_set_color(c_black);
+    for (var _yy = _y1 + px * 2; _yy < _y2 - px; _yy += px * 2) {
+        draw_rectangle(_x1 + px, _yy, _x2 - px - 1, _yy + 1, false);
+    }
+    draw_set_alpha(1);
+}
 
