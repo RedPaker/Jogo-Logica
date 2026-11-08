@@ -105,11 +105,6 @@ if(hp <= 0){
         }
     }
 
-    if (!instance_exists(obj_dialogo)){
-        instance_activate_layer("Entidades");
-        instance_activate_layer("Itens");
-        instance_activate_layer("Misc");
-    }    
 
     var _target_x = 0; 
     var _target_y = 0;
