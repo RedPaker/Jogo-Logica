@@ -23,7 +23,7 @@ if (instance_exists(obj_plr_rpg)) {
         }
         
         if (_text_id != -1) {
-        layer_text_text("HP:" + _text_id, string(_hp) + " / " + string(_hpmax) + "\n" + desbloqueados + "Feitiços");
+        layer_text_text("HP:" + _text_id, string(_hp) + " / " + string(_hpmax) + "\n" + string(desbloqueados) + "Feitiços");
     }
     }else {
     	if (_text_id != -1) {
