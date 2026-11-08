@@ -7,3 +7,5 @@ if (keyboard_check_pressed(ord("V"))){
         show_debug_message("Não tem bloco")
     }
 }
+
+

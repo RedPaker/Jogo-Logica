@@ -13,6 +13,7 @@ if (instance_exists(obj_spellbook) && obj_spellbook.abrir) {
 }
 
 var _bloco = instance_place(x,y,obj_block_parent)
+var _while = instance_place(x,y,obj_bloco_while)
 
 if (_bloco && _bloco.arrastando){
     visible = true

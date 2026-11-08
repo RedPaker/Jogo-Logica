@@ -48,7 +48,8 @@ verificar_bloco_while = function() {
     with (obj_colission_bl) {
         var _bloco = instance_place(x, y, obj_bloco_while);
 
-        if (_bloco != noone) {
+        // Só vale um WHILE que já foi solto no slot (não o que está sendo arrastado)
+        if (_bloco != noone && _bloco.encaixado && !_bloco.arrastando) {
             _linha_while = linha;
         }
     }
@@ -76,6 +77,7 @@ verificar_bloco_while = function() {
             criou_rabinho = true;
             
             var _bloco = instance_place(x, y, obj_bloco_while);
+            if (_bloco != noone && (!_bloco.encaixado || _bloco.arrastando)) _bloco = noone;
             //var _ta_no_while = instance_place(x,y,_bloco)
             if (_bloco != noone){
                 blk = _bloco
@@ -142,7 +144,8 @@ verificar_bloco_if = function() {
     with (obj_colission_bl) {
         var _bloco = instance_place(x, y, obj_bloco_if);
 
-        if (_bloco != noone) {
+        // Só vale um IF que já foi solto no slot (não o que está sendo arrastado)
+        if (_bloco != noone && _bloco.encaixado && !_bloco.arrastando) {
             _linha_if = linha;
         }
     }
@@ -170,6 +173,7 @@ verificar_bloco_if = function() {
             criou_rabinho_if = true;
             
             var _bloco = instance_place(x, y, obj_bloco_if);
+            if (_bloco != noone && (!_bloco.encaixado || _bloco.arrastando)) _bloco = noone;
             if (_bloco != noone){
                 blk_if = _bloco;
             }
@@ -203,7 +207,7 @@ saiu_do_if = function(){
     }
     if (criou_rabinho_if) {
         obj_bloco_if.qt_if -= 1;
-        var _linha_rabo = amarz_if + qt_if;
+        var _linha_rabo = amarz_if + obj_bloco_if.qt_if;
 
         with (obj_colission_bl) {
             if (linha == _linha_rabo) {

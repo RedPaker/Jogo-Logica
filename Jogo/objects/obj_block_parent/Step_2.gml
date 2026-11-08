@@ -70,7 +70,8 @@ if (mouse_check_button_released(mb_left)) {
     primeira = false
 }
 
-if (encaixado){
+// Enquanto o bloco está sendo arrastado ele não deve empurrar nem ser empurrado
+if (encaixado && !arrastando){
     verificar_bloco_while()
     verificar_bloco_if()
 } else {
