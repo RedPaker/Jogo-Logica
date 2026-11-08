@@ -14,15 +14,14 @@ if (bat_pisca > 0) {
 }
 
 hp_anterior = hp;
-
+if (keyboard_check_pressed(ord("P"))) {
+        game_restart();
+        exit;
+}    
 if(hp <= 0){
     game_over = true;    
 } else {
-
-    if (keyboard_check_pressed(ord("P"))) {
-        game_restart();
-        exit;
-    }    
+    
     
     if (instance_number(obj_binario_puzzle) > 0) {
         var _puzzle = instance_find(obj_binario_puzzle, 0);

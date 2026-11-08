@@ -1,4 +1,4 @@
-var _dados = {
+/*var _dados = {
     plr :{
         
     },
@@ -13,4 +13,4 @@ var _dados = {
 
     var _arquivo = file_text_open_write("save.json");
     file_text_write_string(_arquivo, _json);
-    file_text_close(_arquivo);
+    file_text_close(_arquivo);*/
