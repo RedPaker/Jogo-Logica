@@ -1,5 +1,5 @@
 
-if (keyboard_check_pressed(ord("B"))){
+if (keyboard_check_pressed(ord("B")) && obj_plr_rpg.coletou_livro){
     abrir = !abrir;
 }
 
