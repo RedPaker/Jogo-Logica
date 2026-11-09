@@ -114,17 +114,8 @@ if (aba_atual == 1) {
     var _by = _centro_y - 60;
     var _p  = 4;                 // tamanho do "pixel" do cadeado
 
-    // cadeado em pixel art (arco + corpo + fechadura)
-    draw_set_color(make_color_rgb(60, 40, 20));
-    draw_rectangle(_bx - 6*_p, _by - 13*_p, _bx + 6*_p - 1, _by - 11*_p - 1, false); // topo do arco
-    draw_rectangle(_bx - 8*_p, _by - 11*_p, _bx - 6*_p - 1, _by - 4*_p - 1, false);  // lado esq.
-    draw_rectangle(_bx + 6*_p, _by - 11*_p, _bx + 8*_p - 1, _by - 4*_p - 1, false);  // lado dir.
-    draw_rectangle(_bx - 11*_p, _by - 4*_p, _bx + 11*_p - 1, _by + 12*_p - 1, false); // corpo (borda)
-    draw_set_color(make_color_rgb(200, 150, 60));
-    draw_rectangle(_bx - 10*_p, _by - 3*_p, _bx + 10*_p - 1, _by + 11*_p - 1, false); // corpo
-    draw_set_color(make_color_rgb(60, 40, 20));
-    draw_rectangle(_bx - 2*_p, _by + 1*_p, _bx + 2*_p - 1, _by + 5*_p - 1, false);   // fechadura
-    draw_rectangle(_bx - 1*_p, _by + 5*_p, _bx + 1*_p - 1, _by + 8*_p - 1, false);
+    // eu quando o claude faz um sprite a mão com draw 😭
+    draw_sprite_ext(spr_lock, 0, _bx, _by, _p, _p, 0, c_white, 1);
 
     draw_set_font(fnt_10_comicsansms);
     draw_set_color(c_black);
