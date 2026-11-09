@@ -4,7 +4,7 @@ if (global.jogo_pausado == true) {
 var _hor = clamp(alvo_x - x, -1, 1);
 var _ver = clamp(alvo_y - y, -1, 1);
 
-move_and_collide(_hor * move_spd, _ver * move_spd, [tilemap_foreground, obj_enimy_rpg, obj_enimy_atirador, obj_aranha]);
+move_and_collide(_hor * move_spd, _ver * move_spd, [tilemap_foreground, obj_enemy_parent]);
 
 
 if (empurra > 0) {

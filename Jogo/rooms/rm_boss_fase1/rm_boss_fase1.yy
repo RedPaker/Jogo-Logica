@@ -1,15 +1,15 @@
 {
   "$GMRoom":"v1",
-  "%Name":"room_boss_fase1",
+  "%Name":"rm_boss_fase1",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_6C1266DA","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
-    {"name":"inst_4615FABC","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
-    {"name":"inst_5535DCD2","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
-    {"name":"inst_68A01043","path":"rooms/room_boss_fase1/room_boss_fase1.yy",},
+    {"name":"inst_6C1266DA","path":"rooms/rm_boss_fase1/rm_boss_fase1.yy",},
+    {"name":"inst_4615FABC","path":"rooms/rm_boss_fase1/rm_boss_fase1.yy",},
+    {"name":"inst_5535DCD2","path":"rooms/rm_boss_fase1/rm_boss_fase1.yy",},
+    {"name":"inst_68A01043","path":"rooms/rm_boss_fase1/rm_boss_fase1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -61,10 +61,10 @@
         ],"TileDataFormat":1,},"tilesetId":{"name":"tls_boss_1","path":"tilesets/tls_boss_1/tls_boss_1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"room_boss_fase1",
+  "name":"rm_boss_fase1",
   "parent":{
-    "name":"Jogo",
-    "path":"folders/All_these__rooms/Jogo.yy",
+    "name":"BossArenas",
+    "path":"folders/All_these__rooms/Jogo/BossArenas.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
