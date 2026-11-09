@@ -10,6 +10,7 @@
     {"name":"inst_6F182A1","path":"rooms/rm_casa/rm_casa.yy",},
     {"name":"inst_5A9E1C07","path":"rooms/rm_casa/rm_casa.yy",},
     {"name":"inst_2CDDEC55","path":"rooms/rm_casa/rm_casa.yy",},
+    {"name":"inst_15C0274C","path":"rooms/rm_casa/rm_casa.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -27,6 +28,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_pagina_cd","path":"objects/obj_pagina_cd/obj_pagina_cd.yy",},"propertyId":{"name":"numero_pagina","path":"objects/obj_pagina_cd/obj_pagina_cd.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":72.0,"y":104.0,},
         {"$GMRInstance":"v4","%Name":"inst_2CDDEC55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2CDDEC55","objectId":{"name":"obj_pagina_choque","path":"objects/obj_pagina_choque/obj_pagina_choque.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":128.0,},
+        {"$GMRInstance":"v4","%Name":"inst_15C0274C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_15C0274C","objectId":{"name":"obj_item_livro","path":"objects/obj_item_livro/obj_item_livro.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":96.0,},
       ],"layers":[],"name":"Itens","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Entities","depth":400,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_4F2FE9E0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4F2FE9E0","objectId":{"name":"obj_npc_asterisco","path":"objects/obj_npc_asterisco/obj_npc_asterisco.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":80.0,},
