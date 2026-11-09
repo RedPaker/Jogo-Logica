@@ -27,7 +27,7 @@ if (game_over) {
     draw_set_color(c_white);
 
     draw_text_transformed(
-        display_get_gui_width() / 2,
+        display_get_gui_width() / 2,    
         display_get_gui_height() / 2 + 40,
         "Pressione P para reiniciar",
         1.5,

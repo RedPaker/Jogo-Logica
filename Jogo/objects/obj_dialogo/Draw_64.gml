@@ -10,7 +10,7 @@ var _boxh = gui_h - _dy;
 // quanto o balão está deslocado para baixo (0 = totalmente aberto)
 var _slide = (1 - _e) * (_boxh + 300);
 
-draw_sprite_stretched(spr_ui_frame, 0, _dx, _dy + _slide, _boxw, _boxh);
+draw_sprite_stretched(spr_ui_frame_dialogo, 0, _dx, _dy + _slide, _boxw, _boxh);
 
 _dx += 16;
 _dy += 16;
