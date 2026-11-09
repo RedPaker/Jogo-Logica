@@ -1,6 +1,13 @@
 
-if (keyboard_check_pressed(ord("B"))){
+if (keyboard_check_pressed(ord("B")) && obj_plr_rpg.coletou_livro){
     abrir = !abrir;
+} else {
+}
+
+if (obj_plr_rpg.coletou_livro){
+    layer_set_visible("GuiLayer", true);
+} else {
+    layer_set_visible("GuiLayer", false);
 }
 
 if(abrir == true){
