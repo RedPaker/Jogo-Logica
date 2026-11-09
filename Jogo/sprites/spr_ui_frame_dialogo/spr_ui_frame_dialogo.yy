@@ -19,6 +19,7 @@
   "height":16,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"62d2c71c-671c-4600-93e3-3403f5a8d320","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"62d2c71c-671c-4600-93e3-3403f5a8d320","opacity":70.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"d607bce6-1f77-4d54-9a52-9a8655a0cf1d","blendMode":0,"displayName":"default","isLocked":false,"name":"d607bce6-1f77-4d54-9a52-9a8655a0cf1d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_ui_frame_dialogo",
@@ -29,10 +30,10 @@
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
     "highlightStyle":0,
-    "left":1,
+    "left":2,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
-    "right":1,
+    "right":2,
     "tileMode":[
       0,
       0,
@@ -40,7 +41,7 @@
       0,
       0,
     ],
-    "top":1,
+    "top":2,
   },
   "origin":0,
   "parent":{

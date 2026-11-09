@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pagina",
+  "%Name":"obj_pagina_choque",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pagina",
+  "name":"obj_pagina_choque",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_parent/obj_item_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Pagina",},
   ],
@@ -32,7 +32,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"numero_pagina","filters":[],"listItems":[],"multiselect":false,"name":"numero_pagina","rangeEnabled":true,"rangeMax":5.0,"rangeMin":1.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varFriendlyName":"Numero da pagina (1-5)","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"numero_pagina","filters":[],"listItems":[],"multiselect":false,"name":"numero_pagina","rangeEnabled":true,"rangeMax":5.0,"rangeMin":1.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varFriendlyName":"Numero da pagina (1-5)","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
