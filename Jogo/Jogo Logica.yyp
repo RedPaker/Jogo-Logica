@@ -61,6 +61,7 @@
     {"link":"io.gamemaker.gm_filter_pixelate-1.0.0","name":"io.gamemaker.gm_filter_pixelate-1.0.0","path":"io.gamemaker.gm_filter_pixelate-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_ripples-1.0.0","name":"io.gamemaker.gm_filter_ripples-1.0.0","path":"io.gamemaker.gm_filter_ripples-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_underwater-1.0.0","name":"io.gamemaker.gm_filter_underwater-1.0.0","path":"io.gamemaker.gm_filter_underwater-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_mask-1.0.0","name":"io.gamemaker.gm_filter_mask-1.0.0","path":"io.gamemaker.gm_filter_mask-1.0.0.yyp",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"Gravação de tela de 2026-08-07 08-39-43.mp4","CopyToMask":-1,"filePath":"datafiles","name":"Gravação de tela de 2026-08-07 08-39-43.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -73,6 +74,7 @@
   "name":"Jogo Logica",
   "resources":[
     {"id":{"name":"fnt_10_comicsansms","path":"fonts/fnt_10_comicsansms/fnt_10_comicsansms.yy",},},
+    {"id":{"name":"fnt_10_sourcecodepro","path":"fonts/fnt_10_sourcecodepro/fnt_10_sourcecodepro.yy",},},
     {"id":{"name":"fnt_12_comicsansms","path":"fonts/fnt_12_comicsansms/fnt_12_comicsansms.yy",},},
     {"id":{"name":"fnt_12_consolas","path":"fonts/fnt_12_consolas/fnt_12_consolas.yy",},},
     {"id":{"name":"fnt_14_comicsansms","path":"fonts/fnt_14_comicsansms/fnt_14_comicsansms.yy",},},
@@ -81,7 +83,6 @@
     {"id":{"name":"fnt_6_segoeui","path":"fonts/fnt_6_segoeui/fnt_6_segoeui.yy",},},
     {"id":{"name":"fnt_8_comicsansms","path":"fonts/fnt_8_comicsansms/fnt_8_comicsansms.yy",},},
     {"id":{"name":"fnt_8_segoeui","path":"fonts/fnt_8_segoeui/fnt_8_segoeui.yy",},},
-    {"id":{"name":"Font10","path":"fonts/Font10/Font10.yy",},},
     {"id":{"name":"obj_aranha","path":"objects/obj_aranha/obj_aranha.yy",},},
     {"id":{"name":"obj_arceight_body","path":"objects/obj_arceight_body/obj_arceight_body.yy",},},
     {"id":{"name":"obj_arceight_head","path":"objects/obj_arceight_head/obj_arceight_head.yy",},},

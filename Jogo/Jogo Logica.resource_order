@@ -42,6 +42,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"fnt_10_comicsansms","order":2,"path":"fonts/fnt_10_comicsansms/fnt_10_comicsansms.yy",},
+    {"name":"fnt_10_sourcecodepro","order":9,"path":"fonts/fnt_10_sourcecodepro/fnt_10_sourcecodepro.yy",},
     {"name":"fnt_12_consolas","order":6,"path":"fonts/fnt_12_consolas/fnt_12_consolas.yy",},
     {"name":"fnt_14_comicsansms","order":1,"path":"fonts/fnt_14_comicsansms/fnt_14_comicsansms.yy",},
     {"name":"fnt_16_comicsansms","order":4,"path":"fonts/fnt_16_comicsansms/fnt_16_comicsansms.yy",},
@@ -49,7 +50,6 @@
     {"name":"fnt_6_segoeui","order":8,"path":"fonts/fnt_6_segoeui/fnt_6_segoeui.yy",},
     {"name":"fnt_8_comicsansms","order":3,"path":"fonts/fnt_8_comicsansms/fnt_8_comicsansms.yy",},
     {"name":"fnt_8_segoeui","order":7,"path":"fonts/fnt_8_segoeui/fnt_8_segoeui.yy",},
-    {"name":"Font10","order":9,"path":"fonts/Font10/Font10.yy",},
     {"name":"obj_aranha","order":5,"path":"objects/obj_aranha/obj_aranha.yy",},
     {"name":"obj_arceight_body","order":2,"path":"objects/obj_arceight_body/obj_arceight_body.yy",},
     {"name":"obj_arceight_head","order":7,"path":"objects/obj_arceight_head/obj_arceight_head.yy",},

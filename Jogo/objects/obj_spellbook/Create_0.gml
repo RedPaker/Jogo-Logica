@@ -540,7 +540,7 @@ verificacao = function(pagina_atual) {
     //aba_atual = 1
 }
 
-fonte_terminal = Font10;   // troque por uma fonte pixel (veja abaixo)
+fonte_terminal = fnt_10_sourcecodepro;   // troque por uma fonte pixel (veja abaixo)
 px = 4;                                // tamanho do "pixel" do painel
 
 cor_term_fundo     = make_color_rgb(8, 14, 10);
