@@ -27,9 +27,15 @@ draw_sprite_ext(spr_terminal, 0, _ox, _oy, _esc_x, _esc_y, 0, c_white, 1);
     //Texto
     
     // --- esconde os blocos na aba Log ---
+// (só os blocos disponíveis na página da direita somem; o programa
+//  montado na área de código continua visível para comparar com o Log)
 var _vis = (aba_atual != 1);
-with (obj_block_parent)   visible = _vis;
-with (obj_mini_parent)    visible = _vis;
+with (obj_block_parent) {
+    visible = _vis || encaixado || arrastando || e_cauda();
+}
+with (obj_mini_parent) {
+    visible = _vis || arrastando || (instance_place(x, y, obj_colission_mini) != noone);
+}
 
 // --- abas estilo terminal ---
 draw_set_font(fonte_terminal);
@@ -99,6 +105,31 @@ if (aba_atual == 1) {
     }
     draw_set_color(c_black);
 }
+
+    // --- título do feitiço (acima da área de código) e número da página ---
+    draw_set_font(fnt_10_comicsansms);
+    draw_set_color(c_black);
+    draw_set_valign(fa_middle);
+
+    if (pagina_atual >= 0 && pagina_atual < array_length(global.paginas_spawn_data)) {
+        var _lista_pagina = global.paginas_spawn_data[pagina_atual];
+
+        // procura o item com a "frase" (título) da página
+        for (var i = 0; i < array_length(_lista_pagina); i++) {
+            if (variable_struct_exists(_lista_pagina[i], "frase")) {
+                draw_set_halign(fa_center);
+                draw_text_transformed(_centro_x - 180, _centro_y - 260, _lista_pagina[i].frase, 1.7, 1.7, 0);
+                break;
+            }
+        }
+
+        // número da página: canto inferior direito da página direita
+        draw_set_halign(fa_right);
+        draw_text_transformed(_centro_x + 400, _centro_y + 250, string(pagina_atual + 1), 1.7, 1.7, 0);
+    }
+
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
 }
 
 

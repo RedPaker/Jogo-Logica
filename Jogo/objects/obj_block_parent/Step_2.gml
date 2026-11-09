@@ -73,6 +73,9 @@ if (mouse_check_button_released(mb_left)) {
     var _nova_linha = encaixado ? linha_do_slot() : -1;
     if (blk != noone && _nova_linha != minha_linha) saiu_do_while();
     if (blk_if != noone && _nova_linha != minha_linha) saiu_do_if();
+
+    // Soltou em cima de outro bloco grande: vai para a linha de baixo (abrindo espaço)
+    if (encaixado) posicionar_ao_soltar();
 }
 } else {
         aumenta = false

@@ -17,7 +17,8 @@ if (mouse_check_button_pressed(mb_left)) {
     var _clicou = false;
     
     if (_livro_aberto) {
-        if (point_in_rectangle(_mouse_gui_x, _mouse_gui_y, _bloco_gui_x - _half_w, _bloco_gui_y - _half_h, _bloco_gui_x + _half_w, _bloco_gui_y + _half_h)) {
+        // Só pega se o mouse está sobre ele E ele é o bloco "da frente" (ver ganha_clique)
+        if (!e_cauda() && sob_mouse() && ganha_clique()) {
             _clicou = true;
             offset_x = _bloco_gui_x - _mouse_gui_x;
             offset_y = _bloco_gui_y - _mouse_gui_y;

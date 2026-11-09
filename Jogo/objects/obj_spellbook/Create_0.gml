@@ -375,25 +375,85 @@ spawn_blocos_pagina = function(pagina_atual) {
     var _cam_x = camera_get_view_x(view_camera[0]);
     var _cam_y = camera_get_view_y(view_camera[0]);
     
-    for (var i = 0; i < array_length(_lista_blocos); i++){
-        
+    // ---------------------------------------------------------------
+    //  Distribuição automática dos blocos na página da direita.
+    //  (os offset_x / offset_y das páginas não são mais usados)
+    //  - blocos grandes, um por fileira, à esquerda
+    //  - blocos pequenos ao lado dos grandes e, depois, em fileiras embaixo
+    //  - tudo dentro da área abaixo das abas "Codigo" e "Log"
+    //  - se não couber, as fileiras se aproximam (podem se sobrepor um pouco)
+    // ---------------------------------------------------------------
+    var _esc = 2.8;
+    var _area_x1 = 30;    // relativo ao centro da tela
+    var _area_x2 = 330;
+    var _area_y1 = -200;  // as abas vão até -214
+    var _area_y2 = 250;
+    var _gap = 6;
+
+    var _grandes = [];
+    var _minis = [];
+    for (var i = 0; i < array_length(_lista_blocos); i++) {
         var _dados = _lista_blocos[i];
-        
-        if (!variable_struct_exists(_dados, "objeto")) {
-            continue;
-        }
-        
-        var _spawn_x = (_centro_x + _dados.offset_x) + _cam_x;
-        var _spawn_y = (_centro_y + _dados.offset_y) + _cam_y;
-        var _novo_bloco = instance_create_layer(_spawn_x, _spawn_y, "Instances", _dados.objeto);
-        
-        _novo_bloco.offset_inventario_x = _dados.offset_x;
-        _novo_bloco.offset_inventario_y = _dados.offset_y;
-        _novo_bloco.primeira = true;
-        
-        
+        if (!variable_struct_exists(_dados, "objeto")) continue;
+        if (object_is_ancestor(_dados.objeto, obj_mini_parent)) array_push(_minis, _dados.objeto);
+        else array_push(_grandes, _dados.objeto);
     }
-    
+
+    // tamanho (já com a escala) dos maiores blocos de cada tipo
+    var _wg = 0, _hg = 0, _wm = 0, _hm = 0;
+    for (var i = 0; i < array_length(_grandes); i++) {
+        var _spr = object_get_sprite(_grandes[i]);
+        _wg = max(_wg, sprite_get_width(_spr) * _esc);
+        _hg = max(_hg, sprite_get_height(_spr) * _esc);
+    }
+    for (var i = 0; i < array_length(_minis); i++) {
+        var _spr = object_get_sprite(_minis[i]);
+        _wm = max(_wm, sprite_get_width(_spr) * _esc);
+        _hm = max(_hm, sprite_get_height(_spr) * _esc);
+    }
+    var _h_linha = max(_hg, _hm);
+    var _largura = _area_x2 - _area_x1;
+    var _minis_ao_lado = (_wm > 0) ? max(0, floor((_largura - _wg) / (_wm + _gap))) : 0;
+    var _minis_por_linha = (_wm > 0) ? max(1, floor((_largura + _gap) / (_wm + _gap))) : 1;
+
+    // monta as posições: x (relativo ao centro) e número da fileira
+    var _pos = [];
+    var _linha = 0;
+    var _im = 0;
+    for (var g = 0; g < array_length(_grandes); g++) {
+        array_push(_pos, { obj: _grandes[g], ox: _area_x1 + _wg / 2, linha: _linha });
+        for (var k = 0; k < _minis_ao_lado && _im < array_length(_minis); k++) {
+            array_push(_pos, { obj: _minis[_im], ox: _area_x1 + _wg + _gap + k * (_wm + _gap) + _wm / 2, linha: _linha });
+            _im++;
+        }
+        _linha++;
+    }
+    var _col = 0;
+    while (_im < array_length(_minis)) {
+        array_push(_pos, { obj: _minis[_im], ox: _area_x1 + _col * (_wm + _gap) + _wm / 2, linha: _linha });
+        _im++;
+        _col++;
+        if (_col >= _minis_por_linha) { _col = 0; _linha++; }
+    }
+    var _total_linhas = (_col > 0) ? _linha + 1 : _linha;
+
+    // distância entre fileiras (diminui se não couber tudo)
+    var _passo = _h_linha + _gap;
+    var _altura = _area_y2 - _area_y1;
+    if (_total_linhas > 1 && (_total_linhas - 1) * _passo + _h_linha > _altura) {
+        _passo = (_altura - _h_linha) / (_total_linhas - 1);
+    }
+
+    for (var i = 0; i < array_length(_pos); i++) {
+        var _p = _pos[i];
+        var _off_x = _p.ox;
+        var _off_y = _area_y1 + _h_linha / 2 + _p.linha * _passo;
+
+        var _novo_bloco = instance_create_layer(_centro_x + _off_x + _cam_x, _centro_y + _off_y + _cam_y, "Instances", _p.obj);
+        _novo_bloco.offset_inventario_x = _off_x;
+        _novo_bloco.offset_inventario_y = _off_y;
+        _novo_bloco.primeira = true;
+    }
 }
 
 

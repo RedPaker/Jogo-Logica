@@ -122,6 +122,112 @@ abrir_linha = function(_linha, _quem_entra) {
     }
 }
 
+// ---------- Soltar em cima de outro bloco ----------
+e_estrutura = function() {
+    return object_index == obj_bloco_while || object_index == obj_bloco_if;
+}
+
+// Chamado quando o bloco é solto num slot da área de código.
+// - Se a linha já tem outro bloco grande (ou uma cauda), este bloco vai para a linha de baixo.
+// - Se a linha é de um WHILE/IF, não faz nada: o bloco entra no corpo (verificar_bloco_*).
+// - Abre espaço empurrando para baixo o que estiver no caminho. Um WHILE/IF precisa de
+//   várias linhas livres: ele, o corpo e a cauda.
+// - Se a inserção cai dentro do corpo de um WHILE/IF, o corpo cresce e o bloco passa a fazer parte dele.
+// - Se não houver espaço no livro, o bloco volta pro inventário.
+posicionar_ao_soltar = function() {
+    if (e_cauda()) return;
+    var _l = linha_do_slot();
+    if (_l == -1) return;
+
+    var _na = function(_lista, _v) {
+        for (var i = 0; i < array_length(_lista); i++) if (_lista[i] == _v) return true;
+        return false;
+    };
+    // não contam como "outros": ele mesmo e, se for WHILE/IF, o que ele está carregando
+    var _excluir = [id];
+    if (e_estrutura()) {
+        for (var i = 0; i < array_length(itens_dentro); i++) array_push(_excluir, itens_dentro[i]);
+    }
+
+    // quem está na linha onde ele foi solto?
+    var _ocupada = false;
+    var _ocupante_estrutura = false;
+    with (obj_block_parent) {
+        if (_na(_excluir, id)) continue;
+        var _ln = e_cauda() ? linha_do_slot() : ((encaixado && !arrastando) ? linha_do_slot() : -1);
+        if (_ln == _l) {
+            _ocupada = true;
+            if (e_estrutura()) _ocupante_estrutura = true;
+        }
+    }
+    if (_ocupante_estrutura) return;
+
+    var _p = _ocupada ? _l + 1 : _l;      // linha onde ele vai ficar
+    var _n = 1;                           // quantas linhas ele precisa
+    if (e_estrutura()) _n = variable_instance_get(id, (object_index == obj_bloco_while) ? "qt" : "qt_if") + 1;
+
+    // primeira linha ocupada (por outros) a partir de _p e última linha ocupada
+    var _k = 999;
+    var _ultima = -1;
+    with (obj_block_parent) {
+        if (_na(_excluir, id)) continue;
+        var _ln = e_cauda() ? linha_do_slot() : ((encaixado && !arrastando) ? linha_do_slot() : -1);
+        if (_ln == -1) continue;
+        if (_ln >= _p) _k = min(_k, _ln);
+        _ultima = max(_ultima, _ln);
+    }
+    var _desloc = (_k < _p + _n) ? (_p + _n - _k) : 0;
+
+    // cabe no livro?
+    if (slot_da_linha(_p + _n - 1) == noone || (_desloc > 0 && slot_da_linha(_ultima + _desloc) == noone)) {
+        posicao_livro();
+        encaixado = false;
+        minha_linha = -1;
+        return;
+    }
+
+    if (_desloc > 0) {
+        // WHILE/IF cujo corpo contém a linha de inserção crescem
+        var _w_dentro = noone;
+        var _i_dentro = noone;
+        with (obj_bloco_while) {
+            if (!_na(_excluir, id) && encaixado && !arrastando) {
+                var _lw = linha_do_slot();
+                if (_lw < _p && _p <= _lw + qt) { qt += _desloc; _w_dentro = id; }
+            }
+        }
+        with (obj_bloco_if) {
+            if (!_na(_excluir, id) && encaixado && !arrastando) {
+                var _li = linha_do_slot();
+                if (_li < _p && _p <= _li + qt_if) { qt_if += _desloc; _i_dentro = id; }
+            }
+        }
+        if (_w_dentro != noone && blk == noone) blk = _w_dentro;
+        if (_i_dentro != noone && blk_if == noone) blk_if = _i_dentro;
+
+        // empurra para baixo tudo o que está da linha _p em diante
+        with (obj_block_parent) {
+            if (!_na(_excluir, id) && encaixado && !arrastando && !e_cauda()) {
+                var _ln = linha_do_slot();
+                if (_ln >= _p) { y += _desloc * 50; minha_linha = _ln + _desloc; }
+            }
+        }
+        with (obj_mini_parent) {
+            if (!_na(_excluir, id) && !arrastando) {
+                var _s = instance_place(x, y, obj_colission_mini);
+                if (_s != noone && _s.linha >= _p) y += _desloc * 50;
+            }
+        }
+    }
+
+    if (_p != _l) {
+        var _slot = slot_da_linha(_p);
+        x = _slot.x;
+        y = _slot.y;
+    }
+    minha_linha = _p;
+}
+
 // _estrutura: o WHILE/IF em que o bloco foi solto | _var_qt: "qt" ou "qt_if"
 entrar_na_estrutura = function(_estrutura, _var_qt) {
     var _qt = variable_instance_get(_estrutura, _var_qt);
@@ -142,6 +248,61 @@ entrar_na_estrutura = function(_estrutura, _var_qt) {
     variable_instance_set(_estrutura, _var_qt, _qt + 1);
     minha_linha = linha_do_slot();
     return true;
+}
+
+// =====================================================================
+//  CLIQUE: só um bloco é pego por clique
+// =====================================================================
+// Verdadeiro se o mouse está em cima deste bloco (e o bloco está visível)
+sob_mouse = function() {
+    if (!visible) return false;
+    var _mx = device_mouse_x_to_gui(0);
+    var _my = device_mouse_y_to_gui(0);
+    var _gx = x - camera_get_view_x(view_camera[0]);
+    var _gy = y - camera_get_view_y(view_camera[0]);
+    var _hw = sprite_width / 2;
+    var _hh = sprite_height / 2;
+    return point_in_rectangle(_mx, _my, _gx - _hw, _gy - _hh, _gx + _hw, _gy + _hh);
+}
+
+// Quando há vários blocos sob o mouse, só um pode ser pego:
+// os blocos pequenos têm prioridade (são desenhados por cima dos grandes) e,
+// entre blocos do mesmo tipo, ganha o que tem o centro mais perto do mouse.
+ganha_clique = function() {
+    var _mx = device_mouse_x_to_gui(0);
+    var _my = device_mouse_y_to_gui(0);
+    var _cx = camera_get_view_x(view_camera[0]);
+    var _cy = camera_get_view_y(view_camera[0]);
+    var _eu = id;
+    var _meu_x = x;
+    var _meu_y = y;
+    var _sou_mini = object_is_ancestor(object_index, obj_mini_parent);
+    var _minha_dist = point_distance(_mx, _my, x - _cx, y - _cy);
+    var _ganhou = true;
+
+    with (obj_mini_parent) {
+        if (id != _eu && sob_mouse()) {
+            if (!_sou_mini) {
+                _ganhou = false;
+            } else {
+                var _d = point_distance(_mx, _my, x - _cx, y - _cy);
+                if (_d < _minha_dist || (_d == _minha_dist && (x < _meu_x || (x == _meu_x && y < _meu_y)))) {
+                    _ganhou = false;
+                }
+            }
+        }
+    }
+    if (_sou_mini || !_ganhou) return _ganhou;
+
+    with (obj_block_parent) {
+        if (id != _eu && !e_cauda() && sob_mouse()) {
+            var _d = point_distance(_mx, _my, x - _cx, y - _cy);
+            if (_d < _minha_dist || (_d == _minha_dist && (x < _meu_x || (x == _meu_x && y < _meu_y)))) {
+                _ganhou = false;
+            }
+        }
+    }
+    return _ganhou;
 }
 
 verificar_bloco_while = function() {
