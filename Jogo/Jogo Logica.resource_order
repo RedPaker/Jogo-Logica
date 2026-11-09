@@ -105,6 +105,7 @@
     {"name":"obj_npc_morador","order":2,"path":"objects/obj_npc_morador/obj_npc_morador.yy",},
     {"name":"obj_npc_porteiro","order":1,"path":"objects/obj_npc_porteiro/obj_npc_porteiro.yy",},
     {"name":"obj_OVERHEAT","order":6,"path":"objects/obj_OVERHEAT/obj_OVERHEAT.yy",},
+    {"name":"obj_pagina_choque","order":6,"path":"objects/obj_pagina_choque/obj_pagina_choque.yy",},
     {"name":"obj_puzzle_ram","order":5,"path":"objects/obj_puzzle_ram/obj_puzzle_ram.yy",},
     {"name":"obj_spellbook","order":6,"path":"objects/obj_spellbook/obj_spellbook.yy",},
     {"name":"obj_spoon","order":2,"path":"objects/obj_spoon/obj_spoon.yy",},

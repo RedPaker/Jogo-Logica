@@ -39,7 +39,8 @@ if (game_over) {
 }
 
 if (!game_over) {
-    var _P = 4;                 // tamanho de cada pixel na tela (mude aqui para aumentar/diminuir)
+    if (!instance_exists(obj_dialogo)){
+         var _P = 4;                 // tamanho de cada pixel na tela (mude aqui para aumentar/diminuir)
     var _ox = 24, _oy = 24;     // posição na tela
 
     // layout em pixels lógicos
@@ -91,4 +92,5 @@ if (!game_over) {
     }
 
     draw_set_color(c_white);
+    }
 }

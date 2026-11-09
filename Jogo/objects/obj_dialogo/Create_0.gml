@@ -21,3 +21,31 @@ global.jogo_pausado = true
 instance_deactivate_layer("Entities");
 instance_deactivate_layer("Itens");
 instance_deactivate_layer("Misc");
+
+estado = 0;          // 0 = abrindo, 1 = aberto, 2 = fechando
+anim = 0;            // 0 a 1, progresso da abertura do balão
+anim_vel = 0.08;     // maior = mais rápido
+zoom = 0;            // 0 a 1, progresso do zoom do retrato
+ultimo_nome = "";
+
+ease_out_cubic = function(_t) {
+    return 1 - power(1 - _t, 3);
+}
+
+// passa um pouco de 1 e volta, dá o efeito de "pop"
+ease_out_back = function(_t) {
+    var _c1 = 1.70158;
+    var _c3 = _c1 + 1;
+    return 1 + _c3 * power(_t - 1, 3) + _c1 * power(_t - 1, 2);
+}
+
+tem_alvo = false;
+alvo_x = 0;
+alvo_y = 0;
+
+cam = view_camera[0];
+cam_x0 = camera_get_view_x(cam);
+cam_y0 = camera_get_view_y(cam);
+cam_w0 = camera_get_view_width(cam);
+cam_h0 = camera_get_view_height(cam);
+zoom_cam = 1.6;   // 1 = sem zoom, maior = mais perto

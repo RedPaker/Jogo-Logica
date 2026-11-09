@@ -1,9 +1,15 @@
-function d_create_dialog(_messages){
+function d_create_dialog(_messages, _alvo = noone){
     if (instance_exists(obj_dialogo)) return;
-        
+
     var _inst = instance_create_depth(0,0,0, obj_dialogo);
-    _inst.messages = _messages
+    _inst.messages = _messages;
     _inst.current_message = 0;
+
+    if (_alvo != noone) {
+        _inst.alvo_x = _alvo.x;
+        _inst.alvo_y = _alvo.y - 16;
+        _inst.tem_alvo = true;
+    }
 }
 
 function d_select_dialog(_is){
@@ -247,3 +253,4 @@ global.sprites = {
     "Porteiro":spr_green,
     "Morador": spr_magenta,
 }
+
