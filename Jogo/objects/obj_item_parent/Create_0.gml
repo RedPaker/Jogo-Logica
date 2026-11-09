@@ -1,2 +1,2 @@
 coletado = false;
-global.inv=[];
+if (!variable_global_exists("inv")) global.inv = []; // nao apaga o que ja foi coletado

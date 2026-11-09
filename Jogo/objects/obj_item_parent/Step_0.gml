@@ -1,7 +1,7 @@
 
 
 if(place_meeting(x, y, obj_plr_rpg)){
-  if(keyboard_check_direct(ord("Z"))){
+  if(keyboard_check_pressed(ord("Z"))){
           var _item_data = {
             name: item_name,
             sprite:object_get_sprite(object_index),

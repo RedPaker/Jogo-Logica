@@ -37,6 +37,9 @@ with (obj_mini_parent) {
     visible = _vis || arrastando || (instance_place(x, y, obj_colission_mini) != noone);
 }
 
+var _bloqueada = pagina_bloqueada(pagina_atual);
+
+if (!_bloqueada) {
 // --- abas estilo terminal ---
 draw_set_font(fonte_terminal);
 var _rx = _centro_x + 40;
@@ -105,6 +108,34 @@ if (aba_atual == 1) {
     }
     draw_set_color(c_black);
 }
+} else {
+    // --- pagina bloqueada: lado direito sem blocos, so o aviso ---
+    var _bx = _centro_x + 185;   // meio da pagina da direita
+    var _by = _centro_y - 60;
+    var _p  = 4;                 // tamanho do "pixel" do cadeado
+
+    // cadeado em pixel art (arco + corpo + fechadura)
+    draw_set_color(make_color_rgb(60, 40, 20));
+    draw_rectangle(_bx - 6*_p, _by - 13*_p, _bx + 6*_p - 1, _by - 11*_p - 1, false); // topo do arco
+    draw_rectangle(_bx - 8*_p, _by - 11*_p, _bx - 6*_p - 1, _by - 4*_p - 1, false);  // lado esq.
+    draw_rectangle(_bx + 6*_p, _by - 11*_p, _bx + 8*_p - 1, _by - 4*_p - 1, false);  // lado dir.
+    draw_rectangle(_bx - 11*_p, _by - 4*_p, _bx + 11*_p - 1, _by + 12*_p - 1, false); // corpo (borda)
+    draw_set_color(make_color_rgb(200, 150, 60));
+    draw_rectangle(_bx - 10*_p, _by - 3*_p, _bx + 10*_p - 1, _by + 11*_p - 1, false); // corpo
+    draw_set_color(make_color_rgb(60, 40, 20));
+    draw_rectangle(_bx - 2*_p, _by + 1*_p, _bx + 2*_p - 1, _by + 5*_p - 1, false);   // fechadura
+    draw_rectangle(_bx - 1*_p, _by + 5*_p, _bx + 1*_p - 1, _by + 8*_p - 1, false);
+
+    draw_set_font(fnt_10_comicsansms);
+    draw_set_color(c_black);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_top);
+    draw_text_transformed(_bx, _by + 70, "PAGINA BLOQUEADA", 1.5, 1.5, 0);
+    draw_text_ext_transformed(_bx, _by + 115,
+        "Encontre a pagina \"" + pagina_titulo(pagina_atual) + "\" pelo mundo (tecla Z para pegar) para poder programar e desbloquear este poder.",
+        22, 200, 1.2, 1.2, 0);
+    draw_set_halign(fa_left);
+}
 
     // --- título do feitiço (acima da área de código) e número da página ---
     draw_set_font(fnt_10_comicsansms);
@@ -146,4 +177,24 @@ if (desenhar == true){
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
 
+}
+
+
+// --- aviso de pagina coletada (aparece com o livro fechado) ---
+if (!abrir && global.aviso_pagina_tempo > 0) {
+    var _gx = display_get_gui_width() / 2;
+    var _gy = display_get_gui_height() - 120;
+    draw_set_font(fnt_10_comicsansms);
+    draw_set_alpha(min(1, global.aviso_pagina_tempo / 30));
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    var _w = string_width(global.aviso_pagina_texto) * 1.4 / 2 + 24;
+    var _h = string_height(global.aviso_pagina_texto) * 1.4 / 2 + 14;
+    draw_set_color(c_black);
+    draw_rectangle(_gx - _w, _gy - _h, _gx + _w, _gy + _h, false);
+    draw_set_color(c_white);
+    draw_text_transformed(_gx, _gy, global.aviso_pagina_texto, 1.4, 1.4, 0);
+    draw_set_alpha(1);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
 }
