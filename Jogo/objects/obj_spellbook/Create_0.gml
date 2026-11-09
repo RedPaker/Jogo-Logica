@@ -1,4 +1,7 @@
 global.book = [];
+if (!variable_global_exists("inv")) global.inv = [];
+global.aviso_pagina_texto = "";
+global.aviso_pagina_tempo = 0;
 abrir = false;
 bloco_ja_criado = false;
 depth = 100;
@@ -368,6 +371,9 @@ spawn_blocos_pagina = function(pagina_atual) {
     with (obj_mini_parent) instance_destroy()
         
     if (pagina_atual >= array_length(global.paginas_spawn_data)) return;
+
+    // Pagina ainda nao coletada no mundo: sem blocos para programar
+    if (pagina_bloqueada(pagina_atual)) return;
         
     var _lista_blocos = global.paginas_spawn_data[pagina_atual];
     var _centro_x = display_get_gui_width() / 2;
