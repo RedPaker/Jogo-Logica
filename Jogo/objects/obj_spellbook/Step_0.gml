@@ -41,7 +41,7 @@ if (keyboard_check_pressed(vk_enter) && !pagina_bloqueada(pagina_atual)){
     verificacao(pagina_atual)
 }
 
-if (global.aviso_pagina_tempo > 0) global.aviso_pagina_tempo--;
+if (!abrir && global.aviso_pagina_tempo > 0) global.aviso_pagina_tempo--;
 
 function pix_rect(_ox, _oy, _p, _x1, _y1, _x2, _y2, _cor) {
     draw_set_color(_cor);

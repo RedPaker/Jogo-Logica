@@ -54,3 +54,69 @@ function pagina_aviso(_texto) {
     global.aviso_pagina_texto = _texto;
     global.aviso_pagina_tempo = 180; // 3 segundos a 60 FPS
 }
+
+
+// =====================================================================
+//  PODERES LIBERADOS PELAS PAGINAS
+// ---------------------------------------------------------------------
+//  Um poder so aparece na roda de feiticos e so pode ser usado depois
+//  que o programa da pagina correspondente for montado corretamente
+//  no livro (ENTER sem erros).
+//
+//  "id" e o numero do poder em global.meu / quadro de
+//  spr_roda_feiticos_itens. "chave" e o nome em
+//  obj_controller_mg.unlocked_spells.
+//
+//  >>> Para mudar qual pagina libera qual poder, altere SO esta tabela. <<<
+// =====================================================================
+function pagina_poder(_indice) {
+    switch (_indice) {
+        case 0: return { id: 1, chave: "cd",        nome: "Disparo de CD" }; // Arremesso de disco
+        case 1: return { id: 2, chave: "shock",     nome: "Choque" };        // CHOQUE
+        case 2: return { id: 3, chave: "jukebox",   nome: "Jukebox" };       // Musicas Melosas
+        case 3: return { id: 4, chave: "ventoinha", nome: "Vento" };         // Super Ventoinha!
+        case 4: return { id: 5, chave: "restart",   nome: "Cura" };          // Reiniciando...
+    }
+    return undefined; // pagina sem poder associado
+}
+
+// id do poder (1 a 7) -> chave em unlocked_spells
+function poder_chave(_id) {
+    switch (_id) {
+        case 1: return "cd";
+        case 2: return "shock";
+        case 3: return "jukebox";
+        case 4: return "ventoinha";
+        case 5: return "restart";    // Cura
+        case 6: return "brightness"; // Flash
+        case 7: return "overheat";
+    }
+    return "";
+}
+
+// O poder _id ja foi liberado?
+function poder_liberado(_id) {
+    if (!instance_exists(obj_controller_mg)) return false;
+    var _chave = poder_chave(_id);
+    if (_chave == "") return false;
+    var _lib = obj_controller_mg.unlocked_spells;
+    return variable_struct_exists(_lib, _chave) && _lib[$ _chave] == true;
+}
+
+// Lista (em ordem) dos ids dos poderes ja liberados
+function poderes_liberados() {
+    var _lista = [];
+    for (var _id = 1; _id <= 7; _id++) {
+        if (poder_liberado(_id)) array_push(_lista, _id);
+    }
+    return _lista;
+}
+
+// Libera o poder da pagina. Devolve true se o poder era novo.
+function liberar_poder_da_pagina(_indice) {
+    var _poder = pagina_poder(_indice);
+    if (_poder == undefined || !instance_exists(obj_controller_mg)) return false;
+    if (poder_liberado(_poder.id)) return false;
+    obj_controller_mg.unlocked_spells[$ _poder.chave] = true;
+    return true;
+}

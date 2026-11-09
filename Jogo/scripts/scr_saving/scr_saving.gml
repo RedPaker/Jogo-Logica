@@ -65,6 +65,7 @@ function sv_newgame(){
     if (instance_exists(obj_cam))      instance_destroy(obj_cam);
     if (instance_exists(obj_spellbook)) instance_destroy(obj_spellbook);
     if (instance_exists(obj_menu))      instance_destroy(obj_menu);
+    if (instance_exists(obj_controller_mg)) instance_destroy(obj_controller_mg); // poderes bloqueados de novo
     if (instance_exists(old_obj_inventory)) instance_destroy(old_obj_inventory);
     global.inv = []; // novo jogo: inventario vazio e paginas do livro bloqueadas
     scr_fade(rm_casa,-1,-1);

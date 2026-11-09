@@ -602,6 +602,14 @@ verificacao = function(pagina_atual) {
     if (array_length(log_linhas) == 0) {
         array_push(log_linhas, { linha: -1, ok: true, msg: "Nenhum erro. Programa correto!" });
         desenhar = true;
+
+        // libera o poder desta pagina (so na primeira vez)
+        if (liberar_poder_da_pagina(pagina_atual)) {
+            var _poder = pagina_poder(pagina_atual);
+            array_push(log_linhas, { linha: -1, ok: true, msg: "Novo poder liberado: " + _poder.nome + "!" });
+            pagina_aviso("Novo poder liberado: " + _poder.nome
+                + "\nAperte " + chr(global.st_smg) + " para trocar e " + chr(global.st_umg) + " para usar.");
+        }
     }
     //aba_atual = 1
 }

@@ -1,19 +1,26 @@
-if (keyboard_check_pressed(global.st_smg)) {
-    
-    
-    global.meu += 1
-    global.me1 += 1
-    global.me2 += 1
-    
-    if (global.meu > 7){
-        global.meu = 0
+// --- Roda de feiticos: so mostra e so troca entre os poderes ja liberados ---
+// global.meu = poder equipado | me1 e me2 = proximos da roda | 0 = vazio
+var _liberados = poderes_liberados();
+var _qtd = array_length(_liberados);
+
+if (_qtd == 0) {
+    global.meu = 0;
+    global.me1 = 0;
+    global.me2 = 0;
+} else {
+    // posicao do poder equipado na lista (se nao estiver, equipa o primeiro)
+    var _pos = 0;
+    for (var i = 0; i < _qtd; i++) {
+        if (_liberados[i] == global.meu) { _pos = i; break; }
     }
-    if (global.me1 > 7){
-        global.me1 = 0
+
+    if (keyboard_check_pressed(global.st_smg)) {
+        _pos = (_pos + 1) mod _qtd;
     }
-    if (global.me2 > 7){
-        global.me2 = 0
-    }
+
+    global.meu = _liberados[_pos];
+    global.me1 = (_qtd > 1) ? _liberados[(_pos + 1) mod _qtd] : 0;
+    global.me2 = (_qtd > 2) ? _liberados[(_pos + 2) mod _qtd] : 0;
 }
 
 if (tiro_time > 0) {
@@ -39,7 +46,7 @@ if (overheat_time > 0){
     overheat_time --;
 }
 
-if (keyboard_check(global.st_umg)){
+if (keyboard_check(global.st_umg) && poder_liberado(global.meu)){
     switch (global.meu) {
         case 1:
             lancar_cd()
