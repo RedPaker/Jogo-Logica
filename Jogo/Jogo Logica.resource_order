@@ -86,6 +86,7 @@
     {"name":"obj_bloco_vent","order":17,"path":"objects/obj_bloco_vent/obj_bloco_vent.yy",},
     {"name":"obj_bloco_while_rabo","order":20,"path":"objects/obj_bloco_while_rabo/obj_bloco_while_rabo.yy",},
     {"name":"obj_bloco_while","order":19,"path":"objects/obj_bloco_while/obj_bloco_while.yy",},
+    {"name":"obj_casa2","order":3,"path":"objects/obj_casa2/obj_casa2.yy",},
     {"name":"obj_cd","order":1,"path":"objects/obj_cd/obj_cd.yy",},
     {"name":"obj_choque","order":3,"path":"objects/obj_choque/obj_choque.yy",},
     {"name":"obj_colission_mini","order":3,"path":"objects/obj_colission_mini/obj_colission_mini.yy",},
