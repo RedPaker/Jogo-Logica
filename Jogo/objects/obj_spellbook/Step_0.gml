@@ -4,18 +4,6 @@ if (keyboard_check_pressed(ord("B")) && obj_plr_rpg.coletou_livro){
 } else {
 }
 
-if (obj_plr_rpg.coletou_livro){
-    layer_set_visible("GuiLayer", true);
-} else {
-    layer_set_visible("GuiLayer", false);
-}
-
-if(abrir == true){
-    global.jogo_pausado = true
-}else {
-	global.jogo_pausado = false
-}
-
 if (abrir && !slots_criados){
     spawn_blocos_pagina(pagina_atual)
     spawn_blocos_colisao()
