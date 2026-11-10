@@ -1,6 +1,3 @@
-# Jogo Logica
-* *Jogo bem legal do pc com vida para nosso trabalho final de Logica de Programacao*
+# Spells 'n Glitchs
 
-__Resina__
-
-> Yeah
+> Jogo educacional em RPG sobr
