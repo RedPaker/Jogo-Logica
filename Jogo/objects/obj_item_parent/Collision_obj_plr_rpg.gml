@@ -1,1 +1,0 @@
-coletado = true;
