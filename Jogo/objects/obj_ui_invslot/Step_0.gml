@@ -12,4 +12,11 @@ if (slot_id >= 0 && slot_id < array_length(global.inventario_itens)) {
     if (layer_text_exists("InventarioLayer", _text_id)) {
         layer_text_text(_text_id, _item.nome); 
     }
+}else {
+	sprite_index = -1
+    var _text_id = layer_text_get_id("InventarioLayer", meu_texto_id); 
+    if (layer_text_exists("InventarioLayer", _text_id)) {
+        layer_text_text(_text_id, ""); // Clear the text
+    }
+    
 }

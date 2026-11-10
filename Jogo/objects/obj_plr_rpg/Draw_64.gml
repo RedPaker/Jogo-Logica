@@ -39,7 +39,7 @@ if (game_over) {
 }
 
 if (!game_over) {
-    if (!instance_exists(obj_dialogo)){
+    if (!instance_exists(obj_dialogo) && global.jogo_pausado == false){
          var _P = 4;                 // tamanho de cada pixel na tela (mude aqui para aumentar/diminuir)
     var _ox = 24, _oy = 24;     // posição na tela
 

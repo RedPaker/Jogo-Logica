@@ -4,7 +4,10 @@ if (place_meeting(x, y, obj_plr_rpg)) {
 
         var _item_data = {
             nome: item_name, 
-            sprite: sprite_index
+            sprite: sprite_index,
+            use: use,
+            n: n,
+            throwable: throwable
         };
         
         array_push(global.inventario_itens, _item_data);
