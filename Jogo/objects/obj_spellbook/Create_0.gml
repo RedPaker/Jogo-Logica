@@ -339,7 +339,7 @@ global.paginas_spawn_data[4] = [
     },
     {
         objeto: obj_bloco_num_1,
-        offset_x: 185,
+        offset_x: 185, 
         offset_y: 170, 
         linha_inicial: noone
     },
@@ -361,6 +361,30 @@ global.paginas_spawn_data[4] = [
         offset_y: 230, 
         linha_inicial: noone
     }
+];
+
+global.paginas_spawn_data[5] = [
+        {
+        seq_certa: [1],
+        seq_certa_mini:  [2]
+    },
+     {
+        frase: "Muito Brilho!"
+    },
+  
+    {
+        objeto: obj_bloco_print,
+        offset_x: 180,
+        offset_y: -100,
+        linha_inicial: noone, // noone = vai pro inventário | numero (0-8) = encaixa direto no slot
+    },
+    {
+        objeto: obj_bloco_while,
+        offset_x: 100,
+        offset_y: 1, 
+        linha_inicial: noone
+    }
+    
 ];
 
 
