@@ -121,7 +121,7 @@ switch (estado) {
 
         if (tempo_tiro <= 0) {
             if (instance_exists(obj_plr_rpg)) {
-                var _tiro = instance_create_layer(x, y, "Entidades", obj_tiro_boss);
+                var _tiro = instance_create_layer(x, y, "Entities", obj_tiro_boss);
                 _tiro.direction = point_direction(x, y, obj_plr_rpg.x, obj_plr_rpg.y);
             }
 

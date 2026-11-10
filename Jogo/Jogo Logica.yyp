@@ -123,6 +123,7 @@
     {"id":{"name":"obj_bloco_while","path":"objects/obj_bloco_while/obj_bloco_while.yy",},},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
     {"id":{"name":"obj_casa1","path":"objects/obj_casa1/obj_casa1.yy",},},
+    {"id":{"name":"obj_casa2","path":"objects/obj_casa2/obj_casa2.yy",},},
     {"id":{"name":"obj_cd","path":"objects/obj_cd/obj_cd.yy",},},
     {"id":{"name":"obj_choque","path":"objects/obj_choque/obj_choque.yy",},},
     {"id":{"name":"obj_colission_bl","path":"objects/obj_colission_bl/obj_colission_bl.yy",},},

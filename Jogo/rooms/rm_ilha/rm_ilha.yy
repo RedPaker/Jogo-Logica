@@ -56,7 +56,7 @@
           1,0,-3,-2147483648,-20,0,-16,-2147483648,-20,0,-303,-2147483648,1,0,-231,-2147483648,-4,0,-28,-2147483648,
           10,0,-2147483648,0,-2147483648,0,-2147483648,0,-2147483648,0,-2147483648,-3,0,-20,-2147483648,-28,0,
           -12,-2147483648,-24,0,-12,-2147483648,-24,0,-27,-2147483648,-2,0,-7,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tls_tileset","path":"tilesets/tls_tileset/tls_tileset.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tls_tileset","path":"tilesets/tls_tileset/tls_tileset.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"tlm_bg","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tlm_bg","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":32,"SerialiseWidth":36,"TileCompressedData":[
           -20,0,-16,-2147483648,-20,0,-16,-2147483648,-20,0,-16,-2147483648,-20,0,-16,-2147483648,-156,0,24,1,
           2,3,4,2,3,4,2,3,4,2,3,4,2,3,4,2,3,4,2,3,4,2,3,-12,0,1,12,-23,13,-12,0,1,23,-13,13,2,103,100,-7,13,1,

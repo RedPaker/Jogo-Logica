@@ -43,8 +43,8 @@
   ],
   "name":"rm_save",
   "parent":{
-    "name":"Menu",
-    "path":"folders/All_these__rooms/Menu.yy",
+    "name":"Testes",
+    "path":"folders/All_these__rooms/Testes.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
