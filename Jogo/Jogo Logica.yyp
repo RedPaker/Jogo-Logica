@@ -153,6 +153,7 @@
     {"id":{"name":"obj_OVERHEAT","path":"objects/obj_OVERHEAT/obj_OVERHEAT.yy",},},
     {"id":{"name":"obj_pagina_cd","path":"objects/obj_pagina_cd/obj_pagina_cd.yy",},},
     {"id":{"name":"obj_pagina_choque","path":"objects/obj_pagina_choque/obj_pagina_choque.yy",},},
+    {"id":{"name":"obj_pagina_OVERHEAT","path":"objects/obj_pagina_OVERHEAT/obj_pagina_OVERHEAT.yy",},},
     {"id":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},},
     {"id":{"name":"obj_puzzle_ram","path":"objects/obj_puzzle_ram/obj_puzzle_ram.yy",},},
     {"id":{"name":"obj_spellbook","path":"objects/obj_spellbook/obj_spellbook.yy",},},

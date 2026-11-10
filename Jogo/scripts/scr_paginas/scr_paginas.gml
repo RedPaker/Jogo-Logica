@@ -75,7 +75,9 @@ function pagina_poder(_indice) {
         case 1: return { id: 2, chave: "shock",     nome: "Choque" };        // CHOQUE
         case 2: return { id: 3, chave: "jukebox",   nome: "Jukebox" };       // Musicas Melosas
         case 3: return { id: 4, chave: "ventoinha", nome: "Vento" };         // Super Ventoinha!
-        case 4: return { id: 5, chave: "restart",   nome: "Cura" };          // Reiniciando...
+        case 4: return { id: 5, chave: "restart",   nome: "Cura" };          // Reiniciando... 
+        case 5: return { id: 6, chave: "brightness", nome: "Flash" };      // Muito Brilho!
+        case 6: return { id: 7, chave: "overheat",   nome: "Overheat" };   // página 
     }
     return undefined; // pagina sem poder associado
 }

@@ -32,7 +32,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"numero_pagina","filters":[],"listItems":[],"multiselect":false,"name":"numero_pagina","rangeEnabled":true,"rangeMax":6.0,"rangeMin":1.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"6","varFriendlyName":"Numero da pagina (1-5)","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"numero_pagina","filters":[],"listItems":[],"multiselect":false,"name":"numero_pagina","rangeEnabled":true,"rangeMax":6.0,"rangeMin":1.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varFriendlyName":"Numero da pagina (1-5)","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
