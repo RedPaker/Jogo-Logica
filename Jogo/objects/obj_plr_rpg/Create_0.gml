@@ -1,4 +1,4 @@
-
+inventory = [];
 
 
 /*move_spdy = 2; //velocidade y

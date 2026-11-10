@@ -5,15 +5,15 @@
   "managed":true,
   "name":"obj_teste",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_parent","path":"objects/obj_item_parent/obj_item_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_parent/obj_item_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Yellow",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_item_livro_parent","path":"objects/obj_item_livro_parent/obj_item_livro_parent.yy",},"propertyId":{"name":"item_name","path":"objects/obj_item_livro_parent/obj_item_livro_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Yellow",},
   ],
   "parent":{
     "name":"Itens",
     "path":"folders/ObjectS/Itens.yy",
   },
   "parentObjectId":{
-    "name":"obj_item_parent",
-    "path":"objects/obj_item_parent/obj_item_parent.yy",
+    "name":"obj_item_livro_parent",
+    "path":"objects/obj_item_livro_parent/obj_item_livro_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
