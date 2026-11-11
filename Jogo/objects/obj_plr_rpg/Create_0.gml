@@ -53,6 +53,8 @@ if (!instance_exists(obj_spellbook)) instance_create_layer(0, 0, "Sistemas", obj
 if (!instance_exists(obj_menu))      instance_create_layer(0, 0, "Sistemas", obj_menu); 
 if (!instance_exists(obj_controller_mg)) instance_create_layer(0, 0, "Sistemas", obj_controller_mg);
 
+global.chapter = 1;
+
 // desenha um retângulo preenchido em "pixels lógicos" (x2 e y2 não incluídos)
 function pix_rect(_ox, _oy, _p, _x1, _y1, _x2, _y2, _cor) {
     draw_set_color(_cor);

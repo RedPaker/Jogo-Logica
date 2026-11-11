@@ -3,7 +3,7 @@
   "%Name":"spr_livro",
   "bboxMode":0,
   "bbox_bottom":14,
-  "bbox_left":4,
+  "bbox_left":2,
   "bbox_right":13,
   "bbox_top":1,
   "collisionKind":1,
