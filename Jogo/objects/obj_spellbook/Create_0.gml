@@ -754,3 +754,92 @@ painel_terminal = function(_x1, _y1, _x2, _y2) {
     draw_set_alpha(1);
 }
 
+if (!variable_global_exists("blocos_vistos")) global.blocos_vistos = {};
+
+tut_ativo = false;
+tut_estado = 0;      // 0 = escurecendo, 1 = diálogo rodando
+tut_alpha = 0;
+tut_fila = [];
+tut_idx = 0;
+tut_alvo = noone;
+
+// procura os blocos da página que ainda não foram explicados
+if (!variable_global_exists("blocos_vistos")) global.blocos_vistos = {};
+if (!variable_global_exists("intro_livro_vista")) global.intro_livro_vista = false;
+
+tut_ativo = false;
+tut_estado = 0;      // 0 = escurecendo, 1 = diálogo rodando
+tut_alpha = 0;
+tut_fila = [];
+tut_idx = 0;
+
+// alvo: instância ou noone | area: {l,t,r,b} em coordenadas da GUI ou undefined
+tut_add = function(_alvo, _area, _msgs) {
+    array_push(tut_fila, { alvo: _alvo, area: _area, msgs: _msgs });
+}
+
+montar_intro = function() {
+    var _cx = display_get_gui_width() / 2;
+    var _cy = display_get_gui_height() / 2;
+
+    var _grande = noone;
+    with (obj_block_parent) {
+        if (!e_cauda()) { _grande = id; break; }
+    }
+    var _mini = instance_find(obj_mini_parent, 0);
+
+    var _terminal = { l: _cx - 320, t: _cy - 250, r: _cx - 40, b: _cy + 235 };
+    var _aba_log  = { l: _cx + 40 + 110, t: _cy - 250, r: _cx + 40 + 210, b: _cy - 250 + 36 };
+
+    tut_add(noone,    undefined, d_intro_livro(0));
+    tut_add(noone,    _terminal, d_intro_livro(1));
+    tut_add(_grande,  undefined, d_intro_livro(2));
+    tut_add(_mini,    undefined, d_intro_livro(3));
+    tut_add(noone,    _aba_log,  d_intro_livro(4));
+    tut_add(noone,    undefined, d_intro_livro(5));
+}
+
+preparar_tutorial = function() {
+    tut_fila = [];
+    if (pagina_bloqueada(pagina_atual)) return;
+
+    // introdução geral (só na primeira vez)
+    if (!global.intro_livro_vista) {
+        global.intro_livro_vista = true;
+        aba_atual = 0;
+        montar_intro();
+    }
+
+    // explicação de cada bloco novo da página
+    var _pais = [obj_block_parent, obj_mini_parent];
+    for (var p = 0; p < 2; p++) {
+        with (_pais[p]) {
+            if (variable_instance_exists(id, "e_cauda") && e_cauda()) continue;
+            var _n = object_get_name(object_index);
+            if (variable_struct_exists(global.blocos_vistos, _n)) continue;
+            var _msgs = d_explicar_bloco(object_index);
+            if (_msgs == undefined) continue;
+
+            global.blocos_vistos[$ _n] = true;
+            other.tut_add(id, undefined, _msgs);
+        }
+    }
+
+    if (array_length(tut_fila) > 0) {
+        aba_atual = 0;
+        tut_idx = 0;
+        tut_estado = 0;
+        tut_ativo = true;
+    }
+}
+
+proximo_tutorial = function() {
+    tut_idx++;
+    if (tut_idx >= array_length(tut_fila)) {
+        tut_ativo = false;
+        tut_alvo = noone;
+        return;
+    }
+    tut_alvo = tut_fila[tut_idx];
+    tut_estado = 0;
+}

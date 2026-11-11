@@ -37,6 +37,11 @@ with (obj_mini_parent) {
     visible = _vis || arrastando || (instance_place(x, y, obj_colission_mini) != noone);
 }
 
+    if (tut_ativo && instance_exists(tut_alvo)){
+        tut_alvo.visible = false;
+        obj_mini_parent.visible = false
+    } 
+    
 var _bloqueada = pagina_bloqueada(pagina_atual);
 
 if (!_bloqueada) {
@@ -152,6 +157,49 @@ if (aba_atual == 1) {
 
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
+}
+// --- tutorial: escurece a tela e destaca o bloco ---
+// --- tutorial: escurece a tela deixando um "buraco" no foco ---
+if (tut_alpha > 0) {
+    var _W = display_get_gui_width();
+    var _H = display_get_gui_height();
+    var _fl = 0, _ft = 0, _fr = 0, _fb = 0, _tem_foco = false;
+
+    var _i = min(tut_idx, array_length(tut_fila) - 1);
+    if (_i >= 0) {
+        var _ps = tut_fila[_i];
+        if (_ps.area != undefined) {
+            _fl = _ps.area.l - 6;  _ft = _ps.area.t - 6;
+            _fr = _ps.area.r + 6;  _fb = _ps.area.b + 6;
+            _tem_foco = true;
+        } else if (_ps.alvo != noone && instance_exists(_ps.alvo)) {
+            var _camx = camera_get_view_x(view_camera[0]);
+            var _camy = camera_get_view_y(view_camera[0]);
+            _fl = _ps.alvo.bbox_left - _camx - 8;   _ft = _ps.alvo.bbox_top - _camy - 8;
+            _fr = _ps.alvo.bbox_right - _camx + 8;  _fb = _ps.alvo.bbox_bottom - _camy + 8;
+            _tem_foco = true;
+        }
+    }
+
+    draw_set_alpha(tut_alpha);
+    draw_set_color(c_black);
+    if (_tem_foco) {
+        draw_rectangle(0, 0, _W, _ft, false);        // em cima
+        draw_rectangle(0, _fb, _W, _H, false);       // embaixo
+        draw_rectangle(0, _ft, _fl, _fb, false);     // esquerda
+        draw_rectangle(_fr, _ft, _W, _fb, false);    // direita
+    } else {
+        draw_rectangle(0, 0, _W, _H, false);
+    }
+    draw_set_alpha(1);
+
+    if (_tem_foco && tut_ativo) {
+        var _g = 2 + sin(current_time / 150) * 1.5;   // moldura pulsando
+        draw_set_color(c_yellow);
+        draw_rectangle(_fl - _g, _ft - _g, _fr + _g, _fb + _g, true);
+        draw_rectangle(_fl - _g - 1, _ft - _g - 1, _fr + _g + 1, _fb + _g + 1, true);
+    }
+    draw_set_color(c_white);
 }
 
 
