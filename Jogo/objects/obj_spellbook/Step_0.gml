@@ -31,8 +31,12 @@ if (abrir && !tut_ativo) {
     }
 }
 
+if (run_press_t > 0) run_press_t--;
+
+// Enter continua como atalho (o clique no botão chama a mesma função no Draw GUI)
 if (keyboard_check_pressed(vk_enter) && !pagina_bloqueada(pagina_atual) && abrir && !tut_ativo){
-    verificacao(pagina_atual)
+    run_press_t = 6;
+    verificacao(pagina_atual);
 }
 
 if (!abrir && global.aviso_pagina_tempo > 0) global.aviso_pagina_tempo--;
@@ -61,3 +65,8 @@ if (tut_ativo) {
 } else {
     tut_alpha = max(0, tut_alpha - 0.05);
 }
+
+if (flash_t > 0) flash_t--;
+if (tremer_t > 0) tremer_t--;
+if (concluido_t > 0) concluido_t--;
+if (!abrir) concluido_t = 0;

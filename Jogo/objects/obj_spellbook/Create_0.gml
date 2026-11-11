@@ -695,10 +695,13 @@ verificacao = function(pagina_atual) {
     var _p = coletar_programa();
 
     if (array_length(_p.grande) == 0 && array_length(_p.mini) == 0) {
-        array_push(log_linhas, { linha: -1, ok: false, msg: "Nenhum bloco encaixado." });
-        aba_atual = 1;
-        return;
-    }
+    array_push(log_linhas, { linha: -1, ok: false, msg: "Nenhum bloco encaixado." });
+    aba_atual = 1;
+    flash_cor = cor_term_erro;
+    flash_t = flash_dur;
+    tremer_t = tremer_dur;
+    return;
+}
 
     var _e1 = comparar_sequencia(_p.grande, _p.grande_linha, _certa, "Bloco");
     var _e2 = comparar_sequencia(_p.mini, _p.mini_linha, _certa_mini, "Mini bloco");
@@ -706,17 +709,27 @@ verificacao = function(pagina_atual) {
     for (var i = 0; i < array_length(_e2); i++) array_push(log_linhas, _e2[i]);
 
     if (array_length(log_linhas) == 0) {
-        array_push(log_linhas, { linha: -1, ok: true, msg: "Nenhum erro. Programa correto!" });
-        desenhar = true;
+    array_push(log_linhas, { linha: -1, ok: true, msg: "Nenhum erro. Programa correto!" });
+    flash_cor = c_lime;
+    flash_t = flash_dur;
+    concluido_t = concluido_dur;
+    var _gw = display_get_gui_width();
+var _gh = display_get_gui_height();
+part_particles_create(global.particles, _gw * 0.3, _gh * 0.4, global.partTypeConfetti, 60);
+part_particles_create(global.particles, _gw * 0.7, _gh * 0.4, global.partTypeConfetti, 60);    
 
-        // libera o poder desta pagina (so na primeira vez)
-        if (liberar_poder_da_pagina(pagina_atual)) {
-            var _poder = pagina_poder(pagina_atual);
-            array_push(log_linhas, { linha: -1, ok: true, msg: "Novo poder liberado: " + _poder.nome + "!" });
-            pagina_aviso("Novo poder liberado: " + _poder.nome
-                + "\nAperte " + chr(global.st_smg) + " para trocar e " + chr(global.st_umg) + " para usar.");
-        }
+    // libera o poder desta pagina (so na primeira vez)
+    if (liberar_poder_da_pagina(pagina_atual)) {
+        var _poder = pagina_poder(pagina_atual);
+        array_push(log_linhas, { linha: -1, ok: true, msg: "Novo poder liberado: " + _poder.nome + "!" });
+        pagina_aviso("Novo poder liberado: " + _poder.nome
+            + "\nAperte " + chr(global.st_smg) + " para trocar e " + chr(global.st_umg) + " para usar.");
     }
+} else {
+    flash_cor = cor_term_erro;
+    flash_t = flash_dur;
+    tremer_t = tremer_dur;
+}
     //aba_atual = 1
 }
 
@@ -843,3 +856,19 @@ proximo_tutorial = function() {
     tut_alvo = tut_fila[tut_idx];
     tut_estado = 0;
 }
+
+flash_t = 0;          // frames restantes do piscar
+flash_dur = 18;
+flash_cor = c_lime;
+
+tremer_t = 0;         // frames restantes da tremida
+tremer_dur = 24;
+
+concluido_t = 0;      // frames restantes do aviso "Feitiço concluído"
+concluido_dur = 150;
+
+confetti_criado = false
+
+run_press_t = 0;    // frames do botão "afundado" depois do clique
+run_w = 70;
+run_h = 36;

@@ -22,7 +22,23 @@ var _oy = _centro_y - 250;
 var _esc_x = 280 / sprite_get_width(spr_terminal);
 var _esc_y = 485 / sprite_get_height(spr_terminal);
 
-draw_sprite_ext(spr_terminal, 0, _ox, _oy, _esc_x, _esc_y, 0, c_white, 1);
+// tremida (diminui até parar)
+var _sx = 0, _sy = 0;
+if (tremer_t > 0) {
+    var _f = tremer_t / tremer_dur;
+    _sx = random_range(-1, 1) * 6 * _f;
+    _sy = random_range(-1, 1) * 3 * _f;
+}
+
+draw_sprite_ext(spr_terminal, 0, _ox + _sx, _oy + _sy, _esc_x, _esc_y, 0, c_white, 1);
+
+// piscada verde/vermelha por cima do terminal
+if (flash_t > 0) {
+    draw_set_alpha(0.55 * (flash_t / flash_dur));
+    draw_rectangle_color(_ox + _sx, _oy + _sy, _ox + _sx + 280, _oy + _sy + 485,
+                         flash_cor, flash_cor, flash_cor, flash_cor, false);
+    draw_set_alpha(1);
+}
     
     //Texto
     
@@ -72,6 +88,43 @@ for (var a = 0; a < 2; a++) {
     draw_set_color(_ativa ? cor_term_fundo : cor_term_verde);
     draw_text(floor(_ax1 + 50), floor(_ry + 18), _nomes[a]);
 }
+    
+    // --- botão RUN ---
+var _bx1 = _rx + 2 * 110 + 4;     // à direita da aba Log
+var _by1 = _ry;
+var _bx2 = _bx1 + run_w;
+var _by2 = _by1 + run_h;
+
+var _sobre = point_in_rectangle(_mx, _my, _bx1, _by1, _bx2, _by2) && !tut_ativo;
+var _afundado = (run_press_t > 0);
+
+if (_sobre && mouse_check_button_pressed(mb_left)) {
+    run_press_t = 6;
+    verificacao(pagina_atual);
+}
+
+var _dy = _afundado ? 4 : 0;                       // desloca ao clicar
+var _cor_fundo = _afundado ? cor_term_verde_esc : (_sobre ? cor_term_verde : cor_term_fundo);
+var _cor_texto = (_sobre && !_afundado) ? cor_term_fundo : cor_term_verde;
+
+// sombra "3D" pixelada embaixo (some quando afunda)
+if (!_afundado) {
+    painel_pixel(_bx1, _by1 + 4, _bx2, _by2 + 4, cor_term_verde_esc, cor_term_verde_esc);
+}
+painel_pixel(_bx1, _by1 + _dy, _bx2, _by2 + _dy, cor_term_verde, _cor_fundo);
+
+// ícone de "play" feito de pixels + texto
+var _icx = floor(_bx1 + 14);
+var _icy = floor(_by1 + _dy + 10);
+draw_set_color(_cor_texto);
+for (var _k = 0; _k < 4; _k++) {
+    draw_rectangle(_icx + _k * px, _icy + _k * px, _icx + _k * px + px - 1, _icy + 16 - _k * px - 1, false);
+}
+
+draw_set_font(fonte_terminal);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_text(floor(_bx1 + 36), floor(_by1 + _dy + 18), "RUN");
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
@@ -203,19 +256,24 @@ if (tut_alpha > 0) {
 }
 
 
-if (desenhar == true){
-     var _centro_x = display_get_gui_width() / 2;
-    var _centro_y = display_get_gui_height() / 2;
+// --- aviso de feitiço concluído (lado direito) ---
+if (abrir && concluido_t > 0) {
+    var _a = min(1, concluido_t / 30);   // some suavemente no fim
+    var _cxx = display_get_gui_width() / 2;
+    var _cyy = display_get_gui_height() / 2;
 
- draw_set_halign(fa_center);
+    draw_set_alpha(_a);
+    painel_pixel(_cxx + 55, _cyy + 205, _cxx + 315, _cyy + 250, cor_term_verde, cor_term_fundo);
+
+    draw_set_font(fonte_terminal);
+    draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
-    draw_set_color(c_green);
-    
-    draw_text_transformed(_centro_x + 220, _centro_y + 250, "Resenha", 4, 4, 0);
+    draw_set_color(cor_term_verde);
+    draw_text(floor(_cxx + 185), floor(_cyy + 228), "Feitico concluido!");
 
+    draw_set_alpha(1);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-
 }
 
 

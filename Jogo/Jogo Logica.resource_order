@@ -90,6 +90,7 @@
     {"name":"obj_cd","order":1,"path":"objects/obj_cd/obj_cd.yy",},
     {"name":"obj_choque","order":3,"path":"objects/obj_choque/obj_choque.yy",},
     {"name":"obj_colission_mini","order":3,"path":"objects/obj_colission_mini/obj_colission_mini.yy",},
+    {"name":"obj_confetti","order":9,"path":"objects/obj_confetti/obj_confetti.yy",},
     {"name":"obj_controller_mg","order":4,"path":"objects/obj_controller_mg/obj_controller_mg.yy",},
     {"name":"obj_cutscenes","order":7,"path":"objects/obj_cutscenes/obj_cutscenes.yy",},
     {"name":"obj_damage_count","order":3,"path":"objects/obj_damage_count/obj_damage_count.yy",},
