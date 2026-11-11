@@ -10,7 +10,8 @@ switch (button_id) {
         
         break;
     case 3:
-        
+        sv_save(global.current_save);
+        game_restart();
         break;
     case 4:
         if(button_sub_id < array_length(global.inventario_itens) and global.inventario_itens[button_sub_id].throwable == true){

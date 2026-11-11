@@ -169,6 +169,7 @@
     {"id":{"name":"obj_plr_rpg","path":"objects/obj_plr_rpg/obj_plr_rpg.yy",},},
     {"id":{"name":"obj_puzzle_ram","path":"objects/obj_puzzle_ram/obj_puzzle_ram.yy",},},
     {"id":{"name":"obj_quadro","path":"objects/obj_quadro/obj_quadro.yy",},},
+    {"id":{"name":"obj_saveloader","path":"objects/obj_saveloader/obj_saveloader.yy",},},
     {"id":{"name":"obj_spellbook","path":"objects/obj_spellbook/obj_spellbook.yy",},},
     {"id":{"name":"obj_spoon","path":"objects/obj_spoon/obj_spoon.yy",},},
     {"id":{"name":"obj_structure","path":"objects/obj_structure/obj_structure.yy",},},

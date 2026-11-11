@@ -57,8 +57,9 @@ switch (button_id) {
     break;
 
     case 5: // Load/New Game
+        global.current_save = button_sub_id;
         if (fileexistsload == true) {
-
+            sv_load(button_sub_id);
         } else {
             sv_newgame();
         }

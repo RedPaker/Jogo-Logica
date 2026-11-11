@@ -125,6 +125,7 @@
     {"name":"obj_pagina_ventoinha","order":10,"path":"objects/obj_pagina_ventoinha/obj_pagina_ventoinha.yy",},
     {"name":"obj_puzzle_ram","order":5,"path":"objects/obj_puzzle_ram/obj_puzzle_ram.yy",},
     {"name":"obj_quadro","order":6,"path":"objects/obj_quadro/obj_quadro.yy",},
+    {"name":"obj_saveloader","order":10,"path":"objects/obj_saveloader/obj_saveloader.yy",},
     {"name":"obj_spellbook","order":6,"path":"objects/obj_spellbook/obj_spellbook.yy",},
     {"name":"obj_spoon","order":2,"path":"objects/obj_spoon/obj_spoon.yy",},
     {"name":"obj_structure","order":2,"path":"objects/obj_structure/obj_structure.yy",},
