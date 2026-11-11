@@ -145,6 +145,8 @@
     {"name":"rm_menu","order":1,"path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"rm_save","order":3,"path":"rooms/rm_save/rm_save.yy",},
     {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
+    {"name":"room_casa_cenario1","order":5,"path":"rooms/room_casa_cenario1/room_casa_cenario1.yy",},
+    {"name":"room_casa_cenario2","order":6,"path":"rooms/room_casa_cenario2/room_casa_cenario2.yy",},
     {"name":"room_livro","order":2,"path":"rooms/room_livro/room_livro.yy",},
     {"name":"room_mouse","order":1,"path":"rooms/room_mouse/room_mouse.yy",},
     {"name":"room_pagina1","order":3,"path":"rooms/room_pagina1/room_pagina1.yy",},
