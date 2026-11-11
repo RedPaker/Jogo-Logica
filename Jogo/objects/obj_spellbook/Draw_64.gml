@@ -58,6 +58,40 @@ with (obj_mini_parent) {
         obj_mini_parent.visible = false
     } 
     
+    // --- botão VOLTAR ---
+var _vx1 = _centro_x - 320;
+var _vy1 = _centro_y + 245;
+var _vx2 = _vx1 + voltar_w;
+var _vy2 = _vy1 + voltar_h;
+
+var _vmx = device_mouse_x_to_gui(0);
+var _vmy = device_mouse_y_to_gui(0);
+var _vsobre = point_in_rectangle(_vmx, _vmy, _vx1, _vy1, _vx2, _vy2) && !tut_ativo;
+
+if (_vsobre && mouse_check_button_pressed(mb_left)) {
+    alternar_livro();
+}
+
+// Defina margens menores ou ajuste os limites para encolher o botão
+var _margem_x = 16; // Aumente ou diminua para encolher nas laterais
+var _margem_y = 6;  // Aumente ou diminua para encolher na altura
+
+var _bx1 = _vx1 + _margem_x;
+var _by1 = _vy1 + _margem_y;
+var _bx2 = _vx2 - _margem_x;
+var _by2 = _vy2 - _margem_y;
+
+// Desenha o botão menor
+painel_pixel(_bx1, _by1, _bx2, _by2, cor_term_verde, _vsobre ? cor_term_verde : cor_term_fundo);
+
+draw_set_font(fonte_terminal);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_color(_vsobre ? cor_term_fundo : cor_term_verde);
+draw_text(floor((_bx1 + _bx2) / 2), floor((_by1 + _by2) / 2), "< Voltar");
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 var _bloqueada = pagina_bloqueada(pagina_atual);
 
 if (!_bloqueada) {
@@ -207,6 +241,8 @@ if (aba_atual == 1) {
         draw_set_halign(fa_right);
         draw_text_transformed(_centro_x + 400, _centro_y + 250, string(pagina_atual + 1), 1.7, 1.7, 0);
     }
+    
+    
 
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
@@ -295,3 +331,4 @@ if (!abrir && global.aviso_pagina_tempo > 0) {
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
 }
+

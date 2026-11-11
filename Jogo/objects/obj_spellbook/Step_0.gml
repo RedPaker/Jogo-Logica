@@ -1,21 +1,12 @@
-// B não fecha o livro durante o tutorial
-if (keyboard_check_pressed(ord("B")) && obj_plr_rpg.coletou_livro && !tut_ativo){
-    abrir = !abrir;
-}
 
-// ao abrir: cria blocos e slots e prepara o tutorial
+if (keyboard_check_pressed(ord("B"))) alternar_livro();
+
 if (abrir && !slots_criados){
     spawn_blocos_pagina(pagina_atual)
     spawn_blocos_colisao()
     preparar_tutorial();
 }
 
-if (slots_criados == true && keyboard_check_pressed(ord("B")) && !tut_ativo){
-    slots_criados = false
-    desenhar = false
-}
-
-// setas travadas durante o tutorial
 if (abrir && !tut_ativo) {
     if (keyboard_check_pressed(vk_right) && pagina_atual < array_length(global.paginas_spawn_data) - 1) {
         pagina_atual++;
@@ -33,7 +24,7 @@ if (abrir && !tut_ativo) {
 
 if (run_press_t > 0) run_press_t--;
 
-// Enter continua como atalho (o clique no botão chama a mesma função no Draw GUI)
+
 if (keyboard_check_pressed(vk_enter) && !pagina_bloqueada(pagina_atual) && abrir && !tut_ativo){
     run_press_t = 6;
     verificacao(pagina_atual);

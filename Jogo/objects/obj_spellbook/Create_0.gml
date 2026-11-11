@@ -8,7 +8,7 @@ depth = 100;
 slots_criados = false
 pagina_atual = 0
 desenhar = false;
-
+btn_inv_pressed = false
 
 //Aqui vai ser o spawn dos blocos  nas páginas (eu acho)
 
@@ -872,3 +872,24 @@ confetti_criado = false
 run_press_t = 0;    // frames do botão "afundado" depois do clique
 run_w = 70;
 run_h = 36;
+
+veio_do_inventario = false;
+
+alternar_livro = function(_do_inventario = false) {
+    if (!instance_exists(obj_plr_rpg) || !obj_plr_rpg.coletou_livro) return;
+    if (tut_ativo) return;   // não fecha durante o tutorial
+
+    abrir = !abrir;
+    if (abrir) {
+        veio_do_inventario = _do_inventario;
+    } else {
+        slots_criados = false;
+        desenhar = false;
+        // volta ao inventário se foi de lá que o livro abriu
+        if (veio_do_inventario) layer_set_visible("InventarioLayer", true);
+        veio_do_inventario = false;
+    }
+}
+
+voltar_w = 90;
+voltar_h = 36;
