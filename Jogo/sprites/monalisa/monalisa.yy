@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"monalisa",
   "bboxMode":0,
-  "bbox_bottom":19,
+  "bbox_bottom":17,
   "bbox_left":0,
   "bbox_right":13,
   "bbox_top":0,
