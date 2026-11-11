@@ -22,7 +22,23 @@ var _oy = _centro_y - 250;
 var _esc_x = 280 / sprite_get_width(spr_terminal);
 var _esc_y = 485 / sprite_get_height(spr_terminal);
 
-draw_sprite_ext(spr_terminal, 0, _ox, _oy, _esc_x, _esc_y, 0, c_white, 1);
+// tremida (diminui até parar)
+var _sx = 0, _sy = 0;
+if (tremer_t > 0) {
+    var _f = tremer_t / tremer_dur;
+    _sx = random_range(-1, 1) * 6 * _f;
+    _sy = random_range(-1, 1) * 3 * _f;
+}
+
+draw_sprite_ext(spr_terminal, 0, _ox + _sx, _oy + _sy, _esc_x, _esc_y, 0, c_white, 1);
+
+// piscada verde/vermelha por cima do terminal
+if (flash_t > 0) {
+    draw_set_alpha(0.55 * (flash_t / flash_dur));
+    draw_rectangle_color(_ox + _sx, _oy + _sy, _ox + _sx + 280, _oy + _sy + 485,
+                         flash_cor, flash_cor, flash_cor, flash_cor, false);
+    draw_set_alpha(1);
+}
     
     //Texto
     
@@ -37,6 +53,11 @@ with (obj_mini_parent) {
     visible = _vis || arrastando || (instance_place(x, y, obj_colission_mini) != noone);
 }
 
+    if (tut_ativo && instance_exists(tut_alvo)){
+        tut_alvo.visible = false;
+        obj_mini_parent.visible = false
+    } 
+    
 var _bloqueada = pagina_bloqueada(pagina_atual);
 
 if (!_bloqueada) {
@@ -67,6 +88,43 @@ for (var a = 0; a < 2; a++) {
     draw_set_color(_ativa ? cor_term_fundo : cor_term_verde);
     draw_text(floor(_ax1 + 50), floor(_ry + 18), _nomes[a]);
 }
+    
+    // --- botão RUN ---
+var _bx1 = _rx + 2 * 110 + 4;     // à direita da aba Log
+var _by1 = _ry;
+var _bx2 = _bx1 + run_w;
+var _by2 = _by1 + run_h;
+
+var _sobre = point_in_rectangle(_mx, _my, _bx1, _by1, _bx2, _by2) && !tut_ativo;
+var _afundado = (run_press_t > 0);
+
+if (_sobre && mouse_check_button_pressed(mb_left)) {
+    run_press_t = 6;
+    verificacao(pagina_atual);
+}
+
+var _dy = _afundado ? 4 : 0;                       // desloca ao clicar
+var _cor_fundo = _afundado ? cor_term_verde_esc : (_sobre ? cor_term_verde : cor_term_fundo);
+var _cor_texto = (_sobre && !_afundado) ? cor_term_fundo : cor_term_verde;
+
+// sombra "3D" pixelada embaixo (some quando afunda)
+if (!_afundado) {
+    painel_pixel(_bx1, _by1 + 4, _bx2, _by2 + 4, cor_term_verde_esc, cor_term_verde_esc);
+}
+painel_pixel(_bx1, _by1 + _dy, _bx2, _by2 + _dy, cor_term_verde, _cor_fundo);
+
+// ícone de "play" feito de pixels + texto
+var _icx = floor(_bx1 + 14);
+var _icy = floor(_by1 + _dy + 10);
+draw_set_color(_cor_texto);
+for (var _k = 0; _k < 4; _k++) {
+    draw_rectangle(_icx + _k * px, _icy + _k * px, _icx + _k * px + px - 1, _icy + 16 - _k * px - 1, false);
+}
+
+draw_set_font(fonte_terminal);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_text(floor(_bx1 + 36), floor(_by1 + _dy + 18), "RUN");
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
@@ -153,21 +211,69 @@ if (aba_atual == 1) {
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
 }
+// --- tutorial: escurece a tela e destaca o bloco ---
+// --- tutorial: escurece a tela deixando um "buraco" no foco ---
+if (tut_alpha > 0) {
+    var _W = display_get_gui_width();
+    var _H = display_get_gui_height();
+    var _fl = 0, _ft = 0, _fr = 0, _fb = 0, _tem_foco = false;
+
+    var _i = min(tut_idx, array_length(tut_fila) - 1);
+    if (_i >= 0) {
+        var _ps = tut_fila[_i];
+        if (_ps.area != undefined) {
+            _fl = _ps.area.l - 6;  _ft = _ps.area.t - 6;
+            _fr = _ps.area.r + 6;  _fb = _ps.area.b + 6;
+            _tem_foco = true;
+        } else if (_ps.alvo != noone && instance_exists(_ps.alvo)) {
+            var _camx = camera_get_view_x(view_camera[0]);
+            var _camy = camera_get_view_y(view_camera[0]);
+            _fl = _ps.alvo.bbox_left - _camx - 8;   _ft = _ps.alvo.bbox_top - _camy - 8;
+            _fr = _ps.alvo.bbox_right - _camx + 8;  _fb = _ps.alvo.bbox_bottom - _camy + 8;
+            _tem_foco = true;
+        }
+    }
+
+    draw_set_alpha(tut_alpha);
+    draw_set_color(c_black);
+    if (_tem_foco) {
+        draw_rectangle(0, 0, _W, _ft, false);        // em cima
+        draw_rectangle(0, _fb, _W, _H, false);       // embaixo
+        draw_rectangle(0, _ft, _fl, _fb, false);     // esquerda
+        draw_rectangle(_fr, _ft, _W, _fb, false);    // direita
+    } else {
+        draw_rectangle(0, 0, _W, _H, false);
+    }
+    draw_set_alpha(1);
+
+    if (_tem_foco && tut_ativo) {
+        var _g = 2 + sin(current_time / 150) * 1.5;   // moldura pulsando
+        draw_set_color(c_yellow);
+        draw_rectangle(_fl - _g, _ft - _g, _fr + _g, _fb + _g, true);
+        draw_rectangle(_fl - _g - 1, _ft - _g - 1, _fr + _g + 1, _fb + _g + 1, true);
+    }
+    draw_set_color(c_white);
+}
 
 
-if (desenhar == true){
-     var _centro_x = display_get_gui_width() / 2;
-    var _centro_y = display_get_gui_height() / 2;
+// --- aviso de feitiço concluído (lado direito) ---
+if (abrir && concluido_t > 0) {
+    var _a = min(1, concluido_t / 30);   // some suavemente no fim
+    var _cxx = display_get_gui_width() / 2;
+    var _cyy = display_get_gui_height() / 2;
 
- draw_set_halign(fa_center);
+    draw_set_alpha(_a);
+    painel_pixel(_cxx + 55, _cyy + 205, _cxx + 315, _cyy + 250, cor_term_verde, cor_term_fundo);
+
+    draw_set_font(fonte_terminal);
+    draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
-    draw_set_color(c_green);
-    
-    draw_text_transformed(_centro_x + 220, _centro_y + 250, "Resenha", 4, 4, 0);
+    draw_set_color(cor_term_verde);
+    draw_text(floor(_cxx + 185), floor(_cyy + 228), "Feitico concluido!");
 
+    draw_set_alpha(1);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-
 }
 
 

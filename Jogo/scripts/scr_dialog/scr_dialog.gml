@@ -254,3 +254,70 @@ global.sprites = {
     "Morador": spr_magenta,
 }
 
+function d_explicar_bloco(_obj) {
+    switch (object_get_name(_obj)) {
+        case "obj_bloco_print":
+            return [
+                { name: "U+003A", msg: "Esse e o bloco PRINT!" },
+                { name: "U+003A", msg: "Ele mostra uma mensagem no terminal.\n Use para saber o que o programa esta fazendo." }
+            ];
+        case "obj_bloco_while":
+            if (obj_spellbook.pagina_atual != 5){
+            return [
+                { name: "U+003A", msg: "Esse e o WHILE, o bloco de repeticao." },
+                { name: "U+003A", msg: "Tudo que ficar dentro dele se repete\n enquanto a condicao for verdadeira." }
+            ];
+            } else {
+                return [
+                { name: "U+003A", msg: "Esse e o FOR, o bloco de repeticao." },
+                { name: "U+003A", msg: "Repete o que esta dentro certa quantidade de vezes (range)" }
+            ];
+            }
+        case "obj_bloco_if":
+            return [
+                { name: "U+003A", msg: "Esse e o IF." },
+                { name: "U+003A", msg: "Ele so executa o que esta dentro\n se a condicao for verdadeira." }
+            ];
+        case "obj_bloco_import_time":
+            return [
+                { name: "U+003A", msg: "IMPORT TIME traz as funcoes de tempo para o programa." }
+            ];
+        case "obj_bloco_timesleep":
+            return [
+                { name: "U+003A", msg: "SLEEP faz o programa esperar um pouco antes de continuar." }
+            ];
+        // copie um case para cada bloco novo
+    }
+    return undefined;
+}
+
+function d_intro_livro(_passo) {
+    switch (_passo) {
+        case 0: return [
+            { name: "U+003A", msg: "Oi! Que bom que voce abriu o livro de feiticos!" },
+            { name: "U+003A", msg: "Aqui os feiticos sao escritos em PYTHON,\n uma linguagem de programacao de verdade." },
+            { name: "U+003A", msg: "Em vez de digitar, voce monta o codigo\n encaixando blocos." }
+        ];
+        case 1: return [
+            { name: "U+003A", msg: "Essa area e o seu codigo. Cada linha recebe um bloco." },
+            { name: "U+003A", msg: "O programa e lido de cima para baixo,\n uma linha de cada vez." }
+        ];
+        case 2: return [
+            { name: "U+003A", msg: "Os blocos MAIORES sao as FUNCOES." },
+            { name: "U+003A", msg: "Eles dizem ao programa O QUE fazer." }
+        ];
+        case 3: return [
+            { name: "U+003A", msg: "Os blocos MENORES sao as VARIAVEIS e os NUMEROS." },
+            { name: "U+003A", msg: "Eles dizem COM O QUE a funcao vai trabalhar." }
+        ];
+        case 4: return [
+            { name: "U+003A", msg: "Quando terminar, aperte ENTER para testar o programa." },
+            { name: "U+003A", msg: "O LOG te mostra em qual linha esta o erro." }
+        ];
+        case 5: return [
+            { name: "U+003A", msg: "Se ficar com dificuldade, e so abrir a aba AJUDA." },
+            { name: "U+003A", msg: "Boa sorte!" }
+        ];
+    }
+    return undefined;
+}

@@ -822,5 +822,5 @@
           ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"RamLayer","nodeColour":4288672328,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
       ],"locked":false,"name":"puzzles","nodeColour":4294068433,"resourceType":"GMRUIFolder","resourceVersion":"2.0","visible":false,},
   ],
-  "visible":true,
+  "visible":false,
 }

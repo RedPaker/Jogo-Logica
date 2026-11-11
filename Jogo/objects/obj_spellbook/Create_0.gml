@@ -695,10 +695,13 @@ verificacao = function(pagina_atual) {
     var _p = coletar_programa();
 
     if (array_length(_p.grande) == 0 && array_length(_p.mini) == 0) {
-        array_push(log_linhas, { linha: -1, ok: false, msg: "Nenhum bloco encaixado." });
-        aba_atual = 1;
-        return;
-    }
+    array_push(log_linhas, { linha: -1, ok: false, msg: "Nenhum bloco encaixado." });
+    aba_atual = 1;
+    flash_cor = cor_term_erro;
+    flash_t = flash_dur;
+    tremer_t = tremer_dur;
+    return;
+}
 
     var _e1 = comparar_sequencia(_p.grande, _p.grande_linha, _certa, "Bloco");
     var _e2 = comparar_sequencia(_p.mini, _p.mini_linha, _certa_mini, "Mini bloco");
@@ -706,17 +709,27 @@ verificacao = function(pagina_atual) {
     for (var i = 0; i < array_length(_e2); i++) array_push(log_linhas, _e2[i]);
 
     if (array_length(log_linhas) == 0) {
-        array_push(log_linhas, { linha: -1, ok: true, msg: "Nenhum erro. Programa correto!" });
-        desenhar = true;
+    array_push(log_linhas, { linha: -1, ok: true, msg: "Nenhum erro. Programa correto!" });
+    flash_cor = c_lime;
+    flash_t = flash_dur;
+    concluido_t = concluido_dur;
+    var _gw = display_get_gui_width();
+var _gh = display_get_gui_height();
+part_particles_create(global.particles, _gw * 0.3, _gh * 0.4, global.partTypeConfetti, 60);
+part_particles_create(global.particles, _gw * 0.7, _gh * 0.4, global.partTypeConfetti, 60);    
 
-        // libera o poder desta pagina (so na primeira vez)
-        if (liberar_poder_da_pagina(pagina_atual)) {
-            var _poder = pagina_poder(pagina_atual);
-            array_push(log_linhas, { linha: -1, ok: true, msg: "Novo poder liberado: " + _poder.nome + "!" });
-            pagina_aviso("Novo poder liberado: " + _poder.nome
-                + "\nAperte " + chr(global.st_smg) + " para trocar e " + chr(global.st_umg) + " para usar.");
-        }
+    // libera o poder desta pagina (so na primeira vez)
+    if (liberar_poder_da_pagina(pagina_atual)) {
+        var _poder = pagina_poder(pagina_atual);
+        array_push(log_linhas, { linha: -1, ok: true, msg: "Novo poder liberado: " + _poder.nome + "!" });
+        pagina_aviso("Novo poder liberado: " + _poder.nome
+            + "\nAperte " + chr(global.st_smg) + " para trocar e " + chr(global.st_umg) + " para usar.");
     }
+} else {
+    flash_cor = cor_term_erro;
+    flash_t = flash_dur;
+    tremer_t = tremer_dur;
+}
     //aba_atual = 1
 }
 
@@ -754,3 +767,108 @@ painel_terminal = function(_x1, _y1, _x2, _y2) {
     draw_set_alpha(1);
 }
 
+if (!variable_global_exists("blocos_vistos")) global.blocos_vistos = {};
+
+tut_ativo = false;
+tut_estado = 0;      // 0 = escurecendo, 1 = diálogo rodando
+tut_alpha = 0;
+tut_fila = [];
+tut_idx = 0;
+tut_alvo = noone;
+
+// procura os blocos da página que ainda não foram explicados
+if (!variable_global_exists("blocos_vistos")) global.blocos_vistos = {};
+if (!variable_global_exists("intro_livro_vista")) global.intro_livro_vista = false;
+
+tut_ativo = false;
+tut_estado = 0;      // 0 = escurecendo, 1 = diálogo rodando
+tut_alpha = 0;
+tut_fila = [];
+tut_idx = 0;
+
+// alvo: instância ou noone | area: {l,t,r,b} em coordenadas da GUI ou undefined
+tut_add = function(_alvo, _area, _msgs) {
+    array_push(tut_fila, { alvo: _alvo, area: _area, msgs: _msgs });
+}
+
+montar_intro = function() {
+    var _cx = display_get_gui_width() / 2;
+    var _cy = display_get_gui_height() / 2;
+
+    var _grande = noone;
+    with (obj_block_parent) {
+        if (!e_cauda()) { _grande = id; break; }
+    }
+    var _mini = instance_find(obj_mini_parent, 0);
+
+    var _terminal = { l: _cx - 320, t: _cy - 250, r: _cx - 40, b: _cy + 235 };
+    var _aba_log  = { l: _cx + 40 + 110, t: _cy - 250, r: _cx + 40 + 210, b: _cy - 250 + 36 };
+
+    tut_add(noone,    undefined, d_intro_livro(0));
+    tut_add(noone,    _terminal, d_intro_livro(1));
+    tut_add(_grande,  undefined, d_intro_livro(2));
+    tut_add(_mini,    undefined, d_intro_livro(3));
+    tut_add(noone,    _aba_log,  d_intro_livro(4));
+    tut_add(noone,    undefined, d_intro_livro(5));
+}
+
+preparar_tutorial = function() {
+    tut_fila = [];
+    if (pagina_bloqueada(pagina_atual)) return;
+
+    // introdução geral (só na primeira vez)
+    if (!global.intro_livro_vista) {
+        global.intro_livro_vista = true;
+        aba_atual = 0;
+        montar_intro();
+    }
+
+    // explicação de cada bloco novo da página
+    var _pais = [obj_block_parent, obj_mini_parent];
+    for (var p = 0; p < 2; p++) {
+        with (_pais[p]) {
+            if (variable_instance_exists(id, "e_cauda") && e_cauda()) continue;
+            var _n = object_get_name(object_index);
+            if (variable_struct_exists(global.blocos_vistos, _n)) continue;
+            var _msgs = d_explicar_bloco(object_index);
+            if (_msgs == undefined) continue;
+
+            global.blocos_vistos[$ _n] = true;
+            other.tut_add(id, undefined, _msgs);
+        }
+    }
+
+    if (array_length(tut_fila) > 0) {
+        aba_atual = 0;
+        tut_idx = 0;
+        tut_estado = 0;
+        tut_ativo = true;
+    }
+}
+
+proximo_tutorial = function() {
+    tut_idx++;
+    if (tut_idx >= array_length(tut_fila)) {
+        tut_ativo = false;
+        tut_alvo = noone;
+        return;
+    }
+    tut_alvo = tut_fila[tut_idx];
+    tut_estado = 0;
+}
+
+flash_t = 0;          // frames restantes do piscar
+flash_dur = 18;
+flash_cor = c_lime;
+
+tremer_t = 0;         // frames restantes da tremida
+tremer_dur = 24;
+
+concluido_t = 0;      // frames restantes do aviso "Feitiço concluído"
+concluido_dur = 150;
+
+confetti_criado = false
+
+run_press_t = 0;    // frames do botão "afundado" depois do clique
+run_w = 70;
+run_h = 36;
