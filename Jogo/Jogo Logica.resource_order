@@ -128,6 +128,7 @@
     {"name":"obj_ui_button_rmsnd","order":3,"path":"objects/obj_ui_button_rmsnd/obj_ui_button_rmsnd.yy",},
     {"name":"obj_ui_button_text","order":4,"path":"objects/obj_ui_button_text/obj_ui_button_text.yy",},
     {"name":"obj_ui_frame","order":2,"path":"objects/obj_ui_frame/obj_ui_frame.yy",},
+    {"name":"obj_ui_hint","order":9,"path":"objects/obj_ui_hint/obj_ui_hint.yy",},
     {"name":"obj_ui_invslot","order":7,"path":"objects/obj_ui_invslot/obj_ui_invslot.yy",},
     {"name":"obj_ui_manager","order":5,"path":"objects/obj_ui_manager/obj_ui_manager.yy",},
     {"name":"obj_ui_menubutton","order":4,"path":"objects/obj_ui_menubutton/obj_ui_menubutton.yy",},
