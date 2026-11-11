@@ -3,6 +3,26 @@
 var _liberados = poderes_liberados();
 var _qtd = array_length(_liberados);
 
+// 1. Pega a raiz da UI Layer e busca o painel pelo nome que você deu
+var _ui_root = layer_get_flexpanel_node("GuiLayer");
+var _painel  = flexpanel_node_get_child(_ui_root, "FlexPanel_11");
+
+// 2. Extrai o ID da sprite que está dentro desse painel
+var _struct    = flexpanel_node_get_struct(_painel);
+var _sprite_id = _struct.layerElements[0].elementId;
+
+// 3. Muda o frame da animação (e pausa)
+layer_sprite_speed(_sprite_id, 0);
+layer_sprite_index(_sprite_id, 2); // Frame desejado
+
+// 4. Esconde ou mostra dependendo da condição X
+if (!obj_plr_rpg.coletou_livro) {
+    layer_sprite_alpha(_sprite_id, 0); // Invisível (não é renderizada)
+} else {
+    layer_sprite_alpha(_sprite_id, 1); // Visível
+}
+
+
 if (_qtd == 0) {
     global.meu = 0;
     global.me1 = 0;
