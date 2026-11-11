@@ -90,6 +90,7 @@
     {"id":{"name":"obj_aranha","path":"objects/obj_aranha/obj_aranha.yy",},},
     {"id":{"name":"obj_arceight_body","path":"objects/obj_arceight_body/obj_arceight_body.yy",},},
     {"id":{"name":"obj_arceight_head","path":"objects/obj_arceight_head/obj_arceight_head.yy",},},
+    {"id":{"name":"obj_arceight_left_arm","path":"objects/obj_arceight_left_arm/obj_arceight_left_arm.yy",},},
     {"id":{"name":"obj_arceight_right_arm","path":"objects/obj_arceight_right_arm/obj_arceight_right_arm.yy",},},
     {"id":{"name":"obj_atack","path":"objects/obj_atack/obj_atack.yy",},},
     {"id":{"name":"obj_binario_puzzle","path":"objects/obj_binario_puzzle/obj_binario_puzzle.yy",},},
