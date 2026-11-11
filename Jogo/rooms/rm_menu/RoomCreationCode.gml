@@ -3,8 +3,9 @@ global.me1 = 1
 global.me2 = 2
 global.jogo_pausado = false;
 
+global.chapter = 1;
 global.inventario_itens = [];
-
+global.current_save = 0;
 
 if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;

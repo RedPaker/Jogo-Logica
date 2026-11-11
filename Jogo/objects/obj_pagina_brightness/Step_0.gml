@@ -12,10 +12,10 @@ if (place_meeting(x, y, obj_plr_rpg) && keyboard_check_pressed(ord("Z"))) {
             name: "Pagina " + string(numero_pagina) + ": " + _titulo,
             sprite: sprite_index,
             pagina: indice_pagina,
-            descricao: "Pagina do livro de feiticos. Abra o livro (B) para programar \"" + _titulo + "\"."
+            descricao: "Pagina do livro de feiticos. Abra o livro ("+ string(chr(global.st_inv)) +") para programar \"" + _titulo + "\"."
         });
 
-        pagina_aviso("Pagina coletada: " + _titulo + "\nAbra o livro (B) para programar o feitico.");
+        pagina_aviso("Pagina coletada: " + _titulo + "\nAbra o livro ("+ string(chr(global.st_inv)) +") para programar o feitico.");
     }
 
     instance_destroy();

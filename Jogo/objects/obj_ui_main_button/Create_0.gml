@@ -30,7 +30,7 @@ switch (button_id) {
     if (_text_element != -1) {
         layer_text_text(_text_element, "1");
     }
-break;
+    break;
     case 8:
           var _text_element = layer_text_get_id(layer, "UI Folder");
   
