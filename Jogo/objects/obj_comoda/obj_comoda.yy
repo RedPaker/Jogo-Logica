@@ -6,8 +6,8 @@
   "name":"obj_comoda",
   "overriddenProperties":[],
   "parent":{
-    "name":"Misc",
-    "path":"folders/ObjectS/Misc.yy",
+    "name":"Structures",
+    "path":"folders/ObjectS/Structures.yy",
   },
   "parentObjectId":null,
   "persistent":false,
