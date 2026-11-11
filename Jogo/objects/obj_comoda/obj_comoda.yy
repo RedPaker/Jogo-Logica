@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"comoda",
+    "path":"sprites/comoda/comoda.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
