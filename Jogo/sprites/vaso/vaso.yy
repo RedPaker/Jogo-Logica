@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Jogo Logica",
-    "path":"Jogo Logica.yyp",
+    "name":"Structures",
+    "path":"folders/Sprite/Structures.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
