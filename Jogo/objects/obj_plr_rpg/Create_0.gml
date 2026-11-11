@@ -35,8 +35,8 @@ duracao_cura = 245; // 1 segundo (60 FPS)
 animacao_cura_iniciada = false;
 imortal = false
 
-dash_vel = 12
-dash_dir = 0
+dash_vel = 0;
+dash_dir = 0;
 
 dash_carga = 45;
 dash_dura = 100;
