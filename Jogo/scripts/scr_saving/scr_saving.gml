@@ -1,13 +1,16 @@
 function sv_save(save_id){
     var _dados = {
         plr :{
-            
+            chapter: global.chapter
         },
         char : {
             x: obj_plr_rpg.x,
             y: obj_plr_rpg.y,
             hp: obj_plr_rpg.hp,
-            spells: obj_controller_mg.unlocked_spells
+            unlocked_book: obj_plr_rpg.coletou_livro,
+            paginas: global.inv,
+            inventario: global.inventario_itens,
+            spells: obj_controller_mg.unlocked_spells,
         }
     };
     
