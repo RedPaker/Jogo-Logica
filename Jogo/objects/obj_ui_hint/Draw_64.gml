@@ -1,7 +1,7 @@
 draw_set_alpha(alfa);
 draw_set_font(fnt_8_segoeui);
 
-var texto = string_concat("Aperte ", chr(global.st_run), " para correr.");
+var texto = string_concat("Segure ", chr(global.st_run), " para correr.");
 var multiplicador = 3;
 
 var largura_texto = string_width(texto) * multiplicador;

@@ -7,8 +7,11 @@ switch (button_id) {
         }
         break;
     case 2:
-        
-        break;
+    if (instance_exists(obj_spellbook)) {
+        obj_spellbook.alternar_livro(true);
+        if (obj_spellbook.abrir) layer_set_visible("InventarioLayer", false);
+    }
+    break;      
     case 3:
         
         break;

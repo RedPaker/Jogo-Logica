@@ -113,6 +113,7 @@
     {"name":"obj_mequipadas","order":3,"path":"objects/obj_mequipadas/obj_mequipadas.yy",},
     {"name":"obj_mini_parent","order":4,"path":"objects/obj_mini_parent/obj_mini_parent.yy",},
     {"name":"obj_monalisa","order":11,"path":"objects/obj_monalisa/obj_monalisa.yy",},
+    {"name":"obj_nome_local","order":10,"path":"objects/obj_nome_local/obj_nome_local.yy",},
     {"name":"obj_npc_asterisco","order":3,"path":"objects/obj_npc_asterisco/obj_npc_asterisco.yy",},
     {"name":"obj_npc_morador","order":2,"path":"objects/obj_npc_morador/obj_npc_morador.yy",},
     {"name":"obj_npc_porteiro","order":1,"path":"objects/obj_npc_porteiro/obj_npc_porteiro.yy",},
