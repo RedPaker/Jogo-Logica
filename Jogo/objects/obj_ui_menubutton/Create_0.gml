@@ -1,3 +1,5 @@
+caixa_texto_inst = noone;
+
 function findbynome(na){
     var _item_to_find = na; 
     var _found_index = -1;       

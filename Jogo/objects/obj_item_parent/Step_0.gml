@@ -5,8 +5,10 @@ if (place_meeting(x, y, obj_plr_rpg)) {
         var _item_data = {
             nome: item_name, 
             sprite: sprite_index,
+            obj:object_index,
             use: use,
             n: n,
+            info: info,
             throwable: throwable
         };
         

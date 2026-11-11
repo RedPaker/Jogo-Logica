@@ -23,6 +23,13 @@ switch (button_id) {
         }
         
         break;
+    case 6:
+        if(button_sub_id < array_length(global.inventario_itens)){
+            visible = true;
+        } else {
+            visible = false;
+        }
+        break;
     default:
         
         break;
