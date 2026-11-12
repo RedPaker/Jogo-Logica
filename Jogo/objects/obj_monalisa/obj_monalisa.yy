@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_monalisa",
-    "path":"sprites/spr_monalisa/spr_monalisa.yy",
+    "name":"monalisa",
+    "path":"sprites/monalisa/monalisa.yy",
   },
   "spriteMaskId":null,
   "visible":true,

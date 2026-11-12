@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_estante",
-    "path":"sprites/spr_estante/spr_estante.yy",
+    "name":"estante",
+    "path":"sprites/estante/estante.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,6 +1,6 @@
 global.meu = 0
-global.me1 = 0
-global.me2 = 0
+global.me1 = 1
+global.me2 = 2
 global.jogo_pausado = false;
 
 global.chapter = 1;
@@ -48,7 +48,6 @@ if(!variable_global_exists("st_firsttimeplaying")){
      * ...    
     */
     //Audio
-    global.st_music = 50/100;
-    global.st_soundefects = 50/100;
-    global.st_master = 100/100;
+    global.st_music = 25/100;
+    global.st_master = 25/100;
 } 

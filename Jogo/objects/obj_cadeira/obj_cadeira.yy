@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cadeiranebrotato",
-    "path":"sprites/spr_cadeiranebrotato/spr_cadeiranebrotato.yy",
+    "name":"mesa",
+    "path":"sprites/mesa/mesa.yy",
   },
   "spriteMaskId":null,
   "visible":true,

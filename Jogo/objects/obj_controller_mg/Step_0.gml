@@ -32,9 +32,6 @@ if (_qtd == 0) {
 
     if (keyboard_check_pressed(global.st_smg)) {
         _pos = (_pos + 1) mod _qtd;
-        if (_qtd>1) {
-        	        audio_play_sound(snd_switch_spell,1,false,1*global.st_soundefects*global.st_master);
-        }
     }
 
     global.meu = _liberados[_pos];
