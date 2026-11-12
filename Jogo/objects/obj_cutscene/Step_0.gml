@@ -67,10 +67,10 @@ if (estado == 0) {
     if (variable_struct_exists(_s, "zoom")) zoom_alvo = _s.zoom;
 
     // sons
-    if (variable_struct_exists(_s, "snd")) audio_play_sound(_s.snd, 1, false);
+    if (variable_struct_exists(_s, "snd")) audio_play_sound(_s.snd, 1*global.st_master*global.st_soundefects, false);
     if (variable_struct_exists(_s, "music")) {
         if (musica != noone) audio_stop_sound(musica);
-        musica = audio_play_sound(_s.music, 1, true);
+        musica = audio_play_sound(_s.music, 1*global.st_master*global.st_music, true);
     }
 
     // diálogo

@@ -225,7 +225,7 @@
     {"id":{"name":"room_porteiro","path":"rooms/room_porteiro/room_porteiro.yy",},},
     {"id":{"name":"room_salas","path":"rooms/room_salas/room_salas.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
-    {"id":{"name":"scr_cutscenes","path":"scripts/scr_cutscenes/scr_cutscenes.yy",},},
+    {"id":{"name":"scr_cutscene","path":"scripts/scr_cutscene/scr_cutscene.yy",},},
     {"id":{"name":"scr_dialog","path":"scripts/scr_dialog/scr_dialog.yy",},},
     {"id":{"name":"scr_fade","path":"scripts/scr_fade/scr_fade.yy",},},
     {"id":{"name":"scr_paginas","path":"scripts/scr_paginas/scr_paginas.yy",},},

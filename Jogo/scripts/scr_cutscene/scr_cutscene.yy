@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_cutscenes",
+  "%Name":"scr_cutscene",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_cutscenes",
+  "name":"scr_cutscene",
   "parent":{
     "name":"Scripty",
     "path":"folders/Scripty.yy",

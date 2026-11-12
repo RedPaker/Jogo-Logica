@@ -174,7 +174,7 @@
     {"name":"room_pagina1","order":3,"path":"rooms/room_pagina1/room_pagina1.yy",},
     {"name":"room_porteiro","order":4,"path":"rooms/room_porteiro/room_porteiro.yy",},
     {"name":"RoomUI","order":7,"path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"scr_cutscenes","order":2,"path":"scripts/scr_cutscenes/scr_cutscenes.yy",},
+    {"name":"scr_cutscene","order":4,"path":"scripts/scr_cutscene/scr_cutscene.yy",},
     {"name":"scr_dialog","order":1,"path":"scripts/scr_dialog/scr_dialog.yy",},
     {"name":"scr_fade","order":3,"path":"scripts/scr_fade/scr_fade.yy",},
     {"name":"snd_explosao","order":1,"path":"sounds/snd_explosao/snd_explosao.yy",},
