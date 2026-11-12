@@ -1,1 +1,3 @@
 instance_destroy(obj_arceight_head);
+instance_destroy(obj_arceight_left_arm);
+instance_destroy(obj_arceight_right_arm);

@@ -3,6 +3,7 @@ event_inherited();
 
 hp = 250
 
+default_movespeed = 0.7
 move_spd = 0.7;
 estado = "perseguir";
 tempo_estado = 0;
