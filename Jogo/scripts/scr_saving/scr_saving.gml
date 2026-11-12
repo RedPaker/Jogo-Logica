@@ -116,7 +116,7 @@ function sv_newgame(){
         
             { sprite: cutscene1, frame: 1, music: snd_musicaruim},
         
-            { sprite: cutscene1, frame: 2, wait: 1, auto: true },
+            { sprite: cutscene1, frame: 2, wait: 2, auto: true },
             { sprite: cutscene1, frame: 3, wait: 4, auto: true },
             { sprite: cutscene1, frame: 4, wait: 1, auto: true },
             { sprite: cutscene1, frame: 5,wait: .75, auto: true },
