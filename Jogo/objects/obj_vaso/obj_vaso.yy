@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"vaso",
-    "path":"sprites/vaso/vaso.yy",
+    "name":"spe_vaso",
+    "path":"sprites/spe_vaso/spe_vaso.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"comoda",
-    "path":"sprites/comoda/comoda.yy",
+    "name":"spr_comodsa",
+    "path":"sprites/spr_comodsa/spr_comodsa.yy",
   },
   "spriteMaskId":null,
   "visible":true,
