@@ -100,6 +100,32 @@ function sv_newgame(){
     global.inv = []; 
     global.inventario_itens = []; 
     global.chapter = 1;
-    scr_fade(rm_casa,-1,-1);
+    cutscene_play([
+        { sprite: cutscene1, frame: 8, fade: "in", music: snd_musicaboa, wait: 3, auto: true },
+        { sprite: cutscene1, frame: 8, dialog: [
+              { name: "???", msg: "Essa e bitlandia, um lugar sereno e tranquilo" }
+          ] },
+        { sprite: cutscene1, frame: 8, wait: 3, auto: true },
+        
+            { sprite: cutscene1, frame: 0, dialog: [
+              { name: "???", msg: "Esse e 0x43, um velho computador dormindo sob a arvore" }
+          ] },
+    
+    
+        { sprite: cutscene1, frame: 1, shake: 30, flash: true,  snd: snd_explosao, wait: 2, auto: true, music: noone},
+        
+            { sprite: cutscene1, frame: 1, music: snd_musicaruim},
+        
+            { sprite: cutscene1, frame: 2, wait: 1, auto: true },
+            { sprite: cutscene1, frame: 3, wait: 4, auto: true },
+            { sprite: cutscene1, frame: 4, wait: 1, auto: true },
+            { sprite: cutscene1, frame: 5,wait: .75, auto: true },
+            { sprite: cutscene1, frame: 6, wait: .5, auto: true },
+            { sprite: cutscene1, frame: 7, wait: .5},
+    
+        { fade: "out", auto: true}
+    ], function() {
+        room_goto(rm_casa);
+    });
     
 }
