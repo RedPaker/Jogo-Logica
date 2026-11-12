@@ -244,7 +244,8 @@ global.char_colors = {
     "U+003A": c_red,
     "0x43": c_blue,
     "morador": c_lime,
-    "Porteiro": c_orange
+    "Porteiro": c_orange,
+    "???": c_gray
 }
 
 global.sprites = {
@@ -252,6 +253,7 @@ global.sprites = {
     "0x43": spr_speak_C,
     "Porteiro":spr_green,
     "Morador": spr_magenta,
+    "???": Sprite147
 }
 
 function d_explicar_bloco(_obj) {
@@ -320,4 +322,14 @@ function d_intro_livro(_passo) {
         ];
     }
     return undefined;
+}
+
+global.cutscene_ativa = false;
+
+// _passos: lista de structs | _ao_terminar: função opcional chamada no fim
+function cutscene_play(_passos, _ao_terminar = undefined) {
+    if (instance_exists(obj_cutscene)) return;
+    var _c = instance_create_depth(0, 0, 100, obj_cutscene);
+    _c.passos = _passos;
+    _c.ao_terminar = _ao_terminar;
 }
