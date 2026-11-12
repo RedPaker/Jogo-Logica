@@ -108,6 +108,7 @@ switch (estado) {
             estado = "atirar";
             tempo_estado = 100;
             tempo_tiro = 1;
+            obj_arceight_right_arm.tempo_tiro = 1;
             image_speed = 0;
         }
 
@@ -117,16 +118,7 @@ switch (estado) {
 
         tempo_estado--;
         image_speed = 0;
-        tempo_tiro--;
-
-        if (tempo_tiro <= 0) {
-            if (instance_exists(obj_plr_rpg)) {
-                var _tiro = instance_create_layer(x, y, "Entities", obj_tiro_boss);
-                _tiro.direction = point_direction(x, y, obj_plr_rpg.x, obj_plr_rpg.y);
-            }
-
-            tempo_tiro = 20;
-        }
+        
 
         if (tempo_estado <= 0) {
             estado = "perseguir";
