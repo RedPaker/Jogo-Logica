@@ -1,36 +1,72 @@
 
 if (!instance_exists(obj_plr_rpg)) exit;
 
-
 var _dist = point_distance(x, y, obj_plr_rpg.x, obj_plr_rpg.y);
+var _layer = layer_get_id("BinarioLayer");
 
-if (_dist <= distancia_interacao && keyboard_check_pressed(global.st_use)) {
+if (tempo_mensagem > 0) {
+    tempo_mensagem--;
 
-    interagindo = !interagindo;
+    if (tempo_mensagem <= 0) {
+        mensagem = "";
+        resultado = false;
 
-    var _layer = layer_get_id("BinarioLayer");
-
-    if (_layer != -1) {
-        layer_set_visible(_layer, interagindo);
+        if (_layer != -1) {
+            layer_set_visible(_layer, false);
+        }
     }
+}
 
-    
-    if (interagindo) {
+
+if (!resultado && tempo_mensagem <= 0) {
+
+    if (_dist <= distancia_interacao && keyboard_check_pressed(global.st_use)) {
+        interagindo = !interagindo;
+        if (_layer != -1) {
+            layer_set_visible(_layer, interagindo);
+        }
+        if (interagindo) {
+            global.codigo_binario = "";
+            mensagem = "";
+            var _texto = layer_text_get_id(_layer, "text_5B88EC1D");
+            if (_texto != -1) {
+                layer_text_text(_texto, global.codigo_binario);
+            }
+        }
+    }
+}
+
+if (interagindo) {
+
+    var _texto = layer_text_get_id(_layer, "text_5B88EC1D");
+
+    if (keyboard_check_pressed(vk_enter)) {
+
+        if (global.codigo_binario == senha_correta) {
+            mensagem = "CORRETO!";
+        } else {
+            mensagem = "ERRO!";
+        }
+
+        interagindo = false;
+        resultado = true;
+        tempo_mensagem = 120;
+
+        if (_texto != -1) {
+            layer_text_text(_texto, mensagem);
+        }
+
         global.codigo_binario = "";
-
-        var _texto = layer_text_get_id(_layer, "text_5B88EC1D");
-
+    } else {
         if (_texto != -1) {
             layer_text_text(_texto, global.codigo_binario);
         }
     }
 }
 
-
 if (interagindo && keyboard_check_pressed(vk_escape)) {
     interagindo = false;
-
-    var _layer = layer_get_id("BinarioLayer");
+    global.codigo_binario = "";
     if (_layer != -1) {
         layer_set_visible(_layer, false);
     }
