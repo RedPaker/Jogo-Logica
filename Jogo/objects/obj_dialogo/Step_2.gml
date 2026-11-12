@@ -43,3 +43,13 @@ if (current_char < string_length(_str)) {
         draw_message = "";
     }
 }
+
+if (current_message >= array_length(messages)){
+    if (!global.cutscene_ativa) {
+        global.jogo_pausado = false
+        instance_activate_layer("Entities");
+        instance_activate_layer("Itens");
+        instance_activate_layer("Misc");
+    }
+    instance_destroy();
+}
