@@ -101,7 +101,7 @@ if (hp <= 0) {
 
     if (!curando) {
         if (state == 0 || state == 5 || state == 6) {
-            move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls]);
+            move_and_collide(_target_x, _target_y, [tilemap_foreground, inviswalls,inviswallss]);
         } else if (state == 2) {
             x += clamp(_target_x * 5, -5, 5);
             y += clamp(_target_y * 5, -5, 5);
@@ -238,7 +238,7 @@ if (hp <= 0) {
         var _empurra_x = lengthdir_x(empurra, empurra_dir);
         var _empurra_y = lengthdir_y(empurra, empurra_dir);
 
-        move_and_collide(_empurra_x, _empurra_y, [tilemap_foreground, inviswalls]);
+        move_and_collide(_empurra_x, _empurra_y, [tilemap_foreground, inviswalls,inviswallss]);
 
         empurra *= 0.8;
 

@@ -151,6 +151,7 @@
     {"name":"obj_vento","order":2,"path":"objects/obj_vento/obj_vento.yy",},
     {"name":"obj_virus_com_computaodr","order":6,"path":"objects/obj_virus_com_computaodr/obj_virus_com_computaodr.yy",},
     {"name":"obj_virus_mae","order":3,"path":"objects/obj_virus_mae/obj_virus_mae.yy",},
+    {"name":"obj_wall_puzzle","order":11,"path":"objects/obj_wall_puzzle/obj_wall_puzzle.yy",},
     {"name":"obj_wall","order":6,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_warp_parent","order":1,"path":"objects/obj_warp_parent/obj_warp_parent.yy",},
     {"name":"old_obj_inventory","order":7,"path":"objects/old_obj_inventory/old_obj_inventory.yy",},

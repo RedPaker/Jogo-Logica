@@ -17,38 +17,56 @@ if (tempo_mensagem > 0) {
     }
 }
 
-
-if (!resultado && tempo_mensagem <= 0) {
+if (!resultado && tempo_mensagem <= 0 && !global.quests.binario) {
 
     if (_dist <= distancia_interacao && keyboard_check_pressed(global.st_use)) {
         interagindo = !interagindo;
+
         if (_layer != -1) {
             layer_set_visible(_layer, interagindo);
         }
+
         if (interagindo) {
             global.codigo_binario = "";
             mensagem = "";
+            global.jogo_pausado = true;
+
             var _texto = layer_text_get_id(_layer, "text_5B88EC1D");
+
             if (_texto != -1) {
                 layer_text_text(_texto, global.codigo_binario);
             }
+        } else {
+            global.jogo_pausado = false;
         }
     }
 }
 
 if (interagindo) {
 
-    var _texto = layer_text_get_id(_layer, "text_5B88EC1D");
+    var _texto = -1;
+
+    if (_layer != -1) {
+        _texto = layer_text_get_id(_layer, "text_5B88EC1D");
+    }
 
     if (keyboard_check_pressed(vk_enter)) {
 
         if (global.codigo_binario == senha_correta) {
+
             mensagem = "CORRETO!";
+            global.quests.binario = true;
+
+            with (obj_wall_puzzle) {
+                instance_destroy();
+            }
+
         } else {
             mensagem = "ERRO!";
         }
 
         interagindo = false;
+        global.jogo_pausado = false;
         resultado = true;
         tempo_mensagem = 120;
 
@@ -57,7 +75,9 @@ if (interagindo) {
         }
 
         global.codigo_binario = "";
+
     } else {
+
         if (_texto != -1) {
             layer_text_text(_texto, global.codigo_binario);
         }
@@ -65,8 +85,11 @@ if (interagindo) {
 }
 
 if (interagindo && keyboard_check_pressed(vk_escape)) {
+
     interagindo = false;
     global.codigo_binario = "";
+    global.jogo_pausado = false;
+
     if (_layer != -1) {
         layer_set_visible(_layer, false);
     }

@@ -5,6 +5,13 @@ global.jogo_pausado = false;
 
 global.chapter = 1;
 global.inventario_itens = [];
+global.quests = {
+    binario: false,
+    ram: false,
+    css: false
+}
+    
+
 global.current_save = 0;
 
 global.ultimo_local = undefined;
