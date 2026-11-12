@@ -7,6 +7,9 @@ global.chapter = 1;
 global.inventario_itens = [];
 global.current_save = 0;
 
+global.ultimo_local = undefined;
+
+
 if(!variable_global_exists("st_firsttimeplaying")){
     global.st_firsttimeplaying = true;
     show_debug_message("Reset");

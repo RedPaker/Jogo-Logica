@@ -1,7 +1,7 @@
 if (instance_exists(obj_plr_rpg)) {
     obj_plr_rpg.x = char.x;
     obj_plr_rpg.y = char.y;
-    obj_plr_rpg.facing = char.facing;
+    obj_plr_rpg.facing = char.face;
     obj_plr_rpg.hp = char.hp;
     obj_plr_rpg.coletou_livro = char.unlocked_book;
 } else {
