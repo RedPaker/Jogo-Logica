@@ -24,7 +24,7 @@ switch (button_id) {
         
         break;
     case 6:
-        if(button_sub_id < array_length(global.inventario_itens)){
+        if(button_sub_id < array_length(global.inventario_itens) and global.inventario_itens[button_sub_id].info != " "){
             visible = true;
         } else {
             visible = false;

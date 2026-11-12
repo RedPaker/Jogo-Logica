@@ -12,7 +12,7 @@ vspd = 0;
 
 state = 0 //0-Jogando 1-Freezed 2-Noclip 3-Knockback 4-Warping 5-Backwards
 
-facing = 0;
+facing = 90;
 facing_vento = 0;
 
 
