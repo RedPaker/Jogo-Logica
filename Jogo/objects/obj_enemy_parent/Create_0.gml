@@ -3,7 +3,9 @@ alvo_y = y;
 
 hp = 30;
 
-move_spd = 0.8;
+default_movespeed = 0.8;
+move_spd = default_movespeed;
+
 alarm[0] = 60;
 
 distance_to_player = 100;

@@ -154,6 +154,7 @@
     {"name":"obj_wall","order":6,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_warp_parent","order":1,"path":"objects/obj_warp_parent/obj_warp_parent.yy",},
     {"name":"old_obj_inventory","order":7,"path":"objects/old_obj_inventory/old_obj_inventory.yy",},
+    {"name":"rm_area55","order":3,"path":"rooms/rm_area55/rm_area55.yy",},
     {"name":"rm_boss_final","order":1,"path":"rooms/rm_boss_final/rm_boss_final.yy",},
     {"name":"rm_boss_web","order":2,"path":"rooms/rm_boss_web/rm_boss_web.yy",},
     {"name":"rm_configs","order":2,"path":"rooms/rm_configs/rm_configs.yy",},

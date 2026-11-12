@@ -200,6 +200,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},},
     {"id":{"name":"old_obj_inventory","path":"objects/old_obj_inventory/old_obj_inventory.yy",},},
+    {"id":{"name":"rm_area55","path":"rooms/rm_area55/rm_area55.yy",},},
     {"id":{"name":"rm_boss_fase1","path":"rooms/rm_boss_fase1/rm_boss_fase1.yy",},},
     {"id":{"name":"rm_boss_final","path":"rooms/rm_boss_final/rm_boss_final.yy",},},
     {"id":{"name":"rm_boss_web","path":"rooms/rm_boss_web/rm_boss_web.yy",},},
@@ -401,6 +402,7 @@
     {"roomId":{"name":"room_porteiro","path":"rooms/room_porteiro/room_porteiro.yy",},},
     {"roomId":{"name":"room_casa_cenario1","path":"rooms/room_casa_cenario1/room_casa_cenario1.yy",},},
     {"roomId":{"name":"room_casa_cenario2","path":"rooms/room_casa_cenario2/room_casa_cenario2.yy",},},
+    {"roomId":{"name":"rm_area55","path":"rooms/rm_area55/rm_area55.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

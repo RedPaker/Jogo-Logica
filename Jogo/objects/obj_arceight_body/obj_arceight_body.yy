@@ -40,6 +40,9 @@
     "name":"spr_Arc_8BodyIdle",
     "path":"sprites/spr_Arc_8BodyIdle/spr_Arc_8BodyIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_Arc_8BodyFwBw",
+    "path":"sprites/spr_Arc_8BodyFwBw/spr_Arc_8BodyFwBw.yy",
+  },
   "visible":true,
 }

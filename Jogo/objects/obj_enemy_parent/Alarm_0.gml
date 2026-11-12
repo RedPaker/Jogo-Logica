@@ -24,7 +24,7 @@ if(instance_exists(obj_jukebox) && distance_to_object(obj_jukebox) < distance_to
 if (apaixonado){
     move_spd = 0.3
 } else {
-    move_spd = 0.5
+    move_spd = default_movespeed;
 }
 
  
