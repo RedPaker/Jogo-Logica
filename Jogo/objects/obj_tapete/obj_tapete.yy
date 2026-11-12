@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"tapete",
-    "path":"sprites/tapete/tapete.yy",
+    "name":"spr_tapete",
+    "path":"sprites/spr_tapete/spr_tapete.yy",
   },
   "spriteMaskId":null,
   "visible":true,

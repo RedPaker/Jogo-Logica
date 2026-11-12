@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"cama",
-    "path":"sprites/cama/cama.yy",
+    "name":"spr_cama",
+    "path":"sprites/spr_cama/spr_cama.yy",
   },
   "spriteMaskId":null,
   "visible":true,

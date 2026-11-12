@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"quadro",
-    "path":"sprites/quadro/quadro.yy",
+    "name":"spr_quadro",
+    "path":"sprites/spr_quadro/spr_quadro.yy",
   },
   "spriteMaskId":null,
   "visible":true,
