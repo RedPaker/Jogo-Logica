@@ -55,6 +55,7 @@
     {"name":"obj_aranha","order":5,"path":"objects/obj_aranha/obj_aranha.yy",},
     {"name":"obj_arceight_body","order":2,"path":"objects/obj_arceight_body/obj_arceight_body.yy",},
     {"name":"obj_arceight_head","order":7,"path":"objects/obj_arceight_head/obj_arceight_head.yy",},
+    {"name":"obj_arceight_left_arm","order":10,"path":"objects/obj_arceight_left_arm/obj_arceight_left_arm.yy",},
     {"name":"obj_arceight_right_arm","order":9,"path":"objects/obj_arceight_right_arm/obj_arceight_right_arm.yy",},
     {"name":"obj_atack","order":1,"path":"objects/obj_atack/obj_atack.yy",},
     {"name":"obj_binario_puzzle","order":4,"path":"objects/obj_binario_puzzle/obj_binario_puzzle.yy",},
