@@ -7,6 +7,7 @@ move_spd = 2;
 tilemap_foreground = layer_tilemap_get_id("tlm_fg");//fala onde colidir
 tilemap_background = layer_tilemap_get_id("tlm_bg");
 inviswalls = obj_wall;
+inviswallss = obj_wall_puzzle;
 hspd = 0;
 vspd = 0;
 

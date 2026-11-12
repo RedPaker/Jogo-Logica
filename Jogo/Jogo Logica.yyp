@@ -197,6 +197,7 @@
     {"id":{"name":"obj_vento","path":"objects/obj_vento/obj_vento.yy",},},
     {"id":{"name":"obj_virus_com_computaodr","path":"objects/obj_virus_com_computaodr/obj_virus_com_computaodr.yy",},},
     {"id":{"name":"obj_virus_mae","path":"objects/obj_virus_mae/obj_virus_mae.yy",},},
+    {"id":{"name":"obj_wall_puzzle","path":"objects/obj_wall_puzzle/obj_wall_puzzle.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_warp_parent","path":"objects/obj_warp_parent/obj_warp_parent.yy",},},
     {"id":{"name":"old_obj_inventory","path":"objects/old_obj_inventory/old_obj_inventory.yy",},},
