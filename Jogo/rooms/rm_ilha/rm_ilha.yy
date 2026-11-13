@@ -73,7 +73,7 @@
           1,0,-3,-2147483648,-24,0,-12,-2147483648,-24,0,-12,-2147483648,-2,0,-11,-2147483648,1,0,-58,-2147483648,
           -3,0,-57,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tls_tileset","path":"tilesets/tls_tileset/tls_tileset.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRTileLayer":"","%Name":"tlm_ent","depth":700,"effectEnabled":true,"effectType":"_filter_underwater","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tlm_ent","properties":[
+    {"$GMRTileLayer":"","%Name":"tlm_wtr","depth":700,"effectEnabled":true,"effectType":"_filter_underwater","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tlm_wtr","properties":[
         {"name":"g_Distort1Speed","type":0,"value":"0.004",},
         {"name":"g_Distort2Speed","type":0,"value":"0.015",},
         {"name":"g_Distort1Scale","type":0,"value":"10",},

@@ -216,6 +216,7 @@
     {"id":{"name":"rm_mappingtest","path":"rooms/rm_mappingtest/rm_mappingtest.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_save","path":"rooms/rm_save/rm_save.yy",},},
+    {"id":{"name":"rm_TEMPLATE","path":"rooms/rm_TEMPLATE/rm_TEMPLATE.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"room_casa_cenario1","path":"rooms/room_casa_cenario1/room_casa_cenario1.yy",},},
     {"id":{"name":"room_casa_cenario2","path":"rooms/room_casa_cenario2/room_casa_cenario2.yy",},},
@@ -413,6 +414,7 @@
     {"roomId":{"name":"room_casa_cenario1","path":"rooms/room_casa_cenario1/room_casa_cenario1.yy",},},
     {"roomId":{"name":"room_casa_cenario2","path":"rooms/room_casa_cenario2/room_casa_cenario2.yy",},},
     {"roomId":{"name":"rm_area55","path":"rooms/rm_area55/rm_area55.yy",},},
+    {"roomId":{"name":"rm_TEMPLATE","path":"rooms/rm_TEMPLATE/rm_TEMPLATE.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
