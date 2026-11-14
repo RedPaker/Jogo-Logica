@@ -2,9 +2,10 @@
 event_inherited();
 
 hp = 250
+kapows = 5;
 
-default_movespeed = 0.7
-move_spd = 0.7;
+default_movespeed = 0.5
+move_spd = 0.5;
 estado = "perseguir";
 tempo_estado = 0;
 tempo_tiro = 0;

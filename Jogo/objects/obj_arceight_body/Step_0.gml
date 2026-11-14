@@ -70,13 +70,13 @@ switch (estado) {
                 facing = _dir;
 
                 if (abs(_hor) > abs(_ver)) {
-                    if (hp > 25) {
+                    if (kapows > 0) {
                         sprite_walkh(_hor, _ver, spr_Arc_8BodyFwBw, spr_Arc_8BodyRight, spr_Arc_8BodyLeft);
                     } else {
                         sprite_walkh(_hor, _ver, spr_Arc_8BrokenFwBw, spr_Arc_8BrokenRight, spr_Arc_8BrokenLeft);
                     }
                 } else {
-                    if (hp > 25) {
+                    if (kapows > 0) {
                         sprite_walkv(_hor, _ver, spr_Arc_8BodyFwBw, spr_Arc_8BodyRight, spr_Arc_8BodyLeft);
                     } else {
                         sprite_walkv(_hor, _ver, spr_Arc_8BrokenFwBw, spr_Arc_8BrokenRight, spr_Arc_8BrokenLeft);
@@ -106,7 +106,7 @@ switch (estado) {
 
         if (tempo_estado <= 0) {
             estado = "atirar";
-            tempo_estado = 100;
+            tempo_estado = 180;
             tempo_tiro = 1;
             obj_arceight_right_arm.tempo_tiro = 1;
             image_speed = 0;
