@@ -1,6 +1,10 @@
 if (current_message < 0) exit;
     layer_set_visible("GuiLayer", false);
 
+if (keyboard_check_pressed(skip_key) && estado != 2) {
+    estado = 2;
+}
+
 // animação do balão
 if (estado == 0) {
     anim = min(1, anim + anim_vel);

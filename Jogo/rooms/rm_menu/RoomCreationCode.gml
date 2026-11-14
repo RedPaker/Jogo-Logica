@@ -32,6 +32,7 @@ if(!variable_global_exists("st_firsttimeplaying")){
     
     global.st_umg = ord("A");
     global.st_smg = ord("S");
+    global.st_skip = ord("D");
     
     global.st_sprinthold = true;
     
